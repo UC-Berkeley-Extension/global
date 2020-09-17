@@ -74,6 +74,7 @@ We prefer to run the following commands from your host machine:
 
 And run these from inside the DDEV container:
 
+- drush
 - node
 - yarn
 
