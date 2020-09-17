@@ -9,7 +9,7 @@ This project requires the following software on OS X:
 - PHP 7.3 or higher
 - Composer
 
-See the [System Requirements](#System Requirements) section for information about installing these applications.
+See the [System Requirements](#system-requirements) section for information about installing these applications.
 
 # Getting Started
 
@@ -133,9 +133,9 @@ Install DDEV with Homebrew:
 brew tap drud/ddev
 brew install ddev
 ```
-See [Recommended DDEV configuration](##Recommended DDEV configuration) to complete the  recommended configuration for DDEV.
+See [Recommended DDEV configuration](#recommended-ddev-configuration) to complete the  recommended configuration for DDEV.
 
-## Recommended DDEV configuration
+## Recommended DDEV Configuration
 
 ### Set up NFS (file system sharing)
 This will make file changes available to the ddev environment quickly and consistently. Without NFS, files may occasionally get "stuck" at an older version.
