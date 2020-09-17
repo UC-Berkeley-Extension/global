@@ -1,4 +1,4 @@
-# global
+# UC Berkeley Global
 UC Berkeley Global Programs Drupal 9 site
 
 ## System Requirements
@@ -39,8 +39,8 @@ See last section of the Readme for recommended configuration for DDEV.
 - Clone this project. 
   - `git clone git@github.com:UC-Berkeley-Extension/global.git`
 - `cd global`
-- See the DDEV Instructions (and Recommended DDEV configuration) for setup
 - `composer install`
+- See the DDEV Instructions (and Recommended DDEV configuration) for setup
 
 ## New Installations
 
