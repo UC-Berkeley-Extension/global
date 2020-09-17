@@ -9,8 +9,6 @@
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
-/web/themes/custom/bglobal/styleguide/node_modules/
-/web/themes/custom/bglobal/styleguide/public/
 /web/profiles/contrib/
 /web/libraries/
 /web/private/scripts/quicksilver
@@ -19,6 +17,13 @@
 # Ignore Node files
 /node_modules/
 package-lock.json
+
+# Ignore styleguide artifacts
+/web/themes/custom/bglobal/styleguide/node_modules/
+/web/themes/custom/bglobal/styleguide/pattern_exports/
+/web/themes/custom/bglobal/styleguide/public/
+/web/themes/custom/bglobal/styleguide/dependencyGraph.json
+/web/themes/custom/bglobal/styleguide/package-lock.json
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
