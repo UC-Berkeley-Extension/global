@@ -9,6 +9,7 @@
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
+/web/themes/custom/bglobal/styleguide/node_modules/
 /web/profiles/contrib/
 /web/libraries/
 /web/private/scripts/quicksilver
