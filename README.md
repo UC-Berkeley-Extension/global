@@ -45,7 +45,7 @@ Run the following commands.
 
 Visit https://global.ddev.site and login as `admin` with the password provided to you.
 
-Hint: If you forget the password, use `drush uli` to get a login link.
+*Hint:* If you forget the password, use `drush uli` to get a login link.
 
 ## Updating After Installation
 
@@ -106,6 +106,8 @@ To install Homebrew:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
+This action requires *administrator* permissions on your machine.
+
 
 Once installed:
 ```
