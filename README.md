@@ -87,6 +87,19 @@ Run the following commands from your host machine:
 - `chmod 665 *.sh`
 - `chmod +x *.sh`
 
+# Pattern Lab
+We are using [Pattern Lab](https://patternlab.io/) for the component-based styleguide for the project. Pattern Lab is a node-based system that can integrate with Drupal themes.
+
+To get started with Pattern Lab, follow these steps:
+
+- On your host machine, go to the `global` directory.
+- If you have `node` installed on your machine:
+    - `cd web/themes/custom/bglobal/styleguide`
+    - `npm install`
+    - `npm start`
+
+Either approach should open Pattern Lab at http://127.0.0.1:3000/.
+
 # System Requirements
 This setup has been tested with Mac OS X, but may work with other systems.
 These setup steps only need to be run once.
