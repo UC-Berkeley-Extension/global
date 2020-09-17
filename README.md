@@ -1,46 +1,27 @@
 # UC Berkeley Global Programs
 UC Berkeley Global Programs Drupal 9 site
 
-## System Requirements
-This setup has been tested with MacOS, but may work with other systems.
-These setup steps only need to be run once.
+This project requires the following software on OS X:
 
-### (Optional) Php and Composer
-This is optional, but recommended. Composer runs much more quickly outside the container than inside.
-You can use Homebrew to install both:
-See https://brew.sh/ for documentation and installation instructions.
-```
-brew install php@7.3
-brew install composer
-```
+- Docker
+- Git
+- DDEV
+- PHP 7.3 or higher
+- Composer
 
-### (Optional) NodeJS and Yarn
-This is optional, and not recommended. You can run NodeJS and Yarn commands from inside the container.
-Check the .nvmrc file for the version of Yarn that is being used in the container (10.15.3).
-```
-brew install node
-brew install yarn
-```
-
-### DDEV Instructions
-This readme will cover the basic installation of DDEV, with some recommendations. You can also follow instructions at https://ddev.readthedocs.io/en/stable/
-You need to install Docker Desktop for Mac first. You may need to create an account.
-https://hub.docker.com/editions/community/docker-ce-desktop-mac.
-
-Install DDEV with Homebrew:
-```
-brew tap drud/ddev
-brew install ddev
-```
-See last section of the Readme for recommended configuration for DDEV.
+See the [System Requirements](#System Requirements) section for information about installing these applications.
 
 # Getting Started
 
-- Clone this project. 
-  - `git clone git@github.com:UC-Berkeley-Extension/global.git`
+## Checkout the Project
+
+Virtual machines like DDEV run best from your Sites directory.
+
+- `cd ~/Sites`
+- Clone this project.
+- `git clone git@github.com:UC-Berkeley-Extension/global.git`
 - `cd global`
 - `composer install`
-- See the DDEV Instructions (and Recommended DDEV configuration) for setup
 
 ## New Installations
 
@@ -65,7 +46,7 @@ Visit https://global.ddev.site and login as `admin` with the password provided t
 
 Hint: If you forget the password, use `drush uli` to get a login link.
 
-## Updating
+## Updating After Installation
 
 From your host machine
 - `cd global`
@@ -83,6 +64,18 @@ From DDEV
 
 And you should be all set!
 
+## Running Commands
+
+We prefer to run the following commands from your host machine:
+
+- git
+- composer
+
+And run these from inside the DDEV container:
+
+- node
+- yarn
+
 ## Troubleshooting
 
 If the shell scripts will not execute, it may be because git doesn't include permissions on files.
@@ -92,6 +85,55 @@ Run the following commands from your host machine:
 - `cd scripts`
 - `chmod 665 *.sh`
 - `chmod +x *.sh`
+
+# System Requirements
+This setup has been tested with Mac OS X, but may work with other systems.
+These setup steps only need to be run once.
+
+### Git
+These instructions assume you have Git setup on your local machine. See [the documentation on GitHub](https://docs.github.com/en/github/getting-started-with-github) for more information.
+
+### PHP and Composer (optional)
+OS X should already have PHP 7.3 installed. If not, install with the instructions below.
+
+[Composer](https://getcomposer.org/) is a command-line package manager used to manage Drupal projects. Installing Composer on your machine is optional, but recommended. Composer runs much more quickly outside the container than inside.
+
+You can use Homebrew (a command-line OS X installer) to install both:
+See https://brew.sh/ for documentation and installation instructions.
+
+To install Homebrew:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+Once installed:
+```
+brew install php@7.3
+brew install composer
+```
+
+### NodeJS and Yarn (Optional)
+This is optional, and not recommended. You can run NodeJS and Yarn commands from inside the container.
+Check the .nvmrc file for the version of Yarn that is being used in the container (10.15.3).
+```
+brew install node
+brew install yarn
+```
+
+## DDEV Installation
+
+[DDEV](https://www.ddev.com/) is a local development environment for use with Drupal and WordPress. DDEV is well-supported and provides community support.
+
+This section will cover the basic installation of DDEV, with some recommendations. You can also follow instructions at https://ddev.readthedocs.io/en/stable/
+You need to install Docker Desktop for Mac first. You may need to create an account.
+https://hub.docker.com/editions/community/docker-ce-desktop-mac.
+
+Install DDEV with Homebrew:
+```
+brew tap drud/ddev
+brew install ddev
+```
+See [Recommended DDEV configuration](##Recommended DDEV configuration) to complete the  recommended configuration for DDEV.
 
 ## Recommended DDEV configuration
 
