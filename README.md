@@ -18,7 +18,8 @@ See the [System Requirements](#system-requirements) section for information abou
 Virtual machines like DDEV run best from your Sites directory.
 
 - `cd ~/Sites`
-- Clone this project.
+
+Then clone this project.
 - `git clone git@github.com:UC-Berkeley-Extension/global.git`
 - `cd global`
 - `composer install`
@@ -142,33 +143,40 @@ This will make file changes available to the ddev environment quickly and consis
 Either follow the official documentation here Using NFS to Mount the Project into the Web Container, or use these steps:
 
 1. Before you set up NFS, DDEV needs to be run once:
-```
-ddev start
-```
+
+    From your host machine:
+    ```
+    cd global
+    ddev start
+    ```
 
 2. Add the project path to your /etc/exports file, which will look something like this:
-```
-# DDEV
-"/System/Volumes/Data/Users/[YOUR USERNAME HERE]/Sites/global" --alldirs -mapall=501:20 localhost
-```
-  - You will need to provide the path to the project. This may be within /System/Volumes/... or it may be directly within your user directory like /Users/YOU/Sites/global.
-  - The 501 here may need to be replaced with your user ID. You can use the script mentioned in the documentation above if you don’t want to manually create those.
+    ```
+    # DDEV
+    "/System/Volumes/Data/Users/[YOUR USERNAME HERE]/Sites/global" --alldirs -mapall=501:20 localhost
+    ```
+      - You will need to provide the path to the project. This may be within /System/Volumes/... or it may be directly within your user directory like /Users/YOU/Sites/global.
+      - The 501 here may need to be replaced with your user ID. You can use the script mentioned in the documentation above if you don’t want to manually create those.
+
+    This action requires *administrator* permissions on your machine.
 
 3. Edit your `/etc/nfs.conf`:
-```
-# For DDEV
-nfs.server.mount.require_resv_port = 0
-```
+    ```
+    # For DDEV
+    nfs.server.mount.require_resv_port = 0
+    ```
+    This action requires *administrator* permissions on your machine.
 
 4. Restart the NFS service:
-```
-sudo nfsd restart
-```
+    ```
+    sudo nfsd restart
+    ```
+    This action requires *administrator* permissions on your machine.
 
 5. Finally, verify that NFS is configured correctly for the project:
-```
-ddev debug nfsmount
-```
+    ```
+    ddev debug nfsmount
+    ```
 
 ###Set up a certificate
 This makes HTTPS work without those “This is dangerous” notices.
