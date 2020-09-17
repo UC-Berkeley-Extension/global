@@ -97,7 +97,7 @@ To get started with Pattern Lab, follow these steps:
     - `cd web/themes/custom/bglobal/styleguide`
     - `npm install`
     - `npm start`
-    - Visit the styleguide at http://127.0.0.1:3000
+    - Visit the styleguide at https://127.0.0.1:3000
 - If you *do not* have `node` installed on your machine:
     - `ddev ssh`
     - `cd web/themes/custom/bglobal/styleguide`
