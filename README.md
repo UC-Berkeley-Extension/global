@@ -24,7 +24,10 @@ Run the following commands.
 - `drush si --existing-config`
 - Then note the password given at the end of installation.
 
-Visit https://global.ddev.site and login as `admin` with the password.
+*Tip:* You can instead run the single shell command:
+- `/var/www/html/scripts/setup.sh`
+
+Visit https://global.ddev.site and login as `admin` with the password provided to you.
 
 Hint: If you forget the password, use `drush uli` to get a login link.
 
@@ -41,4 +44,17 @@ From DDEV
 - `drush cr`
 - `drush cim`
 
+*Tip:* You can instead run the single shell command:
+- `/var/www/html/scripts/refresh.sh`
+
 And you should be all set!
+
+## Troubleshooting
+
+If the shell scripts will not execute, it may be because git doesn't include permissions on files.
+
+Run the following commands from your host machine:
+
+- `cd scripts`
+- `chmod 665 *.sh`
+- `chmod +x *.sh`
