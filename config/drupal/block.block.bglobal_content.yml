@@ -1,0 +1,22 @@
+uuid: b93e7af9-70a3-4bc5-b925-21695becdd51
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bglobal
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bglobal_content
+theme: bglobal
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
