@@ -8,10 +8,14 @@ base theme: false
 libraries:
   - bglobal/global
 regions:
-  header: Header
-  content: Content
-  footer: Footer
-  disabled: Disabled
+  header: 'Header'
+  navigation: 'Navigation'
+  highlighted: 'Highlighted'
+  page_header: 'Page Header'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
+  footer: 'Footer'
+  disabled: 'Disabled'
 
 # This section is used by the contrib module, Component Libraries. It allows you
 # to reference .twig files in your sass/ directory by using the Twig namespace:

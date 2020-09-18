@@ -1,0 +1,8 @@
+{% set classes = [
+	'button',
+	modifier_classes ? modifier_classes,
+]|join(' ')|trim %}
+
+<button class="{{ classes }}">
+	<a href="{{ url }}">{{ text }}</a>
+</button>
