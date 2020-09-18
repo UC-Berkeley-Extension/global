@@ -37,7 +37,8 @@
     "drupal/pathauto": "^1.8",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
-    "drush/drush": "^10.3"
+    "drush/drush": "^10.3",
+    "zaporylie/composer-drupal-optimizations": "^1.1"
   },
   "require-dev": {
     "drupal/devel": "^4.0"
