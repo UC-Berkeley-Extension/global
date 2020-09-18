@@ -1,0 +1,35 @@
+name: BerkeleyGlobal
+type: theme
+description: 'Berkeley Global D9 theme.'
+package: Core
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: false
+libraries:
+  - bglobal/global
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+  disabled: Disabled
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @tc
+# See https://www.drupal.org/project/components for more information.
+component-libraries:
+  atoms:
+    paths:
+      - styleguide/source/patterns/00-atoms
+  molecules:
+    paths:
+      - styleguide/source/patterns/01-molecules
+  organisms:
+    paths:
+      - styleguide/source/patterns/02-organisms
+  templates:
+    paths:
+      - styleguide/source/patterns/03-templates
+  pages:
+    paths:
+      - styleguide/source/patterns/04-pages
