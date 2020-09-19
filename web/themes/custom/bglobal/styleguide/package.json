@@ -1,7 +1,6 @@
 {
   "name": "styleguide",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +10,9 @@
     "help": "patternlab --help",
     "install": "patternlab install --config ./patternlab-config.json",
     "serve": "patternlab serve --config ./patternlab-config.json",
-    "start": "npm run serve",
-    "version": "patternlab --version"
+    "start": "node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "version": "patternlab --version",
+    "watch": "npm run development -- --watch"
   },
   "author": "",
   "license": "ISC",
@@ -42,5 +42,12 @@
     "stylelint": "^12.0.1",
     "stylelint-scss": "^3.13.0",
     "yo": "^3.1.1"
+  },
+  "devDependencies": {
+    "import-glob-loader": "^1.1.0",
+    "laravel-mix": "^5.0.5",
+    "laravel-mix-glob": "^1.1.4",
+    "resolve-url-loader": "^3.1.0",
+    "vue-template-compiler": "^2.6.12"
   }
 }
