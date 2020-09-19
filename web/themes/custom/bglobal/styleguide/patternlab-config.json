@@ -55,10 +55,10 @@
         "patternSectionSubtype": "views/partials/patternSectionSubtype.mustache",
         "viewall": "views/viewall.mustache"
       },
-      "js": "./source/js/dist",
+      "js": "./source/js",
       "images": "./source/images",
       "fonts": "./source/fonts",
-      "css": "./source/css/dist"
+      "css": "./source/css"
     },
     "public": {
       "root": "public/",

@@ -1,52 +1,25 @@
 {
   "name": "styleguide",
   "version": "1.0.0",
+  "description": "Berkey Global styleguide",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development --watch",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "patternlab build --config ./patternlab-config.json",
+    "build:uikit": "cross-env-shell PL_CONFIG_PATH='${INIT_CWD}/.patternlabrc.js' npm run build --prefix node_modules/@pattern-lab/uikit-workshop -- --patternlabrc '$PL_CONFIG_PATH'",
+    "dev": "node ./node_modules/@pattern-lab/uikit-workshop/build-tools.js",
+    "help": "patternlab --help",
+    "install": "patternlab install --config ./patternlab-config.json",
     "serve": "patternlab serve --config ./patternlab-config.json",
-    "start": "npm run serve"
+    "start": "npm run serve",
+    "version": "patternlab --version"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@pattern-lab/cli": "^5.13.1",
     "@pattern-lab/core": "^5.13.1",
     "@pattern-lab/engine-twig-php": "^5.13.1",
     "@pattern-lab/starterkit-twig-demo": "^5.10.1",
     "@pattern-lab/uikit-workshop": "^5.13.1",
-    "breakpoint-sass": "^2.7.1",
-    "create-pattern-lab": "^5.13.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-changed": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-copy": "^4.0.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-imagemin": "^6.1.1",
-    "gulp-order": "^1.2.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-stylelint": "^11.0.0",
-    "prettier-eslint": "^9.0.1",
-    "stylelint": "^12.0.1",
-    "stylelint-scss": "^3.13.0",
-    "yo": "^3.1.1"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.2",
-    "import-glob-loader": "^1.1.0",
-    "laravel-mix": "^5.0.5",
-    "laravel-mix-glob": "^1.1.4",
-    "resolve-url-loader": "^3.1.0",
-    "vue-template-compiler": "^2.6.12"
+    "create-pattern-lab": "^5.13.1"
   }
 }
