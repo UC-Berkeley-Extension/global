@@ -55,14 +55,14 @@
         "patternSectionSubtype": "views/partials/patternSectionSubtype.mustache",
         "viewall": "views/viewall.mustache"
       },
-      "js": "./dist/js",
-      "images": "./dist/images",
-      "fonts": "./dist/fonts",
-      "css": "./dist/css"
+      "js": "./source/js",
+      "images": "./source/images",
+      "fonts": "./source/fonts",
+      "css": "./source/css"
     },
     "public": {
       "root": "./public/",
-      "patterns": "./public/_patterns/",
+      "patterns": "./public/patterns/",
       "data": "./public/styleguide/data/",
       "annotations": "./public/annotations/",
       "styleguide": "./public/styleguide/",
@@ -94,7 +94,7 @@
     "color": "light",
     "density": "compact",
     "layout": "horizontal",
-    "noViewAll": false
+    "noViewAll": true
   },
   "uikits": [
     {
