@@ -50,9 +50,9 @@ function serve(done) {
     // Drupal core directory. This allows urls that reference
     // Drupal core JS files to resolve correctly.
     // i.e. /core/misc/drupal.js
-    server: ['./patternlab/'],
-    notify: false,
-    open: false
+    server: ['./public/'],
+    watch: true,
+    open: true
   });
   done();
 }
