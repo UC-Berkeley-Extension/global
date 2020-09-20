@@ -44,10 +44,10 @@
     "source": {
       "root": "./source/",
       "patterns": "./source/_patterns/",
-      "data": "./source/_data/",
-      "meta": "./source/_meta/",
-      "annotations": "./source/_annotations/",
-      "styleguide": "dist/",
+      "data": "./source/data/",
+      "meta": "./source/meta/",
+      "annotations": "./source/annotations/",
+      "styleguide": "./dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
         "general-footer": "views/partials/general-footer.mustache",
@@ -55,21 +55,21 @@
         "patternSectionSubtype": "views/partials/patternSectionSubtype.mustache",
         "viewall": "views/viewall.mustache"
       },
-      "js": "./source/js",
-      "images": "./source/images",
-      "fonts": "./source/fonts",
-      "css": "./source/css"
+      "js": "./dist/js",
+      "images": "./dist/images",
+      "fonts": "./dist/fonts",
+      "css": "./dist/css"
     },
     "public": {
-      "root": "public/",
-      "patterns": "public/patterns/",
-      "data": "public/styleguide/data/",
-      "annotations": "public/annotations/",
-      "styleguide": "public/styleguide/",
-      "js": "public/js",
-      "images": "public/images",
-      "fonts": "public/fonts",
-      "css": "public/css"
+      "root": "./public/",
+      "patterns": "./public/_patterns/",
+      "data": "./public/styleguide/data/",
+      "annotations": "./public/annotations/",
+      "styleguide": "./public/styleguide/",
+      "js": "./public/js",
+      "images": "./public/images",
+      "fonts": "./public/fonts",
+      "css": "./public/css"
     }
   },
   "patternExtension": "twig",

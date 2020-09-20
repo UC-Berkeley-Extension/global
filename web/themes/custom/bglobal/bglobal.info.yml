@@ -24,16 +24,16 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - styleguide/source/patterns/00-atoms
+      - source/patterns/00-atoms
   molecules:
     paths:
-      - styleguide/source/patterns/01-molecules
+      - source/patterns/01-molecules
   organisms:
     paths:
-      - styleguide/source/patterns/02-organisms
+      - source/patterns/02-organisms
   templates:
     paths:
-      - styleguide/source/patterns/03-templates
+      - source/patterns/03-templates
   pages:
     paths:
-      - styleguide/source/patterns/04-pages
+      - source/patterns/04-pages

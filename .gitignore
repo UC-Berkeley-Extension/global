@@ -19,11 +19,13 @@
 package-lock.json
 
 # Ignore styleguide artifacts
-/web/themes/custom/bglobal/styleguide/node_modules/
-/web/themes/custom/bglobal/styleguide/pattern_exports/
-/web/themes/custom/bglobal/styleguide/public/
-/web/themes/custom/bglobal/styleguide/dependencyGraph.json
-/web/themes/custom/bglobal/styleguide/package-lock.json
+/web/themes/custom/bglobal/node_modules/
+/web/themes/custom/bglobal/pattern_exports/
+/web/themes/custom/bglobal/public/
+/web/themes/custom/bglobal/dependencyGraph.json
+/web/themes/custom/bglobal/package-lock.json
+/web/themes/custom/bglobal/dist/
+/web/themes/custom/bglobal/source/meta
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.

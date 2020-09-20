@@ -1,0 +1,35 @@
+@import "scss/generic/variables";
+@import "scss/generic/mixins";
+@import "scss/generic/reset";
+
+// Pattern Lab specific SCSS files
+
+///*------------------------------------*\
+//    $TEXT Styles
+//\*------------------------------------*/
+//@import "scss/objects/text";
+//
+//
+///*------------------------------------*\
+//    $COMPONENTS
+//\*------------------------------------*/
+//@import "scss/objects/icons";
+//@import "scss/objects/buttons";
+//@import "scss/objects/blocks";
+//@import "scss/objects/lists";
+//@import "scss/objects/tooltip";
+//@import "scss/objects/accordion";
+//@import "scss/objects/tabs";
+//@import "scss/objects/sections";
+//@import "scss/objects/article";
+//@import "scss/objects/comments";
+//@import "scss/objects/messaging";
+
+// Berkeley Global component SCSS files
+@import "../_patterns/00-atoms/**/*.scss";
+//@import "../_patterns/01-molecules/**/*.scss";
+//@import "../_patterns/02-organisms/**/*.scss";
+//@import "../_patterns/03-templates/**/*.scss";
+//@import "../_patterns/04-pages/**/*.scss";
+
+
