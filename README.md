@@ -3,9 +3,9 @@ UC Berkeley Global Programs Drupal 9 site
 
 This project requires the following software on OS X:
 
-- Docker
+- [Docker](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 - Git
-- DDEV
+- [DDEV](https://ddev.readthedocs.io/en/stable/)
 - PHP 7.3 or higher
 - Composer
 
