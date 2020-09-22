@@ -50,3 +50,6 @@ if (defined('CONFIG_SYNC_DIRECTORY') && empty($config_directories[CONFIG_SYNC_DI
 elseif (empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = '../config/drupal';
 }
+
+// Use correct services.yml file for twig debugging during development.
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.yml';

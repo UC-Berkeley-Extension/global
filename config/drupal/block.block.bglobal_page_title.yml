@@ -1,0 +1,20 @@
+uuid: 35f725c0-d574-4f37-99d7-1ca1818f4897
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bglobal
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: bglobal_page_title
+theme: bglobal
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
