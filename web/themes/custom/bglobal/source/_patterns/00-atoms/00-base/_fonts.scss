@@ -1,0 +1,27 @@
+// @file
+// Fonts
+
+// @font-face declarations go here.
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../../fonts/OpenSans-Regular-webfont.woff'),
+       url('../../../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../../fonts/OpenSans-Bold-webfont.woff'),
+       url('../../../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../../../fonts/OpenSans-Italic-webfont.woff'),
+       url('../../../fonts/OpenSans-Italic.ttf');
+}

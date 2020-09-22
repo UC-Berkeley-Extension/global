@@ -5,8 +5,6 @@
 ]
 %}
 
-<button class="{{ classes|join(' ')|trim }}">
-	<a href="{{ url }}">
-		{{ text }}
-	</a>
-</button>
+<a class="{{ classes|join(' ')|trim }}" href="{{ url }}">
+	{{ text }}
+</a>
