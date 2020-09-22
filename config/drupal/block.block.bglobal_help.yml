@@ -1,0 +1,22 @@
+uuid: 4a1afa42-908a-49de-a24c-0ed52e289646
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bglobal
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bglobal_help
+theme: bglobal
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
