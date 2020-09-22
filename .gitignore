@@ -27,6 +27,9 @@ package-lock.json
 /web/themes/custom/bglobal/dist/
 /web/themes/custom/bglobal/source/meta
 
+# Ignore development services
+web/sites/*/development.services.yml
+
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
 

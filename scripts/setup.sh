@@ -2,7 +2,6 @@
 # be in the right directory
 cd /var/www/html
 echo 'Removing old development settings...'
-rm web/sites/default/development.services.yml
 echo 'Copying settings file...'
 cp config/settings/settings.ddev.php web/sites/default
 echo 'Installing site...'
