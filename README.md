@@ -3,9 +3,9 @@ UC Berkeley Global Programs Drupal 9 site
 
 This project requires the following software on OS X:
 
-- Docker
+- [Docker](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 - Git
-- DDEV
+- [DDEV](https://ddev.readthedocs.io/en/stable/)
 - PHP 7.3 or higher
 - Composer
 
@@ -71,9 +71,11 @@ We prefer to run the following commands from your host machine:
 
 - git
 - composer
+- npm
 
 And run these from inside the DDEV container:
 
+- drush
 - node
 - yarn
 
@@ -104,6 +106,21 @@ To get started with Pattern Lab, follow these steps:
     - `npm install`
     - `npm start`
     - Visit the styleguide at https://global.ddev.site:3000/
+
+## Troubleshooting Pattern Lab
+
+* Pattern Lab may load on a port other than 3000. When `npm start` completes, your browser should autoload the correct page. It will also be visible in the terminal:
+    ```
+    [Browsersync] Access URLs:
+    ----------------------------------
+       Local: http://localhost:3002
+    External: http://10.0.1.6:3002
+    ----------------------------------
+
+    ```
+* If you get a 404 on the homepage, but still see the navigation, run the following from the project root:
+
+    `cp -r web/themes/custom/bglobal/public/dist/html web/themes/custom/bglobal/public/styleguide/html`
 
 # System Requirements
 This setup has been tested with Mac OS X, but may work with other systems.
@@ -198,7 +215,7 @@ Either follow the official documentation here Using NFS to Mount the Project int
     ddev debug nfsmount
     ```
 
-###Set up a certificate
+### Set up a certificate
 This makes HTTPS work without those “This is dangerous” notices.
 - SSH into the ddev container `ddev ssh`
 - From inside the container, run `mkcert -install`
