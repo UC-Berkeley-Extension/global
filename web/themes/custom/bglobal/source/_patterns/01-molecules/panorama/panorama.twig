@@ -1,0 +1,21 @@
+<section class="panorama">
+	<div class="panorama-image">
+		{# Drupal's image field will be connected here #}
+		{{ panorama.img }}
+
+		{#
+		Or we can do it like this:
+		<img src="{{ panorama.img.src }}" alt="{{ panorama.img.alt }}">
+		 #}
+	</div>
+	<div class="panorama-content">
+		<div class="panorama-content--body">
+			{{ panorama.body }}
+		</div>
+		{% if panorama.cta.url %}
+			<div class="panorama-content--cta">
+				<a href="{{ panorama.cta.url }}" class="{{ panorama.cta.classes }}">{{ panorama.cta.text }}</a>
+			</div>
+		{% endif %}
+	</div>
+</section>
