@@ -1,20 +1,31 @@
-button {
+.button {
   display: inline-block;
   font-weight: 600;
   color: #212529;
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
+  border: none;
   text-transform: uppercase;
   text-decoration: none;
-  padding: .25rem .675rem;
-  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
-  border-radius: 0px;
-  background-color: red;
+  background-color: $california-gold;
+  @include transition(all, 0.1s, ease-out);
 
-  a {
-    color: $blue-primary;
+  &:hover,
+  &:focus {
+    background-color: $berkeley-blue;
+  }
+}
+
+a.button {
+  color: $berkeley-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $white;
   }
 }
