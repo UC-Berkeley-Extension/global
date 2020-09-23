@@ -3,7 +3,7 @@ type: theme
 description: 'Berkeley Global D9 theme.'
 package: Core
 core_version_requirement: ^8 || ^9
-base theme: stark
+base theme: stable
 libraries:
   - bglobal/global
 regions:
