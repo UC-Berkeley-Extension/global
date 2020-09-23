@@ -7,7 +7,7 @@ _A description of the changes in this PR._
 ## Testing instructions
 1. _Add your testing instructions here, for example..._
 2. Build the site
-  * From inside the VM, run `/var/www/html/scripts/setup.sh`
+    * From inside the VM, run `/var/www/html/scripts/setup.sh`
 
 ## Relevant Screenshots/gifs:
 Use something like [Skitch](https://evernote.com/skitch/) or [GIPHY Capture](https://giphy.com/apps/giphycapture) to capture images/gifs to demonstrate behaviors.
