@@ -145,6 +145,13 @@
           ]
         },
         {
+          "id": "drupal-components",
+          "recursive": true,
+          "paths": [
+            "source/_patterns/05-drupal-components"
+          ]
+        },
+        {
           "id": "macros",
           "recursive": true,
           "paths": [
