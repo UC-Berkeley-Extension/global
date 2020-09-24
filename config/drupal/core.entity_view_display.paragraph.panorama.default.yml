@@ -1,0 +1,46 @@
+uuid: c6a53dd4-3356-465a-81b4-cc1079a5bfb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.panorama.field_cta_link
+    - field.field.paragraph.panorama.field_image
+    - field.field.paragraph.panorama.field_text
+    - paragraphs.paragraphs_type.panorama
+  module:
+    - link
+    - text
+id: paragraph.panorama.default
+targetEntityType: paragraph
+bundle: panorama
+mode: default
+content:
+  field_cta_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: full_width
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

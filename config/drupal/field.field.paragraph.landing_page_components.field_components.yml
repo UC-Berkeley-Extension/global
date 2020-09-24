@@ -1,0 +1,34 @@
+uuid: bf815ded-a113-40eb-a14f-b0bc416be4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.landing_page_components
+    - paragraphs.paragraphs_type.panorama
+  module:
+    - entity_reference_revisions
+id: paragraph.landing_page_components.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: landing_page_components
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      panorama: panorama
+    target_bundles_drag_drop:
+      landing_page_components:
+        weight: 3
+        enabled: false
+      panorama:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions
