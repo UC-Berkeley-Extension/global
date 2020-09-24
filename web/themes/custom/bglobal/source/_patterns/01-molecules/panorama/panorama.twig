@@ -1,4 +1,4 @@
-<section class="panorama">
+<div class="panorama">
 	<div class="panorama-image">
 		{# Drupal's image field will be connected here #}
 		{{ panorama.img }}
@@ -12,10 +12,10 @@
 		<div class="panorama-content--body">
 			{{ panorama.body }}
 		</div>
-		{% if panorama.cta.url %}
+		{% if panorama.link.url %}
 			<div class="panorama-content--cta">
-				<a href="{{ panorama.cta.url }}" class="{{ panorama.cta.classes }}">{{ panorama.cta.text }}</a>
+				<a href="{{ panorama.link.url }}" class="{{ panorama.link.classes }}">{{ panorama.link.text }}</a>
 			</div>
 		{% endif %}
 	</div>
-</section>
+</div>

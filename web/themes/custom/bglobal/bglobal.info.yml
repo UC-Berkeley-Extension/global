@@ -17,21 +17,21 @@ regions:
   disabled: 'Disabled'
 
 # This section is used by the contrib module, Component Libraries. It allows you
-# to reference .twig files in your sass/ directory by using the Twig namespace
+# to reference .twig files in defined directory by using the Twig namespace
 # See https://www.drupal.org/project/components for more information.
 component-libraries:
   atoms:
     paths:
-      - source/patterns/00-atoms
+      - source/_patterns/00-atoms
   molecules:
     paths:
-      - source/patterns/01-molecules
+      - source/_patterns/01-molecules
   organisms:
     paths:
-      - source/patterns/02-organisms
+      - source/_patterns/02-organisms
   templates:
     paths:
-      - source/patterns/03-templates
+      - source/_patterns/03-templates
   pages:
     paths:
-      - source/patterns/04-pages
+      - source/_patterns/04-pages

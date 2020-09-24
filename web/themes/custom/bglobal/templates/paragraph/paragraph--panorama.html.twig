@@ -47,16 +47,16 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-	{% include '@molecules/.twig' with {
-		'quote': {
-			'quote': content.field_quote.0,
-			'image': content.field_attribution_image.0,
-			'name': content.field_attribution_name.0,
-			'title': content.field_attribution_title.0,
+	foo
+	{% include '@molecules/panorama/panorama.twig' with {
+		'panorama': {
+			'img': content.field_image,
+			'body': content.field_text,
 			'link': {
-				'url': content.field_attribution_link.0['#url'],
-				'label': content.field_attribution_link.0['#title']
+				'url': content.field_cta_link.0['#url'],
+				'text': content.field_cta_link.0['#title'],
+				'classes': 'button button-small',
 			}
-		},
+		}
 	} %}
 {% endblock %}
