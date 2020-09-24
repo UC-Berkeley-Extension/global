@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_components
     - paragraphs.paragraphs_type.landing_page_components
     - paragraphs.paragraphs_type.panorama
+    - paragraphs.paragraphs_type.testimonial
   module:
     - entity_reference_revisions
 id: paragraph.landing_page_components.field_components
@@ -24,6 +25,7 @@ settings:
     negate: 0
     target_bundles:
       panorama: panorama
+      testimonial: testimonial
     target_bundles_drag_drop:
       landing_page_components:
         weight: 3
@@ -31,4 +33,7 @@ settings:
       panorama:
         enabled: true
         weight: 4
+      testimonial:
+        enabled: true
+        weight: 6
 field_type: entity_reference_revisions
