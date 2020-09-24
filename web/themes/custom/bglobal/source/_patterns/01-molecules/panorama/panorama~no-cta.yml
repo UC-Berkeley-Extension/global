@@ -7,7 +7,7 @@ panorama:
   #      alt: "Alt text here."
 
   body: "The International House, Berkeley is a multi-cultural residence and program center serving students at the University of California, Berkeley."
-  cta:
+  link:
     url: ""
     text: ""
     classes: ""
