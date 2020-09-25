@@ -53,3 +53,8 @@ elseif (empty($settings['config_sync_directory'])) {
 
 // Use correct services.yml file for twig debugging during development.
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.yml';
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+$settings['cache']['bins']['render'] = 'cache.backend.null';
