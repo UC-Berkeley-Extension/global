@@ -1,0 +1,21 @@
+uuid: 780a8f8e-86cb-477d-bd53-8292892a6190
+langcode: en
+status: true
+dependencies:
+  module:
+    - pdb_ng2
+  theme:
+    - bglobal
+id: ng2example
+theme: bglobal
+region: content
+weight: 0
+provider: null
+plugin: 'ng2_component:ng2_example_1'
+settings:
+  id: 'ng2_component:ng2_example_1'
+  label: 'NG2 Example'
+  provider: pdb_ng2
+  label_display: visible
+  pdb_configuration: null
+visibility: {  }
