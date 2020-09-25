@@ -1,0 +1,10 @@
+uuid: 771cf406-ccab-44b7-99ca-b91a90f2ccb2
+langcode: en
+status: true
+dependencies: {  }
+id: panorama
+label: Panorama
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 722a59f6-7209-4aca-ab29-49e8f8ef01d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.panorama
+  module:
+    - text
+id: paragraph.panorama.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: panorama
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

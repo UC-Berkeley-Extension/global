@@ -6,7 +6,7 @@ global:
   version: VERSION
   css:
     theme:
-      css/styles.css: {}
+      dist/css/style.css: {}
   js:
     js/dist/scripts.min.js: {}
   dependencies:
