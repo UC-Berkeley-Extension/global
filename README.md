@@ -81,6 +81,14 @@ And run these from inside the DDEV container:
 
 ## Troubleshooting
 
+If you see this on running `ddev start`: 
+```
+=== Running task: Exec command 'cp /var/www/html/config/settings/settings.ddev.php /var/www/html/web/sites/default' in container/service 'web', output below 
+cp: cannot create regular file '/var/www/html/web/sites/default/settings.ddev.php': Permission denied
+task failed: Exec command 'cp /var/www/html/config/settings/settings.ddev.php /var/www/html/web/sites/default' in container/service 'web': exit status 1 
+```
+Try `chmod -R a+w web/sites/`
+
 If the shell scripts will not execute, it may be because git doesn't include permissions on files.
 
 Run the following commands from your host machine:
