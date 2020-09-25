@@ -1,9 +1,9 @@
 // Styling for Drupal tabs.
 
 // Import site utilities.
-@import '../utils/mixins';
-@import '../utils/breakpoints';
-@import '../utils/colors';
+@import '../utils/_mixins.scss';
+@import '../utils/_breakpoints.scss';
+@import '../utils/_colors.scss';
 
 .tabs {
   list-style: none;
