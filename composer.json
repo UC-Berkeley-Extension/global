@@ -37,6 +37,7 @@
     "drupal/pathauto": "^1.8",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
+    "drupal/views_json_source": "^1.0",
     "drush/drush": "^10.3",
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
