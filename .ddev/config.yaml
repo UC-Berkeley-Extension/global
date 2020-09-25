@@ -12,6 +12,7 @@ mariadb_version: "10.3"
 nfs_mount_enabled: true
 use_dns_when_possible: true
 provider: default
+disable_settings_management: true
 hooks:
   post-start:
   - exec: echo 'Copying configuration files...'
