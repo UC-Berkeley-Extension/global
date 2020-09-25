@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing Page'
 type: landing_page
-description: ''
+description: 'Creates a section front marketing page.'
 help: ''
 new_revision: true
 preview_mode: 1
