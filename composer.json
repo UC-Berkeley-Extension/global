@@ -30,11 +30,12 @@
     "cweagans/composer-patches": "^1.6",
     "drupal/admin_toolbar": "^2.3",
     "drupal/components": "2.0-beta3",
+    "drupal/core": "9.0.6 as 8.9.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
-    "drupal/core-recommended": "^9",
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
+    "drupal/pdb": "^1.0@alpha",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
     "drush/drush": "^10.3",
@@ -49,7 +50,13 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
-    "sort-packages": true
+    "platform": {
+        "php": "7.3"
+    },
+    "sort-packages": true,
+    "preferred-install": {
+        "drupal/pdb": "source"
+    }
   },
   "extra": {
     "drupal-scaffold": {
@@ -89,6 +96,9 @@
     "patches": {
       "drupal/core": {
         "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch"
+      },
+      "drupal/pdb": {
+        "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-06-05/drupal9-ready-3133320-4.patch"
       }
     }
   }
