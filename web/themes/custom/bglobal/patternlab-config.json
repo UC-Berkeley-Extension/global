@@ -44,9 +44,9 @@
     "source": {
       "root": "./source/",
       "patterns": "./source/_patterns/",
-      "data": "./source/data/",
-      "meta": "./source/meta/",
-      "annotations": "./source/annotations/",
+      "data": "./source/styleguide/_data/",
+      "meta": "./source/styleguide/_meta/",
+      "annotations": "./source/styleguide/_annotations/",
       "styleguide": "./dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
@@ -155,7 +155,7 @@
           "id": "macros",
           "recursive": true,
           "paths": [
-            "source/_macros"
+            "source/styleguide/_macros"
           ]
         }
       ],
