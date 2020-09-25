@@ -122,6 +122,14 @@ To get started with Pattern Lab, follow these steps:
 
     `cp -r web/themes/custom/bglobal/public/dist/html web/themes/custom/bglobal/public/styleguide/html`
 
+* If you see an error on the homepage like `Twig\Error\LoaderError: Template "@<%= themeNameMachine %>/message/message.twig" is not defined ` you may need to rebuild the node_modules for the styleguide.
+
+  - From the host machine:
+  - `cd web/themes/custom/bglobal`
+  - `rm -rf node_modules`
+  - `npm install`
+  - `npm start`
+
 # System Requirements
 This setup has been tested with Mac OS X, but may work with other systems.
 These setup steps only need to be run once.
