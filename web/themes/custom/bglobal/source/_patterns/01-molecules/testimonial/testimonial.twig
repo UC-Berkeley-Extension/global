@@ -1,11 +1,9 @@
-<div class="testimonial">
-	<div class="testimonial-image">
-		{{ testimonial.img }}
-	</div>
-	<div class="testimonial-body">
-		{{ testimonial.body }}
-	</div>
-	<div class="testimonial-link">
-		{{ testimonial.link }}
-	</div>
+<div class="img-top d-none d-md-block">
+  <img src="{{ testimonial.img.src }}" class="quote-image" width="170" height="180" alt="{{ testimonial.img.alt }}" />
+  <blockquote>"{{ testimonial.body }}"</blockquote>
+  {% if testimonial.link.url %} 
+    <p><a class="attribution" href="{{ testimonial.link.url }}" target="_blank">&mdash;{{ testimonial.link.text }}</a></p>
+  {% else %}
+    <p class="attribution">&mdash;{{ testimonial.link.text }}</p>
+  {% endif %}
 </div>
