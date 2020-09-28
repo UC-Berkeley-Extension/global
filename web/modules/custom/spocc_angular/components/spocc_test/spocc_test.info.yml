@@ -1,0 +1,9 @@
+name: SPoCC Angular Test
+machine_name: spocc-test
+type: pdb
+description: 'SPoCC Angular test block'
+package: NG2
+version: '1.0.0'
+core_version_requirement: ^8 || ^9
+module_status: active
+presentation: ng2
