@@ -1,0 +1,21 @@
+uuid: f4c710e2-b290-4b9f-bd5e-1c550f24ba88
+langcode: en
+status: true
+dependencies:
+  module:
+    - pdb_ng2
+  theme:
+    - bglobal
+id: spoccangulartest
+theme: bglobal
+region: content
+weight: 0
+provider: null
+plugin: 'ng2_component:spocc_test'
+settings:
+  id: 'ng2_component:spocc_test'
+  label: 'SPoCC Angular Test'
+  provider: pdb_ng2
+  label_display: visible
+  pdb_configuration: null
+visibility: {  }
