@@ -47,12 +47,20 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-	{{ dd(content.field_cta_link) }}
 	{% include '@molecules/testimonial/testimonial.twig' with {
 		'testimonial': {
-			'img': content.field_image,
-			'body': content.field_text,
-			'link': content.field_cta_link,
+			'img': {
+				'src': content.field_image.src,
+				'alt': content.field_image.alt,
+			},
+			'image': content.field_image,
+			'body': content.field_text.0["#text"],
+			'link': {
+				'text': content.field_cta_link.0['#title'],
+				'url': content.field_cta_link.0['#url'],
+			},
 		}
 	} %}
+
+	{# {{ dd(content.field_image) }} #}
 {% endblock %}

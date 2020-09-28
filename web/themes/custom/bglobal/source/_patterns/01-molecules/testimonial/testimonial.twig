@@ -1,9 +1,13 @@
 <div class="img-top d-none d-md-block">
-  <img src="{{ testimonial.img.src }}" class="quote-image" width="170" height="180" alt="{{ testimonial.img.alt }}" />
-  <blockquote>"{{ testimonial.body }}"</blockquote>
-  {% if testimonial.link.url %} 
-    <p><a class="attribution" href="{{ testimonial.link.url }}" target="_blank">&mdash;{{ testimonial.link.text }}</a></p>
+  {# 
+    I couldn't get the image to work this way
+    <img src="{{ testimonial.img.src }}" class="quote-image" width="170" height="180" alt="{{ testimonial.img.alt }}" /> 
+  #}
+  {{ testimonial.image }}
+  <blockquote>"{{ testimonial.body|striptags|trim }}"</blockquote>
+  {% if testimonial.link.url.external or testimonial.link.url.routeName is not same as("<nolink>") %} 
+    <p><a class="attribution" href="{{ testimonial.link.url }}">&mdash;{{ testimonial.link.text }}</a> ({{ testimonial.link.url }})</p>
   {% else %}
-    <p class="attribution">&mdash;{{ testimonial.link.text }}</p>
+    <p class="attribution">&mdash;{{ testimonial.link.text }} ({{testimonial.link.url.routeName}})</p>
   {% endif %}
 </div>
