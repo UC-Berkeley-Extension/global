@@ -1,11 +1,13 @@
 import {Component} from "@angular/core";
-import {Http, HTTP_PROVIDERS} from '@angular2/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 
 @Component({
   moduleId: __moduleName,
   selector: "voices-list",
   templateUrl: 'template.html'
 })
+@Injectable()
 export class VoicesList{
   voices: Object[];
   constructor(http:Http) {
