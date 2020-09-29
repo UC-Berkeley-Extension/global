@@ -43,15 +43,14 @@
 	'paragraph--type-' ~ paragraph.bundle|clean_class,
 	view_mode ? 'paragraph--display-mode-' ~ view_mode|clean_class,
 ] %}
-
 {% set attributes = attributes.addClass(classes) %}
+
 {% set cards = [] %}
 {% for card in content.field_info_cards|children|reverse %}
 	{% set cards = [{
 		'title': card['#paragraph'].field_title.value,
-		'body': card['#paragraph'].field_text.value,
+		'body': card['#paragraph'].field_text.value|striptags,
 	}]|merge(cards) %}
-	{{ dd(card) }}
 {% endfor %}
 
 {% block content %}
@@ -59,6 +58,7 @@
 		'info_row': {
 			'title': content.field_title,
 			'cards': cards,
+			'bg': content.field_background_color.0['#markup'],
 		}
 	} %}
 {% endblock %}
