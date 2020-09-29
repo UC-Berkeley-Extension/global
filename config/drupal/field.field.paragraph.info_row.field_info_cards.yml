@@ -1,20 +1,19 @@
-uuid: ad5e661e-30af-4900-9ffb-ac0e3edc600a
+uuid: d2aa4226-5d7c-4745-abd9-f4c09a2b2d78
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_components
-    - node.type.landing_page
+    - field.storage.paragraph.field_info_cards
+    - paragraphs.paragraphs_type.info_card
     - paragraphs.paragraphs_type.info_row
-    - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
-id: node.landing_page.field_components
-field_name: field_components
-entity_type: node
-bundle: landing_page
-label: Components
-description: ''
+id: paragraph.info_row.field_info_cards
+field_name: field_info_cards
+entity_type: paragraph
+bundle: info_row
+label: 'Info Cards'
+description: 'Must include minimum of 2, maximum of 4 cards.'
 required: false
 translatable: false
 default_value: {  }
@@ -24,21 +23,20 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      panorama: panorama
-      info_row: info_row
+      info_card: info_card
     target_bundles_drag_drop:
       info_card:
-        weight: 6
-        enabled: false
-      info_row:
         enabled: true
+        weight: 6
+      info_row:
         weight: 7
+        enabled: false
       landing_page_components:
-        weight: 3
+        weight: 8
         enabled: false
       panorama:
-        enabled: true
-        weight: 4
+        weight: 9
+        enabled: false
       testimonial:
         weight: 10
         enabled: false
