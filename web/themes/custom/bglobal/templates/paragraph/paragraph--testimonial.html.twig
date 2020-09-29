@@ -47,7 +47,6 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-	{{ dd(content.field_cta_link) }}
 	{% include '@molecules/testimonial/testimonial.twig' with {
 		'testimonial': {
 			'img': content.field_image,

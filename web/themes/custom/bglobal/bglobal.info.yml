@@ -35,3 +35,6 @@ component-libraries:
   pages:
     paths:
       - source/_patterns/04-pages
+  drupal-components:
+    paths:
+      - source/_patterns/05-drupal-components

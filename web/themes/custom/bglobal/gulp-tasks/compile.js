@@ -45,7 +45,7 @@ module.exports = {
 
   // Compile JavaScript.
   compileJS: function () {
-    return src(['./source/_patterns/**/**/*.js'], {base: './'})
+    return src(['./source/js/*.js'], {base: './'})
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(
