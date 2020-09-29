@@ -3,16 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.info_row.field_background_color
     - field.field.paragraph.info_row.field_info_cards
     - field.field.paragraph.info_row.field_title
     - paragraphs.paragraphs_type.info_row
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.info_row.default
 targetEntityType: paragraph
 bundle: info_row
 mode: default
 content:
+  field_background_color:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_info_cards:
     type: entity_reference_revisions_entity_view
     weight: 1

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.info_row.field_background_color
     - field.field.paragraph.info_row.field_info_cards
     - field.field.paragraph.info_row.field_title
     - paragraphs.paragraphs_type.info_row
@@ -13,6 +14,12 @@ targetEntityType: paragraph
 bundle: info_row
 mode: default
 content:
+  field_background_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_info_cards:
     type: entity_reference_paragraphs
     weight: 1
