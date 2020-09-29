@@ -1,7 +1,7 @@
 <div class="info-card">
-	{% if info_card.img %}
+	{% if info_card.src %}
 		<div class="info-card-image">
-			{{ info_card.img }}
+			<img src="{{ info_card.src }}" alt="{{ info_card.alt }}">
 		</div>
 	{% endif %}
 
@@ -17,9 +17,9 @@
 		</div>
 	{% endif %}
 
-	{% if info_card.link %}
+	{% if info_card.link.url %}
 		<div class="info-card-link">
-			{{ info_card.link }}
+			<a href="{{ info_card.link.url }}">{{ info_card.link.text }}</a>
 		</div>
 	{% endif %}
 </div>
