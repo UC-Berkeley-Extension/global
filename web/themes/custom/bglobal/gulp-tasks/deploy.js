@@ -23,7 +23,7 @@ module.exports = {
   // Push build to gh-pages
   createGHPages: function() {
     return deploy.publish(
-      'patternlab',
+      'public',
       function(err) {}
     );
   },
