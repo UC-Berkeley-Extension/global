@@ -18,5 +18,8 @@ export class VoicesList{
       console.log(this.voices);
     });
   }
+  getKeys(obj){
+    return Object.keys(obj)
+  }
 
 }
