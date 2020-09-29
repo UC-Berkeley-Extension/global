@@ -1,0 +1,10 @@
+{%
+	set classes = [
+	'button',
+	modifier_class,
+]
+%}
+
+<a class="{{ classes|join(' ')|trim }}" href="{{ url }}">
+	{{ text }}
+</a>
