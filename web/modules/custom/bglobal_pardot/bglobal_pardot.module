@@ -11,40 +11,12 @@
 function bglobal_pardot_theme() {
   return array(
     'bglobal_pardot_form' => array(
+      // Proof of concept for configurable variables.
       'variables' => [
         'action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
-        'success_message' => 'Success!',
+        'success_message' => NULL,
         'submit_label' => 'Submit',
-        'fields' => [
-          'firstname' => [
-            'label' => 'First Name',
-            'type' => 'text',
-            'required' => TRUE,
-          ],
-          'lastname' => [
-            'label' => 'Last Name',
-            'type' => 'text',
-            'required' => TRUE,
-          ],
-          'email' => [
-            'label' => 'Email',
-            'type' => 'text',
-            'required' => TRUE,
-          ],
-          'status' => [
-            'label' => 'Status',
-            'type' => 'select',
-            'options' => ['Student', 'Professional'],
-            'default_value' => 'Professional',
-          ],
-          'question' => [
-            'label' => 'Question',
-            'type' => 'textarea',
-            'rows' => '5',
-            'cols' => '20',
-            'required' => FALSE,
-          ],
-        ],
+        'fields' => [],
       ],
     ),
   );
@@ -58,7 +30,9 @@ function bglobal_pardot_theme() {
  * @param array $variables
  *   An associative array containing:
  *   - action_url: The form submit URL.
- *   - message: The message to display on success.
+ *   - success_message: The message to display on success.
+ *   - submit_label: The label for the submit button.
+ *   - fields: an array of field information.
  */
 function template_preprocess_bglobal_pardot_form(&$variables) {
   // TODO: page specific variables.

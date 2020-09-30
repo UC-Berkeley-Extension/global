@@ -28,14 +28,41 @@ class PardotFormBlock extends BlockBase {
    * Build the output.
    */
   public function build() {
-    $variables = [
-      'action_url' => 'Action!',
-      'message' => 'My Message',
-    ];
     return [
       '#theme' => 'bglobal_pardot_form',
-      '#action_url' => 'Action!',
-      '#message' => 'Message!',
+      '#action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
+      '#success_message' => 'Success!',
+      '#submit_label' => 'Act Now!',
+      '#fields' => [
+        'firstname' => [
+          'label' => 'First Name',
+          'type' => 'text',
+          'required' => TRUE,
+        ],
+        'lastname' => [
+          'label' => 'Last Name',
+          'type' => 'text',
+          'required' => TRUE,
+        ],
+        'email' => [
+          'label' => 'Email',
+          'type' => 'text',
+          'required' => TRUE,
+        ],
+        'status' => [
+          'label' => 'Status',
+          'type' => 'select',
+          'options' => ['Student', 'Professional'],
+          'default_value' => 'Professional',
+        ],
+        'question' => [
+          'label' => 'Question',
+          'type' => 'textarea',
+          'rows' => '5',
+          'cols' => '20',
+          'required' => FALSE,
+        ],
+      ],
     ];
   }
 
