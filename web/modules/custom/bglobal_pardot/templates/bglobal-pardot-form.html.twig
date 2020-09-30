@@ -6,6 +6,10 @@
  * Available variables:
  * - action_url: The URL to use for form submission.
  * - message: A message to display on form submit.
+ * - fields: An array of fields keyed by the Pardot id of the field.
+ *    - label: the field label
+ *    - type: the field type
+ *    - required: boolean indicator that field is required
  *
  * @see template_preprocess_bglobal_pardot_form()
  *
@@ -14,21 +18,35 @@
 #}
 {% block form %}
 
-  <form action="{{ action_url }}" method="post">
-    <div>
-      <label>First Name</label>
-      <input type="text" name="firstname" required=”required” />
-    </div>
-    <div>
-      <label>Last Name</label>
-      <input type="text" name="lastname" required=”required” />
-    </div>
-    <div>
-      <label>Email Address</label>
-      <input type="email" name="email" required=”required” />
-    </div>
-    <div>
-    <input type="submit" value="submit" required="required" />
+  <form action="{{ action_url }}" method="post" xmlns="http://www.w3.org/1999/html">
+    {% for key, field in fields %}
+      <div class="{{ key }}">
+        <label>
+          {{ field.label }}
+          {% if field.required %} * {% endif %}
+        </label>
+        {% set required = '' %}
+        {% if field.required %}
+          {% set required = 'required="required"' %}
+        {% endif %}
+        {% if field.type == 'textarea' %}
+          <textarea rows={{ field.rows }} cols={{ field.cols }} name="{{ key }}" {{ required }}/></textarea>
+        {% elseif field.type == 'select' %}
+          <select name="{{ key }}" {{ required }} />
+          {% for option in field.options %}
+            {% set selected = '' %}
+            {% if option == field.default_value %}
+              {% set selected = 'selected' %}
+            {% endif %}
+            <option value="{{ option }}" {{ selected }}>{{ option }}</option>
+          {% endfor %}
+          </select>
+        {% else %}
+          <input type="{{ field.type }}" name="{{ key }}" {{ required }}/>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <input type="submit" value="{{ submit_label }}" />
     </div>
   </form>
 
