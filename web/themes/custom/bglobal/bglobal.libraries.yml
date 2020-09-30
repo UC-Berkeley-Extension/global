@@ -7,8 +7,9 @@ global:
   css:
     theme:
       dist/css/style.css: {}
+      dist/fonts/: {}
   js:
-    js/dist/scripts.min.js: {}
+    js/dist/: {}
   dependencies:
     - core/drupal
     - core/drupalSettings

@@ -44,9 +44,9 @@
     "source": {
       "root": "./source/",
       "patterns": "./source/_patterns/",
-      "data": "./source/data/",
-      "meta": "./source/meta/",
-      "annotations": "./source/annotations/",
+      "data": "./source/styleguide/_data/",
+      "meta": "./source/styleguide/_meta/",
+      "annotations": "./source/styleguide/_annotations/",
       "styleguide": "./dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
@@ -145,10 +145,17 @@
           ]
         },
         {
+          "id": "drupal-components",
+          "recursive": true,
+          "paths": [
+            "source/_patterns/05-drupal-components"
+          ]
+        },
+        {
           "id": "macros",
           "recursive": true,
           "paths": [
-            "source/_macros"
+            "source/styleguide/_macros"
           ]
         }
       ],
@@ -157,6 +164,102 @@
           "file": "alter-twig.php",
           "functions": [
             "addCustomExtension"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/clean_class.filter.php",
+          "functions": [
+            "addCleanClassFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/clean_id.filter.php",
+          "functions": [
+            "addCleanIdFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/format_date.filter.php",
+          "functions": [
+            "addFormatDateFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/placeholder.filter.php",
+          "functions": [
+            "addPlaceholderFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/render.filter.php",
+          "functions": [
+            "addRenderFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/safe_join.filter.php",
+          "functions": [
+            "addSafeJoinFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/t.filter.php",
+          "functions": [
+            "addTFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/without.filter.php",
+          "functions": [
+            "addWithoutFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/keysort.filter.php",
+          "functions": [
+            "addKeySortFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/filters/unique_id.filter.patternlab.php",
+          "functions": [
+            "addUniqueIdFilter"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/add_attributes.function.patternlab.php",
+          "functions": [
+            "addAddAttributesFunction"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/attach_library.function.php",
+          "functions": [
+            "addAttachLibraryFunction"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/link.function.php",
+          "functions": [
+            "addLinkFunction"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/path.function.php",
+          "functions": [
+            "addPathFunction"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/url.function.php",
+          "functions": [
+            "addUrlFunction"
+          ]
+        },
+        {
+          "file": "source/styleguide/_twig-components/functions/create_attribute.function.php",
+          "functions": [
+            "addCreateAttributeFunction"
           ]
         }
       ]
