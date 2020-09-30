@@ -28,10 +28,14 @@ class PardotFormBlock extends BlockBase {
    * Build the output.
    */
   public function build() {
-    $items = ['foo', 'bar'];
+    $variables = [
+      'action_url' => 'Action!',
+      'message' => 'My Message',
+    ];
     return [
-      '#theme' => 'item_list',
-      '#items' => $items,
+      '#theme' => 'bglobal_pardot_form',
+      '#action_url' => 'Action!',
+      '#message' => 'Message!',
     ];
   }
 

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Pardot form.
+ *
+ * Available variables:
+ * - action_url: The URL to use for form submission.
+ * - message: A message to display on form submit.
+ *
+ * @see template_preprocess_bglobal_pardot_form()
+ *
+ * @ingroup themeable
+ */
+#}
+{% block form %}
+
+  {{ action_url }}
+  {{ message }}
+
+{% endblock form %}

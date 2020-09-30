@@ -4,3 +4,31 @@
  * @file
  * Drupal hook implementations.
  */
+
+/**
+ * Implements hook_theme().
+ */
+function bglobal_pardot_theme() {
+  return array(
+    'bglobal_pardot_form' => array(
+      'variables' => [
+        'action_url' => 'action_url',
+        'message' => 'Success',
+      ],
+    ),
+  );
+}
+
+/**
+ * Prepares variables for Pardot form templates.
+ *
+ * Default template: bglobal-pardot-form.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - action_url: The form submit URL.
+ *   - message: The message to display on success.
+ */
+function template_preprocess_bglobal_pardot_form(&$variables) {
+  // TODO: page specific variables.
+}
