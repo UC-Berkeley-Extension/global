@@ -40,6 +40,7 @@
     "drupal/term_condition": "1.x-dev",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
+    "drupal/viewsreference": "^2.0",
     "drush/drush": "^10.3",
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },

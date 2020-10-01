@@ -311,3 +311,19 @@ display:
       tags:
         - 'config:field.storage.taxonomy_term.field_microsite_school_login_url'
         - 'config:field.storage.taxonomy_term.field_microsite_school_logo'
+  embed_1:
+    display_plugin: embed
+    id: embed_1
+    display_title: Embed
+    position: 2
+    display_options:
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_microsite_school_login_url'
+        - 'config:field.storage.taxonomy_term.field_microsite_school_logo'
