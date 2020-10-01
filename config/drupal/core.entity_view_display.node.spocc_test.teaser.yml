@@ -1,0 +1,32 @@
+uuid: 5271ca10-68a8-4770-84af-fde51648721f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.spocc_test.body
+    - field.field.node.spocc_test.field_course_id
+    - node.type.spocc_test
+  module:
+    - text
+    - user
+id: node.spocc_test.teaser
+targetEntityType: node
+bundle: spocc_test
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_course_id: true

@@ -1,0 +1,23 @@
+uuid: 1d024dd2-b900-4b75-9a10-d6e48a14c25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_id
+    - node.type.spocc_test
+id: node.spocc_test.field_course_id
+field_name: field_course_id
+entity_type: node
+bundle: spocc_test
+label: 'Course IDs'
+description: 'Enter the course ObjectID from Destiny.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

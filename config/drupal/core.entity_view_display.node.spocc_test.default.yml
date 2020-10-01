@@ -1,0 +1,38 @@
+uuid: 670632fc-e44f-42f2-8104-40926f3cb2b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.spocc_test.body
+    - field.field.node.spocc_test.field_course_id
+    - node.type.spocc_test
+  module:
+    - text
+    - user
+id: node.spocc_test.default
+targetEntityType: node
+bundle: spocc_test
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_course_id:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
