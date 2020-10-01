@@ -10,6 +10,7 @@ Right now, this module will create:
 * 2 media items that contain those images
 * 2 Taxonomy terms in the 'school' vocabulary
 * 1 Article node assigned to the school vocabulary.
+* 1 View page node assigned to the school vocabulary.
 
 The module is enabled as part of the site `setup.sh` process.
 
