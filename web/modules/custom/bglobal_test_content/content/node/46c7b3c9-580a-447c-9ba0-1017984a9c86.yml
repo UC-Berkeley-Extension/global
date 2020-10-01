@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 46c7b3c9-580a-447c-9ba0-1017984a9c86
+  bundle: view_page
+  default_langcode: en
+  depends:
+    5da523c5-e0eb-4c0d-b387-cb1810c9c85d: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Test View page'
+  created:
+    -
+      value: 1601584486
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  body:
+    -
+      value: "<p>This is a View page.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_ref_views_embed:
+    -
+      target_id: test_content_vuew
+      display_id: embed_1
+      data: 'a:5:{s:5:"pager";s:0:"";s:8:"argument";s:0:"";s:5:"limit";s:0:"";s:6:"offset";s:0:"";s:5:"title";i:0;}'
+  field_term_ref_school_microsite:
+    -
+      entity: 5da523c5-e0eb-4c0d-b387-cb1810c9c85d

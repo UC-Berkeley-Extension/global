@@ -23,7 +23,7 @@ This command will re-export all of the content defined in this module's info.yml
 
 You can export one piece of content at a time if you prefer:
 
-`drush dcer TYPE ID` e.g. `drush dcer node 4`
+`drush dce TYPE ID` e.g. `drush dce node 4`
 
 Then find the UUID of the output and edit that file inside this module's `content` directory.
 
@@ -31,7 +31,7 @@ Then find the UUID of the output and edit that file inside this module's `conten
 
 To add content, run the following:
 
-`drush dcer TYPE ID` e.g. `drush dcer node 4`
+`drush dce TYPE ID` e.g. `drush dce node 4`
 
 This will output YML in the terminal that looks like so:
 
