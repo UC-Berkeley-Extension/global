@@ -1,0 +1,19 @@
+name: 'Berkeley Global default content'
+type: module
+description: 'Imports default content for Berkeley Global.'
+package: Web services
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:default_content
+default_content:
+  file:
+    - a84b19bc-bc7b-4295-94ba-70d6de5fcdbc
+    - 5d6bf7ec-3227-4d30-bb46-b135855b997a
+  media:
+    - 745c714d-1a01-4538-a70c-12abed532fa0
+    - 018526b4-fde5-45c0-a2fd-a818be6f9f68
+  node:
+    - 5fa3b8c8-556d-4cba-8fb9-314783c93d80-
+  taxonomy_term:
+    - 4f64c2b0-36fd-436f-bb06-12c0b1724d8c
+    - 5da523c5-e0eb-4c0d-b387-cb1810c9c85d

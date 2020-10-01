@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a84b19bc-bc7b-4295-94ba-70d6de5fcdbc
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: bglobal-temp-logo.png
+  uri:
+    -
+      value: 'public://2020-10/bglobal-temp-logo.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 8976
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1601564730

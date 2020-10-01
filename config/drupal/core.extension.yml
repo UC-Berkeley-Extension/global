@@ -2,6 +2,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
+  bglobal_test_content: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -15,6 +16,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  default_content: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
@@ -23,6 +25,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   image: 0
   link: 0
@@ -37,6 +40,7 @@ module:
   path_alias: 0
   rdf: 0
   search: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
