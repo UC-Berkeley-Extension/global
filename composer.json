@@ -93,7 +93,7 @@
         "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch"
       },
       "drupal/term_condition": {
-        "Drupal 9 readiness": "https://www.drupal.org/files/issues/2020-05-12/3133793-2.patch"
+        "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
       }
     }
   }
