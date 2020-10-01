@@ -1,0 +1,33 @@
+uuid: ba8a5d88-e106-4ca9-bf5d-e7806ba816c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_ref_school_microsite
+    - node.type.article
+    - taxonomy.vocabulary.school
+  content:
+    - 'taxonomy_term:school:4f64c2b0-36fd-436f-bb06-12c0b1724d8c'
+id: node.article.field_term_ref_school_microsite
+field_name: field_term_ref_school_microsite
+entity_type: node
+bundle: article
+label: 'School Microsite'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 4f64c2b0-36fd-436f-bb06-12c0b1724d8c
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      school: school
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
