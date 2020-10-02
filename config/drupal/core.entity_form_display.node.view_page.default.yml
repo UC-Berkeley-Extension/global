@@ -1,59 +1,43 @@
-uuid: 05728ec6-cf4e-467e-8899-aafb3f36c81f
+uuid: b4f4c65d-c084-4fb3-9c7e-59aec7c632c4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - field.field.node.article.field_term_ref_school_microsite
-    - image.style.thumbnail
-    - node.type.article
+    - field.field.node.view_page.body
+    - field.field.node.view_page.field_ref_views_embed
+    - field.field.node.view_page.field_term_ref_school_microsite
+    - node.type.view_page
   module:
-    - image
     - path
     - text
-_core:
-  default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
-id: node.article.default
+    - viewsreference
+id: node.view_page.default
 targetEntityType: node
-bundle: article
+bundle: view_page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
-    region: content
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 4
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+  field_ref_views_embed:
+    weight: 26
+    settings: {  }
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
+    type: viewsreference_select
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_term_ref_school_microsite:
     weight: 1
     settings: {  }
@@ -62,7 +46,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -70,21 +54,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -97,12 +81,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
-    region: content
+    weight: 2
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
+      match_limit: 10
+    region: content
     third_party_settings: {  }
 hidden: {  }

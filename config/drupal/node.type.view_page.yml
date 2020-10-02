@@ -1,0 +1,18 @@
+uuid: fe657cfb-6f39-45b4-839c-cd2ee8ba81c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'View Page'
+type: view_page
+description: 'Create a View page to hold content lists that need contextual presentation.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

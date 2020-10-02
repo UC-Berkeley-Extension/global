@@ -1,0 +1,51 @@
+uuid: fcb3c601-8000-40db-8cb8-bc0c95323227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_views_embed
+    - node.type.view_page
+  module:
+    - viewsreference
+id: node.view_page.field_ref_views_embed
+field_name: field_ref_views_embed
+entity_type: node
+bundle: view_page
+label: 'Views Embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    embed: embed
+    default: 0
+    page: 0
+    block: 0
+    feed: 0
+  preselect_views:
+    block_content: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    school_demo: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    pager: pager
+    argument: argument
+    limit: limit
+    offset: offset
+    title: title
+field_type: viewsreference

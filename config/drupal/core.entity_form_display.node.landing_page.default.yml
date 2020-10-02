@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_term_ref_school_microsite
     - node.type.landing_page
   module:
     - paragraphs
@@ -15,7 +16,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -38,9 +39,15 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
+  field_term_ref_school_microsite:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -48,21 +55,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -75,7 +82,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

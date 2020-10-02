@@ -1,0 +1,24 @@
+uuid: 39d887dd-e981-4232-a77e-128e9270d268
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.school_demo
+  module:
+    - views
+  theme:
+    - bglobal
+id: views_block__school_demo_block_1
+theme: bglobal
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:school_demo-block_1'
+settings:
+  id: 'views_block:school_demo-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

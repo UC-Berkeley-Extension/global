@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 4f64c2b0-36fd-436f-bb06-12c0b1724d8c
+  bundle: school
+  default_langcode: en
+  depends:
+    745c714d-1a01-4538-a70c-12abed532fa0: media
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Berkeley Global Access'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_microsite_school_login_url:
+    -
+      uri: 'https://extension.berkeley.edu/portal/logon.do?method=load'
+      title: 'Student Login'
+      options: {  }
+  field_microsite_school_logo:
+    -
+      entity: 745c714d-1a01-4538-a70c-12abed532fa0
