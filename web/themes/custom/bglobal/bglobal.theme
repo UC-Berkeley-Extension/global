@@ -15,7 +15,7 @@ function bglobal_theme_suggestions_page_alter(array &$suggestions, array $variab
     // Get the taxonomy term.
     if ($node->hasField('field_term_ref_school_microsite') && $node->get('field_term_ref_school_microsite')->getValue()) {
       $term = $node->get('field_term_ref_school_microsite')->first()->entity;
-      $suggestions[] = 'page__node__' . $content_type . '__school_' . $term->id();
+      $suggestions[] = 'page__' . 'school_' . $term->id();
     } else {
       $suggestions[] = 'page__node__' . $content_type;
     }

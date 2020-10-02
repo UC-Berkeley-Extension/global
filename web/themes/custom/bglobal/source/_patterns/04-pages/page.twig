@@ -1,11 +1,12 @@
-<div id="page-wrapper" class="{{ classes }}">
+<div id="page-wrapper" {% if modifier_class %}class="{{ modifier_class }}"{% endif %}>
 	<div id="page">
-		<header id="header">
-			{% block header %}
+		{% block header %}
+			<header id="header">
 				{% embed "@organisms/header/header.twig" %}
 				{% endembed %}
-			{% endblock %}
-		</header>
+				{# {{ page.header }} #}
+			</header>
+		{% endblock %}
 
 		<div id="main" class="container">
 			<main class="main-content" role="main">
@@ -14,10 +15,6 @@
 				<div class="content container">
 					{# used for alerts and other drupal messages #}
 					{% block highlighted %}
-
-					{% endblock %}
-
-					{% block page_header %}
 
 					{% endblock %}
 
