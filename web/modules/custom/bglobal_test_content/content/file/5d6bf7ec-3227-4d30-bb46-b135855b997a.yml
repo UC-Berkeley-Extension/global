@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5d6bf7ec-3227-4d30-bb46-b135855b997a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hass-temp-logo.png
+  uri:
+    -
+      value: 'public://2020-10/hass-temp-logo.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 10450
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1601564814

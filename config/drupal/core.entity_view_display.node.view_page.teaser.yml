@@ -1,19 +1,19 @@
-uuid: 5d93d54d-ee32-41bf-b4c4-b6cfd4c2f743
+uuid: e3ae715a-63c0-4036-a830-e2568658e46a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_components
-    - field.field.node.landing_page.field_term_ref_school_microsite
-    - node.type.landing_page
+    - field.field.node.view_page.body
+    - field.field.node.view_page.field_ref_views_embed
+    - field.field.node.view_page.field_term_ref_school_microsite
+    - node.type.view_page
   module:
     - text
     - user
-id: node.landing_page.teaser
+id: node.view_page.teaser
 targetEntityType: node
-bundle: landing_page
+bundle: view_page
 mode: teaser
 content:
   body:
@@ -30,5 +30,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_components: true
+  field_ref_views_embed: true
   field_term_ref_school_microsite: true

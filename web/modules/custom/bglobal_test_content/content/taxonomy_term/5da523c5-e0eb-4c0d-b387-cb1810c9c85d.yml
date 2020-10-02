@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 5da523c5-e0eb-4c0d-b387-cb1810c9c85d
+  bundle: school
+  default_langcode: en
+  depends:
+    018526b4-fde5-45c0-a2fd-a818be6f9f68: media
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Hass Global Access'
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_microsite_school_login_url:
+    -
+      uri: 'https://extension.berkeley.edu/international/academic/bhgap/#'
+      title: Login
+      options: {  }
+  field_microsite_school_logo:
+    -
+      entity: 018526b4-fde5-45c0-a2fd-a818be6f9f68
