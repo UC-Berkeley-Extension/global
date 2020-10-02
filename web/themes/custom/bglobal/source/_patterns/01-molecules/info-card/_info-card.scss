@@ -1,0 +1,30 @@
+.info-card {
+  max-width: 300px;
+  text-align: center;
+}
+
+.info-card-title {
+  font-family: $font-bitter;
+  font-size: $font-size-med-2;
+  margin-top: 1em;
+}
+
+.info-card-body {
+  margin-top: 1em;
+}
+
+.info-card-image {
+  margin: 0 auto;
+  width: 150px;
+
+  & img {
+    border-radius: 50%;
+  }
+}
+
+.info-card-link {
+  font-size: $font-size-small-2;
+  font-style: italic;
+  text-decoration: underline;
+  margin-top: 1em;
+}

@@ -1,0 +1,10 @@
+uuid: 257bc8df-a10e-4dff-8c73-84982471906f
+langcode: en
+status: true
+dependencies: {  }
+id: info_card
+label: 'Info Card'
+icon_uuid: null
+icon_default: null
+description: 'Info Card paragraph component is used in Info Row component to display an image, title, body, and link.'
+behavior_plugins: {  }

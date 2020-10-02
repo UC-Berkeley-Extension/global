@@ -1,0 +1,36 @@
+.info-row {
+  padding: 3em 0;
+}
+
+.info-row-gray {
+  background-color: $gray;
+}
+
+.info-row-teal {
+  background-color: $info-row-teal;
+
+  .info-card-title,
+  .info-card-body,
+  .info-card-link a,
+  .info-row-title {
+    color: $white;
+  }
+}
+
+.info-row-title {
+  text-align: center;
+  font-size: 2em;
+}
+
+.info-row-cards {
+  @include breakpoint($bp-large) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .info-card {
+    flex: 0 1 20%;
+  }
+}

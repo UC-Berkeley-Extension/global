@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.body
     - field.field.node.landing_page.field_components
     - field.field.node.landing_page.field_term_ref_school_microsite
     - node.type.landing_page
@@ -33,5 +32,4 @@ content:
     type: entity_reference_label
     region: content
 hidden:
-  body: true
   links: true

@@ -1,0 +1,25 @@
+<div class="info-card">
+	{% if info_card.src %}
+		<div class="info-card-image">
+			<img src="{{ info_card.src }}" alt="{{ info_card.alt }}">
+		</div>
+	{% endif %}
+
+	{% if info_card.title %}
+		<h3 class="info-card-title">
+			{{ info_card.title }}
+		</h3>
+	{% endif %}
+
+	{% if info_card.body %}
+		<div class="info-card-body">
+			{{ info_card.body }}
+		</div>
+	{% endif %}
+
+	{% if info_card.link.url %}
+		<div class="info-card-link">
+			<a href="{{ info_card.link.url }}">{{ info_card.link.text }}</a>
+		</div>
+	{% endif %}
+</div>
