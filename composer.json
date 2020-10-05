@@ -37,6 +37,7 @@
     "drupal/default_content": "^2.0@alpha",
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
+    "drupal/pdb": "^1.0@alpha",
     "drupal/term_condition": "1.x-dev",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
@@ -53,7 +54,13 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
-    "sort-packages": true
+    "platform": {
+        "php": "7.3"
+    },
+    "sort-packages": true,
+    "preferred-install": {
+        "drupal/pdb": "source"
+    }
   },
   "extra": {
     "drupal-scaffold": {
@@ -93,6 +100,9 @@
     "patches": {
       "drupal/core": {
         "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch"
+      },
+      "drupal/pdb": {
+        "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-09-25/drupal9-ready-3133320-6.patch"
       },
       "drupal/term_condition": {
         "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
