@@ -1,4 +1,7 @@
 #!/bin/bash
+echo 'Installing Angular elements...'
+cd /var/www/html/web/modules/contrib/pdb/modules/pdb_ng2
+npm install 2>/dev/null
 # be in the right directory
 cd /var/www/html
 echo 'Copying settings file...'
