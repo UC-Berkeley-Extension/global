@@ -51,7 +51,7 @@ function bglobal_get_active_microsite() {
       if ($term->hasField('field_microsite_theme_name')) {
         $name = current($term->get('field_microsite_theme_name')->getValue());
         if (!empty($name['value']) && $name['value'] !== 'default-theme') {
-          $theme_name = $name['value'];
+          $theme_name = strtolower(str_replace(['_', ' '], '-', $name['value']));
         }
       }
     }
