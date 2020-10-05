@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.school.field_microsite_school_login_url
     - field.field.taxonomy_term.school.field_microsite_school_logo
+    - field.field.taxonomy_term.school.field_microsite_theme_name
     - taxonomy.vocabulary.school
   module:
     - link
@@ -41,5 +42,13 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_microsite_theme_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

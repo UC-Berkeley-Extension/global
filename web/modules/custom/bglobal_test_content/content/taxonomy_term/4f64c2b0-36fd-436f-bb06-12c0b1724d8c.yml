@@ -35,3 +35,6 @@ default:
   field_microsite_school_logo:
     -
       entity: 745c714d-1a01-4538-a70c-12abed532fa0
+  field_microsite_theme_name:
+    -
+      value: default-theme
