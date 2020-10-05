@@ -1,0 +1,9 @@
+name: 'Angular: Voices Post List'
+machine_name: voices-list
+type: pdb
+description: 'Voices List angular template'
+package: NG2
+version: '1.0.0'
+core_version_requirement: ^8 || ^9
+module_status: active
+presentation: ng2
