@@ -35,3 +35,6 @@ default:
   field_microsite_school_logo:
     -
       entity: 018526b4-fde5-45c0-a2fd-a818be6f9f68
+  field_microsite_theme_name:
+    -
+      value: hass
