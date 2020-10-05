@@ -2,27 +2,27 @@
   padding: 3em 0;
 }
 
-.info-row-gray {
+.info-row--gray {
   background-color: $gray;
 }
 
-.info-row-teal {
+.info-row--teal {
   background-color: $info-row-teal;
 
-  .info-card-title,
-  .info-card-body,
-  .info-card-link a,
-  .info-row-title {
+  .info-card__title,
+  .info-card__body,
+  .info-card__link a,
+  .info-row__title {
     color: $white;
   }
 }
 
-.info-row-title {
+.info-row__title {
   text-align: center;
   font-size: 2em;
 }
 
-.info-row-cards {
+.info-row__cards {
   @include breakpoint($bp-large) {
     display: flex;
     justify-content: space-evenly;
