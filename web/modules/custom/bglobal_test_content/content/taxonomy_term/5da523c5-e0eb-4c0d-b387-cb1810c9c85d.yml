@@ -12,7 +12,7 @@ default:
       value: true
   name:
     -
-      value: 'Hass Global Access'
+      value: 'Haas Global Access'
   weight:
     -
       value: 0
@@ -37,4 +37,4 @@ default:
       entity: 018526b4-fde5-45c0-a2fd-a818be6f9f68
   field_microsite_theme_name:
     -
-      value: hass
+      value: haas
