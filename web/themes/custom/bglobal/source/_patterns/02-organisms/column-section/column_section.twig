@@ -1,0 +1,17 @@
+<section class="column-section column-section--{{ column_section.bg }}">
+	{% if column_section.title %}
+		<h2 class="column-section-title">
+			{{ column_section.title }}
+		</h2>
+	{% endif %}
+
+	<div class="column-section__items container">
+		{% for item in column_section.items %}
+			<div class="column-section__item">
+				{% block column_section_item %}
+
+				{% endblock %}
+			</div>
+		{% endfor %}
+	</div>
+</section>
