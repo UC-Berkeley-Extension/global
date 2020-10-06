@@ -6,10 +6,11 @@
 	{% endif %}
 
 	<div class="column-section__items container">
-		{% for item in column_section.items %}
-			<div class="column-section__item">
-				{{ item }}
-			</div>
-		{% endfor %}
+{#		{% for item in column_section.items %}#}
+{#			<div class="column-section__item">#}
+{#				{{ item }}#}
+{#			</div>#}
+{#		{% endfor %}#}
+		{{ items }}
 	</div>
 </section>
