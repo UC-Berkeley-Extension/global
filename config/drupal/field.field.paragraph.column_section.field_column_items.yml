@@ -1,22 +1,21 @@
-uuid: ad5e661e-30af-4900-9ffb-ac0e3edc600a
+uuid: 6e13d1d4-50c2-403b-b155-a005b74e16ee
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_components
-    - node.type.landing_page
+    - field.storage.paragraph.field_column_items
+    - paragraphs.paragraphs_type.body_copy
     - paragraphs.paragraphs_type.column_section
-    - paragraphs.paragraphs_type.info_row
-    - paragraphs.paragraphs_type.panorama
+    - paragraphs.paragraphs_type.video_embed
   module:
     - entity_reference_revisions
-id: node.landing_page.field_components
-field_name: field_components
-entity_type: node
-bundle: landing_page
-label: Components
+id: paragraph.column_section.field_column_items
+field_name: field_column_items
+entity_type: paragraph
+bundle: column_section
+label: 'Column Items'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -25,29 +24,28 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      panorama: panorama
-      info_row: info_row
-      column_section: column_section
+      body_copy: body_copy
+      video_embed: video_embed
     target_bundles_drag_drop:
       body_copy:
+        enabled: true
         weight: 8
-        enabled: false
       column_section:
-        enabled: true
         weight: 9
-      info_card:
-        weight: 6
         enabled: false
-      info_row:
-        enabled: true
-        weight: 7
-      panorama:
-        enabled: true
-        weight: 4
-      testimonial:
+      info_card:
         weight: 10
         enabled: false
-      video_embed:
-        weight: 14
+      info_row:
+        weight: 11
         enabled: false
+      panorama:
+        weight: 12
+        enabled: false
+      testimonial:
+        weight: 13
+        enabled: false
+      video_embed:
+        enabled: true
+        weight: 14
 field_type: entity_reference_revisions
