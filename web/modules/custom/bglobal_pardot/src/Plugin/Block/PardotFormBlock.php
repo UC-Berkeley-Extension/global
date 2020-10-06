@@ -28,7 +28,7 @@ class PardotFormBlock extends BlockBase {
    * Build the output.
    */
   public function build() {
-    return [
+    $build = [
       '#theme' => 'bglobal_pardot_form',
       '#action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
       '#success_message' => 'Success!',
@@ -83,6 +83,9 @@ class PardotFormBlock extends BlockBase {
         'full_path',
       ],
     ];
+    $build['#attached']['library'][] = 'bglobal_pardot/drupal.bglobal_pardot';
+
+    return $build;
   }
 
   /**
