@@ -1,6 +1,6 @@
-info_row:
+column_section:
 
-  cards:
+  items:
     - img: |-
         <img src="https://picsum.photos/id/122/250/250" alt="alt text here">
       title: "Industry Growth"
@@ -14,5 +14,3 @@ info_row:
       body: "Vestibulum lacinia augue lorem, sed venenatis arcu vulputate non."
       link: |-
         <a href='#'>Integer libero ante, consectetur quis turpis a, aliquam posuere metus</a>
-
-  bg: "teal"

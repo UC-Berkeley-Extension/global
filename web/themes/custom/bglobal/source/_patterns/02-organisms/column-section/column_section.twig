@@ -8,9 +8,7 @@
 	<div class="column-section__items container">
 		{% for item in column_section.items %}
 			<div class="column-section__item">
-				{% block column_section_item %}
-					{{ item }}
-				{% endblock %}
+				{{ item }}
 			</div>
 		{% endfor %}
 	</div>
