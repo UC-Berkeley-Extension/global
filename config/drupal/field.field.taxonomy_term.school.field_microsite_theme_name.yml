@@ -1,0 +1,21 @@
+uuid: d86d240e-f4b1-4c80-97a1-41f505011d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_microsite_theme_name
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.field_microsite_theme_name
+field_name: field_microsite_theme_name
+entity_type: taxonomy_term
+bundle: school
+label: 'Microsite Theme Name'
+description: "The name used by templates to vary presentation of content tagged for this microsite.<br />\r\n\r\nThe name is limited to 15 characters and should be lowercase with no spaces.<br />\r\n\r\nUse <strong>default-theme</strong> to use the base Berkeley Global theme.<br />\r\n\r\n<strong>Once entered, this field cannot be changed without updating your theme.</strong>"
+required: true
+translatable: false
+default_value:
+  -
+    value: default-theme
+default_value_callback: ''
+settings: {  }
+field_type: string

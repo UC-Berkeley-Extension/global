@@ -1,0 +1,29 @@
+uuid: 74af2d38-ea77-4ee4-b8e1-ff45f5c0c257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_microsite_school_logo
+    - media.type.image
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.field_microsite_school_logo
+field_name: field_microsite_school_logo
+entity_type: taxonomy_term
+bundle: school
+label: 'School Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: created
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

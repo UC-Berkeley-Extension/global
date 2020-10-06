@@ -4,3 +4,57 @@
  * @file
  * Functions to support theming.
  */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bglobal_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  if ($theme_name = bglobal_get_active_microsite()) {
+    $suggestions[] = 'html__' . 'school_' . $theme_name;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bglobal_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($theme_name = bglobal_get_active_microsite()) {
+    $suggestions[] = 'page__' . 'school_' . $theme_name;
+    $suggestions[] = 'page__node__' . $content_type . '__school_' . $theme_name;
+  }
+}
+
+/**
+ * Derive the active sub-theme for this request.
+ *
+ * This function can be used as a lookup by any theme alter hook that needs to
+ * make template suggestions for variation by school. The lookup will run the
+ * first time this function is invoked and cache the result for the rest of the
+ * request.
+ *
+ * @return string
+ *   A string name for the sub-theme (e.g. 'hass').
+ */
+function bglobal_get_active_microsite() {
+  static $theme_name = NULL;
+  if (!is_null($theme_name)) {
+    return $theme_name;
+  }
+  $theme_name = '';
+  /** @var \Drupal\node\NodeInterface $node */
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    // Get the taxonomy term.
+    if ($node->hasField('field_term_ref_school_microsite') && $node->get('field_term_ref_school_microsite')->getValue()) {
+      /** @var \Drupal\taxonomy\TermInterface $term */
+      $term = $node->get('field_term_ref_school_microsite')->first()->entity;
+      if ($term->hasField('field_microsite_theme_name')) {
+        $name = current($term->get('field_microsite_theme_name')->getValue());
+        if (!empty($name['value']) && $name['value'] !== 'default-theme') {
+          $theme_name = strtolower(str_replace(['_', ' '], '-', $name['value']));
+        }
+      }
+    }
+  }
+  return $theme_name;
+}

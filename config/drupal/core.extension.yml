@@ -16,6 +16,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  default_content: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
@@ -24,6 +25,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   image: 0
   link: 0
@@ -38,9 +40,11 @@ module:
   path_alias: 0
   rdf: 0
   search: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
+  term_condition: 0
   text: 0
   token: 0
   toolbar: 0
@@ -50,6 +54,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  viewsreference: 0
   pathauto: 1
   views: 10
   paragraphs: 11

@@ -1,0 +1,23 @@
+uuid: 2485c411-f46f-4253-867f-c86698404c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_microsite_school_login_url
+    - taxonomy.vocabulary.school
+  module:
+    - link
+id: taxonomy_term.school.field_microsite_school_login_url
+field_name: field_microsite_school_login_url
+entity_type: taxonomy_term
+bundle: school
+label: 'School Login URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

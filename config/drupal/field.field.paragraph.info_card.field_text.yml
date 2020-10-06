@@ -1,0 +1,21 @@
+uuid: ecf3fa9a-8e46-41d0-9903-2b0a2e4fc96f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.info_card
+  module:
+    - text
+id: paragraph.info_card.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: info_card
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -5,7 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.landing_page
-    - paragraphs.paragraphs_type.landing_page_components
+    - paragraphs.paragraphs_type.info_row
+    - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
 id: node.landing_page.field_components
@@ -23,12 +24,22 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      landing_page_components: landing_page_components
+      panorama: panorama
+      info_row: info_row
     target_bundles_drag_drop:
-      landing_page_components:
+      info_card:
+        weight: 6
+        enabled: false
+      info_row:
         enabled: true
+        weight: 7
+      landing_page_components:
         weight: 3
+        enabled: false
       panorama:
+        enabled: true
         weight: 4
+      testimonial:
+        weight: 10
         enabled: false
 field_type: entity_reference_revisions
