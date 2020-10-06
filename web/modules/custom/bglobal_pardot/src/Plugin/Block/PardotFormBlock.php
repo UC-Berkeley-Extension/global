@@ -79,7 +79,7 @@ class PardotFormBlock extends BlockBase {
       ],
       '#tracking' => [
         'page_title',
-        'program_name',
+        #'program_name',
         'full_path',
       ],
     ];
