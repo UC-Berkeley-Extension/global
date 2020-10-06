@@ -46,11 +46,16 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% block content %}
-	{% include '@organisms/column-section/column-section.twig' with {
+	{% embed '@organisms/column-section/column-section.twig' with {
 		'column_section': {
 			'title': content.field_title,
 			'bg': content.field_background_color.0['#markup'],
 		},
-		'items': content.field_column_items|children,
 	} %}
+
+		{% block column_section_items %}
+			{{ content.field_column_items|children }}
+		{% endblock %}
+
+	{% endembed %}
 {% endblock %}

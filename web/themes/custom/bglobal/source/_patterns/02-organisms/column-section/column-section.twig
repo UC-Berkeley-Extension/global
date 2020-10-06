@@ -1,16 +1,14 @@
-<section class="column-section column-section--{{ column_section.bg }}">
+<section class="column-section {% if column_section.bg %}column-section--{{ column_section.bg }}{% endif %}">
 	{% if column_section.title %}
-		<h2 class="column-section-title">
+		<h2 class="column-section__title container">
 			{{ column_section.title }}
 		</h2>
 	{% endif %}
 
 	<div class="column-section__items container">
-{#		{% for item in column_section.items %}#}
-{#			<div class="column-section__item">#}
-{#				{{ item }}#}
-{#			</div>#}
-{#		{% endfor %}#}
-		{{ items }}
+		{% block column_section_items %}
+			{% include '@molecules/body-copy/body-copy.twig' %}
+			{% include '@molecules/video-embed/video-embed.twig' %}
+		{% endblock %}
 	</div>
 </section>
