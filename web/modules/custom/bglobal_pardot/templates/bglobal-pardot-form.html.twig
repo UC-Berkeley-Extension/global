@@ -27,7 +27,7 @@
       {% endif %}
 
       {% if field.type != 'hidden' %}
-      <div class="pardot-form-{{ key }}">
+      <div class="pardot-form pardot-form-{{ key }}">
         <label>
           {{ field.label }}
           {% if field.required %} * {% endif %}
@@ -56,6 +56,9 @@
           <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
         {% endif %}
 
+        {% if field.description %}
+          <div class="pardot-form-description pardot-form-description-{{ key }}">{{ field.description }}</div>
+        {% endif %}
       </div>
       {% else %}
         <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />

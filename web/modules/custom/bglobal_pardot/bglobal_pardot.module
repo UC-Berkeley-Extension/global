@@ -17,6 +17,11 @@ function bglobal_pardot_theme() {
         'success_message' => NULL,
         'submit_label' => 'Submit',
         'fields' => [],
+        'tracking' => [
+          'page_title',
+          'program_name',
+          'full_path',
+        ],
       ],
     ),
   );
@@ -33,7 +38,45 @@ function bglobal_pardot_theme() {
  *   - success_message: The message to display on success.
  *   - submit_label: The label for the submit button.
  *   - fields: an array of field information.
+ *   - tracking: an array of trackers to include as hidden fields.
+ *      See bglobal_pardot_trackers() for the valid list.
  */
 function template_preprocess_bglobal_pardot_form(&$variables) {
   // TODO: page specific variables.
+  $trackers = bglobal_pardot_trackers();
+  var_dump(array_keys($variables));
+  foreach ($trackers as $tracker => $value) {
+    if (in_array($tracker, $variables['tracking'], TRUE)) {
+      $variables['fields'][$tracker] = [
+        'type' => 'hidden',
+        'name' => $tracker,
+        'default_value' => $value,
+      ];
+    }
+  }
+}
+
+/**
+ * Registers tracking codes for use with Pardot forms.
+ *
+ * @return array
+ *   An array keyed by the code name with a value of the current page value.
+ */
+function bglobal_pardot_trackers() {
+  /** @var \Symfony\Component\Routing\Route */
+  #var_dump(\Drupal::routeMatch()->getRouteObject());
+  /** @var \Drupal\node\NodeInterface $node */
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $page_title = $node->getTitle();
+
+  }
+  else {
+    $page_title = 'asd';
+  }
+  $trackers = [
+    'full_path' => 'This value needs to be derived from local storage and set as a script target object.',
+    'page_title' => $page_title,
+    'program_name' => '',
+  ];
+  return $trackers;
 }

@@ -62,6 +62,12 @@ class PardotFormBlock extends BlockBase {
           'cols' => '20',
           'required' => FALSE,
         ],
+        'opt_in_contact' => [
+          'label' => 'Contact List',
+          'type' => 'checkbox',
+          'description' => 'Join our mailing list.',
+          'required' => FALSE,
+        ],
         'success_location' => [
           'type' => 'hidden',
           'default_value' => 'https://extension.berkeley.edu/international/',
@@ -70,6 +76,11 @@ class PardotFormBlock extends BlockBase {
           'type' => 'hidden',
           'default_value' => 'https://extension.berkeley.edu/international/',
         ],
+      ],
+      '#tracking' => [
+        'page_title',
+        'program_name',
+        'full_path',
       ],
     ];
   }
