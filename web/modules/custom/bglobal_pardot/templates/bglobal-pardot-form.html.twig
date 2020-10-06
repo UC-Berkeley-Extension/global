@@ -61,7 +61,7 @@
         {% endif %}
       </div>
       {% else %}
-        <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
+        <input type="{{ field.type }}" id="pardot-hidden-{{ key }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
       {% endif %}
     {% endfor %}
 
