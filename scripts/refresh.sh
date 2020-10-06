@@ -1,6 +1,7 @@
 #!/bin/bash
 # be in the right directory
 cd /var/www/html/web
+echo 'Copying default files...'
 echo 'Clearing cache...'
 drush cr
 echo 'Importing configuration...'

@@ -1,0 +1,19 @@
+uuid: e565fd78-e295-4c5b-bce3-2b2fdb022b34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.info_row
+id: paragraph.info_row.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: info_row
+label: 'Info Row Section Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

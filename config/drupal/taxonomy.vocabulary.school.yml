@@ -1,0 +1,8 @@
+uuid: a0c37625-6f33-497b-9147-f718c79964ab
+langcode: en
+status: true
+dependencies: {  }
+name: School
+vid: school
+description: 'The school tag defines the microsite that content belongs to.'
+weight: 0

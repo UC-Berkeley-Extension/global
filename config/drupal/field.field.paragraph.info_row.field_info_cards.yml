@@ -1,0 +1,43 @@
+uuid: d2aa4226-5d7c-4745-abd9-f4c09a2b2d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info_cards
+    - paragraphs.paragraphs_type.info_card
+    - paragraphs.paragraphs_type.info_row
+  module:
+    - entity_reference_revisions
+id: paragraph.info_row.field_info_cards
+field_name: field_info_cards
+entity_type: paragraph
+bundle: info_row
+label: 'Info Cards'
+description: 'Must include minimum of 2, maximum of 4 cards.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      info_card: info_card
+    target_bundles_drag_drop:
+      info_card:
+        enabled: true
+        weight: 6
+      info_row:
+        weight: 7
+        enabled: false
+      landing_page_components:
+        weight: 8
+        enabled: false
+      panorama:
+        weight: 9
+        enabled: false
+      testimonial:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions
