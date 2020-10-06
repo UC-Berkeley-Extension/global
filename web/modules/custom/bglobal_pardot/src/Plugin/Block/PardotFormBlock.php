@@ -62,6 +62,14 @@ class PardotFormBlock extends BlockBase {
           'cols' => '20',
           'required' => FALSE,
         ],
+        'success_location' => [
+          'type' => 'hidden',
+          'default_value' => 'https://extension.berkeley.edu/international/',
+        ],
+        'error_location' => [
+          'type' => 'hidden',
+          'default_value' => 'https://extension.berkeley.edu/international/',
+        ],
       ],
     ];
   }

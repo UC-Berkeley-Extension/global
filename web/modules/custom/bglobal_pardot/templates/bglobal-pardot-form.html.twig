@@ -18,19 +18,29 @@
 #}
 {% block form %}
 
-  <form action="{{ action_url }}" method="post" xmlns="http://www.w3.org/1999/html">
+  <form id="pardot-form" action="{{ action_url }}" method="post" xmlns="http://www.w3.org/1999/html">
     {% for key, field in fields %}
-      <div class="{{ key }}">
+
+      {% set default_value = '' %}
+      {% if field.default_value %}
+        {% set default_value = field.default_value %}
+      {% endif %}
+
+      {% if field.type != 'hidden' %}
+      <div class="pardot-form-{{ key }}">
         <label>
           {{ field.label }}
           {% if field.required %} * {% endif %}
         </label>
+
         {% set required = '' %}
         {% if field.required %}
           {% set required = 'required="required"' %}
         {% endif %}
+
         {% if field.type == 'textarea' %}
           <textarea rows={{ field.rows }} cols={{ field.cols }} name="{{ key }}" {{ required }}/></textarea>
+
         {% elseif field.type == 'select' %}
           <select name="{{ key }}" {{ required }} />
           {% for option in field.options %}
@@ -41,18 +51,26 @@
             <option value="{{ option }}" {{ selected }}>{{ option }}</option>
           {% endfor %}
           </select>
+
         {% else %}
-          <input type="{{ field.type }}" name="{{ key }}" {{ required }}/>
+          <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
         {% endif %}
+
       </div>
+      {% else %}
+        <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
+      {% endif %}
     {% endfor %}
-    <div class="submit">
+
+    <div class="pardot-form-submit">
       <input type="submit" value="{{ submit_label }}" />
     </div>
+
     <div style="position:absolute; left:-9999px; top: -9999px;">
       <label for="pardot_extra_field">Comments</label>
       <input type="text" id="pardot_extra_field" name="pardot_extra_field">
     </div>
+
   </form>
 
 {% endblock form %}
