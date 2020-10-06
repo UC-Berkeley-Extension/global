@@ -22,7 +22,7 @@ content:
     region: content
   field_column_items:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -33,7 +33,7 @@ content:
     third_party_settings: {  }
     region: content
   field_title:
-    weight: 2
+    weight: 0
     settings:
       size: 60
       placeholder: ''
