@@ -8,11 +8,11 @@
 			</header>
 		{% endblock %}
 
-		<div id="main" class="container">
-			<main class="main-content" role="main">
+		<div id="main">
+			<main class="main-content{% if not full_width %} container{% endif %}" role="main">
 				<a id="main-content" tabindex="-1"></a>
 				{# {{ page.banner_top }} #}
-				<div class="content container">
+				<div class="content{% if not full_width %} container{% endif %}">
 					{# used for alerts and other drupal messages #}
 					{% block highlighted %}
 
