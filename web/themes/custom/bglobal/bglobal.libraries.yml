@@ -1,7 +1,7 @@
 common:
   version: VERSION
   js:
-    js/dist/common.min.js: {}
+    dist/js/common.min.js: {}
 global:
   version: VERSION
   css:
@@ -9,7 +9,7 @@ global:
       dist/css/style.css: {}
       dist/fonts/: {}
   js:
-    js/dist/: {}
+    dist/js/: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
