@@ -7,3 +7,31 @@ version: '1.0.0'
 core_version_requirement: ^8 || ^9
 module_status: active
 presentation: ng2
+configuration:
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'https://voices.berkeley.edu/international-feed'
+  post:
+    type: textfield
+    title: Posts
+    description: 'Enter an optional post ID. Use "all" for all posts.'
+    default_value: 'all'
+  tag:
+    type: textfield
+    title: Tags
+    description: 'Enter an optional tag ID. Use "all" for all tags.'
+    default_value: 'all'
+  program:
+    type: textfield
+    title: Programs
+    description: 'Enter an optional program ID. Use "all" for all programs.'
+    default_value: 'all'
+  test:
+    type: select
+    title: 'My Select'
+    options:
+      - one
+      - two
+      - three
+    default_value: one
