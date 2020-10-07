@@ -1,0 +1,13 @@
+<section class="accordion-group">
+	<ul class="list--clean">
+		<li>
+      {% block accordion_items %}
+        {% for item in accordions %}
+          {% include "@molecules/accordion-item/accordion-item.twig" with {
+            accordion: item
+          } %}
+        {% endfor %}
+      {% endblock %}
+    </li>
+	</ul>
+</section>

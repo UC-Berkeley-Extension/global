@@ -1,0 +1,59 @@
+// @file
+// Component: Accordion Item
+
+.accordion {
+  border-bottom: 1px solid $gray;
+}
+
+.accordion__title {
+  font-size: $font-size-med-2;
+  margin: 0;
+}
+
+.accordion__button {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: .75em 1em;
+  width: 100%;
+  cursor: pointer;
+  transition: padding .3s cubic-bezier(0.5, 0, 0.2, 1);
+  
+  outline: none;
+  background-color: $white;
+  border: 0;
+  text-align: left;
+
+  // Display plus symbol at initial state
+  &::after {
+    font-size: $font-size-med;
+    content: "+";
+    line-height: .85;
+  }
+
+  // Replace plus symbol with en dash when accordion is open
+  &[aria-expanded="true"]::after {
+    content: "–";
+  }
+ 
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $california-gold;
+    
+    &::after {
+      color: $berkeley-blue;
+    }
+  }
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s cubic-bezier(0.5, 0, 0.2, 1);
+  margin: 0 1.5em;
+
+  &.expanded {
+    margin: .75em 1.5em;
+  }
+}

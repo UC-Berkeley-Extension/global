@@ -48,17 +48,17 @@ module.exports = {
     );
   },
   // Concat all bglobal JS into a master bundle.
-  concatTcJS: function() {
+  concatBgJS: function() {
     return (
-      src(['./dist/js/bglobal/*.js', '!./dist/js/bglobal/allbglobal.js'])
+      src(['./dist/js/bg/*.js', '!./dist/js/bglobal/bg.js'])
         // If you need to reorder any of the JS files here's an example:
         // .pipe(order([
         //   'dist/js/header.js',
         //   'dist/js/button.js',
         //   'dist/js/*.js'
         // ], { base: './' }))
-        .pipe(concat('allbglobal.js'))
-        .pipe(dest('./dist/js/bglobal'))
+        .pipe(concat('bg.js'))
+        .pipe(dest('./dist/js/bg'))
     );
   }
 };

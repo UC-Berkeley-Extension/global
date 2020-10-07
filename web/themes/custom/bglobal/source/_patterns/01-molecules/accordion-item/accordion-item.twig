@@ -1,0 +1,10 @@
+<div class="accordion">
+  <h2 class="accordion__title">
+    <button class="accordion__button" aria-expanded="false" aria-controls="accordion-{{ accordion_name }}--{{ loop.index }}">
+      {{ accordion.title }}
+    </button>
+  </h2>
+  <div id="accordion-{{ accordion_name }}--{{ loop.index }}" class="accordion__content">
+    {{ accordion.content }}
+  </div>
+</div>

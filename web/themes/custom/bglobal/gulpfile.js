@@ -13,7 +13,7 @@ const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
 const { compressAssets } = require('./gulp-tasks/compress');
 const { cleanCSS, cleanJS, cleanImages, cleanFonts } = require('./gulp-tasks/clean');
-const { concatCSS, concatJS, concatTcJS } = require('./gulp-tasks/concat');
+const { concatCSS, concatJS, concatBgJS } = require('./gulp-tasks/concat');
 const { moveFonts, movePatternCSS } = require('./gulp-tasks/move');
 const { createGHPages } = require('./gulp-tasks/deploy');
 const { prettier } = require('./gulp-tasks/format');
@@ -114,7 +114,7 @@ function watchFiles() {
     ],
     series(
       prettier,
-      parallel(lintJS, compileJS), concatJS, concatTcJS, (done) => {
+      parallel(lintJS, compileJS), concatJS, concatBgJS, (done) => {
         server.reload('*.js');
         done();
       }
