@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_column_items
     - paragraphs.paragraphs_type.body_copy
     - paragraphs.paragraphs_type.column_section
+    - paragraphs.paragraphs_type.info_card
     - paragraphs.paragraphs_type.video_embed
   module:
     - entity_reference_revisions
@@ -25,6 +26,7 @@ settings:
     negate: 0
     target_bundles:
       body_copy: body_copy
+      info_card: info_card
       video_embed: video_embed
     target_bundles_drag_drop:
       body_copy:
@@ -34,11 +36,8 @@ settings:
         weight: 9
         enabled: false
       info_card:
+        enabled: true
         weight: 10
-        enabled: false
-      info_row:
-        weight: 11
-        enabled: false
       panorama:
         weight: 12
         enabled: false

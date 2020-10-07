@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_components
     - node.type.landing_page
     - paragraphs.paragraphs_type.column_section
-    - paragraphs.paragraphs_type.info_row
     - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
@@ -26,7 +25,6 @@ settings:
     negate: 0
     target_bundles:
       panorama: panorama
-      info_row: info_row
       column_section: column_section
     target_bundles_drag_drop:
       body_copy:
