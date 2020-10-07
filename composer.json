@@ -108,5 +108,10 @@
         "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
       }
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+        "cd web/modules/contrib/pdb/modules/pdb_ng2 && npm install"
+    ]
   }
 }
