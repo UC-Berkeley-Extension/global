@@ -1,3 +1,7 @@
+h2.accordion__section-title {
+  margin-left: 1em;
+}
+
 .accordion__item {
   position: relative;
   border-top: 1px solid $gray;
@@ -14,47 +18,35 @@
   min-height: 3.5em; // The height of the expand/collapse icon.
 }
 
-.accordion__title-wrapper:before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
-  left: 1rem;
-  content: '+';
-  font-size: 2.5em;
-  color: $gray;
-}
-
-.accordion__item.is-open .accordion__title-wrapper:before {
-  content: '-';
+.accordion__title {
+  margin-top: .6em;
 }
 
 .accordion__content-wrapper {
-  padding: 0 2.5em 0 4.5em;
+  padding: 0 2.5em 0 4.8em;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s cubic-bezier(0.5, 0, 0.2, 1);
 }
 
-//@include breakpoint($mobile-only) {
-//  .accordion__title-wrapper {
-//    padding: 0.5em 3em 0.5em 1em;
-//
-//    &:after {
-//      position: absolute;
-//      top: 50%;
-//      transform: translateY(-50%);
-//      font-family: "tableau-icons";
-//      display: inline-block;
-//      right: 0.5rem;
-//      content: icon($icon--chevron-down-style2);
-//      font-size: 2.5em;
-//      color: $accent-dividers;
-//    }
-//  }
-//
-//  .accordion__item.is-open .accordion__title-wrapper:after {
-//    content: icon($icon--chevron-up-style2);
-//  }
-//
-//  .accordion__content-wrapper {
-//    padding: 0 1em;
-//  }
-//}
+.accordion__button {
+  border: none;
+  background: white;
+  font-size: 1.25em;
+  font-family: $font;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    left: 1rem;
+    content: '+';
+    font-size: 2.5em;
+    color: $gray;
+  }
+}
+
+.accordion__item.is-open .accordion__button:before {
+  content: '-';
+}

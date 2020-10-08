@@ -10,7 +10,7 @@
       button.setAttribute('aria-expanded', !expanded);
       drawer.classList.toggle('expanded');
 
-      if (expanded) {
+      if (!expanded) {
         drawer.style.maxHeight = drawer.scrollHeight + 'px';
       } else {
         drawer.style.maxHeight = null;

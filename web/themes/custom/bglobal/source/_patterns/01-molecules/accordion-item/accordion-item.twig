@@ -11,7 +11,7 @@
 					</button>
 				</h5>
 			</div>
-			<div id="accordion-{{ item.title|replace({" ": "-"}) }}--{{ loop.index }}" class="accordion__content-wrapper {% if item.expanded %}expanded{% endif %}" {% if filter.expanded %}style="max-height: none;"{% endif %}>
+			<div id="accordion-{{ item.title|replace({" ": "-"}) }}--{{ loop.index }}" class="accordion__content-wrapper {% if item.expanded %}expanded{% endif %}">
 				<div class="accordion__content">
 					{{ item.content }}
 				</div>
