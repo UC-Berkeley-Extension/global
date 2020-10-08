@@ -17,4 +17,19 @@ settings:
   label: 'Custom Pardot form'
   provider: bglobal_pardot
   label_display: visible
+  action_url: 'https://go.pardot.com/l/102272/2016-11-04/2klckm'
+  success_location: 'https://extension.berkeley.edu/international/asdasd'
+  error_location: 'https://extension.berkeley.edu/international/'
+  field_list:
+    firstname: firstname
+    lastname: lastname
+    email: email
+    question: question
+    opt_in_contact: opt_in_contact
+  submit_label: 'Apply Now'
+  success_message: 'Success message...'
+  tracking_fields:
+    full_path: full_path
+    page_title: page_title
+    program_name: 0
 visibility: {  }
