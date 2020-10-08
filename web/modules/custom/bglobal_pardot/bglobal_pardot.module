@@ -79,6 +79,9 @@ function bglobal_pardot_trackers() {
     $request = \Drupal::request();
     $page_title = $title_resolver->getTitle($request, $route);
   }
+  if (empty($page_title)) {
+    $page_title = 'Berkeley Global';
+  }
 
   $trackers = [
     'full_path' => 'This value needs to be derived from local storage and set as a script target object.',
