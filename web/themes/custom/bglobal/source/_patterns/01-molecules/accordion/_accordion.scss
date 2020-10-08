@@ -42,7 +42,7 @@ h2.accordion__section-title {
 }
 
 .accordion__button[aria-expanded="true"]:before {
-  content: '&minus';
+  content: '\2212';
 }
 
 .accordion__button:before,
