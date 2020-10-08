@@ -2,11 +2,14 @@
 <html class="{{ htmlClass }}">
   <head>
     <title>{{ title }}</title>
+		<!-- Styleguides should not be indexed by search engines. -->
+		<meta name="robots" content="none" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     
     <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />
     <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
+
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{ patternLabHead | raw }}

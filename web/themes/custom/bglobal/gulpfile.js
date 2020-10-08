@@ -9,15 +9,19 @@ const patternlab = require('@pattern-lab/core')(config);
 //
 // Each task is broken apart to it's own node module.
 // Check out the ./gulp-tasks directory for more.
+const { copyDrupalCSS, copyDrupalJS } = require('./gulp-tasks/copy');
 const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
 const { compressAssets } = require('./gulp-tasks/compress');
 const { cleanCSS, cleanJS, cleanImages, cleanFonts } = require('./gulp-tasks/clean');
-const { concatCSS, concatJS, concatBgJS } = require('./gulp-tasks/concat');
+const { concatCSS, concatJS } = require('./gulp-tasks/concat');
 const { moveFonts, movePatternCSS } = require('./gulp-tasks/move');
 const { createGHPages } = require('./gulp-tasks/deploy');
 const { prettier } = require('./gulp-tasks/format');
 const server = require('browser-sync').create();
+
+// Copy CSS and JS that Drupal is using (core and contrib modules)
+exports.copy = parallel(copyDrupalCSS, copyDrupalJS);
 
 // Compile Our Sass and JS
 exports.compile = parallel(compileSass, compileJS, moveFonts, movePatternCSS);
@@ -114,7 +118,7 @@ function watchFiles() {
     ],
     series(
       prettier,
-      parallel(lintJS, compileJS), concatJS, concatBgJS, (done) => {
+      parallel(lintJS, compileJS), concatJS, (done) => {
         server.reload('*.js');
         done();
       }
@@ -142,6 +146,8 @@ function watchFiles() {
 exports.build = series(
   parallel(cleanCSS, cleanJS),
   parallel(
+    copyDrupalCSS,
+    copyDrupalJS,
     lintSass,
     compileSass,
     lintJS,

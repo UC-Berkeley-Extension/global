@@ -46,19 +46,5 @@ module.exports = {
         .pipe(concat('all.js'))
         .pipe(dest('./dist/js'))
     );
-  },
-  // Concat all bglobal JS into a master bundle.
-  concatBgJS: function() {
-    return (
-      src(['./dist/js/bg/*.js', '!./dist/js/bglobal/bg.js'])
-        // If you need to reorder any of the JS files here's an example:
-        // .pipe(order([
-        //   'dist/js/header.js',
-        //   'dist/js/button.js',
-        //   'dist/js/*.js'
-        // ], { base: './' }))
-        .pipe(concat('bg.js'))
-        .pipe(dest('./dist/js/bg'))
-    );
   }
 };
