@@ -58,16 +58,10 @@ class PardotFormBlock extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public function blockValidate($form, FormStateInterface $form_state) {
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function blockSubmit($form, FormStateInterface $form_state) {
-    foreach (array_keys($this->defaultConfiguration()) as $element) {
-      $this->configuration[$element] = $form_state->getValue($element);
-    }
+    $this->configuration['action_url'] = $form_state->getValue(['urls', 'action_url']);
+    $this->configuration['success_location'] = $form_state->getValue(['urls', 'success_location']);
+    $this->configuration['error_location'] = $form_state->getValue(['urls', 'error_location']);
   }
 
   /**
