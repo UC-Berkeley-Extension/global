@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Drupal hook implementations.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bglobal_pardot_theme() {
+  return array(
+    'bglobal_pardot_form' => array(
+      // Proof of concept for configurable variables.
+      'variables' => [
+        'action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
+        'success_message' => NULL,
+        'submit_label' => 'Submit',
+        'fields' => [],
+        'tracking' => [
+          'page_title',
+          'program_name',
+          'full_path',
+        ],
+      ],
+    ),
+  );
+}
+
+/**
+ * Prepares variables for Pardot form templates.
+ *
+ * Default template: bglobal-pardot-form.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - action_url: The form submit URL.
+ *   - success_message: The message to display on success.
+ *   - submit_label: The label for the submit button.
+ *   - fields: an array of field information.
+ *   - tracking: an array of trackers to include as hidden fields.
+ *      See bglobal_pardot_trackers() for the valid list.
+ */
+function template_preprocess_bglobal_pardot_form(&$variables) {
+  $trackers = bglobal_pardot_trackers();
+  foreach ($trackers as $tracker => $value) {
+    if (in_array($tracker, $variables['tracking'], TRUE)) {
+      $variables['fields'][$tracker] = [
+        'type' => 'hidden',
+        'name' => $tracker,
+        'default_value' => $value,
+      ];
+    }
+  }
+}
+
+/**
+ * Registers tracking codes for use with Pardot forms.
+ *
+ * @return array
+ *   An array keyed by the code name with a value of the current page value.
+ */
+function bglobal_pardot_trackers() {
+  /** @var \Drupal\Core\Routing\RouteMatchInterface */
+  $route_match = \Drupal::routeMatch();
+
+  /** @var \Symfony\Component\Routing\Route */
+  $route = $route_match->getRouteObject();
+
+  /** @var \Drupal\node\NodeInterface $node */
+  if ($node = $route_match->getParameter('node')) {
+    $page_title = $node->getTitle();
+    // @TODO: Derive program name, if relevant.
+  }
+  else {
+    /** @var \Drupal\Core\Controller\TitleResolver */
+    $title_resolver = \Drupal::service('title_resolver');
+    /** @var \Symfony\Component\HttpFoundation\Request */
+    $request = \Drupal::request();
+    $page_title = $title_resolver->getTitle($request, $route);
+  }
+
+  $trackers = [
+    'full_path' => 'This value needs to be derived from local storage and set as a script target object.',
+    'page_title' => $page_title,
+    'program_name' => '',
+  ];
+
+  return $trackers;
+}
