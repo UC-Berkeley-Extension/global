@@ -46,11 +46,11 @@
 {% set attributes = attributes.addClass(classes) %}
 
 {% set items = [] %}
-{% for item in content.field_accordion_items|children|reverse %}
-	{% set items = [{
-		'title': item['#paragraph'].field_title.value,
-		'content': item['#paragraph'].field_text.value,
-	}]|merge(items) %}
+{% for item in content.field_accordion_items|children %}
+	{% set items = items|merge([{
+		'title': drupal_field('field_title', 'paragraph', item['#paragraph'].id()),
+		'content': drupal_field('field_text', 'paragraph', item['#paragraph'].id()),
+	}]) %}
 {% endfor %}
 
 {% block content %}
