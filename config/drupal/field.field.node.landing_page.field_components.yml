@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.landing_page
-    - paragraphs.paragraphs_type.info_row
+    - paragraphs.paragraphs_type.column_section
     - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
@@ -25,21 +25,27 @@ settings:
     negate: 0
     target_bundles:
       panorama: panorama
-      info_row: info_row
+      column_section: column_section
     target_bundles_drag_drop:
+      body_copy:
+        weight: 8
+        enabled: false
+      column_section:
+        enabled: true
+        weight: 9
       info_card:
         weight: 6
         enabled: false
       info_row:
         enabled: true
         weight: 7
-      landing_page_components:
-        weight: 3
-        enabled: false
       panorama:
         enabled: true
         weight: 4
       testimonial:
         weight: 10
+        enabled: false
+      video_embed:
+        weight: 14
         enabled: false
 field_type: entity_reference_revisions

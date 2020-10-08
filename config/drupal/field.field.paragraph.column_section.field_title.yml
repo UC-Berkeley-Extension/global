@@ -1,15 +1,15 @@
-uuid: e565fd78-e295-4c5b-bce3-2b2fdb022b34
+uuid: 7a4740d8-feb2-4c83-ad01-0c7bb3a3cc98
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.info_row
-id: paragraph.info_row.field_title
+    - paragraphs.paragraphs_type.column_section
+id: paragraph.column_section.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: info_row
-label: 'Info Row Section Title'
+bundle: column_section
+label: 'Section Title'
 description: ''
 required: false
 translatable: true

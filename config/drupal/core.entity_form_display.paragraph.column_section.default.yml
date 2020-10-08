@@ -1,28 +1,28 @@
-uuid: 31b0049d-41b0-4884-b50a-aaf7f105bca9
+uuid: 32392e17-bf29-4715-bdc4-86f73b694775
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.info_row.field_background_color
-    - field.field.paragraph.info_row.field_info_cards
-    - field.field.paragraph.info_row.field_title
-    - paragraphs.paragraphs_type.info_row
+    - field.field.paragraph.column_section.field_background_color
+    - field.field.paragraph.column_section.field_column_items
+    - field.field.paragraph.column_section.field_title
+    - paragraphs.paragraphs_type.column_section
   module:
     - paragraphs
-id: paragraph.info_row.default
+id: paragraph.column_section.default
 targetEntityType: paragraph
-bundle: info_row
+bundle: column_section
 mode: default
 content:
   field_background_color:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_info_cards:
+  field_column_items:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

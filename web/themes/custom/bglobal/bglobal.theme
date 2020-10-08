@@ -5,12 +5,16 @@
  * Functions to support theming.
  */
 
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function bglobal_theme_suggestions_html_alter(array &$suggestions, array $variables) {
-  if ($theme_name = bglobal_get_active_microsite()) {
-    $suggestions[] = 'html__' . 'school_' . $theme_name;
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if ($theme_name = bglobal_get_active_microsite($node)) {
+      $suggestions[] = 'html__' . 'school_' . $theme_name;
+    }
   }
 }
 
@@ -18,9 +22,13 @@ function bglobal_theme_suggestions_html_alter(array &$suggestions, array $variab
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function bglobal_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  if ($theme_name = bglobal_get_active_microsite()) {
-    $suggestions[] = 'page__' . 'school_' . $theme_name;
-    $suggestions[] = 'page__node__' . $content_type . '__school_' . $theme_name;
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__node__' . $content_type;
+    if ($theme_name = bglobal_get_active_microsite($node)) {
+      $suggestions[] = 'page__school_' . $theme_name;
+      $suggestions[] = 'page__node__' . $content_type . '__school_' . $theme_name;
+    }
   }
 }
 
@@ -32,29 +40,29 @@ function bglobal_theme_suggestions_page_alter(array &$suggestions, array $variab
  * first time this function is invoked and cache the result for the rest of the
  * request.
  *
+ * @param \Drupal\node\NodeInterface $node
+ *
  * @return string
  *   A string name for the sub-theme (e.g. 'hass').
+ * @throws \Drupal\Core\TypedData\Exception\MissingDataException
  */
-function bglobal_get_active_microsite() {
+function bglobal_get_active_microsite(NodeInterface $node) {
   static $theme_name = NULL;
   if (!is_null($theme_name)) {
     return $theme_name;
   }
   $theme_name = '';
-  /** @var \Drupal\node\NodeInterface $node */
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $content_type = $node->bundle();
-    // Get the taxonomy term.
-    if ($node->hasField('field_term_ref_school_microsite') && $node->get('field_term_ref_school_microsite')->getValue()) {
-      /** @var \Drupal\taxonomy\TermInterface $term */
-      $term = $node->get('field_term_ref_school_microsite')->first()->entity;
-      if ($term->hasField('field_microsite_theme_name')) {
-        $name = current($term->get('field_microsite_theme_name')->getValue());
-        if (!empty($name['value']) && $name['value'] !== 'default-theme') {
-          $theme_name = strtolower(str_replace(['_', ' '], '-', $name['value']));
-        }
+  // Get the taxonomy term.
+  if ($node->hasField('field_term_ref_school_microsite') && $node->get('field_term_ref_school_microsite')->getValue()) {
+    /** @var \Drupal\taxonomy\TermInterface $term */
+    $term = $node->get('field_term_ref_school_microsite')->first()->entity;
+    if ($term->hasField('field_microsite_theme_name')) {
+      $name = current($term->get('field_microsite_theme_name')->getValue());
+      if (!empty($name['value']) && $name['value'] !== 'default-theme') {
+        $theme_name = strtolower(str_replace(['_', ' '], '-', $name['value']));
       }
     }
   }
+
   return $theme_name;
 }

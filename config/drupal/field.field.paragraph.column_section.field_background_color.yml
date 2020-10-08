@@ -1,20 +1,20 @@
-uuid: 9650b3fa-e52d-4f2e-8728-85c6a6d060f3
+uuid: a991c34f-7d1c-4467-8416-4568ee2e6d44
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_background_color
-    - paragraphs.paragraphs_type.info_row
+    - paragraphs.paragraphs_type.column_section
   module:
     - options
-id: paragraph.info_row.field_background_color
+id: paragraph.column_section.field_background_color
 field_name: field_background_color
 entity_type: paragraph
-bundle: info_row
+bundle: column_section
 label: 'Background Color'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

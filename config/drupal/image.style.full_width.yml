@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: full_width
-label: 'Full Width'
+label: 'Full Width (1800x375)'
 effects:
   2a908d5c-c326-41de-aca9-f1028539f940:
     uuid: 2a908d5c-c326-41de-aca9-f1028539f940
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 1600
-      height: 375
+      width: 1800
+      height: 450
       anchor: center-center

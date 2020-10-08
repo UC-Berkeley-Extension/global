@@ -105,3 +105,8 @@
 .tabs__local-actions-links {
   margin: 0;
 }
+
+#block-bglobal-local-tasks,
+#block-bglobal-page-title {
+  @include container;
+}
