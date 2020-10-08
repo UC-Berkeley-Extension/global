@@ -1,0 +1,8 @@
+drupal.bglobal_pardot:
+  version: VERSION
+  js:
+    js/bglobal_pardot.js: {}
+    # js/leadgen.js: {}
+    # js/journey.js: {}
+  dependencies:
+    - core/drupal
