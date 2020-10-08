@@ -18,11 +18,9 @@ settings:
   provider: pdb_ng2
   label_display: visible
   pdb_configuration:
-    info: ''
     post: all
     tag: all
     program: all
-    test: '0'
 visibility:
   request_path:
     id: request_path
