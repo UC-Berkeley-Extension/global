@@ -4,6 +4,7 @@ namespace Drupal\bglobal_pardot\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 
 /**
@@ -22,6 +23,83 @@ class PardotFormBlock extends BlockBase {
   public function access(AccountInterface $account, $return_as_object = FALSE) {
     $access = AccessResult::allowedIfHasPermission($account, 'access content');
     return $return_as_object ? $access : $access->isAllowed();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form['urls'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Form URLs'),
+      '#open' => TRUE,
+    ];
+    $form['urls']['action_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Form Action URL'),
+      '#default_value' => $this->getDefaultValue('action_url'),
+      '#description' => $this->t('The Pardot form URL'),
+    ];
+    $form['urls']['success_location'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Success Location URL'),
+      '#default_value' => $this->getDefaultValue('success_location'),
+      '#description' => $this->t('The URL to redirect to after form completion.'),
+    ];
+    $form['urls']['error_location'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Error Location URL'),
+      '#default_value' => $this->getDefaultValue('error_location'),
+      '#description' => $this->t('The URL to redirect to on form failure.'),
+    ];
+    return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockValidate($form, FormStateInterface $form_state) {
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockSubmit($form, FormStateInterface $form_state) {
+    // Process the block's submission handling if no errors occurred only.
+    if (!$form_state->getErrors()) {
+      foreach (array_keys($this->defaultConfiguration()) as $element) {
+        $this->configuration[$element] = $form_state->getValue($element);
+      }
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function defaultConfiguration() {
+    return [
+      'action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
+      'success_location' => 'https://extension.berkeley.edu/international/',
+      'error_location' => 'https://extension.berkeley.edu/international/',
+      'field_list' => [],
+      'submit_label' => $this->t('Submit'),
+      'tracking_fields' => [],
+    ];
+  }
+
+  /**
+   * Returns the default value for a field,
+   *
+   * @param $field
+   *   The configuration field name.
+   *
+   * @return mixed
+   *   The value of the field as configured, or its default value.
+   */
+  public function getDefaultValue($field) {
+    $defaults = $this->defaultConfiguration();
+    $value = $this->configuration[$field] ?: $defaults[$field];
+    return $value;
   }
 
   /**
