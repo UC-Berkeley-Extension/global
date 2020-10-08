@@ -34,19 +34,25 @@ h2.accordion__section-title {
   background: white;
   font-size: 1.25em;
   font-family: $font;
+  text-align: left;
 
   &:before {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    left: 1rem;
     content: '+';
-    font-size: 2.5em;
-    color: $gray;
   }
 }
 
-.accordion__item.is-open .accordion__button:before {
-  content: '-';
+.accordion__button[aria-expanded="true"]:before {
+  content: '&minus';
+}
+
+.accordion__button:before,
+.accordion__button[aria-expanded="true"]:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  left: 1rem;
+  font-size: 2.5em;
+  color: $berkeley-blue;
+  width: 2em;
 }
