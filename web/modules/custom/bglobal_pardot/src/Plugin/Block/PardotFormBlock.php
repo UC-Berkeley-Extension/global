@@ -40,18 +40,6 @@ class PardotFormBlock extends BlockBase {
       '#default_value' => $this->configuration['action_url'],
       '#description' => $this->t('The Pardot form URL'),
     ];
-    $form['urls']['success_location'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Success Location URL'),
-      '#default_value' => $this->configuration['success_location'],
-      '#description' => $this->t('The URL to redirect to after form completion.'),
-    ];
-    $form['urls']['error_location'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Error Location URL'),
-      '#default_value' => $this->configuration['error_location'],
-      '#description' => $this->t('The URL to redirect to on form failure.'),
-    ];
     $form['fields'] = [
       '#type' => 'details',
       '#title' => $this->t('Pardot Fields'),
@@ -94,8 +82,6 @@ class PardotFormBlock extends BlockBase {
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
     $this->configuration['action_url'] = $form_state->getValue(['urls', 'action_url']);
-    $this->configuration['success_location'] = $form_state->getValue(['urls', 'success_location']);
-    $this->configuration['error_location'] = $form_state->getValue(['urls', 'error_location']);
     $this->configuration['field_list'] = $form_state->getValue(['fields', 'field_list']);
     $this->configuration['tracking_fields'] = $form_state->getValue(['fields', 'tracking_fields']);
     $this->configuration['submit_label'] = $form_state->getValue(['interface', 'submit_label']);
@@ -108,8 +94,6 @@ class PardotFormBlock extends BlockBase {
   public function defaultConfiguration() {
     return [
       'action_url' => 'https://go.pardot.com/l/102272/2016-11-04/2klckm',
-      'success_location' => 'https://extension.berkeley.edu/international/',
-      'error_location' => 'https://extension.berkeley.edu/international/',
       'field_list' => [
         'firstname' => 'firstname',
         'lastname' => 'lastname',
@@ -121,6 +105,8 @@ class PardotFormBlock extends BlockBase {
       'tracking_fields' => [
         'full_path' => 'full_path',
         'page_title' => 'page_title',
+        'success_location' => 'success_location',
+        'error_location' => 'error_location',
       ],
     ];
   }
@@ -145,7 +131,8 @@ class PardotFormBlock extends BlockBase {
     return [
       'full_path' => 'full_path',
       'page_title' => 'page_title',
-      'program_name' => 'program_name',
+      'success_location' => 'success_location',
+      'error_location' => 'error_location',
     ];
   }
 
@@ -190,8 +177,6 @@ class PardotFormBlock extends BlockBase {
     $build = [
       '#theme' => 'bglobal_pardot_form',
       '#action_url' => $this->configuration['action_url'],
-      '#success_location' => $this->configuration['success_location'],
-      '#error_location' => $this->configuration['error_location'],
       '#success_message' => $this->configuration['success_message'],
       '#submit_label' => $this->configuration['submit_label'],
     ];

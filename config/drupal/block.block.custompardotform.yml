@@ -18,7 +18,7 @@ settings:
   provider: bglobal_pardot
   label_display: visible
   action_url: 'https://go.pardot.com/l/102272/2016-11-04/2klckm'
-  success_location: 'https://extension.berkeley.edu/international/asdasd'
+  success_location: 'https://extension.berkeley.edu/international/'
   error_location: 'https://extension.berkeley.edu/international/'
   field_list:
     firstname: firstname
