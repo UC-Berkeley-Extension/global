@@ -2,13 +2,13 @@
     $VARIABLES
 \*------------------------------------*/
 
-//Berkeley Web Basic Colors
+// Berkeley Web Basic Colors
 $gray : #EEEEEE;
 $web-gray: #888888;
 $white : #ffffff;
 $black : #000000;
 $text-gray: #212529;
-$info-row-teal: #4F758B;
+$teal: #4F758B; // Background color for components
 
 // Berkeley Primary Palettes
 $berkeley-blue: #003262;
@@ -30,7 +30,7 @@ $ion: #CFDD45;
 $soybean: #859438;
 $stone-pine: #584F29;
 
-//Typography
+// Typography
 $font: "Open Sans", "Helvetica", "Arial", sans-serif;
 $font-bold: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
 $font-italic: "Open Sans Italic", "Helvetica", "Arial", sans-serif;

@@ -1,0 +1,20 @@
+uuid: 74afc0e4-91eb-4a3a-b11b-f0927db93bdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - bglobal_pardot
+  theme:
+    - bglobal
+id: custompardotform
+theme: bglobal
+region: content
+weight: 0
+provider: null
+plugin: bglobal_pardot_block
+settings:
+  id: bglobal_pardot_block
+  label: 'Custom Pardot form'
+  provider: bglobal_pardot
+  label_display: visible
+visibility: {  }

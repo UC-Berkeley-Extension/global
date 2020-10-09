@@ -1,0 +1,31 @@
+uuid: dae65b0f-6eb3-446d-a5e6-30ab0fcebbbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.video.field_caption
+    - field.field.media.video.field_media_oembed_video
+    - field.field.media.video.field_title
+    - media.type.video
+id: media.video.media_library
+targetEntityType: media
+bundle: video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  field_media_oembed_video: true
+  field_title: true
+  path: true
+  status: true
+  uid: true
