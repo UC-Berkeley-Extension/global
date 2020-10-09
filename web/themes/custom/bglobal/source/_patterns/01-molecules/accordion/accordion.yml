@@ -1,0 +1,12 @@
+accordion:
+  section_title: "Technical troubleshooting"
+  items:
+    -
+      title: "I am having technical difficulties, what are some quick solutions I should first try?"
+      content: "<p>Try various browsers, attendees often find better success using Google Chrome. Clear your web browser cache, re-login to the event platform. Make sure you are not blocking cookies in your browser settings during this event – it can affect your ability to access certain features like changing your profile picture or joining a roundtable. Be sure you have closed out of other tabs in your browser for best performance.</p>"
+    -
+      title: "I am receiving a “could not connect” or other error message, what should I do?"
+      content: "<p>Recusandae iste cupidatat provident hic incididunt inventore exercitationem habitant diam fugiat occaecat quod dignissim optio cum facilis sapiente! Autem pretium.</p><p>Fugiat, tellus quisque nibh sapiente amet diamlorem expedita porta mattis sit nisl, sociis scelerisque tenetur auctor. Accusantium minus, habitant pede habitasse beatae! Taciti taciti venenatis consectetur atque. Perferendis, molestie repellendus! Mollitia wisi dolorem ea proin dignissim, est habitasse pharetra convallis nibh iusto, doloremque cillum cubilia? Tincidunt cumque exercitation deleniti eum dolore nihil inventore quos mauris tristique quis provident laudantium, duis, excepteur corporis doloremque! Ultrices elit faucibus, litora ea sint, harum amet eveniet adipisci consequat deserunt ac, aliquid officia? Dictum, velit.</p>"
+    -
+      title: "I am having trouble signing in, what should I do?"
+      content: "<p>Nesciunt mattis a donec, odit, hendrerit! Tortor hendrerit, nascetur magna eleifend ligula, commodi ullamcorper distinctio. Taciti? Pellentesque turpis repellat tempore sapien! Cum minima sunt? Tenetur, semper facilis amet ante amet nam sociosqu excepteur amet. Potenti nonummy quis aenean alias veniam blanditiis ac. Voluptatum nascetur, vero laboris repudiandae conubia! Expedita primis sit aperiam consectetuer sollicitudin! Erat? Inceptos aute, sagittis hendrerit eget, dis cumque fuga, harum eu? Etiam possimus varius est luctus, accusamus eos habitasse proin donec harum gravida lacus, malesuada vulputate.</p><p>Rhoncus risus deleniti feugiat libero eleifend etiam accusantium imperdiet sociosqu penatibus per, vel malesuada commodi lorem sunt atque! Dolorum sollicitudin.</p>"

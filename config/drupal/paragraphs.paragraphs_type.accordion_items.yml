@@ -1,0 +1,10 @@
+uuid: 803a8b53-949f-483d-bf2f-4aa79e07a7ae
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_items
+label: 'Accordion Items'
+icon_uuid: null
+icon_default: null
+description: 'This is a sub-component to Accordion, that includes title and content.'
+behavior_plugins: {  }

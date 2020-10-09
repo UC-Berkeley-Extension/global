@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_column_items
+    - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.body_copy
     - paragraphs.paragraphs_type.column_section
     - paragraphs.paragraphs_type.info_card
@@ -26,9 +27,16 @@ settings:
     negate: 0
     target_bundles:
       body_copy: body_copy
+      accordion: accordion
       info_card: info_card
       video_embed: video_embed
     target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 9
+      accordion_items:
+        weight: 10
+        enabled: false
       body_copy:
         enabled: true
         weight: 8
