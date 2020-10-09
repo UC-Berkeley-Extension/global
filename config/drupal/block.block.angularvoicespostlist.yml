@@ -1,0 +1,28 @@
+uuid: 6ef44f7e-38c0-4842-add8-0aeedff6eedf
+langcode: en
+status: true
+dependencies:
+  module:
+    - pdb_ng2
+  theme:
+    - bglobal
+id: angularvoicespostlist
+theme: bglobal
+region: content
+weight: 0
+provider: null
+plugin: 'ng2_component:voices_list'
+settings:
+  id: 'ng2_component:voices_list'
+  label: 'Angular: Voices Post List'
+  provider: pdb_ng2
+  label_display: visible
+  pdb_configuration:
+    post: all
+    tag: all
+    program: all
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

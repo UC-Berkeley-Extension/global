@@ -1,0 +1,6 @@
+<div *ngFor="let post of posts" data-ng-cloak class="voices-section grid-flip" style="width: 400px; padding: 10px;">
+  <!-- {{ i }} {{ getKeys(post) }} -->
+  <img [src] = "post.image.src" [alt] = "post.image.alt" style="width: 400px;" class="voice-section--img m-b-20 img-fluid" />
+  <p class="marginless-p"><strong><a [href] = "post.path" class="blog-header">{{ post.title }}</a></strong></p>
+  <div class="blog-intro" [innerHTML] = "post.content"></div>
+</div>
