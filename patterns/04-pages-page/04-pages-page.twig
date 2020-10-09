@@ -1,0 +1,34 @@
+<div id="page-wrapper" {% if modifier_class %}class="{{ modifier_class }}"{% endif %}>
+	<div id="page">
+		{% block header %}
+			<header id="header">
+				{% embed "@organisms/header/header.twig" %}
+				{% endembed %}
+				{# {{ page.header }} #}
+			</header>
+		{% endblock %}
+
+		<div id="main">
+			<main class="main-content{% if not full_width %} container{% endif %}" role="main">
+				<a id="main-content" tabindex="-1"></a>
+				{# {{ page.banner_top }} #}
+				<div class="content{% if not full_width %} container{% endif %}">
+					{# used for alerts and other drupal messages #}
+					{% block highlighted %}
+
+					{% endblock %}
+
+					{% block page_content %}
+
+					{% endblock %}
+
+				</div>
+			</main>
+		</div>
+
+		{% block footer %}
+			{% include "@organisms/footer/footer.twig" %}
+			{# {{ page.footer }} #}
+		{% endblock %}
+	</div>
+</div>

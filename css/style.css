@@ -68,6 +68,10 @@ body {
   -webkit-text-size-adjust: 100%;
   color: #212529; }
 
+@media (min-width: 48em) {
+  #main {
+    min-height: 400px; } }
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -78,12 +82,17 @@ body {
 \*------------------------------------*/
 /* Flexible Media */
 img, video, object {
-  max-width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   width: 100%;
   height: auto; }
 
 iframe {
-  margin-bottom: 1em; }
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 1em 0; }
 
 figure {
   margin-bottom: 1em; }
@@ -131,7 +140,16 @@ h2 {
   letter-spacing: 1px; }
 
 h3 {
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-size: 1.4375em;
+  margin: 0.5em 0; }
+
+h4 {
+  line-height: 1.2;
+  font-size: 1.4375em;
+  color: #3B7EA1;
+  margin: 0.5em 0;
+  font-weight: 400; }
 
 .button {
   display: inline-block;
@@ -164,25 +182,72 @@ a.button {
   font-size: 1em;
   padding: .5em 1em; }
 
+h2.accordion__section-title {
+  margin-left: 1em; }
+
+.accordion__item {
+  position: relative;
+  border-top: 1px solid #EEEEEE; }
+  .accordion__item:last-child {
+    border-bottom: 1px solid #EEEEEE; }
+
+.accordion__title-wrapper {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5em 2.5em 0.5em 4.5em;
+  min-height: 3.5em; }
+
+.accordion__title {
+  margin-top: .6em; }
+
+.accordion__content-wrapper {
+  padding: 0 2.5em 0 4.8em;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.5, 0, 0.2, 1); }
+
+.accordion__button {
+  border: none;
+  background: white;
+  font-size: 1.25em;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  text-align: left; }
+  .accordion__button:before {
+    content: '+'; }
+
+.accordion__button[aria-expanded="true"]:before {
+  content: '\2212'; }
+
+.accordion__button:before,
+.accordion__button[aria-expanded="true"]:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  left: 1rem;
+  font-size: 2.5em;
+  color: #003262;
+  width: 2em; }
+
 .info-card {
   max-width: 300px;
   text-align: center; }
 
-.info-card-title {
+.info-card__title {
   font-family: "Bitter", Georgia, Times, "Times New Roman", serif;
   font-size: 1.0625em;
   margin-top: 1em; }
 
-.info-card-body {
+.info-card__body {
   margin-top: 1em; }
 
-.info-card-image {
+.info-card__image {
   margin: 0 auto;
   width: 150px; }
-  .info-card-image img {
+  .info-card__image img {
     border-radius: 50%; }
 
-.info-card-link {
+.info-card__link {
   font-size: 0.875em;
   font-style: italic;
   text-decoration: underline;
@@ -209,32 +274,43 @@ a.button {
 .panorama-content--cta {
   margin-top: 1.5em; }
 
-.info-row {
-  padding: 3em 0; }
+.column-section {
+  padding: 3em 1em 5em; }
 
-.info-row-gray {
+.column-section--gray {
   background-color: #EEEEEE; }
 
-.info-row-teal {
+.column-section--teal {
   background-color: #4F758B; }
-  .info-row-teal .info-card-title,
-  .info-row-teal .info-card-body,
-  .info-row-teal .info-card-link a {
+  .column-section--teal p,
+  .column-section--teal h3 {
     color: #ffffff; }
 
-.info-row-title {
+.column-section__title {
   text-align: center;
-  font-size: 2em; }
+  font-size: 2em;
+  margin-bottom: 1em; }
 
-@media (min-width: 50em) {
-  .info-row-cards {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    align-items: center; } }
+.column-section__items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap; }
+  .column-section__items > * {
+    flex-grow: 1;
+    flex-basis: 0; }
+  .column-section__items > *:not(:last-child) {
+    margin-right: 4em; }
 
-.info-row-cards .info-card {
-  flex: 0 1 20%; }
+.site-footer {
+  background-color: #888888;
+  height: 300px;
+  margin-top: 2em; }
+
+.site-header {
+  background-color: #003262;
+  height: 100px; }
+  .haas .site-header {
+    background-color: #859438; }
 
 .hidden {
   display: none; }
@@ -403,3 +479,9 @@ a.button {
 
 .tabs__local-actions-links {
   margin: 0; }
+
+#block-bglobal-local-tasks,
+#block-bglobal-page-title {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }

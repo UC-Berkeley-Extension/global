@@ -73,3 +73,9 @@
 
 .tabs__local-actions-links {
   margin: 0; }
+
+#block-bglobal-local-tasks,
+#block-bglobal-page-title {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
