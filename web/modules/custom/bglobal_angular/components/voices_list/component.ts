@@ -11,7 +11,6 @@ import 'rxjs/add/operator/map';
 })
 
 export class VoicesList{
-  public instances: array = [];
   public post: string = 'all';
   public tag: string = 'all';
   public program: string = 'all';
@@ -32,7 +31,6 @@ export class VoicesList{
       // Data is nested inside the 'post' of each item.
       this.posts = Object.keys(items).map(key => items[key].post);
     });
-    console.log(this.instances);
     console.log(fetchUrl);
   }
 
