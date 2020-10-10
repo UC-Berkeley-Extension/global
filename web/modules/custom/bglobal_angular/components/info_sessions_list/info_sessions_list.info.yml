@@ -1,0 +1,29 @@
+name: 'Angular: Info Sessions List'
+machine_name: info-sessions-list
+type: pdb
+description: 'Info Sessions List angular template'
+package: NG2
+version: '1.0.0'
+core_version_requirement: ^8 || ^9
+module_status: active
+presentation: ng2
+configuration:
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'https://voices.berkeley.edu/international-feed/post/{$post}/tag/{$tag}/program/{$program}'
+  limit:
+    type: textfield
+    title: 'Number of posts'
+    description: 'How many Info Sessions would you like to see? Blank for max'
+    default_value: ''
+  area:
+    type: textfield
+    title: Area
+    description: 'Enter an optional Academic Area ID. Use "all" for all Academic Areas.'
+    default_value: 'all'
+  cert:
+    type: textfield
+    title: Programs
+    description: 'Enter an optional program ID. Use "all" for all programs.'
+    default_value: 'all'
