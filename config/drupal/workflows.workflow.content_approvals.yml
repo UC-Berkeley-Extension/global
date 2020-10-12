@@ -1,0 +1,66 @@
+uuid: a5d74531-20b5-4a0f-a0d8-8a4a0cd6bd44
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+    - node.type.view_page
+  module:
+    - content_moderation
+id: content_approvals
+label: 'Content Approvals'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    in_review:
+      published: false
+      default_revision: false
+      label: 'In Review'
+      weight: -1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    changes_requested:
+      label: 'Changes Requested'
+      from:
+        - in_review
+      to: draft
+      weight: 0
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -2
+      from:
+        - draft
+        - published
+    needs_review:
+      label: 'Needs Review'
+      from:
+        - draft
+      to: in_review
+      weight: -1
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - in_review
+        - published
+  entity_types:
+    node:
+      - article
+      - landing_page
+      - page
+      - view_page
+  default_moderation_state: draft
