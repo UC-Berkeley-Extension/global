@@ -1,0 +1,8 @@
+uuid: 0518db08-4928-4e48-b31f-c11708f0fddf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Editorial Section'
+vid: editorial_section
+description: 'Controls which editors can edit selected content.'
+weight: 0
