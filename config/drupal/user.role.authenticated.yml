@@ -19,6 +19,7 @@ permissions:
   - 'access toolbar'
   - 'access tour'
   - 'access user profiles'
+  - 'access workbench'
   - 'create article content'
   - 'create image media'
   - 'create landing_page content'
