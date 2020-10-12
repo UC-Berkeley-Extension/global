@@ -1,0 +1,148 @@
+// @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400|Barlow:400,400i,600,600i');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Barlow:400,400i,600,600i|Open+Sans|Roboto+Slab:300&display=swap&subset=latin-ext');
+
+// Variables //
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #ddd !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+// Color Palette
+$blue:      #15284B;  // Haas Blue 
+$celeste:   #0066CC;  // Haas Light Blue
+$red:       #ED4E33;
+$rust:      #E04E39;
+$yellow:    #FFB700;
+$green:     #4A8232;
+$teal:      #00B2A9;
+$lightBlue: #387799;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "celeste":    $celeste,
+    "red":        $red,
+    "rust":       $rust,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "lightBlue":  $lightBlue,
+    "white":      $white,
+    "light":      $gray-200,
+    "gray":       $gray-400,
+    "dark":       $gray-800
+  ),
+  $colors
+);
+
+$default:    #2867C5;   // nav
+$primary:    $blue;       // header-banner, nav-hover, leadegn-title, apply-now-hover, footer-bg
+$success:    $celeste;    // subject-tiles, links
+$info:       $lightBlue;  // subject-tile-hover, nav-border
+$warning:    $yellow;     // nav-link-hover, warning headers, apply-now
+$danger:     $red;        
+$gray:       $gray-400;
+$light:      $gray-200; 
+$dark:       $gray-800;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "default":    $default,
+    "primary":    $primary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "gray":       $gray,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// These are used to create light-backgrounded bg-variants in bootstrap-overrides
+$theme-light-bg-colors: () !default;
+$theme-light-bg-colors: map-merge(
+  (
+    "success":    $success,
+    "warning":    $warning,
+    "danger":     $danger,
+  ),
+  $theme-light-bg-colors
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1500px,
+  xxl: 2000px
+) !default;
+
+$border-radius-base: 1rem;
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+
+$primary-light: lighten($primary, 15%);
+$header-background: white;
+$mobile-navbar-height: 110px;
+$nav-offset-height: 5px;
+$logo-height: 95px;
+$link-color:                  theme-color("default");
+$footer-bg:                 $primary;
+
+//Styling
+
+$font-family-serif:         "Barlow Semi Condensed", Helvetica, Arial, sans-serif; 
+$font-family-serif-pv3:      $font-family-serif;
+$font-family-sans-serif:    "Barlow", "Georgia Regular", "Times New Roman", Times, serif;
+$font-family-open-sans:     'Open Sans', sans-serif;
+$font-family-header:        'Roboto Slab', serif;
+$font-family-base:          $font-family-sans-serif;
+$font-size-base:            1rem;
+$block-padding:             50px;
+// // stylelint-disable value-keyword-case
+// Overrule the brand-warning color-scheme
+$panel-warning-text:          white;
+$panel-warning-border:        lighten($default, 5%);
+$panel-warning-heading-bg:    $default;
+
+$zindex-navbar:            1001;
+
+
+
+/***** CUSTOM VARS ******/
+$sidebar-card--bg: $warning;
+$sidebar-card--color: black;
