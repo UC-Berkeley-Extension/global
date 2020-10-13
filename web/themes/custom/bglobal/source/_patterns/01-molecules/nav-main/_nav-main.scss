@@ -2,11 +2,25 @@
   list-style: none;
 }
 
-.primary-navbar_submenu {
+.main-menu {
   @include breakpoint(992px) {
     display: flex;
+    flex-wrap: no-wrap;
+    justify-content: flex-end;
+  }
+}
+
+.primary-navbar_submenu {
+  
+  @include breakpoint(992px) {
+    position: absolute;
+    display: flex;
     flex-wrap: nowrap;
+    padding: 2em 0;
     justify-content: space-between;
+    top: 100%;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -21,6 +35,17 @@
     &:last-child {
       border-right: 0;
       margin-right: 0;
+    }
+  }
+}
+
+
+.menu-link.dropdown:not(.show) {
+  
+  .primary-navbar_submenu {
+    @include breakpoint(992px) {
+      display: none;
+      visibility: hidden;
     }
   }
 }
