@@ -149,9 +149,9 @@ var dropdownMenus = {
 
 document.querySelectorAll("[data-toggle~=dropdown]").forEach(dropdownMenus.setupDropdown);
 
-// ============================
-// -- Updated collapse toggle
-// ============================
+// ============================================
+// -- Updated collapse toggle for mobile menu
+// ============================================
 const dataToggleEvents = Array.from(
   document.querySelectorAll('[data-toggle="collapse"]')
 );

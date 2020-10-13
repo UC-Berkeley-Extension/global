@@ -1,4 +1,4 @@
-// // _utilityFunctions.js 
+// // _utilityFunctions.js
 // //
 // // 1. DROPDOWNS
 // // 2. COLLAPSE TOGGLE
@@ -41,10 +41,10 @@
 //   openOne.switch = false;
 
 //   openOne.close = function(){
-//     // fallback for pdp global header  
+//     // fallback for pdp global header
 //     if (openOne.element.parentElement.classList['value'].includes('header1Items')) openOne.element.parentElement.getElementsByTagName("UL")[0].classList.remove('show');
-//       else openOne.element.parentElement.classList.remove('show'); 
-//     openOne.element.setAttribute('aria-expanded', 'false'); 
+//       else openOne.element.parentElement.classList.remove('show');
+//     openOne.element.setAttribute('aria-expanded', 'false');
 //     openOne.element.nextElementSibling.setAttribute('aria-hidden', 'true');
 //     document.body.onclick = null;
 //     openOne.element.parentElement.removeEventListener("keydown", openOne.dropdownNavigation);
@@ -54,10 +54,10 @@
 //     dropdownMenus.isOpen = null;
 //   };
 //   openOne.open = function(){
-//     // fallback for pdp global header 
+//     // fallback for pdp global header
 //     if (openOne.element.parentElement.classList['value'].includes('header1Items')) openOne.element.parentElement.getElementsByTagName("UL")[0].classList.add('show');
-//       else openOne.element.parentElement.classList.add('show'); 
-//     openOne.element.setAttribute('aria-expanded', 'true'); 
+//       else openOne.element.parentElement.classList.add('show');
+//     openOne.element.setAttribute('aria-expanded', 'true');
 //     openOne.element.nextElementSibling.setAttribute('aria-hidden', 'false');
 //     openOne.element.parentNode.children[0].focus();
 //     document.body.onclick  = openOne.clickOutside;
@@ -76,17 +76,17 @@
 //     for ( var x = 0 ; x < linkList.length ; x++ ) { counter = (linkList[x] === currentLink) ? x : counter; }
 
 //     switch ( keyCode ) {
-//       case Keyboard.ESCAPE: 
+//       case Keyboard.ESCAPE:
 //         dropdownMenus.isOpen.close();
 //         break;
-//       case Keyboard.DOWN: 
+//       case Keyboard.DOWN:
 //         e.preventDefault();
 //         if ( currentLink.classList.contains('dropdown-item') ) {
-//           if ( counter + 1 === linkList.length ) openOne.items[0].focus(); 
+//           if ( counter + 1 === linkList.length ) openOne.items[0].focus();
 //             else currentLink.nextElementSibling.focus();
 //         } else dropdownMenus.isOpen.element.nextElementSibling.firstElementChild.focus();
 //         break;
-//       case Keyboard.UP: 
+//       case Keyboard.UP:
 //         e.preventDefault();
 //         if ( counter === 0 ) dropdownMenus.isOpen.close();
 //           else currentLink.previousElementSibling.focus();
@@ -94,7 +94,7 @@
 //     }
 //   };
 //   openOne.tabNavigation = function(e) {
-//     if ( document.activeElement.classList.contains('dropdown-toggle') ) { 
+//     if ( document.activeElement.classList.contains('dropdown-toggle') ) {
 //       openOne.switch = true;
 //       dropdownMenus.isOpen.close();
 //       return;
@@ -119,17 +119,17 @@
 //         dropdownMenus.isOpen = new OpenDropdown(dropdownToggle);
 //         dropdownMenus.isOpen.open();
 //       }
-//       return false; 
+//       return false;
 //     }
 //     function dropdownOpen(e) {
 //       var keyCode = e.keyCode;
-//       // console.log('keycode', keyCode); 
+//       // console.log('keycode', keyCode);
 //       switch ( keyCode ) {
-//         case Keyboard.DOWN: 
+//         case Keyboard.DOWN:
 //           dropdownMenus.isOpen = new OpenDropdown(dropdownToggle);
 //           dropdownMenus.isOpen.open();
 //           break;
-//         case Keyboard.TAB: 
+//         case Keyboard.TAB:
 //           break;
 //       }
 //     }
@@ -147,7 +147,7 @@
 // //     console.log(collapser.dataset.target)
 // //     var collapseTarget = collapser.dataset.target || null;
 // //     console.log('collapseTarget', collapseTarget)
-// //     if ( collapseTarget ) { 
+// //     if ( collapseTarget ) {
 // //       collapser.setAttribute('aria-haspopup', 'true');
 // //       collapser.setAttribute('aria-expanded', 'false');
 // //       if ( collapseTarget[0] === "#" ) collapseTarget = collapseTarget.substr(1, collapseTarget.length-1);
@@ -169,7 +169,7 @@
 // //       function collapseOpened(e) {
 // //         var keyCode = e.keyCode;
 // //         switch ( keyCode ) {
-// //           case Keyboard.DOWN: 
+// //           case Keyboard.DOWN:
 // //             collapsed.isOpen = new CollapsedOpen(collapser, collapsed);
 // //             collapsed.isOpen.open();
 // //             break;
@@ -188,12 +188,12 @@
 // //   openOne.switch = false;
 
 // //   openOne.close = function(){
-// //     // fallback for pdp global header 
+// //     // fallback for pdp global header
 // //     console.log(openOne.menu.parentElement.classList[0])
 // //     if (openOne.menu.parentElement.classList[0] === 'nav-elements') openOne.menu.classList.remove('show');
-// //       else openOne.menu.parentElement.classList.remove('show'); 
+// //       else openOne.menu.parentElement.classList.remove('show');
 // //     openOne.menu.parentElement.classList.remove('show');
-// //     openOne.element.setAttribute('aria-expanded', 'false'); 
+// //     openOne.element.setAttribute('aria-expanded', 'false');
 // //     openOne.menu.setAttribute('aria-hidden', 'true');
 // //     document.body.onclick = null;
 // //     openOne.menu.parentElement.removeEventListener("keydown", openOne.menuNavigation);
@@ -202,13 +202,13 @@
 // //     collapseTrigger.isOpen = null;
 // //   };
 // //   openOne.open = function(){
-// //     // fallback for pdp global header 
+// //     // fallback for pdp global header
 // //         console.log(openOne.menu.parentElement.classList[0])
 
 // //     if (openOne.menu.parentElement.classList[0] === 'nav-elements') openOne.menu.classList.add('show');
-// //      else openOne.menu.parentElement.classList.add('show'); 
+// //      else openOne.menu.parentElement.classList.add('show');
 // //     openOne.menu.parentElement.classList.add('show');
-// //     openOne.element.setAttribute('aria-expanded', 'true'); 
+// //     openOne.element.setAttribute('aria-expanded', 'true');
 // //     openOne.menu.setAttribute('aria-hidden', 'false');
 // //     openOne.element.parentNode.children[0].focus();
 // //     document.body.onclick  = openOne.clickOutside;
@@ -226,17 +226,17 @@
 // //     for ( var x = 0 ; x < linkList.length ; x++ ) { counter = (linkList[x] === currentLink) ? x : counter; }
 
 // //     switch ( keyCode ) {
-// //       case Keyboard.ESCAPE: 
+// //       case Keyboard.ESCAPE:
 // //         collapseTrigger.isOpen.close();
 // //         break;
-// //       case Keyboard.DOWN: 
+// //       case Keyboard.DOWN:
 // //         e.preventDefault();
 // //         if ( currentLink.classList.contains('dropdown-item') ) {
-// //           if ( counter + 1 === linkList.length ) openOne.items[0].focus(); 
+// //           if ( counter + 1 === linkList.length ) openOne.items[0].focus();
 // //             else currentLink.nextElementSibling.focus();
 // //         } else collapseTrigger.isOpen.element.nextElementSibling.firstElementChild.focus();
 // //         break;
-// //       case Keyboard.UP: 
+// //       case Keyboard.UP:
 // //         e.preventDefault();
 // //         if ( counter === 0 ) collapseTrigger.isOpen.close();
 // //           else currentLink.previousElementSibling.focus();
@@ -244,7 +244,7 @@
 // //     }
 // //   };
 // //   openOne.tabNavigation = function(e) {
-// //     if ( document.activeElement.classList.contains('dropdown-toggle') ) { 
+// //     if ( document.activeElement.classList.contains('dropdown-toggle') ) {
 // //       openOne.switch = true;
 // //       collapseTrigger.isOpen.close();
 // //       return;
@@ -319,12 +319,12 @@
 //   steppedForm.steppedButtons.forEach(function(stepButton){ stepButton.onclick = changeStep; });
 
 //   steppedForm.currentStep = steppedForm.querySelector('[aria-hidden="false"]');
-  
+
 //   function changeStep(e){
 //     e.preventDefault();
 //     var stepNum = parseInt(steppedForm.currentStep.dataset.step) + (e.target.dataset.stepdirection === "next" ? 1 : -1),
 //         newStep = steppedForm.querySelector('[data-step="'+ stepNum +'"]');
-    
+
 //     steppedForm.currentStep.setAttribute("aria-hidden", "true");
 //     newStep.setAttribute("aria-hidden", "false");
 //     steppedForm.currentStep = newStep;
@@ -366,7 +366,7 @@
 //     var startTime = new Date().getTime();
 //     var endTime = startTime + duration;
 //     var timer;
-  
+
 //     function run() {
 //         var now = new Date().getTime();
 //         var remaining = Math.max((endTime - now) / duration, 0);
@@ -376,7 +376,7 @@
 //             clearInterval(timer);
 //         }
 //     }
-    
+
 //     timer = setInterval(run, stepTime);
 //     run();
 // }
@@ -396,7 +396,6 @@
 //     getCounterValues(counter)
 //   }
 // })
-
 
 // // =================================================================
 // // 5. LAZY LOAD IMAGES  script moved to src/common-js/lazy-load.js
@@ -427,15 +426,14 @@
 //       //   console.log("unobserving:", entry.target)
 //       //}
 //       //console.log(observer.unobserve(entry.target))
-//     } 
+//     }
 //     //observer.unobserve(entry.target);
 //   });
 // });
 
-
 // var elementsToFadeIn = [].filter.call(document.querySelectorAll(HIDDEN_ELEMENT_SELECTOR), function (element) {
 //   return !isAnimated(element, ANIMATE_CLASS_NAME);
-// }); 
+// });
 
 // elementsToFadeIn.forEach(function (element) {
 //   //console.log("observing:", element)
@@ -443,7 +441,7 @@
 // });
 
 // // ===================
-// // SEARCH ELECTIVES 
+// // SEARCH ELECTIVES
 // // ===================
 // function searchElectives() {
 //   var input = document.getElementById("electivesSearch");
@@ -467,15 +465,15 @@
 // // 7. TOOLTIPS
 // // ===================
 // document.querySelectorAll('[data-tooltip]').forEach(function(tooltip){
-//   tooltip.onmouseover = function(a){ 
-//     var b = document.getElementById(a.target.dataset.tooltip); 
+//   tooltip.onmouseover = function(a){
+//     var b = document.getElementById(a.target.dataset.tooltip);
 //     console.log(b);
-//     b.style.display = "block"; 
+//     b.style.display = "block";
 //   };
-//   tooltip.onmouseout = function(a){ 
-//     var b = document.getElementById(a.target.dataset.tooltip); 
+//   tooltip.onmouseout = function(a){
+//     var b = document.getElementById(a.target.dataset.tooltip);
 //     console.log(b);
-//     b.style.display = "none"; 
+//     b.style.display = "none";
 //   };
 // });
 
@@ -491,18 +489,17 @@
 
 // runSetHiddenFieldValues();
 
-
 // // ===================
 // // 8. DYNAMIC FORM FIELDS
 // // ===================
-// // change field options on select 
+// // change field options on select
 // // let hiddenInputGroup = document.getElementById('preferredContactFormGroup');
 // // let intTelInput = document.getElementById('int-tel-wrapper');
 // // hiddenInputGroup.style.display = 'none';
 // // intTelInput.style.display = 'none';
 
 // // const preferredContactSelector = (event) => {
-// //   let preferredContact = document.getElementById('preferredContact');    
+// //   let preferredContact = document.getElementById('preferredContact');
 // //   //preferredContact.value = event.target.value;
 // //   switch (event.target.value) {
 // //     case 'sms': case 'phone': case 'WhatsApp':
@@ -527,9 +524,9 @@
 // //       hiddenInputGroup.style.display = 'none';
 // //       break;
 // //     default:
-// //       // default 
-// //       hiddenInputGroup.style.display = 'block'; 
+// //       // default
+// //       hiddenInputGroup.style.display = 'block';
 // //       preferredContact.value = event.target.value;
 // //     }
 // // }
-//   
+//
