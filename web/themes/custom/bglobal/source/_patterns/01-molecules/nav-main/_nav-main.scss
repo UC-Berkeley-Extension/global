@@ -3,16 +3,16 @@
 }
 
 .main-menu {
-  @include breakpoint(992px) {
+  @include breakpoint($bp-med) {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
   }
 }
 
 .primary-navbar_submenu {
   
-  @include breakpoint(992px) {
+  @include breakpoint($bp-med) {
     position: absolute;
     display: flex;
     flex-wrap: nowrap;
@@ -26,7 +26,7 @@
 
 .megamenu-wrapper {
   
-  @include breakpoint(992px) {
+  @include breakpoint($bp-med) {
     flex: 1 0 33%;
     padding-right: $spacer * 2;
     margin-right: $spacer * 2;
@@ -43,7 +43,7 @@
 .menu-link.dropdown:not(.show) {
   
   .primary-navbar_submenu {
-    @include breakpoint(992px) {
+    @include breakpoint($bp-med) {
       display: none;
       visibility: hidden;
     }

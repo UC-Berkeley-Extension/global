@@ -1,23 +1,22 @@
-.navbar .grid-container {
-  position: relative;
-}
-
 .secondary-navbar {
 
-  @include breakpoint($bp-large) {
+  a {
+    color: $berkeley-blue;
+    text-decoration: none;
+  }
+
+  @include breakpoint($bp-med) {
     position: absolute;
     top: -2.25em;
     right: 300px;
     font-size: .8em;
-  }
 
-  a {
-    color: $white;
-    text-decoration: underline;
-  }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
 
-  ul {
-    @include breakpoint($bp-large) {
+    ul {
       display: flex;
     }
   }
@@ -25,7 +24,7 @@
 
 li.secondary-menu-link {
 
-  @include breakpoint($bp-large) {
+  @include breakpoint($bp-med) {
     margin-right: 2em;
   }
 }

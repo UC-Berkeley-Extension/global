@@ -4,24 +4,16 @@
   }
 }
 
-.pre-header {
-  background-color: $berkeley-blue;
-  color: $white;
-
-  a {
-    color: $white;
-  }
-}
-
 .navbar {
   // to place utility and search
   border-top: 2.5em solid $berkeley-blue;
+  padding: 0 1em;
 }
 
 .header-cal {
   padding: 1em 0;
   
-  @include breakpoint(992px) {
+  @include breakpoint($bp-med) {
     // for menu dropdown placement
     position: relative;
     
