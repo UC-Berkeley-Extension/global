@@ -13,7 +13,7 @@ const { copyDrupalCSS, copyDrupalJS } = require('./gulp-tasks/copy');
 const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
 const { compressAssets } = require('./gulp-tasks/compress');
-const { cleanCSS, cleanJS, cleanImages, cleanFonts } = require('./gulp-tasks/clean');
+const { cleanCSS, cleanJS, cleanPublicJs, cleanImages, cleanFonts } = require('./gulp-tasks/clean');
 const { concatCSS, concatJS } = require('./gulp-tasks/concat');
 const { moveFonts, movePatternCSS } = require('./gulp-tasks/move');
 const { createGHPages } = require('./gulp-tasks/deploy');
@@ -39,7 +39,7 @@ exports.compress = compressAssets;
 exports.concat = parallel(concatCSS, concatJS);
 
 // Clean all directories.
-exports.clean = parallel(cleanCSS, cleanJS, cleanImages, cleanFonts);
+exports.clean = parallel(cleanCSS, cleanJS, cleanPublicJs, cleanImages, cleanFonts);
 
 /**
  * Start browsersync server.
@@ -56,7 +56,7 @@ function serve(done) {
     // i.e. /core/misc/drupal.js
     server: ['./public/'],
     watch: true,
-    open: true
+    open: false
   });
   done();
 }
@@ -144,7 +144,7 @@ function watchFiles() {
 
 // Build styleguide
 exports.build = series(
-  parallel(cleanCSS, cleanJS),
+  parallel(cleanCSS, cleanJS, cleanPublicJs),
   parallel(
     copyDrupalCSS,
     copyDrupalJS,
