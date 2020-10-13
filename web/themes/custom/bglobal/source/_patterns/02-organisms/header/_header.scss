@@ -14,5 +14,22 @@
 }
 
 .navbar {
-  padding: 2em 0;
+  // to place utility and search
+  border-top: 2.5em solid $berkeley-blue;
+}
+
+.header-cal {
+  padding: 1em 0;
+  
+  @include breakpoint(992px) {
+    // for menu dropdown placement
+    position: relative;
+    
+    padding: 2em 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
