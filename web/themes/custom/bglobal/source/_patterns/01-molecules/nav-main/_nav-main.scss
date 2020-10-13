@@ -43,9 +43,7 @@
 .menu-link.dropdown:not(.show) {
   
   .primary-navbar_submenu {
-    @include breakpoint($bp-med) {
-      display: none;
-      visibility: hidden;
-    }
+    display: none;
+    visibility: hidden;
   }
 }
