@@ -1,8 +1,18 @@
-.site-header {
-  background-color: $berkeley-blue;
-  height: 100px;
-
-  .haas & {
-    background-color: $soybean;
+#top-banner {
+  .site-logo__image {
+    max-width: 350px;
   }
+}
+
+.secondary-navbar {
+  background-color: $berkeley-blue;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+.navbar {
+  padding: 2em 0;
 }

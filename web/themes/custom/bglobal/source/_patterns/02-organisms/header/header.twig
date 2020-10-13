@@ -1,12 +1,14 @@
 <header id="top-banner">
-	<div class="grid-container grid-col-1 header-cal" id="header-intl">
 		<div id="secondary-nav" class="secondary-navbar mobile-collapse collapse">
+			<div class="grid-container grid-col-1 header-cal" id="header-intl">
 			{% include '@molecules/nav-search/nav-search.twig' %}
+			</div>
 		</div>
 		<div class="navbar">
-			{% include '@molecules/nav-logo/nav-logo.twig' %}
-			{% include '@molecules/nav-main/nav-main.twig' %}
-			{% include '@molecules/nav-utility/nav-utility.twig' %}
-		</div>
+			<div class="grid-container grid-col-1 header-cal" id="header-intl">
+				{% include '@molecules/nav-logo/nav-logo.twig' %}
+				{% include '@molecules/nav-main/nav-main.twig' %}
+				{% include '@molecules/nav-utility/nav-utility.twig' %}
+			</div>
 	</div>
 </header>

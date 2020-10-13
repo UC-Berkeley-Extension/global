@@ -1,0 +1,25 @@
+.navbar .grid-container {
+  position: relative;
+}
+
+#secondary-menu {
+
+  @include breakpoint($bp-large) {
+    position: absolute;
+    top: -2em;
+    right: 300px;
+    display: flex;
+    font-size: .8em;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+li.secondary-menu-link {
+
+  @include breakpoint($bp-large) {
+    margin-right: 1em;
+  }
+}

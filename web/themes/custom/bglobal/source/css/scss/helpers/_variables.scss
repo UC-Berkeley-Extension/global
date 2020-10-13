@@ -4,6 +4,7 @@
 
 // Berkeley Web Basic Colors
 $gray : #EEEEEE;
+$bg-gray: #f2f2f2;
 $web-gray: #888888;
 $white : #ffffff;
 $black : #000000;
@@ -63,13 +64,13 @@ $border-med: 3px;
 $border-thick: 7px;
 
 //Breakpoints
-$bp-small : 24em;
+$bp-small : 24em; //384px @ standard 16px = 1em
 $bp-small-2 : 29.75em;
 $bp-small-3 : 39.8em;
-$bp-med : 46.8em;
-$bp-med-2 : 48em;
-$bp-large : 50em;
-$bp-large-2 : 66em;
+$bp-med : 46.8em; //748.8px @ standard 16px = 1em
+$bp-med : 48em; //768px @ standard 16px = 1em
+$bp-large : 60em; //960px @ standard 16px = 1em
+$bp-large-2 : 66em; //1056px @ standard 16px = 1em
 $bp-xl : 73em;
 $bp-xxl : 89em;
 $bp-xxxl : 93em;

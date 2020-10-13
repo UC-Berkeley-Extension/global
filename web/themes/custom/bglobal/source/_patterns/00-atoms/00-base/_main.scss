@@ -14,3 +14,7 @@ body {
 .container {
   @include container;
 }
+
+.bg-light {
+  background-color: $bg-gray;
+}
