@@ -156,4 +156,12 @@ main_menu:
               href: "#"
               off_site: null
 
-
+utility_menu:
+  - label: Agents
+    href: "#"
+  - label: Partners
+    href: "#"
+  - label: Student Login
+    href: "#"
+  - label: Instructor Login
+    href: "#"

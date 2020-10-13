@@ -2,24 +2,30 @@
   position: relative;
 }
 
-#secondary-menu {
+.secondary-navbar {
 
   @include breakpoint($bp-large) {
     position: absolute;
-    top: -2em;
+    top: -4.5em;
     right: 300px;
-    display: flex;
     font-size: .8em;
   }
 
   a {
     color: $white;
+    text-decoration: underline;
+  }
+
+  ul {
+    @include breakpoint($bp-large) {
+      display: flex;
+    }
   }
 }
 
 li.secondary-menu-link {
 
   @include breakpoint($bp-large) {
-    margin-right: 1em;
+    margin-right: 2em;
   }
 }
