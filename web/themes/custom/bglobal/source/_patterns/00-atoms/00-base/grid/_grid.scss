@@ -136,7 +136,7 @@ article, details, hgroup, main, menu, nav, summary, #infoRow #contentModule9, #f
 
 .grid-container {
   display: flex; // MS Fallbacks
-    flex-wrap: wrap; // MS Fallbacks  
+  flex-wrap: wrap; // MS Fallbacks
   width: 100%; // MS Fallbacks  
   align-items: start; // This was intended to be for #content10Container, but maybe it should apply more broadly?
   max-width: 1200px;
