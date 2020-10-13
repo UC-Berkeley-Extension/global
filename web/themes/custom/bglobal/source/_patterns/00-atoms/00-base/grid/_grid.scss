@@ -66,6 +66,9 @@ $grid-float-breakpoint:     $screen-sm-min;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
+// @TODO: remove when existing init variables are added;
+$columns: $grid-columns;
+$spacer: $grid-gutter-width;
 
 // MIXINS
 @mixin column-variants($parent, $column) {
@@ -272,6 +275,12 @@ article, details, hgroup, main, menu, nav, summary, #infoRow #contentModule9, #f
     > :nth-child(2n){
       grid-column: col4 / col12;
     }
+  }
+}
+// @TODO: replace with actual '.grid-col-2' scss
+.grid-col-2 {
+  @media (max-width: map-get($grid-breakpoints, "md") - 1) { 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .grid-col-2-1 {
