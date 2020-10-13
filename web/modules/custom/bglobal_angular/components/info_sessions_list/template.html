@@ -11,7 +11,7 @@
 <div class="events" *ngIf="view.count > 0">
   <h2 class="block-header">Info Sessions</h2>
   <ul class="session-list" >
-    <li class="session" *ngFor="let session of sessions | slice:0:3;">
+    <li class="session" *ngFor="let session of sessions | slice:0:limit;">
       <div class="session-left">
         <div class="date">
           <span class="month">{{ session.jsDate | date:'MMM' }}</span> <span class="day">{{ session.jsDate | date:'dd' }}</span>
