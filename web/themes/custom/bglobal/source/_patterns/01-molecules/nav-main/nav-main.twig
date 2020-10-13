@@ -11,7 +11,7 @@
         <ul class="primary-navbar_submenu dropdown-menu">
           {% for column in item.children %}
           <li class="megamenu-wrapper">
-            {# @TODO // Determine if we need 'columns' to be a data point or if we can organize it via css #}
+            {# @TODO // Determine if we need 'columns' to be a data point or if we can organize it via css. Current implementation matches live site w/ column wrappers. #}
             <div class="megamenu-column">
               {% for child in column.children %}
               <ul class="megamenu-submenu">
