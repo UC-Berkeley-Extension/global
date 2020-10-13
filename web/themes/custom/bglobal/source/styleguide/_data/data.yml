@@ -1,0 +1,159 @@
+main_menu:
+  - label: Programs
+    children:
+      - label: column-1
+        children:
+          - label: Programs for Professionals
+            children:
+              - label: Business Administration
+                href: "#"
+                off_site: null
+              - label: Business Development
+                href: "#"
+                off_site: null
+              - label: Data Science
+                href: "#"
+                off_site: null
+              - label: Entrepreneurship
+                href: "#"
+                off_site: null
+              - label: Finance
+                href: "#"
+                off_site: null
+              - label: Marketing
+                href: "#"
+                off_site: null
+              - label: Product Management
+                href: "#"
+                off_site: null
+              - label: Project Management
+                href: "#"
+                off_site: null
+              - label: UX/UI Design
+                href: "#"
+                off_site: null
+      - label: column-2
+        children: 
+          - label: Online Learning
+            children:
+              - label: Online Courses and Certificates
+                href: "#"
+                off_site: null
+          - label: Programs for University Students
+            children:
+              - label: Berkeley Global Access
+                href: "#"
+                off_site: null
+              - label: Entrepreneurship
+                href: "#"
+                off_site: true
+              - label: Legal Studies
+                href: "#"
+                off_site: true
+              - label: Physics
+                href: "#"
+                off_site: true
+          - label: Programs for High School Graduates
+            children:
+              - label: Global Program for Freshmen
+                href: "#"
+                off_site: null
+              - label: College Foundations
+                href: "#"
+                off_site: null
+      - label: column-3
+        children: 
+          - label: Events
+            children:
+              - label: Information Sessions
+                href: "#"
+                off_site: null
+              - label: Free and Low Cost Events
+                href: "#"
+                off_site: null
+  - label: Student Resources
+    children:
+      - label: column-1
+        children:
+          - label: Student Services
+            children:
+              - label: Latest COVID-19 Information
+                href: "#"
+                off_site: true
+              - label: About Us
+                href: "#"
+                off_site: null
+              - label: Once You've Applied
+                href: "#"
+                off_site: null
+              - label: Preparing for Your Trip to the U.S.
+                href: "#"
+                off_site: null
+              - label: Visa Information
+                href: "#"
+                off_site: null
+              - label: Professional Internship Program
+                href: "#"
+                off_site: null
+              - label: Berkeley Campus
+                href: "#"
+                off_site: null
+              - label: San Francisco Campus
+                href: "#"
+                off_site: null
+              - label: Belmont Campus
+                href: "#"
+                off_site: null
+      - label: column-2
+        children:
+          - label: Berkeley Life
+            children:
+              - label: Culture
+                href: "#"
+                off_site: null
+              - label: Health and Safety
+                href: "#"
+                off_site: null
+              - label: Housing
+                href: "#"
+                off_site: null
+              - label: Community Guides
+                href: "#"
+                off_site: null
+      - label: column-3
+        children:
+          - label: Events
+            children:
+              - label: Information Sessions
+                href: "#"
+                off_site: null
+              - label: Free and Low Cost Events
+                href: "#"
+                off_site: null
+  - label: Graduates
+    children:
+      - label: column-1
+        children:
+        - label: Voices Blog
+          children:
+            - label: Voices Home
+              href: "#"
+              off_site: true
+            - label: Student Stories
+              href: "#"
+              off_site: true
+            - label: Professional Pathways
+              href: "#"
+              off_site: true
+      - label: column-2
+        children:
+        - label: Events
+          children:
+            - label: Information Sessions
+              href: "#"
+              off_site: null
+            - label: Free and Low Cost Events
+              href: "#"
+              off_site: null
+
+

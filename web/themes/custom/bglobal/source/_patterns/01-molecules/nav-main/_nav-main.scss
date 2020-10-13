@@ -1,3 +1,26 @@
 .navbar ul {
   list-style: none;
 }
+
+.primary-navbar_submenu {
+  @include breakpoint(992px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.megamenu-wrapper {
+  
+  @include breakpoint(992px) {
+    flex: 1 0 33%;
+    padding-right: $spacer * 2;
+    margin-right: $spacer * 2;
+    border-right: 1px solid grey;
+    
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+    }
+  }
+}
