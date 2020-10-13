@@ -1,0 +1,19 @@
+{# Source:
+  /web/modules/custom/bglobal_angular/components/voices_list/template.html
+#}
+{# *ngFor="let post of posts" data-ng-cloak  #}
+<div class="voices featured">
+  <h2 class="block-header">Spotlight</h2>
+  <div class="voices-section grid-flip" style="width: 400px; padding: 10px;">
+    <img src="{{ posts[0].image.src }}" 
+         alt="{{ posts[0].image.alt }}" 
+         style="width: 400px;" 
+         class="voice-section--img m-b-20 img-fluid" />
+    <p class="marginless-p"><strong>
+      <a href="{{ posts[0].path }}" class="blog-header">{{ posts[0].title }}</a>
+    </strong></p>
+    {# [innerHTML] #}
+    <div class="blog-intro">{{ posts[0].content }}</div>
+    <div class="btn"><a href="{{ posts[0].path }}">Read More</div>
+  </div>
+</div>

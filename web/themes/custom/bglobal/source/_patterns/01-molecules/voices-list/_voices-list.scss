@@ -1,0 +1,26 @@
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+.post {
+  &:hover img,
+  &:focus img,
+  &:active img {
+    opacity: .7;
+  }
+  &-img {
+    overflow: hidden;
+    img {
+      border-bottom: 0.7em solid $berkeley-blue;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      -moz-transition: opacity 0.3s ease-in-out;
+      -ms-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+  &-title {
+    font-family: $font-bitter;
+  }
+}

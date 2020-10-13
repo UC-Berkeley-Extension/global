@@ -8,98 +8,22 @@
     <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>
   </div>
 </div> -->
-<div class="events">
-  <h3 class="block-header">Info Sessions</h3>
-  <ul class="media-list" *ngIf="view.count > 0">
-    <li class="media" *ngFor="let session of sessions">
-      <div class="media-left">
+<div class="events" *ngIf="view.count > 0">
+  <h2 class="block-header">Info Sessions</h2>
+  <ul class="session-list" >
+    <li class="session" *ngFor="let session of sessions | slice:0:3;">
+      <div class="session-left">
         <div class="date">
           <span class="month">{{ session.jsDate | date:'MMM' }}</span> <span class="day">{{ session.jsDate | date:'dd' }}</span>
         </div>
       </div>
-      <div class="media-body">
-        <h4>
-          <a [href] = "session.path">{{session.title}}</a>
-        </h4>
+      <div class="session-body">
+        <h3>
+          <a [href] = "session.enroll">{{session.title}}</a>
+        </h3>
      </div>
     </li>
   </ul>
-  <div *ngIf="view.count <= 0"><h1>No Info Sessions to show!</h1></div>
+  <a class="block-header" href="/">More Info Sessions</a>
 </div>
-
-<style>
-.events {
-  max-width: 360px;
-  width: 100%;
-}
-.events h3.block-header, .news h3.block-header {
-  font-size: 12px;
-  margin-top: 0;
-  margin-left: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #003262;
-  font-family: 'Open Sans',sans-serif;
-}
-.media-list {
-  padding-left: 0;
-  list-style: none;
-}
-.media:first-child {
-  margin-top: 0;
-}
-.media {
-  margin-top: 15px;
-}
-.media-left, .media-right, .media-body {
-  display: table-cell;
-  vertical-align: top;
-}
-.media-left, .media>.pull-left {
-  padding-right: 10px;
-}
-.events .date {
-  display: inline-block;
-  background: transparent;
-  width: 68px;
-  height: 68px;
-  border-right: 1px solid #ddd;
-  text-align: center;
-}
-.events .month {
-  margin-top: 0;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: block;
-  line-height: 19px;
-  color: #003262;
-}
-.events .day {
-  font-weight: 400;
-  font-size: 39px;
-  display: block;
-  line-height: 22px;
-  color: #003262;
-  font-family: "freight-micro-pro",Georgia,serif;
-}
-.media-left, .media-right, .media-body {
-  display: table-cell;
-  vertical-align: top;
-}
-.event .media-body h4, .events .media-body h4 {
-  margin: 0;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600;
-  font-family: 'Open Sans',sans-serif;
-}
-@media (min-width: 768px) {
-  h3 {
-    font-size: 24px;
-  }
-}
-.events .media-body a {
-  color: #003262;
-}
-</style>
+<div *ngIf="view.count <= 0"><h1>No Info Sessions to show!</h1></div>
