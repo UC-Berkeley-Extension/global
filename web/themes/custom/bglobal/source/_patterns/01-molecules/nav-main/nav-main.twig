@@ -17,16 +17,16 @@
               <ul class="megamenu-submenu">
                 <li class="megamenu-submenu_title">
                   {{ child.label }}
+                  {# @TODO // This ul was moved inside of the parent li for hierarchy purposes. Determine if this is a workable solution (likely dependent on drupal implementation) #}
+                  {% if child.children %}
+                  <ul class="megamenu-submenu_links">
+                    {% for grandchild in child.children %}
+                    <li class="leaf menu-link-{{ grandchild.label|replace(" ", "-")|lower }}">
+                      <a class="dropdown-item" {% if grandchild.off_site %}target="_blank" rel="noopener noreferrer"{% endif %} href="{{ grandchild.href }}">{{ grandchild.label }} {% if grandchild.off_site %}<span class="fa fa-external-link-alt"></span>{% endif %}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
                 </li>
-                {# @TODO // Consider moving this ul into the above ul for hierarchy purposes #}
-                {% if child.children %}
-                <ul class="megamenu-submenu_links">
-                  {% for grandchild in child.children %}
-                  <li class="leaf menu-link-{{ grandchild.label|replace(" ", "-")|lower }}">
-                    <a class="dropdown-item" {% if grandchild.off_site %}target="_blank" rel="noopener noreferrer"{% endif %} href="{{ grandchild.href }}">{{ grandchild.label }} {% if grandchild.off_site %}<span class="fa fa-external-link-alt"></span>{% endif %}</a>
-                  </li>
-                  {% endfor %}
-                </ul>
                 {% endif %}
               </ul>
               {% endfor %}
