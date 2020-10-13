@@ -3,6 +3,12 @@
   a {
     color: $berkeley-blue;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: $berkeley-blue solid 1px;
+    }
   }
 
   @include breakpoint($bp-med) {
@@ -14,6 +20,13 @@
     a {
       color: $white;
       text-decoration: underline;
+
+      &:hover,
+      &:active,
+      &:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: 2px;
+      }
     }
 
     ul {
