@@ -22,7 +22,7 @@ export class InfoSessionsList {
     this.setVariables(elementRef);
     this.view = { count: 0 };
 
-    const fetchUrl = this.baseUrl + 'cert/' + this.cert + '/area/265';
+    const fetchUrl = this.baseUrl + 'cert/' + this.cert + '/area/International';
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {

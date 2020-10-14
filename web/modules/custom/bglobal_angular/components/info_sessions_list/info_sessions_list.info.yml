@@ -11,7 +11,7 @@ configuration:
   info:
     type: item
     title: 'Data endpoint'
-    description: 'https://voices.berkeley.edu/international-feed/post/{$post}/tag/{$tag}/program/{$program}'
+    description: 'https://voices.berkeley.edu/info-sessions/json/cert/{$cert}/area/international'
   limit:
     type: textfield
     title: 'Number of posts'
