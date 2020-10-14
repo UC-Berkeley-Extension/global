@@ -1,0 +1,29 @@
+<!-- 
+  Reference modules/custom/bglobal_angular/components/info_sessions_list/template.html
+ -->
+
+<!-- <div data-ng-if="view.count > 0 && $parent.parentProgram.abbreves === 'pdp'">
+  <div data-ng-repeat="session in sessions | limitTo:1">
+    <p class="blockquote">"Please join us for a free <a data-ng-href="{{ session.enroll }}" target="_blank">online information session</a>."</p>
+    <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>
+  </div>
+</div> -->
+<div class="events" *ngIf="view.count > 0">
+  <h2 class="block-header">Info Sessions</h2>
+  <ul class="session-list" >
+    <li class="session" *ngFor="let session of sessions | slice:0:limit;">
+      <div class="session-left">
+        <div class="date">
+          <span class="month">{{ session.jsDate | date:'MMM' }}</span> <span class="day">{{ session.jsDate | date:'dd' }}</span>
+        </div>
+      </div>
+      <div class="session-body">
+        <h3>
+          <a [href] = "session.enroll">{{session.title}}</a>
+        </h3>
+     </div>
+    </li>
+  </ul>
+  <a class="block-header" href="/">More Info Sessions</a>
+</div>
+<div *ngIf="view.count <= 0"><h1>No Info Sessions to show!</h1></div>
