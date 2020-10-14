@@ -1,0 +1,28 @@
+{# Source:
+  /web/modules/custom/bglobal_angular/components/info_sessions_advising/template.html
+#}
+<div class="events">
+  <h2 class="block-header">Info Sessions</h2>
+  {# *ngIf="view.count > 0" #}
+  <ul class="session-list"> 
+    {# *ngFor="let session of sessions" #}
+    {% for session in sessions %}
+    <li class="session"> 
+      <div class="session-left">
+        <div class="date">
+          {# {{ session.jsDate | date:'MMM' }} #}
+          {# {{ session.jsDate | date:'dd' }} #}
+          <span class="month">{{ session.jsDate.month }}</span> <span class="day">{{ session.jsDate.day }}</span>
+        </div>
+      </div>
+      <div class="session-body">
+        <h3>
+          {# {{session.path, .title}} #}
+          <a href="{{ session.enroll }}">{{ session.title }}</a>
+        </h3>
+     </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="block-header" href="/">More Info Sessions</a>
+</div>
