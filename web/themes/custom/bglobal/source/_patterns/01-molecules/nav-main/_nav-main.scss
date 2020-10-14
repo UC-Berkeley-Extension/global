@@ -1,0 +1,49 @@
+.navbar ul {
+  list-style: none;
+}
+
+.main-menu {
+  @include breakpoint($bp-med) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+}
+
+.primary-navbar_submenu {
+  
+  @include breakpoint($bp-med) {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2em 0;
+    justify-content: space-between;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.megamenu-wrapper {
+  
+  @include breakpoint($bp-med) {
+    flex: 1 0 33%;
+    padding-right: $spacer * 2;
+    margin-right: $spacer * 2;
+    border-right: 1px solid grey;
+    
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.menu-link.dropdown:not(.show) {
+  
+  .primary-navbar_submenu {
+    display: none;
+    visibility: hidden;
+  }
+}

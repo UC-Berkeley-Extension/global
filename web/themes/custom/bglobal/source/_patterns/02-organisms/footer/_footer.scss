@@ -1,5 +1,15 @@
-.site-footer {
-  background-color: $web-gray;
+#footer {
   height: 300px;
   margin-top: 2em;
+  padding: 3em .5em;
+
+  .site-logo__image {
+    max-width: 210px;
+  }
+}
+
+span.footer__info,
+span.footer__info a {
+  text-align: center;
+  display: inline-block;
 }

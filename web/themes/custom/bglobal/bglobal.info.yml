@@ -8,9 +8,7 @@ libraries:
   - bglobal/global
 regions:
   header: 'Header'
-  navigation: 'Navigation'
   highlighted: 'Highlighted'
-  page_header: 'Page Header'
   content: 'Content'
   content_bottom: 'Content Bottom'
   footer: 'Footer'
