@@ -12,7 +12,6 @@ import 'rxjs/add/operator/map';
 
 export class InfoSessionsList {
   public cert: string = 'all';
-  public area: string = 'all';
   public baseUrl: string = 'https://voices.berkeley.edu/info-sessions/json/';
   
   // Constructor method sets our data from the JSON callback.
@@ -23,7 +22,7 @@ export class InfoSessionsList {
     this.setVariables(elementRef);
     this.view = { count: 0 };
 
-    const fetchUrl = this.baseUrl + 'cert/' + this.cert + '/area/' + this.area;
+    const fetchUrl = this.baseUrl + 'cert/' + this.cert + '/area/265';
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {
@@ -40,7 +39,6 @@ export class InfoSessionsList {
     var instanceId = elementRef.nativeElement.id.substring(12);
     // Get the values set by our configuration.
     this.cert = drupalSettings.pdb.configuration[instanceId].cert;
-    this.area = drupalSettings.pdb.configuration[instanceId].area;
     this.limit = drupalSettings.pdb.configuration[instanceId].limit || 3;
   }
   parseMonthDay(obj) {

@@ -17,11 +17,6 @@ configuration:
     title: 'Number of posts'
     description: 'How many Info Sessions would you like to see? Blank for max'
     default_value: '3'
-  area:
-    type: textfield
-    title: Area
-    description: 'Enter an optional Academic Area ID. Use "all" for all Academic Areas.'
-    default_value: 'all'
   cert:
     type: textfield
     title: Programs
