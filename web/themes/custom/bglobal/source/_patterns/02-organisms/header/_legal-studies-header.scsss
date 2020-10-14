@@ -1,0 +1,42 @@
+
+/************ Header *************/
+
+.ribbon {
+  background: white;
+}
+
+#nav-stud-account {
+	color: $gray-800;
+	a:not(.btn) {
+		color: $link-color;
+		text-decoration: underline;
+	}
+}
+
+#logo-header {
+  // @media only screen and (min-width: 768px) {
+  // 	min-height: 144px;
+  // }
+	#nav-cart-container a {
+		color: #333; // overloading default white
+	}
+}
+
+// legal-studies-change
+#navDropdowns{
+	@media (min-width: map-get($grid-breakpoints, "sm")) {
+		border-top: 10px solid $primary;
+	}
+	font-family: $font-family-serif;
+	.nav-link {
+		text-transform: uppercase;
+	}
+}
+
+ul.dropdown-menu.sub-nav-group{
+	background-color: $default;
+}
+
+#logo {
+	height: 94px;
+}

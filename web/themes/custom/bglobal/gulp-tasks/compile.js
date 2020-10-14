@@ -26,7 +26,7 @@ function handleError(err) {
 module.exports = {
   // Compile Sass.
   compileSass: function () {
-    return src(['source/css/style.scss', './source/_patterns/**/**/*.scss'], {allowEmpty: true})
+    return src(['./source/css/style.scss', './source/_patterns/**/**/*.scss'], {allowEmpty: true})
       .pipe(sassGlob())
       .pipe(sass({outputStyle: 'nested'}).on('error', handleError))
       .pipe(

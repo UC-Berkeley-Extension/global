@@ -1,0 +1,161 @@
+// Variables //
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #ddd !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+// Color Palette
+$blue:      #4291C4;
+$celeste:   #466F82;
+$red:       #D9661F;
+$rust:      darken($red, 10%);
+$brown:     #6A6160;
+$yellow:    #FFB700;
+$green:     #A9B240;
+$teal:      #00B2A9;
+$gray:       $gray-400;
+$light:      $gray-200; 
+$dark:       $gray-800;
+
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "celeste":    $celeste,
+    "red":        $red,
+    "brown":      $brown,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "white":      $white,
+    "light":      $light,
+    "gray":       $gray,
+    "dark":       $dark
+  ),
+  $colors
+);
+
+/*****  COMMON  *****/
+// nav (default)
+// nav-hover
+// leadegn-title
+// apply-now-hover
+//  
+// 
+// 
+
+/*****  DIFFERENT  *****/
+// header-banner
+// footer-bg
+// apply-now
+// warning-headers
+// section-tiles
+// links
+// section-tile-hover
+
+
+/*****  DIFFERENT BUT COULD SHARE VARIABLE  *****/
+
+// 
+
+
+$default:    $celeste;  // nav, footer-bg, warning headers
+$primary:    $blue;     // nav-border-top, leadegn-title, nav-hover, section-tiles, apply-now-hover, links
+$success:    $green;    // 
+$info:       $brown;    // section-tile-hover, nav-border
+$warning:    $yellow;   // nav-links-hover
+$danger:     $red;      // apply-now
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "default":    $default,
+    "primary":    $primary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "gray":       $gray,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// These are used to create light-backgrounded bg-variants in bootstrap-overrides
+$theme-light-bg-colors: () !default;
+$theme-light-bg-colors: map-merge(
+  (
+    "success":    $success,
+    "warning":    $warning,
+    "danger":     $danger,
+  ),
+  $theme-light-bg-colors
+);
+
+$primary-light: lighten($primary, 15%);
+$header-background: white;
+$mobile-navbar-height: 110px;
+$nav-offset-height: 5px;
+$logo-height: 95px;
+$link-color:                  darken(theme-color("primary"), 15%);  
+$footer-bg:                 $celeste;
+
+//Styling
+// Google Fonts
+// law-gap
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Barlow:400,400i,600,600i|Open+Sans&display=swap&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400|Barlow:400,400i,600,600i');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$border-radius-base: 4px;
+$padding-base-vertical:     6px;
+$padding-base-horizontal: 12px;
+
+$font-family-serif:         "Barlow Semi Condensed", Helvetica, Arial, sans-serif; // legal-studies-change
+$font-family-serif-pv3:      $font-family-serif;
+$font-family-sans-serif:    "Barlow", Georgia Regular, "Times New Roman", Times, serif; //legal-studies-change
+$font-family-open-sans:     'Open Sans', sans-serif;
+$font-family-header:        $font-family-sans-serif;
+$font-family-base:          $font-family-open-sans;
+$font-size-base:            1rem;
+$block-padding:             50px;
+
+// Overrule the brand-warning color-scheme
+$panel-warning-text:          white;
+$panel-warning-border:        lighten($default, 5%);
+$panel-warning-heading-bg:    $default;
+
+$zindex-navbar:            1001;
+
+
+/***** CUSTOM VARS ******/
+$sidebar-card--bg: $default;
+$sidebar-card--color: white;
