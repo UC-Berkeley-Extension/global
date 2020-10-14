@@ -32,12 +32,10 @@
     ul {
       display: flex;
     }
+
+    li {
+      margin-right: 2em;
+    }
   }
 }
 
-li.secondary-menu-link {
-
-  @include breakpoint($bp-med) {
-    margin-right: 2em;
-  }
-}

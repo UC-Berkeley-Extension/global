@@ -128,17 +128,19 @@ $columns: map-merge(
 ///////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
 
-article, details, hgroup, main, menu, nav, summary, #infoRow #contentModule9, #footer { 
-  // Removed figure and figaption because department contact box on certs didn't need to be like this
-  // removed section cause it was messing up when I tried to put things in landmarks
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-  & > * {
-    @include containerize();
-  }
-}
+// Below rule breaks Drupal admin toolbar.
+//article, details, hgroup, main, menu, nav, summary, #infoRow #contentModule9, #footer {
+//  // Removed figure and figaption because department contact box on certs didn't need to be like this
+//  // removed section cause it was messing up when I tried to put things in landmarks
+//  display: flex;
+//  align-items: center;
+//  flex-direction: column;
+//
+//  & > * {
+//    @include containerize();
+//  }
+//}
+
 #pageContainer > section, #footer { // removed main because most times it seems to be excessive
   padding: var(--spacer-md) 0;
 }

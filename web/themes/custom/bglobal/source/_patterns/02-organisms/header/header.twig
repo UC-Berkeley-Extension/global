@@ -12,9 +12,11 @@
 		<div class="grid-container grid-col-1 header-cal" id="header-intl">
 			{% include '@molecules/nav-logo/nav-logo.twig' %}
 			<div class="header__mobile-drawer mobile-collapse">
-				{% include '@molecules/nav-search/nav-search.twig' %}
-				{% include '@molecules/nav-main/nav-main.twig' %}
-				{% include '@molecules/nav-utility/nav-utility.twig' %}
+				{% block header_blocks %}
+					{% include '@molecules/nav-search/nav-search.twig' %}
+					{% include '@molecules/nav-main/nav-main.twig' %}
+					{% include '@molecules/nav-utility/nav-utility.twig' %}
+				{% endblock %}
 			</div>
 		</div>
 	</div>
