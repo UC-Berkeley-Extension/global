@@ -48,13 +48,13 @@
   @include breakpoint($bp-med) {
     // for menu dropdown placement
     position: relative;
-    
-    padding: 2em 0;
+    padding: 0;
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    max-height: 250px;
   }
 }
 

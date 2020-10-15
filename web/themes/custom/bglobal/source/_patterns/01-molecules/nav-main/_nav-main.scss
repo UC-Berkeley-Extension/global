@@ -49,6 +49,21 @@
 }
 
 // Drupal nav styling
+#block-mainnavigation {
+  @include breakpoint($bp-med) {
+  }
+}
+
 #block-mainnavigation ul[data-region="header"] {
   display: flex;
+
+  > li a {
+    display: inline-block;
+    min-width: 150px;
+  }
+}
+
+.dropdown-menu.dropdown-fullwidth {
+  display: none;
+  visibility: hidden;
 }
