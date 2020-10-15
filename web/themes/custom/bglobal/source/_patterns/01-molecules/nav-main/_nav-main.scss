@@ -47,3 +47,8 @@
     visibility: hidden;
   }
 }
+
+// Drupal nav styling
+#block-mainnavigation ul[data-region="header"] {
+  display: flex;
+}
