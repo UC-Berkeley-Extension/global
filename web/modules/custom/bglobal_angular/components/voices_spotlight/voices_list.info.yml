@@ -14,7 +14,7 @@ configuration:
     description: 'https://voices.berkeley.edu/single-post/%/tag/%/cert/%/area/International'
   post:
     type: textfield
-    title: Posts
+    title: Post
     description: 'If you know what post you wanna show, replace 'all' with the post ID.'
     default_value: 'all'
   tag:
