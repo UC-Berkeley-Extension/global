@@ -1,18 +1,37 @@
 {# Source:
   /web/modules/custom/bglobal_angular/components/voices_list/template.html
 #}
-<div class="voices">
-  <h2 class="block-header">Latest</h2>
-  <div class="posts">
-    {% for post in posts %}
-      <a href="{{ post.path }}" class="post">
-        <div class="post-img">
-          <img src="{{ post.image.src }}" alt="{{ post.image.alt }}" />
+<div class="voices__list">
+  <h2 class="voices__list__header block-header">Latest</h2>
+  <div class="voices__teaser__list">
+    {% for post in posts %} {# RENAME TEASER #}
+      <a href="{{ post.path }}" class="voices__teaser__block">
+        <div class="voices__teaser__image">
+          <img class="voices__teaser__image__el" src="{{ post.image.src }}" alt="{{ post.image.alt }}" />
         </div>
-        <p class="post-title">
+        <p class="voices__teaser__title">
           <strong>{{ post.title }}</strong>
         </p>
       </a>
     {% endfor %}
   </div>
+  <a clsss="more-link" href="/">More More</a>
 </div>
+
+
+{# 
+<div class="voices__spotlight">
+  <h2 class="voices__spotlight__header block-header">Spotlight</h2>
+  <div class="voices__spotlight_teaser">
+    <a href="{{ post.path }}" class="post">
+      <div class="post-img">
+        <img src="{{ post.image.src }}" alt="{{ post.image.alt }}" />
+      </div>
+      <p class="post-title">
+        <strong>{{ post.title }}</strong>
+      </p>
+    </a>
+  </div>
+</div>
+ #}
+
