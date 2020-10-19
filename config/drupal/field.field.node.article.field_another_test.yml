@@ -1,0 +1,28 @@
+uuid: 3ba98d53-c21a-4561-a82c-7148e7aca5ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_another_test
+    - node.type.article
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+id: node.article.field_another_test
+field_name: field_another_test
+entity_type: node
+bundle: article
+label: 'Another Test'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

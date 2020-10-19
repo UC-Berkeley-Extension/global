@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  allowed_formats: 0
   automated_cron: 0
   bglobal_angular: 0
   bglobal_pardot: 0
@@ -52,6 +53,7 @@ module:
   term_condition: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   tour: 0
   twig_field_value: 0
