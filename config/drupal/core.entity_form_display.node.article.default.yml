@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_another_test
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - field.field.node.article.field_term_ref_editorial_section
     - field.field.node.article.field_term_ref_school_microsite
+    - field.field.node.article.field_test_field
     - image.style.thumbnail
     - node.type.article
   module:
@@ -37,6 +39,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_another_test:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_image:
     type: image_image
     weight: 5
@@ -66,6 +76,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_test_field:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   path:
     type: path
