@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.view_page.body
     - field.field.node.view_page.field_ref_views_embed
+    - field.field.node.view_page.field_term_ref_editorial_section
     - field.field.node.view_page.field_term_ref_school_microsite
     - node.type.view_page
   module:
@@ -31,4 +32,5 @@ content:
     region: content
 hidden:
   field_ref_views_embed: true
+  field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true

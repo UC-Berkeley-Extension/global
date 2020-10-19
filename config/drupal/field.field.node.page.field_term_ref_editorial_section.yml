@@ -1,0 +1,33 @@
+uuid: 1b9b7282-f2e7-42d0-8067-9fd4e06f8013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_ref_editorial_section
+    - node.type.page
+    - taxonomy.vocabulary.editorial_section
+  content:
+    - 'taxonomy_term:editorial_section:b14062f8-fca5-4e45-bf22-0d184e8ba7d8'
+id: node.page.field_term_ref_editorial_section
+field_name: field_term_ref_editorial_section
+entity_type: node
+bundle: page
+label: 'Editorial Section'
+description: 'Determines who can edit this content.'
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: b14062f8-fca5-4e45-bf22-0d184e8ba7d8
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      editorial_section: editorial_section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
