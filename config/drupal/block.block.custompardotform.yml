@@ -18,8 +18,6 @@ settings:
   provider: bglobal_pardot
   label_display: visible
   action_url: 'https://go.pardot.com/l/102272/2016-11-04/2klckm'
-  success_location: 'https://extension.berkeley.edu/international/'
-  error_location: 'https://extension.berkeley.edu/international/'
   field_list:
     firstname: firstname
     lastname: lastname
@@ -31,5 +29,9 @@ settings:
   tracking_fields:
     full_path: full_path
     page_title: page_title
+    success_location: success_location
+    error_location: error_location
     program_name: 0
+  success_location: 'https://extension.berkeley.edu/international/'
+  error_location: 'https://extension.berkeley.edu/international/'
 visibility: {  }
