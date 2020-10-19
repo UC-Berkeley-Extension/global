@@ -31,6 +31,7 @@
     "drupal/admin_toolbar": "^2.3",
     "drupal/block_field": "^1.0@RC",
     "drupal/components": "2.0-beta3",
+    "drupal/config_inspector": "^1.1",
     "drupal/core": "9.0.6 as 8.9.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
@@ -105,6 +106,9 @@
     "patches": {
       "drupal/core": {
         "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch"
+      },
+      "drupal/block_field": {
+        "Changing the available blocks for a 'Block (plugin)' field produces a Recoverable fatal error (https://www.drupal.org/project/block_field/issues/2861670)": "https://www.drupal.org/files/issues/2020-06-23/block_field-available-blocks-2861670-40.patch"
       },
       "drupal/pdb": {
         "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-09-25/drupal9-ready-3133320-6.patch",
