@@ -1,0 +1,19 @@
+uuid: 901db892-5a97-4983-935a-652b9240ab1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_shortname
+    - node.type.program
+id: node.program.field_program_shortname
+field_name: field_program_shortname
+entity_type: node
+bundle: program
+label: 'Program Shortname'
+description: 'The short name for this program. Used in URLs and headers.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

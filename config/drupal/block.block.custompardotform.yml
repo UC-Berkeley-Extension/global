@@ -31,7 +31,6 @@ settings:
     page_title: page_title
     success_location: success_location
     error_location: error_location
-    program_name: 0
   success_location: 'https://extension.berkeley.edu/international/'
   error_location: 'https://extension.berkeley.edu/international/'
 visibility: {  }

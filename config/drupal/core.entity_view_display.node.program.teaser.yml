@@ -1,0 +1,42 @@
+uuid: 24c293e9-b159-4372-acb9-f1bcf0c7ee91
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.body
+    - field.field.node.program.field_block_pardot_form
+    - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_term_ref_editorial_section
+    - field.field.node.program.field_term_ref_school_microsite
+    - node.type.program
+  module:
+    - text
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_block_pardot_form: true
+  field_program_application_cta: true
+  field_program_description: true
+  field_program_shortname: true
+  field_term_ref_editorial_section: true
+  field_term_ref_school_microsite: true
