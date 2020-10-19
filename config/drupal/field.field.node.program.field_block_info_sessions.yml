@@ -1,0 +1,37 @@
+uuid: b41c18f8-55fd-4562-9ce8-ee309cfa4a64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_block_info_sessions
+    - node.type.program
+  module:
+    - block_field
+id: node.program.field_block_info_sessions
+field_name: field_block_info_sessions
+entity_type: node
+bundle: program
+label: 'Info Sessions Block '
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    plugin_id: 'ng2_component:voices_list'
+    settings:
+      id: 'ng2_component:voices_list'
+      label: 'Angular: Voices Post List'
+      provider: pdb_ng2
+      label_display: false
+      pdb_configuration:
+        info: ''
+        post: all
+        tag: all
+        program: all
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'ng2_component:voices_list': 'ng2_component:voices_list'
+field_type: block_field

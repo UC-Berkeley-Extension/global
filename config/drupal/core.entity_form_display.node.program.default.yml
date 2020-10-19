@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.program.body
+    - field.field.node.program.field_block_info_sessions
     - field.field.node.program.field_block_pardot_form
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
@@ -15,7 +16,6 @@ dependencies:
     - block_field
     - field_group
     - link
-    - path
     - text
 third_party_settings:
   field_group:
@@ -66,7 +66,8 @@ third_party_settings:
       label: 'Hero section'
     group_advisor_callout:
       children:
-        - field_block_pardot_form
+        - group_block_settings
+        - group_info_session_settings
       parent_name: ''
       weight: 3
       format_type: details
@@ -78,6 +79,34 @@ third_party_settings:
         open: true
         required_fields: true
       label: 'Advisor callout'
+    group_block_settings:
+      children:
+        - field_block_pardot_form
+      parent_name: group_advisor_callout
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Pardot Form Settings'
+    group_info_session_settings:
+      children:
+        - field_block_info_sessions
+      parent_name: group_advisor_callout
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Info Session Settings'
 id: node.program.default
 targetEntityType: node
 bundle: program
@@ -89,8 +118,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_block_info_sessions:
+    weight: 22
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
   field_block_pardot_form:
-    weight: 29
+    weight: 21
     settings:
       plugin_id: ''
       settings: {  }
@@ -134,12 +172,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  path:
-    type: path
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
@@ -155,9 +187,8 @@ content:
     region: content
     third_party_settings: {  }
   sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
+    type: options_buttons
+    settings: {  }
     weight: 8
     region: content
     third_party_settings: {  }
@@ -170,14 +201,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   uid:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+    settings: {  }
     region: content
     third_party_settings: {  }
 hidden:
   body: true
+  path: true
