@@ -1,0 +1,8 @@
+uuid: 3c9ff225-4e52-4931-a20e-48f9f2294031
+langcode: en
+status: true
+dependencies: {  }
+name: 'Delivery Method'
+vid: delivery_method
+description: ''
+weight: 0
