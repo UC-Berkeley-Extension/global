@@ -15,6 +15,16 @@ export class VoicesSpotlight{
   public tag: string = 'all';
   public program: string = 'all';
   public baseUrl: string = 'https://voices.berkeley.edu/single-post/';
+  public teaser = {
+    content: "",
+    image: {
+      src: "https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/global-logo-celebration-blog.jpg?itok=5PlyyzNQ",
+    }
+    link: "",
+    path: "",
+    tags: [],
+    title: "",
+  };
 
   // Constructor method sets our data from the JSON callback.
   constructor(
@@ -23,29 +33,14 @@ export class VoicesSpotlight{
 
     this.setVariables(elementRef);
     var fetchUrl = this.baseUrl + this.post + '/tag/' + this.tag + '/cert/' + this.program + "/area/International";
-    
-    this.post = {
-      content: "",
-      image: {
-        src: "https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/global-logo-celebration-blog.jpg?itok=5PlyyzNQ",
-      }
-      link: "",
-      path: "",
-      tags: [],
-      title: "",
-    };
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {
-      var items = data.nodes;
-      // Data is nested inside the 'post' of each item.
-      this.posts = Object.keys(items).map(key => items[key].post);
-      this.post = this.posts[0];
-      this.post.tags = this.post.tags ? this.post.tags.split(', ') : [];
-
-      // "International, international students"
-      console.log("this.post");
-      console.log(this.post);
+      let items = data.nodes;
+      console.log(data.nodes);
+      // Data is nested inside the 'teaser' of each item.
+      this.teaser = Object.keys(items).map(key => items[key].post)[0];
+      this.teaser.tags = this.teaser.tags ? this.teaser.tags.split(', ') : [];
     });
     console.log(fetchUrl);
   }
