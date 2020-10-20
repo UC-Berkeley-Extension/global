@@ -15,12 +15,12 @@ configuration:
   post:
     type: textfield
     title: Post
-    description: 'If you know what post you wanna show, replace 'all' with the post ID.'
+    description: 'If you know what post you wanna show, replace "all" with the post ID.'
     default_value: 'all'
   tag:
     type: textfield
     title: Tags
-    description: 'For most recent post in a tag, replace 'all' with the tag ID.'
+    description: 'For most recent post in a tag, replace "all" with the tag ID.'
     default_value: 'all'
   program:
     type: textfield
