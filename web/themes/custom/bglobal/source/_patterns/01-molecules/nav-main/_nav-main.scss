@@ -65,7 +65,6 @@
       margin-left: 5em;
     }
   }
-
 }
 
 .dropdown-menu {
@@ -103,5 +102,16 @@ ul.navbar-nav {
   li.menu-depth-1:first-child {
     font-family: $font-bitter;
     color: $web-gray;
+    font-size: 1.15em;
   }
+}
+
+button.menu__toggle {
+  background: transparent;
+  border: none;
+  background-image: url(../../source/images/chevron-down.svg);
+  width: 20px;
+  height: 20px;
+  padding: .25em 1.5em .25em .5em;
+  background-repeat: no-repeat;
 }
