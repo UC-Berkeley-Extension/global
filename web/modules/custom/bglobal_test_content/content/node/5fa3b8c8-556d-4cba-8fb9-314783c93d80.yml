@@ -5,6 +5,7 @@ _meta:
   bundle: article
   default_langcode: en
   depends:
+    b14062f8-fca5-4e45-bf22-0d184e8ba7d8: taxonomy_term
     4f64c2b0-36fd-436f-bb06-12c0b1724d8c: taxonomy_term
 default:
   revision_uid:
@@ -41,6 +42,9 @@ default:
       value: "<p>This is an article page.</p>\r\n"
       format: basic_html
       summary: ''
+  field_term_ref_editorial_section:
+    -
+      entity: b14062f8-fca5-4e45-bf22-0d184e8ba7d8
   field_term_ref_school_microsite:
     -
       entity: 4f64c2b0-36fd-436f-bb06-12c0b1724d8c
