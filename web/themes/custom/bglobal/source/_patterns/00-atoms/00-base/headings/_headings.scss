@@ -36,3 +36,12 @@ h5 {
 h6 {
 	
 }
+
+.block-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $berkeley-blue;
+  font-family: $font;
+}
