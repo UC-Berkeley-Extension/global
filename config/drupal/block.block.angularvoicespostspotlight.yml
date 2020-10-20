@@ -16,7 +16,7 @@ settings:
   id: 'ng2_component:voices_spotlight'
   label: 'Angular: Voices Post Spotlight'
   provider: pdb_ng2
-  label_display: visible
+  label_display: '0'
   pdb_configuration:
     info: ''
     post: all
