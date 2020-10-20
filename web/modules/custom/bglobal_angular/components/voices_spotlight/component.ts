@@ -36,13 +36,9 @@ export class VoicesSpotlight{
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {
-      let items = data.nodes;
-      console.log(data.nodes);
-      // Data is nested inside the 'teaser' of each item.
-      this.teaser = Object.keys(items).map(key => items[key].post)[0];
+      this.teaser = data.nodes[0].post;
       this.teaser.tags = this.teaser.tags ? this.teaser.tags.split(', ') : [];
     });
-    console.log(fetchUrl);
   }
 
   // Helper function to set variables for the current instance.
