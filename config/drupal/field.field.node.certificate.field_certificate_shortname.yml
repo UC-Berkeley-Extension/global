@@ -1,0 +1,19 @@
+uuid: 2d0895b0-493f-4572-9de8-62c262d4d106
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_shortname
+    - node.type.certificate
+id: node.certificate.field_certificate_shortname
+field_name: field_certificate_shortname
+entity_type: node
+bundle: certificate
+label: 'Certificate Shortname'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

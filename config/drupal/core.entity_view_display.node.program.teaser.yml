@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_study_prefix
     - field.field.node.program.field_program_study_suffix
+    - field.field.node.program.field_ref_certificates
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -44,5 +45,6 @@ hidden:
   field_program_shortname: true
   field_program_study_prefix: true
   field_program_study_suffix: true
+  field_ref_certificates: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true

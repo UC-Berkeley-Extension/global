@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_study_prefix
     - field.field.node.program.field_program_study_suffix
+    - field.field.node.program.field_ref_certificates
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -24,6 +25,7 @@ third_party_settings:
     group_metadata:
       children:
         - title
+        - field_program_shortname
         - field_term_ref_school_microsite
         - field_term_ref_editorial_section
       parent_name: ''
@@ -38,8 +40,7 @@ third_party_settings:
         classes: ''
       label: Metadata
     group_title_tag:
-      children:
-        - field_program_shortname
+      children: {  }
       parent_name: ''
       weight: 1
       format_type: details
@@ -112,6 +113,7 @@ third_party_settings:
     group_study_options:
       children:
         - field_program_study_prefix
+        - field_ref_certificates
         - field_program_study_suffix
       parent_name: ''
       weight: 4
@@ -170,7 +172,7 @@ content:
     type: text_textarea
     region: content
   field_program_shortname:
-    weight: 26
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -186,21 +188,31 @@ content:
     type: text_textarea
     region: content
   field_program_study_suffix:
-    weight: 30
+    weight: 31
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_ref_certificates:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_term_ref_editorial_section:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_term_ref_school_microsite:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
