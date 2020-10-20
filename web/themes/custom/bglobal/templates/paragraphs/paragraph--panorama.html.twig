@@ -50,7 +50,7 @@
 	{% include '@molecules/panorama/panorama.twig' with {
 		'panorama': {
 			'img': content.field_image,
-			'body': content.field_text,
+			'body': content.field_text.0,
 			'link': {
 				'url': content.field_cta_link.0['#url'],
 				'text': content.field_cta_link.0['#title'],

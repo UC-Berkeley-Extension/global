@@ -8,17 +8,19 @@
 		<img src="{{ panorama.img.src }}" alt="{{ panorama.img.alt }}">
 		 #}
 	</div>
+	{% if panorama.body %}
 	<div class="panorama-content">
-		{% if panorama.body %}
-			<div class="panorama-content--body">
+	{% endif %}
+		<div class="panorama-content--body">
 				{{ panorama.body }}
 			</div>
-		{% endif %}
 
 		{% if panorama.link.url %}
 			<div class="panorama-content--cta">
 				<a href="{{ panorama.link.url }}" class="{{ panorama.link.classes }}">{{ panorama.link.text }}</a>
 			</div>
 		{% endif %}
+	{% if panorama.body %}
 	</div>
+	{% endif %}
 </div>
