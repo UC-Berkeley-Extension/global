@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Academic Level'
 vid: academic_level
-description: ''
+description: 'The target student level for a certificate or program.'
 weight: 0

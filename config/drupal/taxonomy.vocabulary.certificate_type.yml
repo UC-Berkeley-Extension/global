@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Certificate Type'
 vid: certificate_type
-description: ''
+description: 'Type classifications for certificates.'
 weight: 0

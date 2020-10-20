@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Delivery Method'
 vid: delivery_method
-description: ''
+description: 'Method of instruction delivery (e.g. Classroom).'
 weight: 0
