@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.certificate.field_certificate_prerequisite
     - field.field.node.certificate.field_certificate_short_descript
     - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_term_ref_certificate_type
     - field.field.node.certificate.field_term_ref_editorial_section
     - node.type.certificate
   module:
@@ -22,6 +23,7 @@ third_party_settings:
       children:
         - title
         - field_certificate_shortname
+        - field_term_ref_certificate_type
         - field_term_ref_editorial_section
       parent_name: ''
       weight: 0
@@ -124,8 +126,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_term_ref_editorial_section:
+  field_term_ref_certificate_type:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_term_ref_editorial_section:
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select

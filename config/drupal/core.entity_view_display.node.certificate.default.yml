@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.certificate.field_certificate_prerequisite
     - field.field.node.certificate.field_certificate_short_descript
     - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_term_ref_certificate_type
     - field.field.node.certificate.field_term_ref_editorial_section
     - node.type.certificate
   module:
@@ -21,7 +22,7 @@ bundle: certificate
 mode: default
 content:
   field_certificate_cost:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -29,7 +30,7 @@ content:
     type: string
     region: content
   field_certificate_cta:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -41,7 +42,7 @@ content:
     type: link
     region: content
   field_certificate_duration:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -49,7 +50,7 @@ content:
     type: string
     region: content
   field_certificate_prerequisite:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -57,11 +58,19 @@ content:
     type: string
     region: content
   field_certificate_short_descript:
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_term_ref_certificate_type:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   body: true

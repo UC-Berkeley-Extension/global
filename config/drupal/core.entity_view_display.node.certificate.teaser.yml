@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.certificate.field_certificate_prerequisite
     - field.field.node.certificate.field_certificate_short_descript
     - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_term_ref_certificate_type
     - field.field.node.certificate.field_term_ref_editorial_section
     - node.type.certificate
   module:
@@ -41,4 +42,5 @@ hidden:
   field_certificate_prerequisite: true
   field_certificate_short_descript: true
   field_certificate_shortname: true
+  field_term_ref_certificate_type: true
   field_term_ref_editorial_section: true
