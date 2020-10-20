@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 
 export class InfoSessionsList {
   public cert: string = 'all';
+  public limit: number = 4;
   const baseUrl: string = 'https://voices.berkeley.edu/info-sessions/json/';
   public view = { 
     number: 0,
@@ -40,6 +41,7 @@ export class InfoSessionsList {
     var instanceId = elementRef.nativeElement.id.substring(12);
     // Get the values set by our configuration.
     this.cert = drupalSettings.pdb.configuration[instanceId].cert;
+    this.limit = drupalSettings.pdb.configuration[instanceId].limit || this.limit;
   }
   parseMonthDay(obj) {
     const sessions = obj;
