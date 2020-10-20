@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_study_prefix
+    - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -107,6 +109,21 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Info Session Settings'
+    group_study_options:
+      children:
+        - field_program_study_prefix
+        - field_program_study_suffix
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Study Options'
 id: node.program.default
 targetEntityType: node
 bundle: program
@@ -114,7 +131,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -160,6 +177,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_program_study_prefix:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_program_study_suffix:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_term_ref_editorial_section:
     weight: 3
     settings: {  }
@@ -176,20 +209,20 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   sticky:
     type: options_buttons
     settings: {  }
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -202,7 +235,7 @@ content:
     third_party_settings: {  }
   uid:
     type: options_buttons
-    weight: 5
+    weight: 6
     settings: {  }
     region: content
     third_party_settings: {  }

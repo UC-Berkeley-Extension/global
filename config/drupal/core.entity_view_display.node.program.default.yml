@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_study_prefix
+    - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -69,6 +71,20 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_program_study_prefix:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_program_study_suffix:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_term_ref_editorial_section:
     weight: 103
