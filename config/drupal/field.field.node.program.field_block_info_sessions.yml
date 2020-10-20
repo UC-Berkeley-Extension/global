@@ -17,21 +17,20 @@ required: false
 translatable: false
 default_value:
   -
-    plugin_id: 'ng2_component:voices_list'
+    plugin_id: 'ng2_component:info_sessions_list'
     settings:
-      id: 'ng2_component:voices_list'
-      label: 'Angular: Voices Post List'
+      id: 'ng2_component:info_sessions_list'
+      label: 'Angular: Info Sessions List'
       provider: pdb_ng2
       label_display: false
       pdb_configuration:
         info: ''
-        post: all
-        tag: all
-        program: all
+        limit: '4'
+        cert: all
 default_value_callback: ''
 settings:
   selection: blocks
   selection_settings:
     plugin_ids:
-      'ng2_component:voices_list': 'ng2_component:voices_list'
+      'ng2_component:info_sessions_list': 'ng2_component:info_sessions_list'
 field_type: block_field
