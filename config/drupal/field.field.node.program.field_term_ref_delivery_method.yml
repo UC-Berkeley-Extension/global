@@ -1,0 +1,29 @@
+uuid: 7537e89a-5053-4f07-9c4b-28c58de21f51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_ref_delivery_method
+    - node.type.program
+    - taxonomy.vocabulary.delivery_method
+id: node.program.field_term_ref_delivery_method
+field_name: field_term_ref_delivery_method
+entity_type: node
+bundle: program
+label: 'Delivery Method'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      delivery_method: delivery_method
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

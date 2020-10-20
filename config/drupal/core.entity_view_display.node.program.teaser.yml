@@ -13,6 +13,9 @@ dependencies:
     - field.field.node.program.field_program_study_prefix
     - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_term_ref_academic_level
+    - field.field.node.program.field_term_ref_certificate_type
+    - field.field.node.program.field_term_ref_delivery_method
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -46,5 +49,8 @@ hidden:
   field_program_study_prefix: true
   field_program_study_suffix: true
   field_ref_certificates: true
+  field_term_ref_academic_level: true
+  field_term_ref_certificate_type: true
+  field_term_ref_delivery_method: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true

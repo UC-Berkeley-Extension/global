@@ -12,6 +12,9 @@ dependencies:
     - field.field.node.program.field_program_study_prefix
     - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_term_ref_academic_level
+    - field.field.node.program.field_term_ref_certificate_type
+    - field.field.node.program.field_term_ref_delivery_method
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
@@ -26,21 +29,21 @@ bundle: program
 mode: default
 content:
   field_block_info_sessions:
-    weight: 3
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: block_field
     region: content
   field_block_pardot_form:
-    weight: 2
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: block_field
     region: content
   field_program_application_cta:
-    weight: 1
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
@@ -52,28 +55,28 @@ content:
     type: link
     region: content
   field_program_description:
-    weight: 0
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_program_study_prefix:
-    weight: 4
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_program_study_suffix:
-    weight: 6
+    weight: 9
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_ref_certificates:
-    weight: 5
+    weight: 8
     label: hidden
     settings:
       link: true
@@ -81,8 +84,32 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_term_ref_academic_level:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_certificate_type:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_delivery_method:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
