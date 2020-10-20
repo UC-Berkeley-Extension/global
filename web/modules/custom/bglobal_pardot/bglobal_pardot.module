@@ -1,4 +1,5 @@
 <?php
+use Drupal\Core\Url;
 
 /**
  * @file
@@ -21,6 +22,8 @@ function bglobal_pardot_theme() {
           'page_title',
           'program_name',
           'full_path',
+          'success_location',
+          'error_location',
         ],
       ],
     ),
@@ -79,11 +82,17 @@ function bglobal_pardot_trackers() {
     $request = \Drupal::request();
     $page_title = $title_resolver->getTitle($request, $route);
   }
+  if (empty($page_title)) {
+    $page_title = 'Berkeley Global';
+  }
 
+  $current_url = Url::fromRoute('<current>', [], ['query' => \Drupal::request()->query->all(), 'absolute' => 'true'])->toString();
   $trackers = [
     'full_path' => 'This value needs to be derived from local storage and set as a script target object.',
     'page_title' => $page_title,
     'program_name' => '',
+    'success_location' => $current_url . "?thankyou=welcome",
+    'error_location' => $current_url . "?thankyou=false",
   ];
 
   return $trackers;
