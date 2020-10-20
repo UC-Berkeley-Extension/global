@@ -1,0 +1,17 @@
+#block-haasmainmenu {
+  a,
+  li {
+    color: $white;
+  }
+
+  ul {
+    @include breakpoint($bp-med) {
+      display: flex;
+    }
+
+    > li {
+      display: inline-block;
+      margin-left: 5em;
+    }
+  }
+}

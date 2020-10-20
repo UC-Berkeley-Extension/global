@@ -69,7 +69,11 @@ function bglobal_get_active_microsite(NodeInterface $node) {
 }
 
 function bglobal_preprocess_menu(&$variables) {
-  if ($variables['menu_name'] !== 'main') {
+  $menu_names = [
+    'main',
+    'haas-main-menu'
+  ];
+  if (!in_array($variables['menu_name'], $menu_names)) {
     return;
   }
   $storage = \Drupal::entityTypeManager()->getStorage('menu_link_content');

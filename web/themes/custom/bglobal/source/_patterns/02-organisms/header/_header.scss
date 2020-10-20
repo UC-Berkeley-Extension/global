@@ -21,6 +21,10 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  .user-logged-in & {
+    top: 3em;
+  }
   
   &:hover,
   &:focus,
