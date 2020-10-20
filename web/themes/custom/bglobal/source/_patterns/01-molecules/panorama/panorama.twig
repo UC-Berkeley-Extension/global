@@ -9,9 +9,12 @@
 		 #}
 	</div>
 	<div class="panorama-content">
-		<div class="panorama-content--body">
-			{{ panorama.body }}
-		</div>
+		{% if panorama.body %}
+			<div class="panorama-content--body">
+				{{ panorama.body }}
+			</div>
+		{% endif %}
+
 		{% if panorama.link.url %}
 			<div class="panorama-content--cta">
 				<a href="{{ panorama.link.url }}" class="{{ panorama.link.classes }}">{{ panorama.link.text }}</a>
