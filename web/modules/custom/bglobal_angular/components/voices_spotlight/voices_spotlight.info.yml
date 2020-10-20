@@ -10,20 +10,20 @@ presentation: ng2
 configuration:
   info:
     type: item
-    title: 'Data endpoint'
-    description: 'https://voices.berkeley.edu/international-feed/post/{$post}/tag/{$tag}/program/{$program}'
+    title: 'Data endpoint. Defaults to most recent featured post.'
+    description: 'https://voices.berkeley.edu/single-post/%/tag/%/cert/%/area/International'
   post:
     type: textfield
-    title: Posts
-    description: 'Enter an optional post ID. Use "all" for all posts.'
+    title: Post
+    description: 'If you know what post you wanna show, replace "all" with the post ID.'
     default_value: 'all'
   tag:
     type: textfield
     title: Tags
-    description: 'Enter an optional tag ID. Use "all" for all tags.'
+    description: 'For most recent post in a tag, replace "all" with the tag ID.'
     default_value: 'all'
   program:
     type: textfield
     title: Programs
-    description: 'Enter an optional program ID. Use "all" for all programs.'
+    description: 'For most recent post for a program, replace "all" with the program ID.'
     default_value: 'all'
