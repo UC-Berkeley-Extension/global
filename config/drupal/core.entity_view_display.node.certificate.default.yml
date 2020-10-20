@@ -14,31 +14,23 @@ dependencies:
     - node.type.certificate
   module:
     - link
-    - text
     - user
 id: node.certificate.default
 targetEntityType: node
 bundle: certificate
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_certificate_cost:
-    weight: 106
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_certificate_cta:
-    weight: 108
-    label: above
+    weight: 4
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -49,47 +41,30 @@ content:
     type: link
     region: content
   field_certificate_duration:
-    weight: 105
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_certificate_prerequisite:
-    weight: 107
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_certificate_short_descript:
-    weight: 104
-    label: above
+    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_certificate_shortname:
-    weight: 103
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_term_ref_editorial_section:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  body: true
+  field_certificate_shortname: true
+  field_term_ref_editorial_section: true
+  links: true
