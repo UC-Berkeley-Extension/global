@@ -8,11 +8,21 @@
 					item.in_active_trail ? 'active',
 				]
 				%}
+
 				<li{{ item.attributes.addClass(item_classes) }}>
-					<a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
-					<div class="dropdown-menu dropdown-fullwidth">
-						{{ item.content }}
-					</div>
+					{% if item.url.toString() is empty %}
+						{{ item.title }}
+					{% else %}
+						<a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
+					{% endif %}
+
+					{% if item.has_children %}
+						<button class="menu__toggle" type="button"><span class="element-invisible">Open Drawer</span></button>
+						<div class="dropdown-menu dropdown-fullwidth">
+							{{ item.content }}
+						</div>
+					{% endif %}
+
 				</li>
 			{% endfor %}
 		</ul>

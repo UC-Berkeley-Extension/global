@@ -1,6 +1,7 @@
 #top-banner {
   .site-logo__image {
     max-width: 350px;
+    padding: 1em 0;
   }
 }
 
@@ -58,11 +59,12 @@
   }
 }
 
-
 .header__mobile-drawer:not(.show) {
   display: none;
   
   @include breakpoint($bp-med) {
     display: block;
+    width: 100%;
+    margin: 0 auto;
   }
 }
