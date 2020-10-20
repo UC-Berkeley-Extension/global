@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_term_ref_editorial_section
     - field.field.node.page.field_term_ref_school_microsite
     - node.type.page
   module:
@@ -29,4 +30,5 @@ content:
     weight: 101
     region: content
 hidden:
+  field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true
