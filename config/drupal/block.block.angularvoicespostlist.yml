@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - pdb_ng2
+    - system
   theme:
     - bglobal
 id: angularvoicespostlist
@@ -16,8 +17,9 @@ settings:
   id: 'ng2_component:voices_list'
   label: 'Angular: Voices Post List'
   provider: pdb_ng2
-  label_display: visible
+  label_display: '0'
   pdb_configuration:
+    info: ''
     post: all
     tag: all
     program: all

@@ -6,15 +6,18 @@ import 'rxjs/add/operator/map';
 
 @Component({
   moduleId: __moduleName,
-  selector: "voices-list",
+  selector: "info-sessions-list",
   templateUrl: 'template.html'
 })
 
-export class VoicesList{
-  public post: string = 'all';
-  public tag: string = 'all';
-  public program: string = 'all';
-  public baseUrl: string = 'https://voices.berkeley.edu/international-feed/';
+export class InfoSessionsList {
+  public cert: string = 'all';
+  public limit: number = 4;
+  const baseUrl: string = 'https://voices.berkeley.edu/info-sessions/json/';
+  public view = { 
+    number: 0,
+  };
+  public sessions = {};
 
   // Constructor method sets our data from the JSON callback.
   constructor(
@@ -23,15 +26,13 @@ export class VoicesList{
 
     this.setVariables(elementRef);
 
-    var fetchUrl = this.baseUrl + 'post/' + this.post + '/tag/' + this.tag + '/program/' + this.program;
+    const fetchUrl = this.baseUrl + 'cert/' + this.cert + '/area/International';
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {
-      var items = data.nodes;
-      // Data is nested inside the 'post' of each item.
-      this.posts = Object.keys(items).map(key => items[key].post);
+      this.sessions = this.parseMonthDay(data.sessions);
+      this.view = data.view;
     });
-    console.log(fetchUrl);
   }
 
   // Helper function to set variables for the current instance.
@@ -39,14 +40,16 @@ export class VoicesList{
     // Strip the 'instance-id-' off the beginning of our selector for uuid.
     var instanceId = elementRef.nativeElement.id.substring(12);
     // Get the values set by our configuration.
-    this.post = drupalSettings.pdb.configuration[instanceId].post;
-    this.tag = drupalSettings.pdb.configuration[instanceId].tag;
-    this.program = drupalSettings.pdb.configuration[instanceId].program;
+    this.cert = drupalSettings.pdb.configuration[instanceId].cert;
+    this.limit = drupalSettings.pdb.configuration[instanceId].limit || this.limit;
   }
-
-  // Helper function to check data structures.
-  getKeys(obj){
-    return Object.keys(obj)
+  parseMonthDay(obj) {
+    const sessions = obj;
+    for ( let i in sessions ) {
+      let sessionDate = sessions[i].date;
+      sessions[i].jsDate = new Date(sessionDate.substr(0, sessionDate.indexOf(" - ")));
+    }
+    return sessions;
   }
 
 }
