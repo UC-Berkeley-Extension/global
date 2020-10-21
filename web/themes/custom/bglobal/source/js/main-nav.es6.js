@@ -3,8 +3,15 @@
   const parent = document.querySelectorAll('.menu-depth-0');
 
   Array.prototype.forEach.call(parent, a => {
+    // Without this evaluation, js fails if first item does not have .menu__toggle.
     const button = a.querySelector('.menu__toggle');
+    if (!button) {
+      return;
+    }
     const drawer = button.nextElementSibling;
+    if (!drawer) {
+      return;
+    }
 
     button.onclick = (e) => {
       e.preventDefault();

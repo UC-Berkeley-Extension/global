@@ -19,7 +19,7 @@
           {% if item.has_children %}
             <button class="menu__toggle" type="button"><span class="element-invisible">Open Drawer</span></button>
             <div class="dropdown-menu dropdown-fullwidth">
-              {{ item.content }}
+              {{ _self.menu_links(item.below, [], menu_level + 1, dropdown_classes, []) }}
             </div>
           {% endif %}
         </li>

@@ -4,7 +4,7 @@
     color: $white;
   }
 
-  ul {
+  > ul.navbar-nav {
     @include breakpoint($bp-med) {
       display: flex;
     }
@@ -12,6 +12,12 @@
     > li {
       display: inline-block;
       margin-left: 5em;
+      position: relative;
     }
+  }
+
+  .dropdown-menu {
+    background-color: $berkeley-blue;
+    width: 100%;
   }
 }
