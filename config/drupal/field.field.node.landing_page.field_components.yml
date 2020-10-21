@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_components
     - node.type.landing_page
     - paragraphs.paragraphs_type.column_section
+    - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
@@ -26,19 +27,26 @@ settings:
     target_bundles:
       panorama: panorama
       column_section: column_section
+      hero: hero
     target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_items:
+        weight: 11
+        enabled: false
       body_copy:
         weight: 8
         enabled: false
       column_section:
         enabled: true
         weight: 9
+      hero:
+        enabled: true
+        weight: 14
       info_card:
         weight: 6
         enabled: false
-      info_row:
-        enabled: true
-        weight: 7
       panorama:
         enabled: true
         weight: 4
