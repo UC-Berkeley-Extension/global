@@ -111,7 +111,8 @@
         "Notice: Uninitialized string offset: 0 in pdb_ng2_component_info_alter() in pdb_ng2 sub-module (https://www.drupal.org/project/pdb/issues/3083540)": "https://www.drupal.org/files/issues/2019-09-25/3083540-uninitialized-string-offset-0-in-pdb_ng2_component_info_alter-3.patch"
       },
       "drupal/term_condition": {
-        "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
+        "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch",
+        "Fixes context not loading properly (https://www.drupal.org/project/term_condition/issues/3177999#comment-13876611)": "https://www.drupal.org/files/issues/2020-10-20/3177999-term_condition_update_annotation.patch"
       }
     }
   },
