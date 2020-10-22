@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - content_moderation
     - node
     - user
 _core:
@@ -321,14 +322,14 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: field
-        status:
-          id: status
+        moderation_state:
+          id: moderation_state
           table: node_field_data
-          field: status
+          field: moderation_state
           relationship: vid
           group_type: group
           admin_label: ''
-          label: Published
+          label: State
           exclude: false
           alter:
             alter_text: false
@@ -370,11 +371,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: boolean
-          settings:
-            format: yes-no
-            format_custom_true: ''
-            format_custom_false: ''
+          type: content_moderation_state
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -386,8 +384,7 @@ display:
           separator: ', '
           field_api_classes: false
           entity_type: node
-          entity_field: status
-          plugin_id: field
+          plugin_id: moderation_state_field
         changed:
           id: changed
           table: node_field_revision
@@ -681,7 +678,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: '1'
+          value: All
           group: 1
           exposed: true
           expose:
@@ -690,6 +687,8 @@ display:
             description: ''
             use_operator: false
             operator: status_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: published
             required: false
             remember: true
@@ -698,9 +697,6 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-              editor: '0'
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
