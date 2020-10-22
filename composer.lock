@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbd81d52204e85a41721eae73d816742",
+    "content-hash": "a5335f72a45118017ef4c14219763c88",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3137,66 +3137,6 @@
             }
         },
         {
-            "name": "drupal/pdb",
-            "version": "1.0.0-alpha6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/pdb.git",
-                "reference": "8.x-1.0-alpha6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pdb-8.x-1.0-alpha6.zip",
-                "reference": "8.x-1.0-alpha6",
-                "shasum": "19721bdd7f61b48150c6ba451174bc1af9683e5a"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha6",
-                    "datestamp": "1479388440",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                },
-                "patches_applied": {
-                    "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-09-25/drupal9-ready-3133320-6.patch",
-                    "Notice: Uninitialized string offset: 0 in pdb_ng2_component_info_alter() in pdb_ng2 sub-module (https://www.drupal.org/project/pdb/issues/3083540)": "https://www.drupal.org/files/issues/2019-09-25/3083540-uninitialized-string-offset-0-in-pdb_ng2_component_info_alter-3.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "codekarate",
-                    "homepage": "https://www.drupal.org/user/506260"
-                },
-                {
-                    "name": "emacoti",
-                    "homepage": "https://www.drupal.org/user/2930721"
-                },
-                {
-                    "name": "mrjmd",
-                    "homepage": "https://www.drupal.org/user/1800446"
-                },
-                {
-                    "name": "sdleslie",
-                    "homepage": "https://www.drupal.org/user/3608649"
-                }
-            ],
-            "description": "Progressively Decoupled Blocks (PDB). Build stuff with javascript frameworks as blocks.",
-            "homepage": "https://www.drupal.org/project/pdb",
-            "support": {
-                "source": "https://git.drupalcode.org/project/pdb"
-            }
-        },
-        {
             "name": "drupal/term_condition",
             "version": "dev-1.x",
             "source": {
@@ -3264,7 +3204,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -7517,7 +7457,6 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/default_content": 15,
-        "drupal/pdb": 15,
         "drupal/term_condition": 20,
         "drupal/workbench_access": 10
     },
