@@ -1,0 +1,19 @@
+name: Material Card
+machine_name: card
+description: 'Material Card (Angular 8)'
+type: pdb
+package: NG8
+module_status: active
+presentation: ng8
+core_version_requirement: ^8 || ^9
+configuration:
+  title:
+    type: textfield
+    title: 'Card title'
+  sub_title:
+    type: textfield
+    title: 'Sub title'
+  content:
+    type: textarea
+    title: 'Content'
+

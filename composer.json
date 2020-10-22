@@ -108,7 +108,8 @@
       },
       "drupal/pdb": {
         "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-09-25/drupal9-ready-3133320-6.patch",
-        "Notice: Uninitialized string offset: 0 in pdb_ng2_component_info_alter() in pdb_ng2 sub-module (https://www.drupal.org/project/pdb/issues/3083540)": "https://www.drupal.org/files/issues/2019-09-25/3083540-uninitialized-string-offset-0-in-pdb_ng2_component_info_alter-3.patch"
+        "Notice: Uninitialized string offset: 0 in pdb_ng2_component_info_alter() in pdb_ng2 sub-module (https://www.drupal.org/project/pdb/issues/3083540)": "https://www.drupal.org/files/issues/2019-09-25/3083540-uninitialized-string-offset-0-in-pdb_ng2_component_info_alter-3.patch",
+        "Support for Angular 8 (https://www.drupal.org/project/pdb/issues/3098754)": "https://www.drupal.org/files/issues/2019-12-05/pdb-angular8-support-3098754-2.patch"
       },
       "drupal/term_condition": {
         "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
