@@ -44,10 +44,28 @@
  */
 #}
 
-{% embed '@pages/page.twig' %}
+{% embed '@pages/page.twig' with {
+	'logo': {
+		'src': '/themes/custom/bglobal/source/images/logo.png',
+	}
+}%}
+	{% block page_header %}
+		{% embed "@organisms/header/header.twig" %}
+			{% block header_blocks %}
+				{{ page.header }}
+			{% endblock %}
+
+		{% endembed %}
+	{% endblock %}
 
 	{% block page_content %}
 		{{ page.content }}
 	{% endblock %}
+
+	{% block page_footer %}
+		{% include "@organisms/footer/footer.twig" %}
+		{{ page.footer }}
+	{% endblock %}
+
 
 {% endembed %}

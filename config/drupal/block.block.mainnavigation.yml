@@ -1,4 +1,4 @@
-uuid: 3a187b26-094f-45b2-b4a0-c5b3b5a4b36d
+uuid: 77b98ae8-af82-42b0-a25b-62e0001a5515
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - bglobal
-_core:
-  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bglobal_main_menu
+id: mainnavigation
 theme: bglobal
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +20,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }

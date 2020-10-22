@@ -1,0 +1,27 @@
+.voices__spotlight {
+  &__teaser {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $space;
+    background: #eee;
+    &__image {
+      overflow: hidden;
+      background-size: cover;
+      &__ribbon {    
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        padding-left: 30px;
+        margin-top: 20px;
+        height: min-content;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    &__summary {
+      padding: $space;
+    }
+    &__title {
+      font-family: $font-bitter;
+    }
+  }
+}

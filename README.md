@@ -122,8 +122,8 @@ When the styleguide is deployed, it uses `gh-pages` branch on the repo, which sh
 
 To deploy the styleguide, navigate to the theme's root (web/themes/custom/bglobal):
 ```
-`npm start`
-`npm start deploy`
+npm start
+npm start deploy
 ```
 Then visit the styleguide on github.io (link above), confirm that everything has been deployed properly.
 
