@@ -1,0 +1,24 @@
+uuid: 0955c235-3308-42ae-910f-8eef052ab15b
+langcode: en
+status: true
+dependencies:
+  module:
+    - pdb_ng8
+  theme:
+    - bglobal
+id: materialcard
+theme: bglobal
+region: content
+weight: -8
+provider: null
+plugin: 'ng8_component:material_card'
+settings:
+  id: 'ng8_component:material_card'
+  label: 'Material Card'
+  provider: pdb_ng8
+  label_display: visible
+  pdb_configuration:
+    title: Fuck
+    sub_title: You
+    content: Bastard
+visibility: {  }
