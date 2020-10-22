@@ -18,7 +18,7 @@ settings:
   provider: pdb_ng8
   label_display: visible
   pdb_configuration:
-    title: Fuck
-    sub_title: You
-    content: Bastard
+    title: Title
+    sub_title: Subtitle
+    content: Content
 visibility: {  }
