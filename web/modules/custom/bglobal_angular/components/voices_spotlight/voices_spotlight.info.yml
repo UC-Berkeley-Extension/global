@@ -1,0 +1,29 @@
+name: 'Angular: Voices Post Spotlight'
+machine_name: voices-spotlight
+type: pdb
+description: 'Voices Spotlight angular template'
+package: NG2
+version: '1.0.0'
+core_version_requirement: ^8 || ^9
+module_status: active
+presentation: ng2
+configuration:
+  info:
+    type: item
+    title: 'Data endpoint. Defaults to most recent featured post.'
+    description: 'https://voices.berkeley.edu/single-post/{$post}/tag/{$tag}/cert/{$cert}/area/International'
+  post:
+    type: textfield
+    title: Post
+    description: 'If you know what post you wanna show, replace "all" with the post ID.'
+    default_value: 'all'
+  tag:
+    type: textfield
+    title: Tags
+    description: 'For most recent post in a tag, replace "all" with the tag ID.'
+    default_value: 'all'
+  program:
+    type: textfield
+    title: Programs
+    description: 'For most recent post for a program, replace "all" with the program ID.'
+    default_value: 'all'

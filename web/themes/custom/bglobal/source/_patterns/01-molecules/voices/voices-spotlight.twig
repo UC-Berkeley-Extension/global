@@ -12,8 +12,8 @@
       <h3 class="voices__spotlight__teaser__title marginless-p">
         <strong><a href="{{ posts[0].path }}" class="blog-header">{{ posts[0].title }}</a></strong>
       </h3>
-      {{ posts[0].content }}
-      <p class="text-right mb-0"><a class="voices__spotlight__teaser__cta button button-small" href="{{ posts[0].path }}">Read More</a></p>
+      <div class="voices__spotlight__teaser__body">{{ posts[0].content }}</div>
+      <div class="voices__spotlight__teaser__cta__wrapper text-right mb-0"><a class="voices__spotlight__teaser__cta__link button button-small" href="{{ posts[0].path }}">Continue Reading<span class="sr-only"> {{ posts[0].title }}</span></a></p>
     </div>
   </div>
 </div>
