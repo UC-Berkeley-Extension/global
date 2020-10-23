@@ -30,6 +30,7 @@
     "cweagans/composer-patches": "^1.6",
     "drupal/admin_toolbar": "^2.3",
     "drupal/block_field": "^1.0@RC",
+    "drupal/block_list_override": "^1.0",
     "drupal/components": "2.0-beta3",
     "drupal/core": "9.0.6 as 8.9.0",
     "drupal/core-composer-scaffold": "^9",
