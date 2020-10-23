@@ -1,5 +1,9 @@
 .column-section {
-  padding: 3em 1em;
+  padding: 2em 1.5em 3em;
+
+  @include breakpoint($bp-med) {
+    padding: 3em 1em 5em;
+  }
 }
 
 .column-section--gray {
@@ -17,21 +21,28 @@
 
 .column-section__title {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: $space;
+
+  @include breakpoint($bp-med) {
+    font-size: 2em;
+  }
 }
 
 .column-section__items {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
 
-  > * {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
+  @include breakpoint($bp-med) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 
-  > *:not(:last-child) {
-    margin-right: $space * 4;
+    > * {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    > *:not(:last-child) {
+      margin-right: $space * 4;
+    }
   }
 }
