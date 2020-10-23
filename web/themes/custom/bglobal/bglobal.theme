@@ -94,7 +94,9 @@ function bglobal_get_menu_link_content_depth(MenuLinkContent $menu_link, $depth 
   /** @var \Drupal\Core\Entity\EntityRepository $repository */
   $repository = \Drupal::service('entity.repository');
   if ($menu_link->get('parent')->getValue()) {
-    [$entity_type, $uuid] = explode(':', $menu_link->get('parent')->first()->getValue()['value']);
+    [$entity_type, $uuid] = explode(':', $menu_link->get('parent')
+      ->first()
+      ->getValue()['value']);
     if (!$entity_type) {
       return $depth;
     }
@@ -103,6 +105,8 @@ function bglobal_get_menu_link_content_depth(MenuLinkContent $menu_link, $depth 
     bglobal_get_menu_link_content_depth($parent, $depth);
   }
   return $depth;
+}
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */

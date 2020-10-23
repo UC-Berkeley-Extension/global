@@ -1,0 +1,24 @@
+uuid: 96551ce2-7081-4cb0-9fd4-9b8b60ff51dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_lb.field_paragraph_fields
+    - field.field.node.landing_page_lb.layout_builder__layout
+    - node.type.landing_page_lb
+  module:
+    - user
+id: node.landing_page_lb.teaser
+targetEntityType: node
+bundle: landing_page_lb
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_paragraph_fields: true
+  layout_builder__layout: true
