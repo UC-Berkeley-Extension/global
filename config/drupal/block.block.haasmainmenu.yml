@@ -34,3 +34,4 @@ visibility:
       -
         target_id: '1'
     negate: false
+    show_if_no_terms: false

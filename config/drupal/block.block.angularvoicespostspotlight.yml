@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - ctools
     - pdb_ng2
+    - term_condition
   theme:
     - bglobal
 id: angularvoicespostspotlight
@@ -22,4 +24,17 @@ settings:
     post: all
     tag: all
     program: all
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page_lb: landing_page_lb
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }
