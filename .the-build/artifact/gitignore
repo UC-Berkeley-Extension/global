@@ -12,3 +12,10 @@ web/themes/custom/bglobal/auto-create-md-files.sh
 
 # Exclude the root npm dependencies.
 node_modules/
+
+# Exclude hidden files.
+.ddev/*
+.editorconfig
+.the-build/*
+build.xml
+artifacts/*
