@@ -52,7 +52,9 @@
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
   "require-dev": {
-    "drupal/devel": "^4.0"
+    "drupal/devel": "^4.0",
+    "palantirnet/the-build": "^3.0",
+    "phing/phing": "2.*"
   },
   "conflict": {
     "drupal/drupal": "*"

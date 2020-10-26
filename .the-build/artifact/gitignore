@@ -1,0 +1,14 @@
+# This .gitignore file is specific to the artifact.
+settings.local.php
+
+# Exclude the npm dependencies of the styleguide from the artifact.
+web/themes/custom/bglobal/node_modules
+
+# Exclude other styleguide pieces that aren't required for prod.
+web/themes/custom/bglobal/patternlab
+web/themes/custom/bglobal/gulp-tasks
+web/themes/custom/bglobal/dependencyGraph.json
+web/themes/custom/bglobal/auto-create-md-files.sh
+
+# Exclude the root npm dependencies.
+node_modules/
