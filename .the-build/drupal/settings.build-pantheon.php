@@ -21,23 +21,8 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  */
 include __DIR__ . "/settings.pantheon.php";
 
-
+/**
+ * Override the default config directory.
+ */
 $settings['config_sync_directory'] = '${drupal.site.config_sync_directory}';
 
-/**
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-case 'test':
-$config['config_split.config_split.test']['status'] = TRUE;
-break;
-case 'live':
-$config['config_split.config_split.live']['status'] = TRUE;
-break;
-case 'dev':
-default:
-// Multidev catchall
-$config['config_split.config_split.dev']['status'] = TRUE;
-break;
-}
-
-}*/
