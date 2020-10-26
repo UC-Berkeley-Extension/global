@@ -62,6 +62,9 @@ artifact:
     # Name to use for the git remote on the artifact repository.
     remote_name: origin
 
+    # Name to use for the git branch when doing a deployment.
+    remote_branch: deploy
+
 # Configuration for building the style guide.
 #
 # Use these properties if you're using a Composer + Yarn install process for your
