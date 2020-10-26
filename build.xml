@@ -65,23 +65,6 @@
             </then>
         </if>
 
-        <!-- Run yarn install in the project root and compile ES6. -->
-        <if>
-            <and>
-                <available file="${drupal.root}/../yarn.lock" type="file" />
-                <or>
-                  <not><available file="${drupal.root}/../node_modules/.yarn-integrity" type="file" /></not>
-                  <not><available file="${drupal.root}/../node_modules/node-sass/vendor/linux-x64-59/binding.node" type="file" /></not>
-                </or>
-            </and>
-            <then>
-                <exec dir="${drupal.root}/.." command="yarn install --non-interactive --no-progress --prefer-offline" passthru="true" checkreturn="true" />
-            </then>
-        </if>
-
-        <!-- Compile ES6 into JS -->
-        <exec dir="${drupal.root}/.." command="yarn run build:js" passthru="true" checkreturn="true" />
-
     </target>
 
     <!-- Target: install
