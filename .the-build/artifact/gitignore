@@ -16,6 +16,8 @@ node_modules/
 # Exclude hidden files.
 .ddev/*
 .editorconfig
+.github/*
 .the-build/*
 build.xml
 artifacts/*
+scripts/*
