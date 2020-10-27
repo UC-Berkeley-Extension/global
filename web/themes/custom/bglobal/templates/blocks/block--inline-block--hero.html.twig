@@ -25,11 +25,17 @@
  * @see template_preprocess_block()
  */
 #}
-{% include '@molecules/hero/hero.twig' with {
-  'hero': {
-    'img': {
-      'src': file_url(content.field_hero_image.0['#media'].field_media_image.entity.uri.value|image_style('full_width')),
-      'alt': content.field_hero_image.0.entity.field_media_image.alt,
-    }
-  }
-} %}
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% include '@molecules/hero/hero.twig' with {
+      'hero': {
+        'img': {
+          'src': file_url(content.field_hero_image.0['#media'].field_media_image.entity.uri.value|image_style('full_width')),
+          'alt': content.field_hero_image.0.entity.field_media_image.alt,
+        }
+      }
+    } %}
+  {% endblock %}
+</div>
