@@ -3,11 +3,11 @@
     <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
   </div>
   <div class="hero__text__container container">
-    <h1 class="hero__text--title h2">
+    <h1 class="hero__title h2">
       <span class="highlight--blue">{{ hero.title }}</span>
     </h1>
     {% if hero.subtitle %}
-    <h2 class="hero__text--subtitle p">
+    <h2 class="hero__subtitle p">
       <span class="highlight--blue">{{ hero.subtitle }}</span>
     </h2>
     {% endif %}
@@ -18,6 +18,5 @@
         </div>
       </div>
     {% endif %}
-    
   </div>
 </section>

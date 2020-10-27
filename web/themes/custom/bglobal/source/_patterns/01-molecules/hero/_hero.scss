@@ -39,7 +39,7 @@ img.hero__image {
   padding: 2em 0;
 }
 
-.hero__text--title {
+.hero__title {
   color: white;
   grid-area: 1 / 1 / 1 / 2;
   margin: 0px;
@@ -47,12 +47,12 @@ img.hero__image {
   max-width: 500px;
 }
 
-.hero__text--subtitle {
+.hero__subtitle {
   margin-left: 16px; /* adjust left to account for box shadow on highlight */
   grid-area: 2 / 1 / 2 / 1;
 }
 
-.hero__text--title .highlight--blue, .hero__text--subtitle .highlight--blue {
+.hero__title .highlight--blue, .hero__subtitle .highlight--blue {
   background-color: rgba(0,58,112,1);
   padding: 0.5rem 0;
   -webkit-box-shadow: 1rem 0px 0px rgba(0,58,112,1), -1rem 0px 0px rgba(0,58,112,1);
