@@ -28,5 +28,7 @@ visibility:
     id: term
     tid:
       -
-        target_id: '2'
+        target_id: '7'
     negate: false
+    show_if_no_terms: 1
+    context_mapping: {  }
