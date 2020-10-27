@@ -12,7 +12,7 @@ dependencies:
 id: utilitymenu
 theme: bglobal
 region: header
-weight: -5
+weight: -7
 provider: null
 plugin: 'system_menu_block:utility-menu'
 settings:
@@ -26,8 +26,7 @@ settings:
 visibility:
   term:
     id: term
-    tid:
-      -
-        target_id: '2'
+    tid: null
     negate: false
-    show_if_no_terms: false
+    show_if_no_terms: 1
+    context_mapping: {  }
