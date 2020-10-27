@@ -160,6 +160,8 @@ Then visit the styleguide on github.io (link above), confirm that everything has
 
 The site is deployed to the `berkeleyglobal` Pantheon account and follows Pantheon's development workflow. We use Palantir's `The Build` to manage `phing` tasks for deployment.
 
+Files that control this build process can be found in the `/.the-build` directory in project root.
+
 Running the artifact process will automatically deploy to the `deploy` multisite environment on Pantheon. Once your changes have been tested there, you can merge them to the `dev` server using the Pantheon dashboard.
 
 When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- configuration changes are imported automatically and the Drupal database update script is run.
@@ -206,6 +208,8 @@ The Build provides standard `phing` commands. The following commands have been t
   - Installs node dependencies and builds the styleguide.
 
 Other default `phing` commands should not be used at this time.
+
+Default `phing` commands are in `vendor/palantirnet/the-build/targets`. These commands can be overwritten by those in the `build.xml` file in document root.
 
 ## Setting up Terminus
 
