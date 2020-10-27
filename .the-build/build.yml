@@ -63,7 +63,7 @@ artifact:
     remote_name: origin
 
     # Name to use for the git branch when doing a deployment.
-    remote_branch: deploy
+    remote_branch: master
 
 # Configuration for building the style guide.
 #
