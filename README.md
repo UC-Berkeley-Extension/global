@@ -11,6 +11,15 @@ This project requires the following software on OS X:
 
 See the [System Requirements](#system-requirements) section for information about installing these applications.
 
+# Contents
+
+- [Getting Started](#getting-started)
+- [Pattern Lab](#pattern-lab)
+- [Deploying to Pantheon](#deploying-to-pantheon)
+- [System Requirements](#system-requirements)
+- [DDEV Installation](#ddev-installation)
+
+
 # Getting Started
 
 ## Checkout the Project
@@ -117,10 +126,10 @@ To get started with Pattern Lab, follow these steps:
     - `npm start`
     - Visit the styleguide at https://global.ddev.site:3000/
 
-# Pattern Lab - Build
+## Pattern Lab - Build
 To build the styleguide without launching the Pattern Lab browser, you can run `npm start build` from within `cd web/themes/custom/bglobal/styleguide`.
 
-# Pattern Lab - Deployment
+## Pattern Lab - Deployment
 Deployed styleguide can be viewed [here](https://uc-berkeley-extension.github.io/global/?p=atoms-welcome).
 
 When the styleguide is deployed, it uses `gh-pages` branch on the repo, which should not be removed.
@@ -131,7 +140,6 @@ npm start
 npm start deploy
 ```
 Then visit the styleguide on github.io (link above), confirm that everything has been deployed properly.
-
 
 ## Troubleshooting Pattern Lab
 
