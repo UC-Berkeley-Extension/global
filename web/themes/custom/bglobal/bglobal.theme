@@ -7,6 +7,8 @@
 
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Layout\LayoutDefault;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -122,4 +124,74 @@ function bglobal_theme_suggestions_block_alter(array &$suggestions, array $varia
       $suggestions[] = 'block__' . $block->bundle() . '__' . $view_mode;
     }
   }
+}
+
+/**
+ * Implements hook_form_FORM_NAME_alter.
+ *
+ * Adds classes field on Layout Builder configuration section form.
+ */
+function bglobal_form_layout_builder_configure_section_alter(&$form, FormStateInterface $form_state) {
+  $form_object = $form_state->getFormObject();
+  $r = new ReflectionObject($form_object);
+  $property = $r->getProperty('layout');
+  $property->setAccessible(TRUE);
+  $layout = $property->getValue($form_object);
+  if (!$layout instanceof LayoutDefault) {
+    return;
+  }
+  $form['layout_settings']['class'] = [
+    // Change type to 'textfield' for text box form field.
+    '#type' => 'checkboxes',
+    '#title' => t('Add Classes'),
+    '#default_value' => $layout->getConfiguration()['class'] ?? '',
+    // List of classes that can be added. Remove if using text box.
+    '#options' => [
+      'container' => t('container')
+    ]
+  ];
+  array_unshift($form['#submit'],'bglobal_form_layout_builder_configure_section_submit');
+}
+
+/**
+ * A custom submit handler for our custom layout section configure elements.
+ *
+ * Saves extra classes to Layout Builder layout configuration.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *
+ * @throws \ReflectionException
+ */
+function bglobal_form_layout_builder_configure_section_submit(&$form, FormStateInterface $form_state) {
+  $classes = $form_state->getValue(['layout_settings', 'class']);
+  if (!$classes) {
+    return;
+  }
+  $form_object = $form_state->getFormObject();
+  $r = new ReflectionObject($form_object);
+  $property = $r->getProperty('layout');
+  $property->setAccessible(TRUE);
+  $layout = $property->getValue($form_object);
+  if (!$layout instanceof LayoutDefault) {
+    return;
+  }
+  $config = $layout->getConfiguration();
+  $config['class'] = $classes;
+  $layout->setConfiguration($config);
+}
+
+/**
+ * Implements hook_preprocess_layout.
+ *
+ * Adds extra classes to Layout Builder layout attributes from configuration.
+ */
+function bglobal_preprocess_layout(&$variables) {
+  if (empty($variables['settings']['class'])) {
+    return;
+  }
+  // Use this line if you want a textfield instead of checkboxes in the form.
+  //$variables['attributes']['class'] = array_merge($variables['attributes']['class'], explode(' ', $variables['settings']['class']));
+  // Use for checkboxes form element.
+  $variables['attributes']['class'] = array_merge($variables['attributes']['class'] ?? [], $variables['settings']['class']);
 }
