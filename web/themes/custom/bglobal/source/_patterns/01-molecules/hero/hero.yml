@@ -1,11 +1,11 @@
 hero:
   # img: |-
   #   <img class="hero__image" src="https://source.unsplash.com/random" alt="alt text here">
-  # img:
-  #   src: "https://source.unsplash.com/random"
-  #   alt: "Alt text here."
-  src: "https://source.unsplash.com/random"
-  alt: "Alt text here." 
+  img:
+    src: "https://source.unsplash.com/random"
+    alt: "Alt text here."
+  # src: "https://source.unsplash.com/random"
+  # alt: "Alt text here." 
   title: "Experience This Website Title"
   subtitle: "With our optional catchy tagline"
   link:
