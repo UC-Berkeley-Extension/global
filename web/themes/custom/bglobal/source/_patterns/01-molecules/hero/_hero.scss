@@ -1,9 +1,9 @@
-.hero__text--title.h2 {
+.hero__title.h2 {
   font-size: 3rem;
   line-height: 5rem;
 }
 
-.hero__text--subtitle {
+.hero__subtitle {
   line-height: 1.5;
 }
 
@@ -44,7 +44,7 @@ img.hero__image {
   grid-area: 1 / 1 / 1 / 2;
   margin: 0px;
   margin-left: 16px; /* adjust left to account for box shadow on highlight */
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .hero__subtitle {
