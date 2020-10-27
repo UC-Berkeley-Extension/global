@@ -190,6 +190,7 @@ If a deployment goes wrong, you can [restore the site from your backup](https://
 
 To build a deployment artifact, follow these steps:
 
+1. Make sure you have committed all code changes to your current branch. If you have not, the build process will complain about a `dirty` working branch.
 1. `ddev ssh`
 1. `cd ..` -- This should put you in the `/var/www/html` directory
 1. `phing artifact`
@@ -197,7 +198,15 @@ To build a deployment artifact, follow these steps:
 
 This process can take 5 minutes or so, as the entire node and composer install processes must take place.
 
-For documentation on other commands available, see [The Build github documentation](https://github.com/palantirnet/the-build/blob/develop/docs/artifacts.md)
+### Deployment options
+
+For documentation on other commands available, see [The Build github documentation](https://github.com/palantirnet/the-build/blob/develop/docs/artifacts.md). A few notes:
+
+* You can deploy from any branch, and it will always be pushed to the `deploy` environment on Pantheon.
+* If you want to spin up a new multisite environment on Pantheon, change the `remote_branch` target when running the build:
+    - e.g. `phing artifact -Dartifact.git.remote_branch=mytest` will create a `mytest` branch that can be accessed in the `Multisite` section of the Pantheon dashboard.
+    - Note that Pantheon limits the branch name to *11 lowercase characters*. [See the Pantheon documentation for more information](https://pantheon.io/docs/multidev).
+
 
 When the task finishes, visit the site at https://deploy-berkeleyglobal.pantheonsite.io/
 
