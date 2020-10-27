@@ -36,6 +36,9 @@
  * @see template_preprocess_paragraph()
  *
  * @ingroup themeable
+ {% set heroTitle %}
+  {{ content.field_title }}
+{% endset %}
  */
 #}
 {% set classes = [
@@ -48,11 +51,9 @@
 
 {% set image_url = file_url(content.field_image.0['#media'].field_media_image.entity.uri.value) %}
 
-{% set heroTitle %}
-  {{ content.field_title }}
-{% endset %}
 
-{% set heroSubtitle %}
+
+{% set hero_subtitle %}
   {{ content.field_subtitle }}
 {% endset %}
 
@@ -63,8 +64,8 @@
         'src': image_url,
         'alt': content.field_image.0['#media'].field_media_image.alt
       }, 
-      'title': heroTitle | striptags,
-      'subtitle': heroSubtitle | striptags('<a>'),
+      'title': content.field_title.0['#context'].value,
+      'subtitle': hero_subtitle | striptags('<a>'),
       'link': {
         'url': content.field_cta_link.0['#url'],
         'text': content.field_cta_link.0['#title'],

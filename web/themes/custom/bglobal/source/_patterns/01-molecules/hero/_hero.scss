@@ -1,4 +1,4 @@
-.hero__title.h2 {
+.hero__title {
   font-size: 3rem;
   line-height: 5rem;
 }
@@ -8,14 +8,11 @@
 }
 
 .hero__container {
-  background-color: #EEEEEE;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 450px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  align-content: center;
-  justify-content: center;
 }
 
 .hero__image__container {
@@ -27,7 +24,7 @@ img.hero__image {
   height: 100%;
   width: 100%;
   min-width: 350px; 
-  max-width: 100% !important;
+  max-width: 100%;  // !important
   object-fit: cover;
   object-position: center 25%;
 }
@@ -48,8 +45,8 @@ img.hero__image {
 }
 
 .hero__subtitle {
-  margin-left: 16px; /* adjust left to account for box shadow on highlight */
   grid-area: 2 / 1 / 2 / 1;
+  margin: 0.7em 0 0 1em; /* give top margin for highlight spacing and adjust left to account for box shadow on highlight */
 }
 
 .hero__title .highlight--blue, .hero__subtitle .highlight--blue {
@@ -65,7 +62,6 @@ img.hero__image {
 .highlight--blue {
   color: white;
   display: inline;
-  font-family: "Bitter";
   font-weight: 400;
 }
 

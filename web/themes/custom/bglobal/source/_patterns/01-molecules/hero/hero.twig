@@ -3,13 +3,13 @@
     <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
   </div>
   <div class="hero__text__container container">
-    <h1 class="hero__title h2">
+    <h2 class="hero__title">
       <span class="highlight--blue">{{ hero.title }}</span>
-    </h1>
-    {% if hero.subtitle %}
-    <h2 class="hero__subtitle p">
-      <span class="highlight--blue">{{ hero.subtitle }}</span>
     </h2>
+    {% if hero.subtitle %}
+    <p class="hero__subtitle">
+      <span class="highlight--blue">{{ hero.subtitle }}</span>
+    </p>
     {% endif %}
     {% if hero.link.url %}
       <div class="hero__btn__container">
