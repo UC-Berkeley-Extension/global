@@ -176,18 +176,6 @@ When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- 
 
 *NOTE: the Pantheon build is not currently using Config Split, which may be desired for local development once the site goes live.*
 
-## Building an Artifact
-
-To build an artifact, follow these steps:
-
-1. `ddev ssh`
-1. `cd ..` -- This should put you in the `/var/www/html` directory
-1. `phing artifact`
-1. When prompted to `Push artifact changes to the 'deploy' branch?`, enter [0] to accept.
-
-This process can take 5 minutes or so, as the entire node and composer install processes must take place.
-
-For documentation on other commands available, see [The Build github documentation](https://github.com/palantirnet/the-build/blob/develop/docs/artifacts.md)
 
 ## Pre-deployment
 
@@ -198,9 +186,30 @@ Best practice is to [create a site backup](https://pantheon.io/docs/backups) bef
 If a deployment goes wrong, you can [restore the site from your backup](https://pantheon.io/docs/restore-environment-backup).
 
 
+## Deployment
+
+To build a deployment artifact, follow these steps:
+
+1. `ddev ssh`
+1. `cd ..` -- This should put you in the `/var/www/html` directory
+1. `phing artifact`
+1. When prompted to `Push artifact changes to the 'deploy' branch?`, enter `[0]` to accept.
+
+This process can take 5 minutes or so, as the entire node and composer install processes must take place.
+
+For documentation on other commands available, see [The Build github documentation](https://github.com/palantirnet/the-build/blob/develop/docs/artifacts.md)
+
+When the task finishes, visit the site at https://deploy-berkeleyglobal.pantheonsite.io/
+
 ## Post-deployment
 
 After deploying an artifact, you can run additional commands using `drush` or `terminus`. On the `live` environment, you should always run `drush cim -y` and `drush updb -y` after a deployment.
+
+### Build options
+
+The options for how the artifact is built are located in `.the-build/build.yml` and may be edited.
+
+For instance, if you do not want to use `deploy`, you can change the `artifact.git.remote_branch` from `deploy` to `master`. Doing so will push all artifacts to the DEV server for testing.
 
 ### Pantheon scripts
 
