@@ -73,4 +73,4 @@ styleguide:
   # Location of the style guide, relative to the project root.
   root: "${drupal.root}/themes/custom/bglobal"
   # Command to compile the style guide assets, for use during the build and artifact steps.
-  command: 'npm start build'
+  command: 'npm install && npm start build'
