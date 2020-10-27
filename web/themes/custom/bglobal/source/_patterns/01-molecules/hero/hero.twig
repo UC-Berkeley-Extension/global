@@ -1,0 +1,22 @@
+<section class="hero__container">
+  <div class="hero__image__container">
+    <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
+  </div>
+  <div class="hero__text__container container">
+    <h2 class="hero__title">
+      <span class="highlight--blue">{{ hero.title }}</span>
+    </h2>
+    {% if hero.subtitle %}
+    <p class="hero__subtitle">
+      <span class="highlight--blue">{{ hero.subtitle }}</span>
+    </p>
+    {% endif %}
+    {% if hero.link.url %}
+      <div class="hero__btn__container">
+        <div>
+          <a class="{{ hero.link.classes }}" href="{{ hero.link.url }}">{{ hero.link.text }}</a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

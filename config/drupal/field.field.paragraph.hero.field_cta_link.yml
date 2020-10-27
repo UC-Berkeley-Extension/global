@@ -1,0 +1,28 @@
+uuid: 397f4cb1-069c-4fa7-9e51-86fc988f3c64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_link
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+id: paragraph.hero.field_cta_link
+field_name: field_cta_link
+entity_type: paragraph
+bundle: hero
+label: 'CTA Link'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://extension.berkeley.edu'
+    title: 'Learn More'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
