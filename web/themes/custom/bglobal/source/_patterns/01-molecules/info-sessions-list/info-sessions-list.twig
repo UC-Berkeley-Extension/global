@@ -1,28 +1,21 @@
 {# Source:
   /web/modules/custom/bglobal_angular/components/info_sessions_list/template.html
 #}
-<div class="events">
-  <h2 class="block-header">Info Sessions</h2>
-  {# *ngIf="view.count > 0" #}
-  <ul class="session-list"> 
-    {# *ngFor="let session of sessions" #}
-    {% for session in sessions %}
-    <li class="session"> 
-      <div class="session-left">
-        <div class="date">
-          {# {{ session.jsDate | date:'MMM' }} #}
-          {# {{ session.jsDate | date:'dd' }} #}
-          <span class="month">{{ session.jsDate.month }}</span> <span class="day">{{ session.jsDate.day }}</span>
+<div class="events {{ event_type }}"> {# FIGURE THIS OUT #}
+  <h2 class="events__header block-header">Info Sessions</h2>
+  <ul class="events__list">{% for session in sessions %} {# FIGURE THIS OUT, should be "event" #}
+    <li class="event__list__item"> 
+      <div class="event__list__item--left">
+        <div class="event__date">
+          <span class="event__date__month">{{ session.jsDate.month }}</span> <span class="event__date__day">{{ session.jsDate.day }}</span>
         </div>
       </div>
-      <div class="session-body">
-        <h3>
-          {# {{session.path, .title}} #}
-          <a href="{{ session.enroll }}">{{ session.title }}</a>
-        </h3>
+      <div class="event__list__item__body">
+        <span class="event__title">
+          <a clsss="event__link" href="{{ session.enroll }}">{{ session.title }}</a>
+        </span>
      </div>
-    </li>
-    {% endfor %}
+    </li>{% endfor %}
   </ul>
-  <a class="block-header" href="/">More Info Sessions</a>
+  <a clsss="more-link" href="/">More Info Sessions</a>
 </div>

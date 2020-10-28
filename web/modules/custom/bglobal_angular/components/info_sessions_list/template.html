@@ -1,29 +1,23 @@
-<!-- 
-  Reference modules/custom/bglobal_angular/components/voices_list/template.html
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/info-sessions-list/info-sessions-list.twig
  -->
-
-<!-- <div data-ng-if="view.count > 0 && $parent.parentProgram.abbreves === 'pdp'">
-  <div data-ng-repeat="session in sessions | limitTo:1">
-    <p class="blockquote">"Please join us for a free <a data-ng-href="{{ session.enroll }}" target="_blank">online information session</a>."</p>
-    <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>
-  </div>
-</div> -->
-<div class="events" *ngIf="view.count > 0">
-  <h2 class="block-header">Info Sessions</h2>
-  <ul class="session-list" >
-    <li class="session" *ngFor="let session of sessions | slice:0:limit;">
-      <div class="session-left">
-        <div class="date">
-          <span class="month">{{ session.jsDate | date:'MMM' }}</span> <span class="day">{{ session.jsDate | date:'dd' }}</span>
+<div class="events " *ngIf="view.count > 0">
+  <h2 class="events__header block-header">Info Sessions</h2>
+  <ul class="events__list" >
+    <li class="event__list__item" *ngFor="let session of sessions | slice:0:limit;">
+      <div class="event__list__item--left">
+        <div class="event__date">
+          <span class="event__date__month">{{ session.jsDate | date:'MMM' }}</span> <span class="event__date__day">{{ session.jsDate | date:'dd' }}</span>
         </div>
       </div>
-      <div class="session-body">
-        <h3>
+      <div class="event__list__item__body">
+        <span class="event__title">
           <a [href] = "session.enroll">{{session.title}}</a>
-        </h3>
+        </span>
      </div>
     </li>
   </ul>
-  <a class="block-header" href="/">More Info Sessions</a>
+  <a class="more-link" href="/">More Info Sessions</a>
 </div>
-<div *ngIf="view.count <= 0"><h1>No Info Sessions to show!</h1></div>
+<div class="events events--no-result" *ngIf="view.count <= 0"><h2>No Info Sessions to show!</h2></div>
+<!-- TODO: Fallback when no info sessions to show -->

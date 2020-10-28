@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - search
+    - term_condition
   theme:
     - bglobal
 _core:
@@ -20,4 +21,11 @@ settings:
   provider: search
   label_display: '0'
   page_id: node_search
-visibility: {  }
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '2'
+    negate: false
+    show_if_no_terms: false
