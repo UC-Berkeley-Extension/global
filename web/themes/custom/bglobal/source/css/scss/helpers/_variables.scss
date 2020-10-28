@@ -59,6 +59,20 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($space * .25),
+    2: ($space * .5),
+    3: $space,
+    4: ($space * 1.5),
+    5: ($space * 3)
+  ),
+  $spacers
+);
+
 //Borders
 $border-med: 3px;
 $border-thick: 7px;
@@ -74,3 +88,14 @@ $bp-large-2 : 66em; //1056px @ standard 16px = 1em
 $bp-xl : 73em;
 $bp-xxl : 89em;
 $bp-xxxl : 93em;
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: $bp-small,
+  sm: $bp-med,
+  md: $bp-large,
+  lg: $bp-xl,
+  xl: $bp-xxl,
+  xxl: $bp-xxxl
+) !default;
+

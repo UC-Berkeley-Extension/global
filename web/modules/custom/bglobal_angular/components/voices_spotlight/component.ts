@@ -6,15 +6,25 @@ import 'rxjs/add/operator/map';
 
 @Component({
   moduleId: __moduleName,
-  selector: "voices-list",
+  selector: "voices-spotlight",
   templateUrl: 'template.html'
 })
 
-export class VoicesList{
+export class VoicesSpotlight{
   public post: string = 'all';
   public tag: string = 'all';
   public program: string = 'all';
-  public baseUrl: string = 'https://voices.berkeley.edu/international-feed/';
+  public baseUrl: string = 'https://voices.berkeley.edu/single-post/';
+  public teaser = {
+    content: "",
+    image: {
+      src: "https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/global-logo-celebration-blog.jpg?itok=5PlyyzNQ",
+    }
+    link: "",
+    path: "",
+    tags: [],
+    title: "",
+  };
 
   // Constructor method sets our data from the JSON callback.
   constructor(
@@ -22,16 +32,13 @@ export class VoicesList{
     @Inject(ElementRef) elementRef: ElementRef) {
 
     this.setVariables(elementRef);
-
-    var fetchUrl = this.baseUrl + 'post/' + this.post + '/tag/' + this.tag + '/program/' + this.program;
+    var fetchUrl = this.baseUrl + this.post + '/tag/' + this.tag + '/cert/' + this.program + "/area/International";
 
     // TODO: error handling.
     http.get(fetchUrl).map(res => res.json()).subscribe((data) {
-      var items = data.nodes;
-      // Data is nested inside the 'post' of each item.
-      this.posts = Object.keys(items).map(key => items[key].post);
+      this.teaser = data.nodes[0].post;
+      this.teaser.tags = this.teaser.tags ? this.teaser.tags.split(', ') : [];
     });
-    console.log(fetchUrl);
   }
 
   // Helper function to set variables for the current instance.

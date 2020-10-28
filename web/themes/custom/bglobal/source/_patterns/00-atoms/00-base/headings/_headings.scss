@@ -1,13 +1,13 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
-h1 {
+h1, .h1 {
 	line-height: 1.2;
   font-size: $font-size-large * 1.5;
   margin: $space-half 0;
   letter-spacing: 1px;
 }
 
-h2 {
+h2, .h2 {
 	line-height: 1.2;
   font-family: $font-bitter;
   font-size: $font-size-large;
@@ -15,13 +15,13 @@ h2 {
   letter-spacing: 1px;
 }
 
-h3 {
+h3, .h3 {
 	line-height: 1.2;
   font-size: $font-size-large;
   margin: $space-half 0;
 }
 
-h4 {
+h4, .h5 {
   line-height: 1.2;
   font-size: $font-size-large;
   color: $founders-rock;
@@ -35,4 +35,18 @@ h5 {
 
 h6 {
 	
+}
+
+.p {
+  font-size: 1em;
+  font-family: $font;
+}
+
+.block-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $berkeley-blue;
+  font-family: $font;
 }
