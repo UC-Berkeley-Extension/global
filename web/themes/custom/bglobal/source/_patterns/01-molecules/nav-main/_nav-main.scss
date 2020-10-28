@@ -39,11 +39,79 @@
   }
 }
 
-
 .menu-link.dropdown:not(.show) {
   
   .primary-navbar_submenu {
     display: none;
     visibility: hidden;
   }
+}
+
+// Drupal nav styling
+#block-mainnavigation {
+
+}
+
+#block-mainnavigation ul[data-region="header"] {
+
+  @include breakpoint($bp-med) {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    margin: 0 auto;
+
+    > li {
+      display: inline-block;
+      margin-left: 5em;
+    }
+  }
+}
+
+.dropdown-menu {
+  background-color: white;
+  z-index: 1;
+
+  @include breakpoint($bp-med) {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 1200px;
+    border: 1px solid gray;
+    padding: 2em;
+    margin-top: 1em;
+
+    .layout--threecol-section {
+      flex-wrap: nowrap;
+    }
+
+    .layout__region--first {
+      border-right: 1px solid gray;
+      padding-right: .5em;
+      margin-right: 1em;
+    }
+
+    .layout__region--third {
+      border-left: 1px solid gray;
+      padding-left: .5em;
+      margin-left: 1em;
+    }
+  }
+}
+
+ul.navbar-nav {
+  li.menu-depth-1:first-child {
+    font-family: $font-bitter;
+    color: $web-gray;
+    font-size: 1.15em;
+  }
+}
+
+button.menu__toggle {
+  background: transparent;
+  border: none;
+  background-image: url(../../source/images/chevron-down.svg);
+  width: 20px;
+  height: 20px;
+  padding: .25em 1.5em .25em .5em;
+  background-repeat: no-repeat;
 }

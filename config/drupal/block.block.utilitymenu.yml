@@ -6,6 +6,7 @@ dependencies:
     - system.menu.utility-menu
   module:
     - system
+    - term_condition
   theme:
     - bglobal
 id: utilitymenu
@@ -22,4 +23,11 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '2'
+    negate: false
+    show_if_no_terms: false
