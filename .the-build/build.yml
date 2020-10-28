@@ -20,7 +20,7 @@ drupal:
 
   # Comma-separated list of directories that should be present for Drupal development.
   # EDIT: We removed creating the config split directories since they are different.
-  create_dirs: "${drupal.root}/modules/custom,${drupal.root}/themes/custom,${drupal.root}/profiles/custom"
+  create_dirs: "${drupal.root}/modules/custom,${drupal.root}/themes/custom"
 
   sites:
     default:
