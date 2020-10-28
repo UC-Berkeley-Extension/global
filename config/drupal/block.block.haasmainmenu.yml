@@ -1,0 +1,37 @@
+uuid: d47cfed3-3738-40a7-9310-6fb460698d4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.haas-main-menu
+  module:
+    - menu_block
+    - term_condition
+  theme:
+    - bglobal
+id: haasmainmenu
+theme: bglobal
+region: header
+weight: -2
+provider: null
+plugin: 'menu_block:haas-main-menu'
+settings:
+  id: 'menu_block:haas-main-menu'
+  label: 'Haas Main Menu'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'haas-main-menu:'
+  suggestion: haas_main_menu
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '1'
+    negate: false
+    show_if_no_terms: false

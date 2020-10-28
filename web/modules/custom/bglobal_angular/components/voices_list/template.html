@@ -3,13 +3,13 @@
  -->
  <div class="voices__list">
   <h2 class="voices__list__header block-header">Latest</h2>
-  <div class="voices__teaser__list">
+  <div class="voices__list__teasers">
     <!-- TODO: RENAME TO TEASER -->
-    <a *ngFor="let post of posts | slice:0:3;" data-ng-cloak class="voices__teaser__block" [href] = "post.path">
-      <div class="voices__teaser__image">
-        <img [src] = "post.image.src" [alt] = "post.image.alt" class="voices__teaser__image__el"/>
+    <a *ngFor="let post of posts | slice:0:3;" data-ng-cloak class="voices__list__teaser" [href] = "post.path">
+      <div class="voices__list__teaser__image">
+        <img [src] = "post.image.src" [alt] = "post.image.alt" class="voices__list__teaser__image__el"/>
       </div>
-      <span class="voices__teaser__title">{{ post.title }}</span>
+      <span class="voices__list__teaser__title">{{ post.title }}</span>
     </a>
   </div>
   <a clsss="more-link" href="/">More More</a>

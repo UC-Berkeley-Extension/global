@@ -37,7 +37,10 @@
     "drupal/core-recommended": "^9",
     "drupal/default_content": "^2.0@alpha",
     "drupal/devel_kint_extras": "^1.0",
+    "drupal/diff": "^1.0",
     "drupal/field_group": "^3.1",
+    "drupal/menu_block": "^1.6",
+    "drupal/menu_item_extras": "^2.12",
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
     "drupal/pdb": "^1.0@alpha",
@@ -112,6 +115,14 @@
       },
       "drupal/term_condition": {
         "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
+      },
+      "drupal/menu_item_extras": {
+        "Error when creating new menus (https://www.drupal.org/project/menu_item_extras/issues/3061342)": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin_0.patch"
+      },
+      "drupal/term_condition": {
+        "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch",
+        "Fixes context not loading properly (https://www.drupal.org/project/term_condition/issues/3177999)": "https://www.drupal.org/files/issues/2020-10-20/3177999-term_condition_update_annotation.patch",
+        "Add option to display block if no terms are present (https://www.drupal.org/project/term_condition/issues/3178234)": "https://www.drupal.org/files/issues/2020-10-21/3178234-term_condition-show-on-empty-3.patch"
       }
     }
   },

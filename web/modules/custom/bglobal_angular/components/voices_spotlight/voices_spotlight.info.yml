@@ -11,7 +11,7 @@ configuration:
   info:
     type: item
     title: 'Data endpoint. Defaults to most recent featured post.'
-    description: 'https://voices.berkeley.edu/single-post/%/tag/%/cert/%/area/International'
+    description: 'https://voices.berkeley.edu/single-post/{$post}/tag/{$tag}/cert/{$cert}/area/International'
   post:
     type: textfield
     title: Post

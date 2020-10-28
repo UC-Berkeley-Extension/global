@@ -9,10 +9,10 @@
    </div>
     <div class="voices__spotlight__teaser__summary">
       <h3 class="voices__spotlight__teaser__title marginless-p">
-        <strong><a href="{{ teaser.path }}" class="blog-header">{{ teaser.title }}</a></strong>
+        <strong><a href="{{ teaser.path }}" class="">{{ teaser.title }}</a></strong>
       </h3>
       <div class="voices__spotlight__teaser__body" [innerHTML]="teaser.content"></div>
-      <p class="text-right mb-0"><a class="voices__spotlight__teaser__cta button button-small" href="{{ teaser.path }}">Read More</a></p>
+      <div class="voices__spotlight__teaser__cta text--right"><a class="button button--small" href="{{ teaser.path }}">Continue Reading<span class="sr-only"> "{{ teaser.title }}"</span></a></div>
     </div>
   </div>
 </div>
