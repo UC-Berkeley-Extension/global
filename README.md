@@ -45,14 +45,11 @@ You should now be in the DDEV virtual machine at the prompt:
 `USERNAME@global-web:/var/www/html/web$`
 
 Run the following commands.
-- `cp ../config/settings/settings.ddev.php sites/default`
-- `drush si --existing-config`
-- Then note the password given at the end of installation.
+- `cd ..` - this will put you in `/var/www/html`
+- `phing install` - to install the Drupal site from scratch.
+- The `admin` user will then have its password set to `admin`.
 
-*Tip:* You can instead run the single shell command:
-- `/var/www/html/scripts/setup.sh`
-
-Visit https://global.ddev.site and login as `admin` with the password provided to you.
+Visit https://global.ddev.site and login as `admin\admin`.
 
 *Hint:* If you forget the password, use `drush uli` to get a login link.
 
@@ -66,11 +63,12 @@ From your host machine
 - `ddev ssh` -- You might open this in a new terminal tab.
 
 From DDEV
-- `drush cr`
-- For config export and import, use `drush cex` (export) and `drush cim` (import)
+- `cd ..`
+- `phing reload`
 
-*Tip:* You can instead run the single shell command:
-- `/var/www/html/scripts/refresh.sh`
+- You can also run the reload command manually:
+    - `drush cr`
+    - For config export and import, use `drush cex` (export) and `drush cim` (import)
 
 And you should be all set!
 
@@ -92,6 +90,8 @@ And run these from inside the DDEV container:
 
 ## Troubleshooting
 
+### `ddev start`
+
 If you see this on running `ddev start`:
 ```
 === Running task: Exec command 'cp /var/www/html/config/settings/settings.ddev.php /var/www/html/web/sites/default' in container/service 'web', output below
@@ -107,6 +107,10 @@ Run the following commands from your host machine:
 - `cd scripts`
 - `chmod 665 *.sh`
 - `chmod +x *.sh`
+
+### `phing`
+
+If you try a `phing` command and get the error `Buildfile: build.xml does not exist!`, make sure you are in the `/var/www/html/` directory.
 
 # Pattern Lab
 We are using [Pattern Lab](https://patternlab.io/) for the component-based styleguide for the project. Pattern Lab is a node-based system that can integrate with Drupal themes.
@@ -232,6 +236,14 @@ The Build provides standard `phing` commands. The following commands have been t
   - Builds and deploys the application to Pantheon.
 * `phing styleguide`
   - Installs node dependencies and builds the styleguide.
+* `phing build`
+  - Builds the application and its dependencies.
+* `phing install`
+  - Installs Drupal from existing configuration.
+* `phing reload`
+  - Clears cache and loads configuration into the site.
+* `phing drupal-load-db`
+  - Loads a database from `/artifacts/backups/*.sql.gz` if one exists.
 
 Other default `phing` commands should not be used at this time.
 
