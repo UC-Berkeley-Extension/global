@@ -90,7 +90,7 @@ And run these from inside the DDEV container:
 
 ## Troubleshooting
 
-### `ddev start`
+### `ddev start` errors
 
 If you see this on running `ddev start`:
 ```
@@ -100,15 +100,7 @@ task failed: Exec command 'cp /var/www/html/config/settings/settings.ddev.php /v
 ```
 Try `chmod -R a+w web/sites/`
 
-If the shell scripts will not execute, it may be because git doesn't include permissions on files.
-
-Run the following commands from your host machine:
-
-- `cd scripts`
-- `chmod 665 *.sh`
-- `chmod +x *.sh`
-
-### `phing`
+### `phing` errors
 
 If you try a `phing` command and get the error `Buildfile: build.xml does not exist!`, make sure you are in the `/var/www/html/` directory.
 
