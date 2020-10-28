@@ -1,52 +1,60 @@
 <?php
 
 /**
- * @file Drupal settings file template for use on development environments.
+ * @file
+ * #ddev-generated: Automatically generated Drupal settings file.
+ * ddev manages this file and may delete or overwrite the file unless this
+ * comment is removed.
  */
 
-// The database settings here are only used by CircleCI. DDEV will add it's own
-// settings afterwards that overwrite the local settings.
+$host = "db";
+$port = 3306;
+
+// If DDEV_PHP_VERSION is not set but IS_DDEV_PROJECT *is*, it means we're running (drush) on the host,
+// so use the host-side bind port on docker IP
+if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
+  $host = "127.0.0.1";
+  $port = 32816;
+}
 
 $databases['default']['default'] = array(
-  'driver' => 'mysql',
-  'database' => '${drupal.site.database.database}',
-  'username' => '${drupal.site.database.username}',
-  'password' => '${drupal.site.database.password}',
-  'host' => '${drupal.site.database.host}',
-  'prefix' => '',
-  'collation' => 'utf8mb4_general_ci',
+  'database' => "db",
+  'username' => "db",
+  'password' => "db",
+  'host' => $host,
+  'driver' => "mysql",
+  'port' => $port,
+  'prefix' => "",
 );
 
-$settings['config_sync_directory'] = '${drupal.site.config_sync_directory}';
+$settings['hash_salt'] = 'IifzfbSZwhlFEBkbBzoKeXKfjVJMFkqXMlqJStlLlXOEPqHKhkRzOAryhyyjXlmI';
 
-$settings['hash_salt'] = '${drupal.site.hash_salt}';
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
-$settings['container_yamls'][] = __DIR__ . '/services.build.yml';
-
-$settings['file_public_path'] = '${drupal.site.settings.file_public_path}';
-$settings['file_private_path'] = '${drupal.site.settings.file_private_path}';
-
-// Use the standard temporary directory on the development environment (update if the
-// project's development environment is configured differently).
-$settings['file_temp_path'] = '/tmp';
-
-// Enable/disable config_split configurations. To simulate other config split
-// environments, change "development" to either "staging" or "production", then run:
-//   drush cr && drush cim -y
-$config['config_split.config_split.local']['status'] = FALSE;
-
-// Disable the render cache.
-$settings['cache']['bins']['render'] = 'cache.backend.null';
-
-// Disable the dynamic page cache.
-$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-
-// Disable CSS and JS aggregation.
-$config['system.performance']['css']['preprocess'] = FALSE;
-$config['system.performance']['js']['preprocess'] = FALSE;
-
-// Don't chmod the sites subdirectory.
+// This will prevent Drupal from setting read-only permissions on sites/default.
 $settings['skip_permissions_hardening'] = TRUE;
 
-// Turn errors up.
-$config['system.logging']['error_level'] = 'verbose';
+// This will ensure the site can only be accessed through the intended host
+// names. Additional host patterns can be added for custom configurations.
+$settings['trusted_host_patterns'] = ['.*'];
+
+// Don't use Symfony's APCLoader. ddev includes APCu; Composer's APCu loader has
+// better performance.
+$settings['class_loader_auto_detect'] = FALSE;
+
+// This specifies the default configuration sync directory.
+// $config_directories (pre-Drupal 8.8) and
+// $settings['config_sync_directory'] are supported
+// so it should work on any Drupal 8 or 9 version.
+if (defined('CONFIG_SYNC_DIRECTORY') && empty($config_directories[CONFIG_SYNC_DIRECTORY])) {
+  $config_directories[CONFIG_SYNC_DIRECTORY] = '../config/drupal';
+}
+elseif (empty($settings['config_sync_directory'])) {
+  $settings['config_sync_directory'] = '../config/drupal';
+}
+
+// Use correct services.yml file for twig debugging during development.
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.yml';
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+$settings['cache']['bins']['render'] = 'cache.backend.null';

@@ -79,6 +79,13 @@
         </drush>
     </target>
 
+  <!-- Target: reload
+       Reloads configuration for the site.
+       -->
+  <target name="reload" depends="set-site,build,drupal-has-database-connection" description="Load configuration and clear the cache.">
+    <drush command="cache:rebuild" assume="yes" />
+    <drush command="config:import" assume="yes" />
+  </target>
 
     <!-- Target: load -->
 <!--    <target name="load" depends="set-site" description="Load a database dump.">-->
