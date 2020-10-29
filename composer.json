@@ -120,6 +120,7 @@
   },
   "scripts": {
     "post-install-cmd": [
+        "echo 'Setting directory permissions...' && chmod -R a+w web/sites",
         "echo 'Installing npm packages...' && cd web/modules/contrib/pdb/modules/pdb_ng2 && npm install 2>/dev/null"
     ]
   }
