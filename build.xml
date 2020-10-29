@@ -30,7 +30,7 @@
 
         <!-- Set permissions on the sites subdirectory. -->
         <mkdir dir="${drupal.root}/sites/${drupal.site.dir}" />
-        <chmod file="${drupal.root}/sites/${drupal.site.dir}" mode="750" />
+        <chmod file="${drupal.root}/sites/${drupal.site.dir}" mode="750" failonerror="false" />
 
         <!-- Create the public files directory and make it world writable. -->
         <mkdir dir="${drupal.root}/${drupal.site.settings.file_public_path}" />
