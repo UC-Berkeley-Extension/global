@@ -47,6 +47,12 @@ drupal:
       # Path to the Drupal config directory, relative to the Drupal root.
       config_sync_directory: "../config/drupal"
 
+      build:
+        settings_template: config/settings/settings.ddev.php
+        settings_dest: web/sites/default/settings.ddev.php
+        services_template: config/settings/development.services.yml
+        services_dest: web/sites/development.services.yml
+
 # To build an artifact from your code, add the URL to your artifact git repository.
 # @see https://github.com/palantirnet/the-build/blob/release-2.0/defaults.yml
 
