@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - bglobal_pardot
+    - ctools
+    - term_condition
   theme:
     - bglobal
 id: custompardotform
@@ -31,7 +33,19 @@ settings:
     page_title: page_title
     success_location: success_location
     error_location: error_location
-    program_name: 0
   success_location: 'https://extension.berkeley.edu/international/'
   error_location: 'https://extension.berkeley.edu/international/'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page_lb: landing_page_lb
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }
