@@ -33,6 +33,14 @@ Then clone this project.
 - `cd global`
 - `composer install`
 
+Install the styleguide:
+
+- `cd web/themes/custom/bglobal`
+- `npm install`
+- `npm start build`
+
+Note that we do not install the styleguide from the VM due to dependency conflicts.
+
 ## New Installations
 
 From your host machine
