@@ -56,7 +56,9 @@
     "zaporylie/composer-drupal-optimizations": "^1.1"
   },
   "require-dev": {
-    "drupal/devel": "^4.0"
+    "drupal/devel": "^4.0",
+    "palantirnet/the-build": "^3.0",
+    "phing/phing": "2.*"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -130,6 +132,7 @@
   },
   "scripts": {
     "post-install-cmd": [
+        "echo 'Setting directory permissions...' && chmod -R a+w web/sites",
         "echo 'Installing npm packages...' && cd web/modules/contrib/pdb/modules/pdb_ng2 && npm install 2>/dev/null"
     ]
   }
