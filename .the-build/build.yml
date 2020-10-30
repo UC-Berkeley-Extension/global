@@ -80,3 +80,4 @@ styleguide:
   root: "${drupal.root}/themes/custom/bglobal"
   # Command to compile the style guide assets, for use during the build and artifact steps.
   command: 'npm install && npm start build'
+  local_install: false

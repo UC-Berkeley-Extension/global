@@ -9,3 +9,5 @@ drupal:
         settings_template: .the-build/drupal/settings.build-pantheon.php
         settings_dest: artifacts/build/web/sites/default/settings.php
         services_dest: artifacts/dev/null
+styleguide:
+  local_install: true

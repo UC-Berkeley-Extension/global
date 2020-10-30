@@ -154,5 +154,28 @@
         </if>
     </target>
 
+    <!--
+        Target: styleguide-build
+
+        Install and build the style guide.
+        -->
+    <target name="styleguide-build" depends="styleguide-exists-or-else" hidden="true">
+      <if>
+          <not><equals arg1="${styleguide.local_install}" arg2="false" /></not>
+              <then>
+                  <echo>Running build command in ${styleguide.root}: ${styleguide.command}</echo>
+                  <exec dir="${styleguide.root.resolved}" command="${styleguide.command}" passthru="true" checkreturn="true" />
+              </then>
+              <else>
+                <echo>For local development, build the styleguide from your host machine.</echo>
+                <echo>> cd web/sites/custom/bglobal</echo>
+                <echo>To install and launch:</echo>
+                <echo>> npm install</echo>
+                <echo>> npm start</echo>
+                <echo>To build:</echo>
+                <echo>> npm start build</echo>
+              </else>
+      </if>
+    </target>
 
 </project>
