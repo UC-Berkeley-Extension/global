@@ -200,7 +200,7 @@ For documentation on other commands available, see [The Build github documentati
 
 * You can deploy from any branch, and it will always be pushed to the `deploy` environment on Pantheon.
 * If you want to spin up a new multisite environment on Pantheon, change the `remote_branch` target when running the build:
-    - e.g. `phing artifact -Dartifact.git.remote_branch=mytest` will create a `mytest` branch that can be accessed in the `Multisite` section of the Pantheon dashboard.
+    - e.g. `phing artifact -D artifact.git.remote_branch=mytest` will create a `mytest` branch that can be accessed in the `Multisite` section of the Pantheon dashboard.
     - Note that Pantheon limits the branch name to *11 lowercase characters*. [See the Pantheon documentation for more information](https://pantheon.io/docs/multidev).
 
 
