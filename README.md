@@ -114,6 +114,12 @@ Try `chmod -R a+w web/sites/`
 
 If you try a `phing` command and get the error `Buildfile: build.xml does not exist!`, make sure you are in the `/var/www/html/` directory.
 
+### `[phingcall] ... The remote end hung up unexpectedly`
+
+If you try `phing artifact` and get an error, you might need to extend permissions on your artifacts folder. Run `chmod -R 776 artifacts` from your host machine. 
+
+You might get a `You have changes which must be committed before you may build an artifact` error next. Go to your `global/.git/gitconfig` file and set `filemode` to false. 
+
 # Pattern Lab
 We are using [Pattern Lab](https://patternlab.io/) for the component-based styleguide for the project. Pattern Lab is a node-based system that can integrate with Drupal themes.
 
