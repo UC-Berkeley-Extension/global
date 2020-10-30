@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f970ce1643361a36b9100b28250acdc9",
+    "content-hash": "c5f99fefbc885a5a890807a234ffdb5f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1963,6 +1963,50 @@
             }
         },
         {
+            "name": "drupal/block_list_override",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_list_override.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_list_override-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "f1ae936cc5e4748d511ee0a7a6025337b135db56"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1594592703",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "KarenS",
+                    "homepage": "https://www.drupal.org/user/45874"
+                }
+            ],
+            "description": "Remove unnecessary blocks from the block list for better system performance.",
+            "homepage": "https://www.drupal.org/project/block_list_override",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_list_override"
+            }
+        },
+        {
             "name": "drupal/components",
             "version": "2.0.0-beta3",
             "source": {
@@ -2927,30 +2971,226 @@
             }
         },
         {
-            "name": "drupal/field_group",
-            "version": "3.1.0",
+          "name": "drupal/field_group",
+          "version": "3.1.0",
+          "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/field_group.git",
+            "reference": "8.x-3.1"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
+            "reference": "8.x-3.1",
+            "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
+          },
+          "require": {
+            "drupal/core": "^8.8 || ^9"
+          },
+          "require-dev": {
+            "drupal/jquery_ui_accordion": "^1.0"
+          },
+          "type": "drupal-module",
+          "extra": {
+            "drupal": {
+              "version": "8.x-3.1",
+              "datestamp": "1591772567",
+              "security-coverage": {
+                "status": "covered",
+                "message": "Covered by Drupal's security advisory policy"
+              }
+            }
+          },
+          "notification-url": "https://packages.drupal.org/8/downloads",
+          "license": [
+            "GPL-2.0-or-later"
+          ],
+          "authors": [
+            {
+              "name": "Hydra",
+              "homepage": "https://www.drupal.org/user/647364"
+            },
+            {
+              "name": "Stalski",
+              "homepage": "https://www.drupal.org/user/322618"
+            },
+            {
+              "name": "jyve",
+              "homepage": "https://www.drupal.org/user/591438"
+            },
+            {
+              "name": "nils.destoop",
+              "homepage": "https://www.drupal.org/user/361625"
+            },
+            {
+              "name": "swentel",
+              "homepage": "https://www.drupal.org/user/107403"
+            }
+          ],
+          "description": "Provides the field_group module.",
+          "homepage": "https://www.drupal.org/project/field_group",
+          "support": {
+            "source": "https://git.drupalcode.org/project/field_group",
+            "issues": "https://www.drupal.org/project/issues/field_group"
+          }
+        },
+        {
+          "name": "drupal/menu_block",
+          "version": "1.6.0",
+          "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/menu_block.git",
+            "reference": "8.x-1.6"
+          },
+          "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.6.zip",
+            "reference": "8.x-1.6",
+            "shasum": "3da96af15c3a5f5f1966e28b6e87b74228617998"
+          },
+          "require": {
+            "drupal/core": "^8 || ^9"
+          },
+          "type": "drupal-module",
+          "extra": {
+            "drupal": {
+              "version": "8.x-1.6",
+              "datestamp": "1587721600",
+              "security-coverage": {
+                "status": "covered",
+                "message": "Covered by Drupal's security advisory policy"
+              }
+            }
+          },
+          "notification-url": "https://packages.drupal.org/8/downloads",
+          "license": [
+            "GPL-2.0-or-later"
+          ],
+          "authors": [
+            {
+              "name": "Dave Reid",
+              "homepage": "https://www.drupal.org/user/53892"
+            },
+            {
+              "name": "JohnAlbin",
+              "homepage": "https://www.drupal.org/user/32095"
+            },
+            {
+              "name": "joelpittet",
+              "homepage": "https://www.drupal.org/user/160302"
+            },
+            {
+              "name": "kim.pepper",
+              "homepage": "https://www.drupal.org/user/370574"
+            },
+            {
+              "name": "rrrob",
+              "homepage": "https://www.drupal.org/user/273533"
+            }
+          ],
+          "description": "Provides configurable blocks of menu links.",
+          "homepage": "https://www.drupal.org/project/menu_block",
+          "support": {
+            "source": "https://git.drupalcode.org/project/menu_block"
+          }
+        },
+        {
+            "name": "drupal/menu_item_extras",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "8.x-3.1"
+                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
+                "reference": "8.x-2.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-8.x-2.12.zip",
+                "reference": "8.x-2.12",
+                "shasum": "9921151e52c44206dc1c77feb0a53cd1d0879d6c"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "require-dev": {
-                "drupal/jquery_ui_accordion": "^1.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1591772567",
+                    "version": "8.x-2.12",
+                    "datestamp": "1600958987",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_restrictions",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
+                "reference": "8.x-2.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "7e5658281cc32f7a9c091f065568d696cb7b7bee"
+            },
+            "require": {
+                "drupal/core": "^8.6.0 || ^9"
+            },
+            "require-dev": {
+                "drupal/dashboards": "*",
+                "drupal/layout_library": "*",
+                "drupal/mini_layouts": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.7",
+                    "datestamp": "1588081705",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2959,35 +3199,46 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "Hydra",
-                    "homepage": "https://www.drupal.org/user/647364"
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
                 },
                 {
-                    "name": "Stalski",
-                    "homepage": "https://www.drupal.org/user/322618"
+                    "name": "eiriksm",
+                    "homepage": "https://www.drupal.org/user/1014468"
                 },
                 {
-                    "name": "jyve",
-                    "homepage": "https://www.drupal.org/user/591438"
+                    "name": "gravelpot",
+                    "homepage": "https://www.drupal.org/user/748208"
                 },
                 {
-                    "name": "nils.destoop",
-                    "homepage": "https://www.drupal.org/user/361625"
+                    "name": "lreynaga",
+                    "homepage": "https://www.drupal.org/user/3400232"
                 },
                 {
-                    "name": "swentel",
-                    "homepage": "https://www.drupal.org/user/107403"
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "ricksta",
+                    "homepage": "https://www.drupal.org/user/311042"
+                },
+                {
+                    "name": "texas_tater",
+                    "homepage": "https://www.drupal.org/user/753614"
+                },
+                {
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
                 }
             ],
-            "description": "Provides the field_group module.",
-            "homepage": "https://www.drupal.org/project/field_group",
+            "description": "Manage which fields & layouts are available in Layout Builder",
+            "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
             "support": {
-                "source": "https://git.drupalcode.org/project/field_group",
-                "issues": "https://www.drupal.org/project/issues/field_group"
+                "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
             }
         },
         {
@@ -3267,7 +3518,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -3740,7 +3991,13 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2020-10-05T11:50:13+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/weitzman",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-08-20T19:27:28+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -8242,5 +8499,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
