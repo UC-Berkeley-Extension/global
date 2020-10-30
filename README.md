@@ -67,6 +67,8 @@ From your host machine
 - `cd global`
 - `git pull`
 - `composer install`
+- `cd web/themes/custom/bglobal`
+- `npm start build`
 - `ddev start` -- If ddev is not running.
 - `ddev ssh` -- You might open this in a new terminal tab.
 
