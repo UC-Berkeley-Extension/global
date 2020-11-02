@@ -4,13 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.program.body
-    - field.field.node.program.field_block_info_sessions
-    - field.field.node.program.field_block_pardot_form
-    - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
-    - field.field.node.program.field_program_study_prefix
-    - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_ref_certificates
     - field.field.node.program.field_term_ref_academic_level
     - field.field.node.program.field_term_ref_certificate_type
@@ -19,8 +14,6 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
   module:
-    - block_field
-    - link
     - text
     - user
 id: node.program.default
@@ -28,48 +21,8 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
-  field_block_info_sessions:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: block_field
-    region: content
-  field_block_pardot_form:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: block_field
-    region: content
-  field_program_application_cta:
-    weight: 4
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_program_description:
     weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_program_study_prefix:
-    weight: 7
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_program_study_suffix:
-    weight: 9
     label: hidden
     settings: {  }
     third_party_settings: {  }

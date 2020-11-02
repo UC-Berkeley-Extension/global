@@ -4,13 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.program.body
-    - field.field.node.program.field_block_info_sessions
-    - field.field.node.program.field_block_pardot_form
-    - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
-    - field.field.node.program.field_program_study_prefix
-    - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_ref_certificates
     - field.field.node.program.field_term_ref_academic_level
     - field.field.node.program.field_term_ref_certificate_type
@@ -19,9 +14,8 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - node.type.program
   module:
-    - block_field
+    - content_moderation
     - field_group
-    - link
     - text
 third_party_settings:
   field_group:
@@ -73,49 +67,6 @@ third_party_settings:
         open: true
         required_fields: true
       label: 'Hero section'
-    group_advisor_callout:
-      children:
-        - group_block_settings
-        - group_info_session_settings
-      parent_name: ''
-      weight: 3
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: true
-        required_fields: true
-      label: 'Advisor callout'
-    group_block_settings:
-      children:
-        - field_block_pardot_form
-      parent_name: group_advisor_callout
-      weight: 20
-      format_type: details
-      region: content
-      format_settings:
-        description: ''
-        required_fields: true
-        id: ''
-        classes: ''
-        open: false
-      label: 'Pardot Form Settings'
-    group_info_session_settings:
-      children:
-        - field_block_info_sessions
-      parent_name: group_advisor_callout
-      weight: 21
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-      label: 'Info Session Settings'
     group_study_options:
       children:
         - field_program_study_prefix
@@ -143,32 +94,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_block_info_sessions:
-    weight: 22
-    settings:
-      plugin_id: ''
-      settings: {  }
-      configuration_form: full
-    third_party_settings: {  }
-    type: block_field_default
-    region: content
-  field_block_pardot_form:
-    weight: 21
-    settings:
-      plugin_id: ''
-      settings: {  }
-      configuration_form: full
-    third_party_settings: {  }
-    type: block_field_default
-    region: content
-  field_program_application_cta:
-    weight: 35
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_program_description:
     weight: 33
     settings:
@@ -184,22 +109,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_program_study_prefix:
-    weight: 29
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_program_study_suffix:
-    weight: 31
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
     region: content
   field_ref_certificates:
     weight: 30
@@ -241,6 +150,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:

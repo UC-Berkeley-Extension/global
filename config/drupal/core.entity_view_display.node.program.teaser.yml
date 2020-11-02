@@ -5,13 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.program.body
-    - field.field.node.program.field_block_info_sessions
-    - field.field.node.program.field_block_pardot_form
-    - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
-    - field.field.node.program.field_program_study_prefix
-    - field.field.node.program.field_program_study_suffix
     - field.field.node.program.field_ref_certificates
     - field.field.node.program.field_term_ref_academic_level
     - field.field.node.program.field_term_ref_certificate_type
@@ -41,13 +36,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_block_info_sessions: true
-  field_block_pardot_form: true
-  field_program_application_cta: true
   field_program_description: true
   field_program_shortname: true
-  field_program_study_prefix: true
-  field_program_study_suffix: true
   field_ref_certificates: true
   field_term_ref_academic_level: true
   field_term_ref_certificate_type: true
