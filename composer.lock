@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa275eb252fbb774058045977f8034fd",
+    "content-hash": "be462f4f3ef15281a095088710797326",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1822,6 +1822,7 @@
                 "reflection",
                 "static"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
@@ -3035,6 +3036,69 @@
             }
         },
         {
+            "name": "drupal/layout_builder_modal",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "5063c2d5e33265c92bfeed34df6682d74c973c51"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1588175915",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Svensson",
+                    "homepage": "https://www.drupal.org/u/johndevman",
+                    "email": "john@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Emil Johnsson",
+                    "homepage": "https://www.drupal.org/u/johnzzon",
+                    "email": "emil@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Henrik Larsson",
+                    "homepage": "https://www.drupal.org/u/henriklarsson",
+                    "email": "henrik@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
+                }
+            ],
+            "description": "Open blocks in a modal in the Layout Builder UI.",
+            "homepage": "https://www.drupal.org/project/layout_builder_modal",
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_builder_modal",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
+            }
+        },
+        {
             "name": "drupal/layout_builder_restrictions",
             "version": "2.7.0",
             "source": {
@@ -3109,6 +3173,53 @@
             "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_tabs",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_tabs.git",
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_tabs-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "be240bc3ae63e9411cad5ef946123dcb9ca9ea23"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1595066380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Render array key error (https://www.drupal.org/project/layout_builder_tabs/issues/3150894)": "https://www.drupal.org/files/issues/2020-07-27/layout_builder_tabs-user_errors-3150894-5.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a layout to show blocks as a tabs set",
+            "homepage": "https://www.drupal.org/project/layout_builder_tabs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_tabs"
             }
         },
         {
@@ -3523,7 +3634,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -7793,6 +7904,20 @@
                 "Xdebug",
                 "performance"
             ],
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-10-24T12:39:10+00:00"
         },
         {
@@ -7973,6 +8098,12 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/pdepend/pdepend",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-06-20T10:53:13+00:00"
         },
         {
@@ -8300,6 +8431,12 @@
                 "phpmd",
                 "pmd"
             ],
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpmd/phpmd",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-09-23T22:06:32+00:00"
         },
         {
@@ -8473,6 +8610,7 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/default_content": 15,
+        "drupal/layout_builder_tabs": 10,
         "drupal/pdb": 15,
         "drupal/term_condition": 20,
         "drupal/workbench_access": 10
@@ -8483,5 +8621,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.3"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
