@@ -1,0 +1,7 @@
+name: Berkeley Global Custom Layouts
+type: module
+description: 'Creates custom layouts for Layout Builder.'
+package: 'Berkeley Global'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:layout_discovery

@@ -1,6 +1,7 @@
 #top-banner {
   .site-logo__image {
     max-width: 350px;
+    padding: 1em 0;
   }
 }
 
@@ -20,6 +21,10 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  .user-logged-in & {
+    top: 3em;
+  }
   
   &:hover,
   &:focus,
@@ -48,21 +53,30 @@
   @include breakpoint($bp-med) {
     // for menu dropdown placement
     position: relative;
-    
-    padding: 2em 0;
+    padding: 0;
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    max-height: 250px;
   }
 }
-
 
 .header__mobile-drawer:not(.show) {
   display: none;
   
   @include breakpoint($bp-med) {
     display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// HAAS SPECIFIC STYLING
+
+.haas {
+  .navbar {
+    background-color: $berkeley-blue;
   }
 }

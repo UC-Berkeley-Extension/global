@@ -6,12 +6,13 @@ dependencies:
     - system.menu.utility-menu
   module:
     - system
+    - term_condition
   theme:
     - bglobal
 id: utilitymenu
 theme: bglobal
 region: header
-weight: -5
+weight: -7
 provider: null
 plugin: 'system_menu_block:utility-menu'
 settings:
@@ -22,4 +23,10 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  term:
+    id: term
+    tid: null
+    negate: false
+    show_if_no_terms: 1
+    context_mapping: {  }
