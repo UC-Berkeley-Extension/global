@@ -16,6 +16,7 @@ class BGThreeColumnLayout extends ThreeColumnLayout {
 
   public function build(array $regions) {
     $build = parent::build($regions);
+    $build['#attributes']['class'][] = 'title-layout';
     $title = $this->getConfiguration()['title'] ?? '';
     if ($title) {
       $build['title'] = [
