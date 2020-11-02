@@ -71,10 +71,7 @@
     "platform": {
         "php": "7.3"
     },
-    "sort-packages": true,
-    "preferred-install": {
-        "drupal/pdb": "source"
-    }
+    "sort-packages": true
   },
   "extra": {
     "drupal-scaffold": {
@@ -130,7 +127,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-        "echo 'Setting directory permissions...' && chmod -R a+w web/sites"
+        "echo 'Setting directory permissions...' && sudo chmod -R a+w web/sites"
     ]
   }
 }
