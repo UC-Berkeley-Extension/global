@@ -32,8 +32,7 @@
     "drupal/block_field": "^1.0@RC",
     "drupal/block_list_override": "^1.0",
     "drupal/components": "2.0-beta3",
-    "drupal/config_inspector": "^1.1",
-    "drupal/core": "9.0.6 as 8.9.0",
+    "drupal/core": "9.0.7 as 8.9.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
     "drupal/core-recommended": "^9",
@@ -120,9 +119,6 @@
       "drupal/pdb": {
         "Drupal 9 readiness (https://www.drupal.org/project/pdb/issues/3133320)": "https://www.drupal.org/files/issues/2020-09-25/drupal9-ready-3133320-6.patch",
         "Notice: Uninitialized string offset: 0 in pdb_ng2_component_info_alter() in pdb_ng2 sub-module (https://www.drupal.org/project/pdb/issues/3083540)": "https://www.drupal.org/files/issues/2019-09-25/3083540-uninitialized-string-offset-0-in-pdb_ng2_component_info_alter-3.patch"
-      },
-      "drupal/term_condition": {
-        "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
       },
       "drupal/menu_item_extras": {
         "Error when creating new menus (https://www.drupal.org/project/menu_item_extras/issues/3061342)": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin_0.patch"
