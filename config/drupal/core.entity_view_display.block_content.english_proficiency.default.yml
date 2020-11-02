@@ -13,7 +13,57 @@ dependencies:
     - field.field.block_content.english_proficiency.field_esl_toefl
     - field.field.block_content.english_proficiency.field_esl_waiver
   module:
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_test_scores:
+      children:
+        - field_esl_toefl
+        - field_esl_ielts
+        - field_esl_daad
+        - field_esl_cambridge
+        - field_esl_tem
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+        effect: none
+      label: 'Test Scores'
+    group_interview:
+      children:
+        - field_esl_interview
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+      label: Interview
+    group_waiver:
+      children:
+        - field_esl_waiver
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+      label: Waiver
 id: block_content.english_proficiency.default
 targetEntityType: block_content
 bundle: english_proficiency
@@ -27,7 +77,7 @@ content:
     third_party_settings: {  }
     region: content
   field_esl_cambridge:
-    weight: 6
+    weight: 7
     label: hidden
     settings:
       format: default
@@ -37,7 +87,7 @@ content:
     type: boolean
     region: content
   field_esl_daad:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
@@ -45,7 +95,7 @@ content:
     type: string
     region: content
   field_esl_ielts:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -53,14 +103,14 @@ content:
     type: string
     region: content
   field_esl_interview:
-    weight: 1
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_esl_tem:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       link_to_entity: false
@@ -68,7 +118,7 @@ content:
     type: string
     region: content
   field_esl_toefl:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -76,8 +126,8 @@ content:
     type: string
     region: content
   field_esl_waiver:
-    weight: 2
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default

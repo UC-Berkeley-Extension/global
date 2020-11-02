@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.english_proficiency
+    - block_content.type.feature_box
     - field.field.node.program.body
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
@@ -12,9 +14,11 @@ dependencies:
     - field.field.node.program.field_term_ref_delivery_method
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
+    - field.field.node.program.layout_builder__layout
     - node.type.program
   module:
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -27,86 +31,16 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          1610e392-edc7-46bd-8266-075084554f1e:
-            uuid: 1610e392-edc7-46bd-8266-075084554f1e
+          8f1480e3-742a-47c5-b709-b70aab82ac65:
+            uuid: 8f1480e3-742a-47c5-b709-b70aab82ac65
             region: content
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:program:field_term_ref_academic_level'
-              formatter:
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
+              id: 'extra_field_block:node:program:content_moderation_control'
             additional: {  }
-            weight: 0
-          9dac8a5f-ffb2-445e-a380-3a41733ad3b3:
-            uuid: 9dac8a5f-ffb2-445e-a380-3a41733ad3b3
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_term_ref_certificate_type'
-              formatter:
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 1
-          5237a3aa-740b-4ac2-84af-44734b4bce4b:
-            uuid: 5237a3aa-740b-4ac2-84af-44734b4bce4b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_term_ref_delivery_method'
-              formatter:
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 2
-          1d7ff955-a180-42c0-b680-8a73c04c78f4:
-            uuid: 1d7ff955-a180-42c0-b680-8a73c04c78f4
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_description'
-              formatter:
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 3
-          5b1a2e18-f85f-48f3-82df-224cf092e0cc:
-            uuid: 5b1a2e18-f85f-48f3-82df-224cf092e0cc
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_ref_certificates'
-              formatter:
-                label: hidden
-                settings:
-                  link: true
-                  view_mode: default
-                third_party_settings: {  }
-                type: entity_reference_entity_view
-            additional: {  }
-            weight: 4
+            weight: 7
           9ede018e-bcbf-4545-b364-1352f7c9ef2f:
             uuid: 9ede018e-bcbf-4545-b364-1352f7c9ef2f
             region: content
@@ -116,13 +50,55 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'extra_field_block:node:program:links'
             additional: {  }
-            weight: 5
+            weight: 6
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'International Students'
+          column_widths: 50-50
+          class:
+            container: container
+        components:
+          59766bd7-7e41-4ea2-b759-6b6fb2486854:
+            uuid: 59766bd7-7e41-4ea2-b759-6b6fb2486854
+            region: second
+            configuration:
+              id: 'inline_block:english_proficiency'
+              label: 'English Proficiency Requirements'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 3
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+          1417fed0-935c-4594-a0fb-afbe659da2bf:
+            uuid: 1417fed0-935c-4594-a0fb-afbe659da2bf
+            region: first
+            configuration:
+              id: 'inline_block:feature_box'
+              label: 'International Student Info'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 4
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
 bundle: program
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_program_description:
     weight: 3
     label: hidden
@@ -173,3 +149,4 @@ hidden:
   field_program_shortname: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true
+  layout_builder__layout: true
