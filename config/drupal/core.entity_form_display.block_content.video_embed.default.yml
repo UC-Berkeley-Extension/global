@@ -1,0 +1,23 @@
+uuid: 2e78f55e-3fda-44c5-a70c-895d2d114cfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_embed
+    - field.field.block_content.video_embed.field_video
+  module:
+    - media_library
+id: block_content.video_embed.default
+targetEntityType: block_content
+bundle: video_embed
+mode: default
+content:
+  field_video:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  info: true
