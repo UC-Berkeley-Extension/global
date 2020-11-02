@@ -29,11 +29,12 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
+    {% set src = content.field_image.0['#media'].field_media_image.entity.uri.value %}
     {% include '@molecules/info-card/info-card.twig' with {
       'info_card': {
         'title': content.field_title,
         'body': content.body,
-        'src': file_url(content.field_image.0['#media'].field_media_image.entity.uri.value|image_style('info_card_image')),
+        'src': src ? file_url(src|image_style('info_card_image')) : null,
         'alt': content.field_image.0.entity.field_media_image.alt,
         'link': {
           'url': content.field_cta_link.0['#url'],
