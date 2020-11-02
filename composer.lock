@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5f99fefbc885a5a890807a234ffdb5f",
+    "content-hash": "217ea9eb2b2bba7c2f5e3c37c0c76a19",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2971,142 +2971,82 @@
             }
         },
         {
-          "name": "drupal/field_group",
-          "version": "3.1.0",
-          "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/field_group.git",
-            "reference": "8.x-3.1"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
-            "reference": "8.x-3.1",
-            "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
-          },
-          "require": {
-            "drupal/core": "^8.8 || ^9"
-          },
-          "require-dev": {
-            "drupal/jquery_ui_accordion": "^1.0"
-          },
-          "type": "drupal-module",
-          "extra": {
-            "drupal": {
-              "version": "8.x-3.1",
-              "datestamp": "1591772567",
-              "security-coverage": {
-                "status": "covered",
-                "message": "Covered by Drupal's security advisory policy"
-              }
-            }
-          },
-          "notification-url": "https://packages.drupal.org/8/downloads",
-          "license": [
-            "GPL-2.0-or-later"
-          ],
-          "authors": [
-            {
-              "name": "Hydra",
-              "homepage": "https://www.drupal.org/user/647364"
-            },
-            {
-              "name": "Stalski",
-              "homepage": "https://www.drupal.org/user/322618"
-            },
-            {
-              "name": "jyve",
-              "homepage": "https://www.drupal.org/user/591438"
-            },
-            {
-              "name": "nils.destoop",
-              "homepage": "https://www.drupal.org/user/361625"
-            },
-            {
-              "name": "swentel",
-              "homepage": "https://www.drupal.org/user/107403"
-            }
-          ],
-          "description": "Provides the field_group module.",
-          "homepage": "https://www.drupal.org/project/field_group",
-          "support": {
-            "source": "https://git.drupalcode.org/project/field_group",
-            "issues": "https://www.drupal.org/project/issues/field_group"
-          }
-        },
-        {
-          "name": "drupal/menu_block",
-          "version": "1.6.0",
-          "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/menu_block.git",
-            "reference": "8.x-1.6"
-          },
-          "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "3da96af15c3a5f5f1966e28b6e87b74228617998"
-          },
-          "require": {
-            "drupal/core": "^8 || ^9"
-          },
-          "type": "drupal-module",
-          "extra": {
-            "drupal": {
-              "version": "8.x-1.6",
-              "datestamp": "1587721600",
-              "security-coverage": {
-                "status": "covered",
-                "message": "Covered by Drupal's security advisory policy"
-              }
-            }
-          },
-          "notification-url": "https://packages.drupal.org/8/downloads",
-          "license": [
-            "GPL-2.0-or-later"
-          ],
-          "authors": [
-            {
-              "name": "Dave Reid",
-              "homepage": "https://www.drupal.org/user/53892"
-            },
-            {
-              "name": "JohnAlbin",
-              "homepage": "https://www.drupal.org/user/32095"
-            },
-            {
-              "name": "joelpittet",
-              "homepage": "https://www.drupal.org/user/160302"
-            },
-            {
-              "name": "kim.pepper",
-              "homepage": "https://www.drupal.org/user/370574"
-            },
-            {
-              "name": "rrrob",
-              "homepage": "https://www.drupal.org/user/273533"
-            }
-          ],
-          "description": "Provides configurable blocks of menu links.",
-          "homepage": "https://www.drupal.org/project/menu_block",
-          "support": {
-            "source": "https://git.drupalcode.org/project/menu_block"
-          }
-        },
-        {
-            "name": "drupal/menu_item_extras",
-            "version": "2.12.0",
+            "name": "drupal/field_group",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
-                "reference": "8.x-2.12"
+                "url": "https://git.drupalcode.org/project/field_group.git",
+                "reference": "8.x-3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-8.x-2.12.zip",
-                "reference": "8.x-2.12",
-                "shasum": "9921151e52c44206dc1c77feb0a53cd1d0879d6c"
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "8a719eaea594f0ba874172831cb28da93c66b77a"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/jquery_ui_accordion": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1591772567",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
+                },
+                {
+                    "name": "jyve",
+                    "homepage": "https://www.drupal.org/user/591438"
+                },
+                {
+                    "name": "nils.destoop",
+                    "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "swentel",
+                    "homepage": "https://www.drupal.org/user/107403"
+                }
+            ],
+            "description": "Provides the field_group module.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_group",
+                "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_modal",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "5063c2d5e33265c92bfeed34df6682d74c973c51"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -3114,54 +3054,47 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.12",
-                    "datestamp": "1600958987",
+                    "version": "8.x-1.1",
+                    "datestamp": "1588175915",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "Andriy Khomych",
-                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "name": "John Svensson",
+                    "homepage": "https://www.drupal.org/u/johndevman",
+                    "email": "john@kodamera.se",
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Bogdan Hepting",
-                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "name": "Emil Johnsson",
+                    "homepage": "https://www.drupal.org/u/johnzzon",
+                    "email": "emil@kodamera.se",
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Oleh Vehera",
-                    "homepage": "https://www.drupal.org/u/voleger",
+                    "name": "Henrik Larsson",
+                    "homepage": "https://www.drupal.org/u/henriklarsson",
+                    "email": "henrik@kodamera.se",
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Mykhailo Gurei",
-                    "homepage": "https://www.drupal.org/u/ozin",
-                    "role": "Maintainer"
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
                 }
             ],
-            "description": "Provide an additional custom fields which can be used on Menu link",
-            "homepage": "https://www.drupal.org/project/menu_item_extras",
-            "keywords": [
-                "Drupal",
-                "Mega Menu"
-            ],
+            "description": "Open blocks in a modal in the Layout Builder UI.",
+            "homepage": "https://www.drupal.org/project/layout_builder_modal",
             "support": {
-                "source": "https://git.drupalcode.org/project/menu_item_extras",
-                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
+                "source": "http://cgit.drupalcode.org/layout_builder_modal",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
             }
         },
         {
@@ -3239,6 +3172,186 @@
             "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_tabs",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_tabs.git",
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_tabs-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "be240bc3ae63e9411cad5ef946123dcb9ca9ea23"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1595066380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Render array key error (https://www.drupal.org/project/layout_builder_tabs/issues/3150894)": "https://www.drupal.org/files/issues/2020-07-27/layout_builder_tabs-user_errors-3150894-5.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a layout to show blocks as a tabs set",
+            "homepage": "https://www.drupal.org/project/layout_builder_tabs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_tabs"
+            }
+        },
+        {
+            "name": "drupal/menu_block",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_block.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "3da96af15c3a5f5f1966e28b6e87b74228617998"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1587721600",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                }
+            ],
+            "description": "Provides configurable blocks of menu links.",
+            "homepage": "https://www.drupal.org/project/menu_block",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_block"
+            }
+        },
+        {
+            "name": "drupal/menu_item_extras",
+            "version": "2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
+                "reference": "8.x-2.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-8.x-2.12.zip",
+                "reference": "8.x-2.12",
+                "shasum": "9921151e52c44206dc1c77feb0a53cd1d0879d6c"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.12",
+                    "datestamp": "1600958987",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                },
+                "patches_applied": {
+                    "Error when creating new menus (https://www.drupal.org/project/menu_item_extras/issues/3061342)": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin_0.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
             }
         },
         {
@@ -3475,7 +3588,9 @@
                     }
                 },
                 "patches_applied": {
-                    "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch"
+                    "Drupal 9 readiness (https://www.drupal.org/project/term_condition/issues/3133793)": "https://www.drupal.org/files/issues/2020-05-13/3133793-11.patch",
+                    "Fixes context not loading properly (https://www.drupal.org/project/term_condition/issues/3177999)": "https://www.drupal.org/files/issues/2020-10-20/3177999-term_condition_update_annotation.patch",
+                    "Add option to display block if no terms are present (https://www.drupal.org/project/term_condition/issues/3178234)": "https://www.drupal.org/files/issues/2020-10-21/3178234-term_condition-show-on-empty-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3991,13 +4106,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "funding": [
-                {
-                    "url": "https://github.com/weitzman",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-08-20T19:27:28+00:00"
+            "time": "2020-10-05T11:50:13+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -7804,6 +7913,20 @@
                 "Xdebug",
                 "performance"
             ],
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-10-24T12:39:10+00:00"
         },
         {
@@ -7984,6 +8107,12 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/pdepend/pdepend",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-06-20T10:53:13+00:00"
         },
         {
@@ -8311,6 +8440,12 @@
                 "phpmd",
                 "pmd"
             ],
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpmd/phpmd",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-09-23T22:06:32+00:00"
         },
         {
@@ -8474,6 +8609,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-10-02T07:34:48+00:00"
         }
     ],
@@ -8489,6 +8638,7 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/default_content": 15,
+        "drupal/layout_builder_tabs": 10,
         "drupal/pdb": 15,
         "drupal/term_condition": 20,
         "drupal/workbench_access": 10
