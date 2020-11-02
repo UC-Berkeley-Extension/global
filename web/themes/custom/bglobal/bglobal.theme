@@ -147,7 +147,8 @@ function bglobal_form_layout_builder_configure_section_alter(&$form, FormStateIn
     '#default_value' => $layout->getConfiguration()['class'] ?? '',
     // List of classes that can be added. Remove if using text box.
     '#options' => [
-      'container' => t('container')
+      'bg-light' => t('Background Light'),
+      'bg-teal' => t('Background Teal'),
     ]
   ];
   array_unshift($form['#submit'],'bglobal_form_layout_builder_configure_section_submit');

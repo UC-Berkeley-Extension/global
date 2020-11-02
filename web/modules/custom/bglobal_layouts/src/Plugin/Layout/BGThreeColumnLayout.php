@@ -4,7 +4,7 @@ namespace Drupal\bglobal_layouts\Plugin\Layout;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
-use Drupal\layout_builder\Plugin\Layout\TwoColumnLayout;
+use Drupal\layout_builder\Plugin\Layout\ThreeColumnLayout;
 
 /**
  * Configurable two column layout plugin class.
@@ -12,7 +12,7 @@ use Drupal\layout_builder\Plugin\Layout\TwoColumnLayout;
  * @internal
  *   Plugin classes are internal.
  */
-class BGTwoColumnLayout extends TwoColumnLayout {
+class BGThreeColumnLayout extends ThreeColumnLayout {
 
   public function build(array $regions) {
     $build = parent::build($regions);

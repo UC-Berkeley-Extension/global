@@ -3,8 +3,8 @@
 namespace Drupal\bglobal_layouts\Plugin\Layout;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Layout\LayoutDefault;
 use Drupal\Core\Render\Markup;
-use Drupal\layout_builder\Plugin\Layout\TwoColumnLayout;
 
 /**
  * Configurable two column layout plugin class.
@@ -12,10 +12,15 @@ use Drupal\layout_builder\Plugin\Layout\TwoColumnLayout;
  * @internal
  *   Plugin classes are internal.
  */
-class BGTwoColumnLayout extends TwoColumnLayout {
+class BGFourColumnLayout extends LayoutDefault {
 
   public function build(array $regions) {
     $build = parent::build($regions);
+    $build['#attributes']['class'] = [
+      'layout',
+      'title-layout',
+      $this->getPluginDefinition()->getTemplate(),
+    ];
     $title = $this->getConfiguration()['title'] ?? '';
     if ($title) {
       $build['title'] = [

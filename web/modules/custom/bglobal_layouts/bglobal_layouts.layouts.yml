@@ -2,12 +2,14 @@ bglobal_twocol_section:
   label: 'Two column with section title'
   path: layouts/twocol_section_title
   template: layout--twocol-title-section
-  library: bglobal_layouts/twocol_section
+  library: bglobal_layouts/twocol_title_section
   class: '\Drupal\bglobal_layouts\Plugin\Layout\BGTwoColumnLayout'
   category: 'Columns: 2'
   default_region: first
   icon_map:
     - [title, title]
+    - [first, second]
+    - [first, second]
     - [first, second]
   regions:
     first:
@@ -15,41 +17,46 @@ bglobal_twocol_section:
     second:
       label: Second
 
-#bglobal_threecol_section:
-#  label: 'Three column with section title'
-#  path: layouts/threecol_section
-#  template: layout--threecol-section
-#  library: bglobal_layouts/threecol_section
-#  class: '\Drupal\layout_builder\Plugin\Layout\ThreeColumnLayout'
-#  category: 'Columns: 3'
-#  default_region: second
-#  icon_map:
-#    - [title, title, title]
-#    - [first, second, third]
-#  regions:
-#    first:
-#      label: First
-#    second:
-#      label: Second
-#    third:
-#      label: Third
-#
-#bglobal_fourcol_section:
-#  label: 'Four column with section title'
-#  path: layouts/fourcol_section
-#  template: layout--fourcol-section
-#  library: bglobal_layouts/fourcol_section
-#  category: 'Columns: 4'
-#  default_region: first
-#  icon_map:
-#    - [title, title, title, title]
-#    - [first, second, third, fourth]
-#  regions:
-#    first:
-#      label: First
-#    second:
-#      label: Second
-#    third:
-#      label: Third
-#    fourth:
-#      label: Fourth
+bglobal_threecol_section:
+  label: 'Three column with section title'
+  path: layouts/threecol_section_title
+  template: layout--threecol-title-section
+  library: bglobal_layouts/threecol_title_section
+  class: '\Drupal\bglobal_layouts\Plugin\Layout\BGThreeColumnLayout'
+  category: 'Columns: 3'
+  default_region: second
+  icon_map:
+    - [title, title, title]
+    - [first, second, third]
+    - [first, second, third]
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+bglobal_fourcol_section:
+  label: 'Four column with section title'
+  path: layouts/fourcol_section_title
+  template: layout--fourcol-title-section
+  library: bglobal_layouts/fourcol_title_section
+  class: '\Drupal\bglobal_layouts\Plugin\Layout\BGFourColumnLayout'
+  category: 'Columns: 4'
+  default_region: first
+  icon_map:
+    - [title, title, title, title]
+    - [first, second, third, fourth]
+    - [first, second, third, fourth]
+    - [first, second, third, fourth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
