@@ -1,0 +1,40 @@
+uuid: 9a11c896-0bf8-4bc3-b938-73d002463fb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - pdb_ng2
+    - term_condition
+  theme:
+    - bglobal
+id: angularvoicespostspotlight
+theme: bglobal
+region: content
+weight: -7
+provider: null
+plugin: 'ng2_component:voices_spotlight'
+settings:
+  id: 'ng2_component:voices_spotlight'
+  label: 'Angular: Voices Post Spotlight'
+  provider: pdb_ng2
+  label_display: '0'
+  pdb_configuration:
+    info: ''
+    post: all
+    tag: all
+    program: all
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page_lb: landing_page_lb
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }

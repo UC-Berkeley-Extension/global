@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_term_ref_editorial_section
     - field.field.node.article.field_term_ref_school_microsite
+    - field.field.node.article.layout_builder__layout
     - node.type.article
   module:
     - user
@@ -19,6 +20,11 @@ targetEntityType: node
 bundle: article
 mode: rss
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
@@ -28,3 +34,4 @@ hidden:
   field_tags: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true
+  layout_builder__layout: true
