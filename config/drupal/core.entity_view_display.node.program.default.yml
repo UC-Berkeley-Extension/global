@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.call_to_action
     - block_content.type.english_proficiency
     - block_content.type.feature_box
     - field.field.node.program.body
@@ -55,8 +56,49 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
+          label: Subheader
+          column_widths: 25-75
+          class:
+            container: container
+        components:
+          14daad3b-42b9-4630-9156-46c0fb834a27:
+            uuid: 14daad3b-42b9-4630-9156-46c0fb834a27
+            region: second
+            configuration:
+              id: 'inline_block:call_to_action'
+              label: 'Apply Now'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 5
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+          94c38af4-416a-4ecb-8fd6-bd134769836d:
+            uuid: 94c38af4-416a-4ecb-8fd6-bd134769836d
+            region: second
+            configuration:
+              id: 'field_block:node:program:field_program_description'
+              label: 'Program Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
           label: 'International Students'
-          column_widths: 50-50
+          column_widths: 25-75
           class:
             container: container
         components:
