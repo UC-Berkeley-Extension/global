@@ -1,0 +1,15 @@
+uuid: 15c15285-d51c-43b1-826f-bbcd2fb49818
+langcode: en
+status: true
+dependencies: {  }
+name: info_card_image
+label: 'Info Card Image (200x200)'
+effects:
+  dacf0d97-a918-4808-aa83-0c94fbb8aee7:
+    uuid: dacf0d97-a918-4808-aa83-0c94fbb8aee7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

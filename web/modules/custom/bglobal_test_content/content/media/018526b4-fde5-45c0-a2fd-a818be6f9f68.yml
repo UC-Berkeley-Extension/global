@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 018526b4-fde5-45c0-a2fd-a818be6f9f68
+  bundle: image
+  default_langcode: en
+  depends:
+    5d6bf7ec-3227-4d30-bb46-b135855b997a: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hass-temp-logo.png
+  created:
+    -
+      value: 1601564814
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 5d6bf7ec-3227-4d30-bb46-b135855b997a
+      alt: 'Berkeley Hass Global Access Program'
+      title: ''
+      width: 318
+      height: 108

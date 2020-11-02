@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.landing_page
-    - paragraphs.paragraphs_type.landing_page_components
+    - paragraphs.paragraphs_type.column_section
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.panorama
   module:
     - entity_reference_revisions
 id: node.landing_page.field_components
@@ -23,12 +25,35 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      landing_page_components: landing_page_components
+      panorama: panorama
+      column_section: column_section
+      hero: hero
     target_bundles_drag_drop:
-      landing_page_components:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_items:
+        weight: 11
+        enabled: false
+      body_copy:
+        weight: 8
+        enabled: false
+      column_section:
         enabled: true
-        weight: 3
+        weight: 9
+      hero:
+        enabled: true
+        weight: 14
+      info_card:
+        weight: 6
+        enabled: false
       panorama:
+        enabled: true
         weight: 4
+      testimonial:
+        weight: 10
+        enabled: false
+      video_embed:
+        weight: 14
         enabled: false
 field_type: entity_reference_revisions

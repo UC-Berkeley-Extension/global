@@ -2,6 +2,9 @@ uuid: 35f725c0-d574-4f37-99d7-1ca1818f4897
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
+    - term_condition
   theme:
     - bglobal
 _core:
@@ -9,7 +12,7 @@ _core:
 id: bglobal_page_title
 theme: bglobal
 region: content
-weight: -50
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +20,17 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page_lb: landing_page_lb
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,60 @@
+// Styling specfic to Layout Builder Drupal module.
+
+.layout-builder__section .layout {
+  padding: 0;
+}
+
+.layout.title-layout {
+  padding: 2em 0;
+
+  .section-title {
+    margin-bottom: 1em;
+  }
+}
+
+// Layout Builder form styling
+
+.layout-builder-form {
+  @include container;
+
+  .button {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin: 1em 0;
+  }
+}
+
+// Layout Builder tabs
+// @TODO Tab styling
+
+.layout__region.layout__region--tabs {
+  @include container;
+  padding: 2em 0;
+
+  ul {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  li {
+    padding: 1em;
+
+    a {
+      display: block;
+      padding: .5em;
+      color: $text-gray;
+      font-size: 1.2em;
+      font-weight: 800;
+    }
+
+    a.is-active {
+      border-bottom: 5px solid $berkeley-blue;
+      background-color: $white;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+    }
+  }
+}

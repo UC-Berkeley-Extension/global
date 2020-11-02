@@ -1,0 +1,58 @@
+h2.accordion__section-title {
+  margin-left: 1em;
+}
+
+.accordion__item {
+  position: relative;
+  border-top: 1px solid $gray;
+
+  &:last-child {
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.accordion__title-wrapper {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5em 2.5em 0.5em 4.5em;
+  min-height: 3.5em; // The height of the expand/collapse icon.
+}
+
+.accordion__title {
+  margin-top: .6em;
+}
+
+.accordion__content-wrapper {
+  padding: 0 2.5em 0 4.8em;
+  max-height: 0;
+  overflow: hidden;
+  transition: .3s cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+.accordion__button {
+  border: none;
+  background: transparent;
+  font-size: 1.25em;
+  font-family: $font;
+  text-align: left;
+
+  &:before {
+    content: '+';
+  }
+}
+
+.accordion__button[aria-expanded="true"]:before {
+  content: '\2212';
+}
+
+.accordion__button:before,
+.accordion__button[aria-expanded="true"]:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  left: 1rem;
+  font-size: 2.5em;
+  color: $berkeley-blue;
+  width: 2em;
+}

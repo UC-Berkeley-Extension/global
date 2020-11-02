@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 745c714d-1a01-4538-a70c-12abed532fa0
+  bundle: image
+  default_langcode: en
+  depends:
+    a84b19bc-bc7b-4295-94ba-70d6de5fcdbc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: bglobal-temp-logo.png
+  created:
+    -
+      value: 1601564730
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: a84b19bc-bc7b-4295-94ba-70d6de5fcdbc
+      alt: 'Berkeley Global'
+      title: ''
+      width: 367
+      height: 91

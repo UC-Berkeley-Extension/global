@@ -1,6 +1,7 @@
 @import "scss/helpers/_variables.scss";
 @import "scss/helpers/_mixins.scss";
 @import "scss/helpers/_reset.scss";
+@import "_fonts.scss";
 
 // Add the Breakpoint mixin.
 @import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
@@ -31,8 +32,7 @@
 // Berkeley Global component SCSS files
 @import "../_patterns/00-atoms/**/*.scss";
 @import "../_patterns/01-molecules/**/*.scss";
-//@import "../_patterns/02-organisms/**/*.scss";
-//@import "../_patterns/03-templates/**/*.scss";
+@import "../_patterns/02-organisms/**/*.scss";
+@import "../_patterns/03-templates/*.scss";
 //@import "../_patterns/04-pages/**/*.scss";
-
-
+@import "../_patterns/05-drupal-components/**/*.scss";

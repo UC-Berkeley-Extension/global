@@ -1,0 +1,10 @@
+uuid: 60a05dca-c48f-4d5d-a973-8e6757e1cd82
+langcode: en
+status: true
+dependencies: {  }
+id: column_section
+label: 'Column Section'
+icon_uuid: null
+icon_default: null
+description: 'Column Section is a full-width component that includes sub-components, such as Body Copy, to create a section on a landing page.'
+behavior_plugins: {  }

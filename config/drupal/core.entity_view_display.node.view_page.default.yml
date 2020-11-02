@@ -1,0 +1,57 @@
+uuid: 61eb84a6-b340-4a44-9fa8-381088af708c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.view_page.body
+    - field.field.node.view_page.field_ref_views_embed
+    - field.field.node.view_page.field_term_ref_editorial_section
+    - field.field.node.view_page.field_term_ref_school_microsite
+    - node.type.view_page
+  module:
+    - text
+    - user
+    - viewsreference
+id: node.view_page.default
+targetEntityType: node
+bundle: view_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ref_views_embed:
+    weight: 103
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_term_ref_editorial_section:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_school_microsite:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

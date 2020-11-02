@@ -1,0 +1,24 @@
+<div class="accordion {{ modifier_class }}">
+  <h2 class="accordion__section-title">
+    {{ accordion.section_title }}
+  </h2>
+  {% for item in accordion.items %}
+    <div class="accordion__item">
+      <div class="accordion__title-wrapper">
+        <h5 class="accordion__title">
+          <button type="button" class="accordion__button"
+            aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+            aria-controls="accordion--{{ loop.index }}">
+            {{ item.title }}
+          </button>
+        </h5>
+      </div>
+      <div id="accordion--{{ loop.index }}"
+           class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+        <div class="accordion__content">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,20 @@
+uuid: ca843533-a0e1-42e4-b571-8b986feb4532
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - taxonomy
+id: taxonomy_term.field_microsite_school_logo
+field_name: field_microsite_school_logo
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
