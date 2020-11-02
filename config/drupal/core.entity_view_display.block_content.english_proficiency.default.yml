@@ -1,0 +1,85 @@
+uuid: 1c381b11-617a-45c8-95bc-1fa7fdec2735
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.field.block_content.english_proficiency.body
+    - field.field.block_content.english_proficiency.field_esl_cambridge
+    - field.field.block_content.english_proficiency.field_esl_daad
+    - field.field.block_content.english_proficiency.field_esl_ielts
+    - field.field.block_content.english_proficiency.field_esl_interview
+    - field.field.block_content.english_proficiency.field_esl_tem
+    - field.field.block_content.english_proficiency.field_esl_toefl
+    - field.field.block_content.english_proficiency.field_esl_waiver
+  module:
+    - text
+id: block_content.english_proficiency.default
+targetEntityType: block_content
+bundle: english_proficiency
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_esl_cambridge:
+    weight: 6
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_esl_daad:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_esl_ielts:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_esl_interview:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_esl_tem:
+    weight: 7
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_esl_toefl:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_esl_waiver:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

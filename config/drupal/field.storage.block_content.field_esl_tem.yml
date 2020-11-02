@@ -1,0 +1,21 @@
+uuid: 3f182407-0090-4684-bfde-9129f2c7d1bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_esl_tem
+field_name: field_esl_tem
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
