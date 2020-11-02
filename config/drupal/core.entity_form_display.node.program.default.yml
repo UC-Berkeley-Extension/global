@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_term_ref_delivery_method
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_school_microsite
+    - field.field.node.program.layout_builder__layout
     - node.type.program
   module:
     - content_moderation
@@ -192,4 +193,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  layout_builder__layout: true
   path: true

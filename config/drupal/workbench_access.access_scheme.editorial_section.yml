@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.field_term_ref_editorial_section
     - field.field.node.certificate.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_editorial_section
+    - field.field.node.landing_page_lb.field_term_ref_editorial_section
     - field.field.node.page.field_term_ref_editorial_section
     - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.view_page.field_term_ref_editorial_section
@@ -24,6 +25,10 @@ scheme_settings:
       field: field_term_ref_editorial_section
     -
       entity_type: node
+      bundle: program
+      field: field_term_ref_editorial_section
+    -
+      entity_type: node
       bundle: page
       field: field_term_ref_editorial_section
     -
@@ -32,13 +37,13 @@ scheme_settings:
       field: field_term_ref_editorial_section
     -
       entity_type: node
+      bundle: certificate
+      field: field_term_ref_editorial_section
+    -
+      entity_type: node
       bundle: article
       field: field_term_ref_editorial_section
     -
       entity_type: node
-      bundle: program
-      field: field_term_ref_editorial_section
-    -
-      entity_type: node
-      bundle: certificate
+      bundle: landing_page_lb
       field: field_term_ref_editorial_section

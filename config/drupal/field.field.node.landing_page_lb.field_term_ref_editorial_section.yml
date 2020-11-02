@@ -1,0 +1,33 @@
+uuid: 3fdf8d74-f959-4335-9d81-2813aaf4dc63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_ref_editorial_section
+    - node.type.landing_page_lb
+    - taxonomy.vocabulary.editorial_section
+  content:
+    - 'taxonomy_term:editorial_section:b14062f8-fca5-4e45-bf22-0d184e8ba7d8'
+id: node.landing_page_lb.field_term_ref_editorial_section
+field_name: field_term_ref_editorial_section
+entity_type: node
+bundle: landing_page_lb
+label: 'Editorial Section'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: b14062f8-fca5-4e45-bf22-0d184e8ba7d8
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      editorial_section: editorial_section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
