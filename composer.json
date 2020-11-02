@@ -127,7 +127,7 @@
   },
   "scripts": {
     "post-install-cmd": [
-        "echo 'Setting directory permissions...' && chmod -R a+w web/sites"
+        "echo 'Setting directory permissions...' && chmod -R a+w web/sites && chmod -R a+w config/drupal"
     ]
   }
 }
