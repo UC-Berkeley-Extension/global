@@ -1,0 +1,18 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/voices_spotlight/voices_spotlight.twig
+-->
+<div class="voices__spotlight" data-ng-controller="VoicesSpotlightController as voices">
+  <h2 class="voices__spotlight__header block-header">Spotlight</h2>
+  <div class="voices__spotlight__teaser">
+    <div class="voices__spotlight__teaser__image" data-ng-attr-style="background-image: url('{{voices.blog.image.src}}');">
+      <span class="voices__spotlight__teaser__image__ribbon">{{ voices.blog.tags[0] }}</span>
+   </div>
+    <div class="voices__spotlight__teaser__summary">
+      <h3 class="voices__spotlight__teaser__title marginless-p">
+        <strong><a data-ng-href="{{ voices.blog.path }}" class="blog-header">{{ voices.blog.title }}</a></strong>
+      </h3>
+      <div class="voices__spotlight__teaser__body" data-ng-bind-html="voices.blog.content"></div>
+      <div class="voices__spotlight__teaser__cta__wrapper text-right mb-0"><a class="voices__spotlight__teaser__cta__link button button-small" href="{{ voices.blog.path }}">Continue Reading<span class="sr-only"> {{ voices.blog.title }}</span></a></p>
+    </div>
+  </div>
+</div>
