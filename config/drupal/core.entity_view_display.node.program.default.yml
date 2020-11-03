@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
+    - views.view.certificate_quick_view
     - views.view.study_options
   module:
     - bglobal_layouts
@@ -224,6 +225,28 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Curriculum
+          class:
+            bg-light: 0
+            bg-teal: 0
+        components:
+          5c709a48-2d65-4b88-8052-eea1b6ba2a3d:
+            uuid: 5c709a48-2d65-4b88-8052-eea1b6ba2a3d
+            region: content
+            configuration:
+              id: 'views_block:certificate_quick_view-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: bglobal_twocol_section

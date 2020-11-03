@@ -690,6 +690,24 @@ display:
       displays:
         block_1: block_1
       attachment_position: after
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      defaults:
+        style: false
+        row: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            field_certificate_shortname: field_certificate_shortname
+            field_term_ref_certificate_type: field_term_ref_certificate_type
+          separator: ' '
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
