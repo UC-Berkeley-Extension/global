@@ -6,11 +6,17 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.certificate.body
     - field.field.node.certificate.field_certificate_cost
+    - field.field.node.certificate.field_certificate_courses
     - field.field.node.certificate.field_certificate_cta
     - field.field.node.certificate.field_certificate_duration
+    - field.field.node.certificate.field_certificate_format
+    - field.field.node.certificate.field_certificate_length
+    - field.field.node.certificate.field_certificate_offered
+    - field.field.node.certificate.field_certificate_prereq
     - field.field.node.certificate.field_certificate_prerequisite
     - field.field.node.certificate.field_certificate_short_descript
     - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_certificate_tuition
     - field.field.node.certificate.field_term_ref_certificate_type
     - field.field.node.certificate.field_term_ref_editorial_section
     - node.type.certificate
@@ -37,10 +43,16 @@ content:
     region: content
 hidden:
   field_certificate_cost: true
+  field_certificate_courses: true
   field_certificate_cta: true
   field_certificate_duration: true
+  field_certificate_format: true
+  field_certificate_length: true
+  field_certificate_offered: true
+  field_certificate_prereq: true
   field_certificate_prerequisite: true
   field_certificate_short_descript: true
   field_certificate_shortname: true
+  field_certificate_tuition: true
   field_term_ref_certificate_type: true
   field_term_ref_editorial_section: true

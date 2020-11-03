@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
+    - workflows.workflow.content_approvals
   module:
     - content_moderation
     - field_group
@@ -56,7 +57,6 @@ third_party_settings:
     group_hero_section:
       children:
         - field_program_description
-        - field_program_application_cta
       parent_name: ''
       weight: 2
       format_type: details
@@ -70,19 +70,17 @@ third_party_settings:
       label: 'Hero section'
     group_study_options:
       children:
-        - field_program_study_prefix
         - field_ref_certificates
-        - field_program_study_suffix
       parent_name: ''
       weight: 4
       format_type: details
       region: content
       format_settings:
+        description: ''
+        open: true
+        required_fields: true
         id: ''
         classes: ''
-        description: ''
-        open: false
-        required_fields: true
       label: 'Study Options'
 id: node.program.default
 targetEntityType: node

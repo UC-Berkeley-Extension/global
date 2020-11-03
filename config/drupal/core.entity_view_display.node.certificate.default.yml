@@ -5,11 +5,17 @@ dependencies:
   config:
     - field.field.node.certificate.body
     - field.field.node.certificate.field_certificate_cost
+    - field.field.node.certificate.field_certificate_courses
     - field.field.node.certificate.field_certificate_cta
     - field.field.node.certificate.field_certificate_duration
+    - field.field.node.certificate.field_certificate_format
+    - field.field.node.certificate.field_certificate_length
+    - field.field.node.certificate.field_certificate_offered
+    - field.field.node.certificate.field_certificate_prereq
     - field.field.node.certificate.field_certificate_prerequisite
     - field.field.node.certificate.field_certificate_short_descript
     - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_certificate_tuition
     - field.field.node.certificate.field_term_ref_certificate_type
     - field.field.node.certificate.field_term_ref_editorial_section
     - node.type.certificate
@@ -24,6 +30,14 @@ content:
   field_certificate_cost:
     weight: 3
     label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_courses:
+    weight: 8
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -49,6 +63,38 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_certificate_format:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_length:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_offered:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_prereq:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_certificate_prerequisite:
     weight: 4
     label: hidden
@@ -63,6 +109,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_certificate_tuition:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_term_ref_certificate_type:
     weight: 0
