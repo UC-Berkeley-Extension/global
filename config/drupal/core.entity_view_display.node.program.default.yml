@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - block_content.type.call_to_action
     - block_content.type.english_proficiency
     - block_content.type.feature_box
@@ -17,12 +18,14 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
+    - views.view.study_options
   module:
     - bglobal_pardot
     - layout_builder
     - layout_discovery
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: true
@@ -185,6 +188,41 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Study Options'
+          class:
+            container: container
+        components:
+          8cc6ef45-f4cc-4a1a-b068-af3343fb99eb:
+            uuid: 8cc6ef45-f4cc-4a1a-b068-af3343fb99eb
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Your Study Options'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 6
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          823f7408-9f8c-4c66-adcb-41ca5f963168:
+            uuid: 823f7408-9f8c-4c66-adcb-41ca5f963168
+            region: content
+            configuration:
+              id: 'views_block:study_options-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
