@@ -1,6 +1,14 @@
+.pardot-form {
+  margin: 14px 0;
+  input[type=text], select, textarea {
+    font-family: $font;
+    font-size: 1em;
+  }
+}
+
 input[type=text], select, textarea {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px;
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
@@ -38,9 +46,21 @@ input[type=submit]:hover {
 .pardot-form-opt_in_contact {
   display: flex;
   label {
-    content: '';
+    visibility: hidden;
+    position: absolute;
   }
-  input:checked ~ .pardot-form-description-opt_in_contact {
+  // input:checked ~ .pardot-form-description-opt_in_contact {
 
+  // }
+  input[type=checkbox] {
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    padding: 10px;
+  }
+  .pardot-form-description-opt_in_contact {
+    margin-left: 1em;
   }
 }
