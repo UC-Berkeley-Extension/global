@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: Full-time
+      value: 'Full-Time Certificate'
   weight:
     -
       value: 0

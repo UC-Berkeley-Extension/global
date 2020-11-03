@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: Part-time
+      value: 'Part-Time Certificate'
   weight:
     -
       value: 0
