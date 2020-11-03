@@ -1,0 +1,46 @@
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: $berkeley-blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: $california-gold;
+}
+
+.pardot-form-firstname, .pardot-form-lastname {
+  width: 49%;
+}
+
+.pardot-form-firstname {
+  float:left;
+}
+
+.pardot-form-lastname {
+  float:right;
+}
+
+.pardot-form-opt_in_contact {
+  display: flex;
+  label {
+    content: '';
+  }
+  input:checked ~ .pardot-form-description-opt_in_contact {
+
+  }
+}
