@@ -20,6 +20,7 @@ dependencies:
     - node.type.program
     - views.view.study_options
   module:
+    - bglobal_layouts
     - bglobal_pardot
     - layout_builder
     - layout_discovery
@@ -225,27 +226,15 @@ third_party_settings:
             weight: 1
         third_party_settings: {  }
       -
-        layout_id: layout_twocol_section
+        layout_id: bglobal_twocol_section
         layout_settings:
-          label: 'International Students'
+          label: International
           column_widths: 25-75
           class:
-            container: container
+            bg-light: bg-light
+            bg-teal: 0
+          title: 'International Students'
         components:
-          59766bd7-7e41-4ea2-b759-6b6fb2486854:
-            uuid: 59766bd7-7e41-4ea2-b759-6b6fb2486854
-            region: second
-            configuration:
-              id: 'inline_block:english_proficiency'
-              label: 'English Proficiency Requirements'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 3
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 2
           1417fed0-935c-4594-a0fb-afbe659da2bf:
             uuid: 1417fed0-935c-4594-a0fb-afbe659da2bf
             region: first
@@ -256,6 +245,20 @@ third_party_settings:
               label_display: '0'
               view_mode: full
               block_revision_id: 4
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          59766bd7-7e41-4ea2-b759-6b6fb2486854:
+            uuid: 59766bd7-7e41-4ea2-b759-6b6fb2486854
+            region: second
+            configuration:
+              id: 'inline_block:english_proficiency'
+              label: 'English Proficiency Requirements'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 3
               block_serialized: null
               context_mapping: {  }
             additional: {  }
