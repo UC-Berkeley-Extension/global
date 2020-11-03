@@ -1,8 +1,8 @@
 .column-section {
-  padding: 2em 1.5em 3em;
+  padding: 2em 1.5em;
 
   @include breakpoint($bp-med) {
-    padding: 3em 1em 5em;
+    padding: 3em 1em;
   }
 }
 
@@ -14,6 +14,7 @@
   background-color: $teal;
 
   p,
+  h2,
   h3 {
     color: $white;
   }

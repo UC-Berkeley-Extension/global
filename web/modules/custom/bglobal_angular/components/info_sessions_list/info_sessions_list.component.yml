@@ -1,0 +1,35 @@
+name: 'Angular: Info Sessions List'
+description: 'Info Sessions List angular template'
+type: 'block' # default
+enable_field: true
+js:
+  info_sessions_list.js: {}
+template: info_sessions_list.html
+# This component makes use of an existing shared library which is provided by
+#   another component (library type). This is how to share and manage common
+#   assets across different components.
+dependencies:
+ - component/angularjs_lib
+cache:
+  max-age: 60
+static_configuration:
+  limit: '3'
+form_configuration:
+  info-sessions-list:
+    title: 'Voices List'
+    type: item
+    description: ''
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'https://voices.berkeley.edu/info-sessions/json/cert/{$cert}/area/international'
+  limit:
+    type: textfield
+    title: 'Number of posts'
+    description: 'How many Info Sessions would you like to see? Blank for max'
+    default_value: '4'
+  cert:
+    type: textfield
+    title: Programs
+    description: 'Enter an optional program ID. Use "all" for all programs.'
+    default_value: 'all'

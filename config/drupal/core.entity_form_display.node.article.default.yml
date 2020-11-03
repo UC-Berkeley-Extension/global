@@ -8,9 +8,12 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_term_ref_editorial_section
     - field.field.node.article.field_term_ref_school_microsite
+    - field.field.node.article.layout_builder__layout
     - image.style.thumbnail
     - node.type.article
+    - workflows.workflow.content_approvals
   module:
+    - content_moderation
     - image
     - path
     - text
@@ -67,6 +70,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 10
@@ -112,4 +121,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
