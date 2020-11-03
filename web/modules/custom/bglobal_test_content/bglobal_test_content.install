@@ -15,7 +15,7 @@ function bglobal_test_content_install($is_syncing) {
     'e349a631-440f-4ffc-b6de-6e8bce48e649',
     '0b671609-3b3f-4624-90ca-0f0a9c2abef7',
   ];
-  $block_storage = \Drupal::entityTypeManager('block_content')->storage();
+  $block_storage = \Drupal::entityTypeManager('block_content')->getStorage();
   $db = \Drupal::database();
   foreach ($uuids as $uuid) {
     if ($block = $block_storage->loadEntityByUuid($uuid)) {
