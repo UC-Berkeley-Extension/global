@@ -5,9 +5,9 @@
  */
 
 /**
- * @inheritDoc
+ * @inheritdoc
  */
-function hook_install($is_syncing) {
+function bglobal_test_content_install($is_syncing) {
   // All our custom blocks are used by Layouts, so register them.
   $uuids = [
     '3e8afb12-ae97-4876-9ec9-958108a8c5ef',
