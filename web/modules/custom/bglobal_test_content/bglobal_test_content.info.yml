@@ -6,6 +6,11 @@ core_version_requirement: ^8 || ^9
 dependencies:
   - drupal:default_content
 default_content:
+  block_content:
+    - 3e8afb12-ae97-4876-9ec9-958108a8c5ef
+    - 546bae8e-2d73-4871-9b57-1a53a7818a43
+    - e349a631-440f-4ffc-b6de-6e8bce48e649
+    - 0b671609-3b3f-4624-90ca-0f0a9c2abef7
   file:
     - a84b19bc-bc7b-4295-94ba-70d6de5fcdbc
     - 5d6bf7ec-3227-4d30-bb46-b135855b997a

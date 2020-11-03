@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 3e8afb12-ae97-4876-9ec9-958108a8c5ef
+  bundle: english_proficiency
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'English Proficiency Requirements'
+  reusable:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: "<p>If English is not your first language, you must submit official evidence of English-language proficiency.</p>\r\n\r\n<p>Because English-language proficiency test centers are closed due to COVID-19, you can meet our English-language requirement in any of the following ways:</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_esl_cambridge:
+    -
+      value: true
+  field_esl_daad:
+    -
+      value: C1
+  field_esl_ielts:
+    -
+      value: '7'
+  field_esl_interview:
+    -
+      value: "<p><strong>If you do not meet any of the above criteria</strong>, you can request an English-language interview through our department. If you are interested in this option, please select, \"I would like to request an English interview\" in your online application.</p>\r\n\r\n<p><strong>Note</strong>: Transcripts and credentials should reflect the program that you completed in English. Our Admissions department will assess all documentation and inform you if additional items are needed. Please note that our admissions process is holistic and meeting the English-language proficiency requirement does not guarantee acceptance. Email<span>&nbsp;</span><a href=\"mailto:internationaladmissions@berkeley.edu\">internationaladmissions@berkeley.edu</a><span>&nbsp;</span>with questions or to learn more.</p>\r\n"
+      format: basic_html
+  field_esl_tem:
+    -
+      value: 'Level 70'
+  field_esl_toefl:
+    -
+      value: '90'
+  field_esl_waiver:
+    -
+      value: "<p>You may request a waiver if you meet one of the following requirements:</p>\r\n\r\n<ul>\r\n\t<li>You have completed one year of full-time college-level instruction entirely in the English language.</li>\r\n\t<li>You have successfully completed a university-level program in a country or region where English is the official language.</li>\r\n\t<li>You are from a country or region on the exempt list.<span>&nbsp;</span><a href=\"#contact\">Contact an adviser</a><span>&nbsp;</span>for more information.</li>\r\n</ul>\r\n"
+      format: basic_html
