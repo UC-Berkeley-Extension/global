@@ -5,6 +5,8 @@ dependencies:
   config:
     - views.view.school_demo
   module:
+    - ctools
+    - term_condition
     - views
   theme:
     - bglobal
@@ -21,4 +23,18 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
-visibility: {  }
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page_lb: landing_page_lb
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }

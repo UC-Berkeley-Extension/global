@@ -39,32 +39,23 @@
  */
 #}
 {% set classes = [
-	'paragraph',
-	'paragraph--type-' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--display-mode-' ~ view_mode|clean_class,
+  'paragraph',
+  'paragraph--type-' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--display-mode-' ~ view_mode|clean_class,
 ] %}
 {% set attributes = attributes.addClass(classes) %}
 
-{% set cards = [] %}
-{% for card in content.field_info_cards|children|reverse %}
-	{% set cards = [{
-		'title': card['#paragraph'].field_title.value,
-		'body': card['#paragraph'].field_text.value|striptags,
-		'src': card['#paragraph'].field_image.0 ? file_url(card['#paragraph'].field_image.0.entity.field_media_image.entity.uri.value|image_style('info_card_image')) : null,
-		'alt': card['#paragraph'].field_image.0.entity.field_media_image.alt,
-		'link': {
-			'url': card['#paragraph'].field_cta_link.0.url,
-			'text': card['#paragraph'].field_cta_link.0.title,
-		}
-	}]|merge(cards) %}
-{% endfor %}
-
 {% block content %}
-	{% include '@organisms/info-row/info-row.twig' with {
-		'info_row': {
-			'title': content.field_title,
-			'cards': cards,
-			'bg': content.field_background_color.0['#markup'],
-		}
-	} %}
+  {% include '@molecules/info-card/info-card.twig' with {
+    'info_card': {
+      'title': content.field_title,
+      'body': content.field_text,
+      'src': file_url(content.field_image.0['#media'].field_media_image.entity.uri.value|image_style('info_card_image')),
+      'alt': content.field_image.0.entity.field_media_image.alt,
+      'link': {
+        'url': content.field_cta_link.0['#url'],
+        'text': content.field_cta_link.0['#title'],
+      }
+    }
+  } %}
 {% endblock %}

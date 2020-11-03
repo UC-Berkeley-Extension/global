@@ -3,12 +3,14 @@ module:
   admin_toolbar_tools: 0
   automated_cron: 0
   bglobal_angular: 0
+  bglobal_layouts: 0
   bglobal_pardot: 0
   bglobal_test_content: 0
   big_pipe: 0
   block: 0
   block_content: 0
   block_field: 0
+  block_list_override: 0
   breakpoint: 0
   ckeditor: 0
   color: 0
@@ -34,6 +36,9 @@ module:
   help: 0
   image: 0
   layout_builder: 0
+  layout_builder_modal: 0
+  layout_builder_restrictions: 0
+  layout_builder_tabs: 0
   layout_discovery: 0
   link: 0
   media: 0
