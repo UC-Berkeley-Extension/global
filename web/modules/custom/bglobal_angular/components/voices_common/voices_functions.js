@@ -84,7 +84,7 @@ app.factory('VoicesFactory', ['$http', ($http) => {
     if (!attrs) return '';
     const programArea = attrs.area;
     vff.voicesUrl = vff.blogFeedFunction(programArea, attrs.cert, attrs.tag, attrs.post, attrs.feed);
-    console.log(`http://voices.berkeley.edu/${vff.voicesUrl}`);
+    // console.log(`http://voices.berkeley.edu/${vff.voicesUrl}`);
 
     return vff.voicesUrl;
   };

@@ -20,9 +20,6 @@ app.controller('VoicesInfoListController', ['$scope', '$element', 'VoicesFactory
     .then((data) => {
       vcc.sessions = parseMonthDay(data.sessions);
       vcc.view = data.view;
-      console.log(data);
-      console.log(vcc.sessions);
-
       if (vcc.attrs.limit) vcc.sessions.splice(vcc.attrs.limit);
     })
     .catch((err) => {
