@@ -29,20 +29,18 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
-    {% include '@molecules/hero/hero.twig' with {
-      'hero': {
-        'img': {
-          'src': file_url(content.field_hero_image.0['#media'].field_media_image.entity.uri.value|image_style('full_width')),
-          'alt': content.field_hero_image.0.entity.field_media_image.alt,
-          },
-        'title': content.field_title.0['#context'].value,
-        'subtitle': content.field_subtitle.0,
+    {% set src = content.field_image.0['#media'].field_media_image.entity.uri.value %}
+    {% include '@molecules/info-card/info-card.twig' with {
+      'info_card': {
+        'title': content.field_title,
+        'body': content.body,
+        'src': src ? file_url(src|image_style('info_card_image')) : null,
+        'alt': content.field_image.0.entity.field_media_image.alt,
         'link': {
           'url': content.field_cta_link.0['#url'],
           'text': content.field_cta_link.0['#title'],
-          'classes': 'hero__btn btn__warning btn__large button',
-          }
         }
+      }
     } %}
   {% endblock %}
 </div>

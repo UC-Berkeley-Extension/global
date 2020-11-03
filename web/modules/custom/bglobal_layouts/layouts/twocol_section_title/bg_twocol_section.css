@@ -1,0 +1,41 @@
+/*
+ * @file
+ * Provides the layout styles for two-column layout section.
+ */
+
+.layout--twocol-title-section > .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol-title-section > .container > .layout__region,
+.layout--twocol-title-section > .container > .section-title {
+  flex: 0 1 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .layout--twocol-title-section.layout--twocol-title-section--50-50 > .container > .layout__region--first,
+  .layout--twocol-title-section.layout--twocol-title-section--50-50 > .container > .layout__region--second {
+    flex: 0 1 50%;
+  }
+
+  .layout--twocol-title-section.layout--twocol-title-section--33-67 > .container > .layout__region--first,
+  .layout--twocol-title-section.layout--twocol-title-section--67-33 > .container > .layout__region--second {
+    flex: 0 1 33%;
+  }
+
+  .layout--twocol-title-section.layout--twocol-title-section--33-67 > .container > .layout__region--second,
+  .layout--twocol-title-section.layout--twocol-title-section--67-33 > .container > .layout__region--first {
+    flex: 0 1 67%;
+  }
+
+  .layout--twocol-title-section.layout--twocol-title-section--25-75 > .container > .layout__region--first,
+  .layout--twocol-title-section.layout--twocol-title-section--75-25 > .container > .layout__region--second {
+    flex: 0 1 25%;
+  }
+
+  .layout--twocol-title-section.layout--twocol-title-section--25-75 > .container > .layout__region--second,
+  .layout--twocol-title-section.layout--twocol-title-section--75-25 > .container > .layout__region--first {
+    flex: 0 1 75%;
+  }
+}
