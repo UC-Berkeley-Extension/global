@@ -5,7 +5,7 @@ module:
   bglobal_angular: 0
   bglobal_layouts: 0
   bglobal_pardot: 0
-  bglobal_test_content: 0
+  bglobal_test_content: 100
   big_pipe: 0
   block: 0
   block_content: 0
