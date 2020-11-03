@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 52eab51a-faf3-4171-8176-b8084caa3d93
+  bundle: certificate
+  default_langcode: en
+  depends:
+    0be4dd5b-5e24-401e-9ebf-b222fbd39313: taxonomy_term
+    b14062f8-fca5-4e45-bf22-0d184e8ba7d8: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Data Analytics'
+  created:
+    -
+      value: 1604417300
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  field_certificate_cost:
+    -
+      value: '$11,000 (USD)'
+  field_certificate_cta:
+    -
+      uri: 'https://google.com'
+      title: 'Learn More'
+      options: {  }
+  field_certificate_duration:
+    -
+      value: '1 semester, Fall or Spring'
+  field_certificate_prerequisite:
+    -
+      value: None
+  field_certificate_short_descript:
+    -
+      value: 'Learn to collect, process, analyze, and interpret data in order to develop actionable business insights.'
+  field_certificate_shortname:
+    -
+      value: 'Data Analytics'
+  field_term_ref_certificate_type:
+    -
+      entity: 0be4dd5b-5e24-401e-9ebf-b222fbd39313
+  field_term_ref_editorial_section:
+    -
+      entity: b14062f8-fca5-4e45-bf22-0d184e8ba7d8

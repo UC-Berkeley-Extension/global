@@ -1,0 +1,71 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3b380a9a-9feb-4432-bf74-024fc08cd63e
+  bundle: certificate
+  default_langcode: en
+  depends:
+    0be4dd5b-5e24-401e-9ebf-b222fbd39313: taxonomy_term
+    b14062f8-fca5-4e45-bf22-0d184e8ba7d8: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Data Science'
+  created:
+    -
+      value: 1604417986
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  field_certificate_cost:
+    -
+      value: '$11,000 (USD)'
+  field_certificate_cta:
+    -
+      uri: 'https://google.com'
+      title: 'Learn More'
+      options: {  }
+  field_certificate_duration:
+    -
+      value: '1 semester, Fall or Spring'
+  field_certificate_prerequisite:
+    -
+      value: 'Data Analytics'
+  field_certificate_short_descript:
+    -
+      value: 'Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling, and machine learning on complex data sets.'
+  field_certificate_shortname:
+    -
+      value: 'Data Science'
+  field_term_ref_certificate_type:
+    -
+      entity: 0be4dd5b-5e24-401e-9ebf-b222fbd39313
+  field_term_ref_editorial_section:
+    -
+      entity: b14062f8-fca5-4e45-bf22-0d184e8ba7d8
