@@ -1,29 +1,29 @@
-.voices__list {
-  &__teasers {
+.voices__teaser {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
   }
-  &__teaser {
+  &__wrapper {
     &:hover img,
     &:focus img,
     &:active img {
       opacity: .7;
     }
-    &__image {
-      overflow: hidden;
-      img {
-        border-bottom: 0.7em solid $berkeley-blue;
-        -webkit-transition: opacity 0.3s ease-in-out;
-        -o-transition: opacity 0.3s ease-in-out;
-        -moz-transition: opacity 0.3s ease-in-out;
-        -ms-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3s ease-in-out;
-      }
+  }
+  &__image {
+    overflow: hidden;
+    img {
+      border-bottom: 0.7em solid $berkeley-blue;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      -moz-transition: opacity 0.3s ease-in-out;
+      -ms-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
     }
-    &__title {
-      font-family: $font-bitter;
-      font-weight: 800;
-    }
+  }
+  &__title {
+    font-family: $font-bitter;
+    font-weight: 800;
   }
 }
