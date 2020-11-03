@@ -46,6 +46,7 @@
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
     "drupal/pdb": "^1.0@alpha",
+    "drupal/rabbit_hole": "^1.0@beta",
     "drupal/term_condition": "1.x-dev",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",

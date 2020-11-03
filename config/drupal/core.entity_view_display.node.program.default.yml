@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.program.layout_builder__layout
     - node.type.program
   module:
+    - bglobal_pardot
     - layout_builder
     - layout_discovery
     - text
@@ -91,6 +92,40 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Advisors
+          column_widths: 50-50
+          class:
+            container: container
+        components:
+          c8f92224-a709-4450-ae63-022bcdd8ecdf:
+            uuid: c8f92224-a709-4450-ae63-022bcdd8ecdf
+            region: first
+            configuration:
+              id: bglobal_pardot_block
+              label: 'Talk to an Advisor'
+              provider: bglobal_pardot
+              label_display: visible
+              action_url: 'https://go.pardot.com/l/102272/2016-11-04/2klckm'
+              field_list:
+                firstname: firstname
+                lastname: lastname
+                email: email
+                question: question
+                opt_in_contact: opt_in_contact
+              submit_label: 'Get Advising'
+              success_message: 'Success message...'
+              tracking_fields:
+                full_path: full_path
+                page_title: page_title
+                success_location: success_location
+                error_location: error_location
+              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
