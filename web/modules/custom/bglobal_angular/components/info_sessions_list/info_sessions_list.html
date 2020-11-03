@@ -1,0 +1,25 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/info-sessions-list/info-sessions-list.twig
+ -->
+<div data-ng-controller="VoicesInfoListController as infoSessions">
+  <div class="events" data-ng-if="infoSessions.view.count > 0">
+    <h2 class="events__header block-header">Info Sessions</h2>
+    <ul class="events__list" >
+      <li class="event__list__item" data-ng-repeat="session in infoSessions.sessions">
+        <div class="event__list__item--left">
+          <div class="event__date">
+            <span class="event__date__month">{{ session.jsDate | date:'MMM' }}</span> <span class="event__date__day">{{ session.jsDate | date:'dd' }}</span>
+          </div>
+        </div>
+        <div class="event__list__item__body">
+          <span class="event__title">
+            <a [href] = "session.enroll">{{session.title}}</a>
+          </span>
+       </div>
+      </li>
+    </ul>
+    <a class="more-link" href="/">More Info Sessions</a>
+  </div>
+  <div class="events events--no-result" data-ng-if="infoSessions.view.count <= 0"><h2>No Info Sessions to show!</h2></div>
+  <!-- TODO: Fallback when no info sessions to show -->
+</div>
