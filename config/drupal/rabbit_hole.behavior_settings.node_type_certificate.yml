@@ -1,0 +1,11 @@
+uuid: 7b633051-a7ca-4edc-bef2-e19ea8ae085f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.certificate
+id: node_type_certificate
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
