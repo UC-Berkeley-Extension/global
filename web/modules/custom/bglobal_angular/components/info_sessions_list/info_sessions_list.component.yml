@@ -16,7 +16,7 @@ static_configuration:
   limit: '3'
 form_configuration:
   info-sessions-list:
-    title: 'Voices List'
+    title: 'Info Sessions List'
     type: item
     description: ''
   info:
