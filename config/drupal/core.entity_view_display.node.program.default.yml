@@ -94,6 +94,63 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          79f11ad0-65e7-4218-933b-01db5da0ddf9:
+            uuid: 79f11ad0-65e7-4218-933b-01db5da0ddf9
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_term_ref_delivery_method'
+              label: 'Delivery Method'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          2e103050-e686-431e-abe4-936c607d1dd2:
+            uuid: 2e103050-e686-431e-abe4-936c607d1dd2
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_program_shortname'
+              label: 'Program Shortname'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c:
+            uuid: 3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_term_ref_certificate_type'
+              label: 'Certificate Type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
