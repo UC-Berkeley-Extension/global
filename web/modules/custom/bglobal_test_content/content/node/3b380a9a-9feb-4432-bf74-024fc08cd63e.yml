@@ -46,6 +46,11 @@ default:
   field_certificate_cost:
     -
       value: '$11,000 (USD)'
+  field_certificate_courses:
+    -
+      value: '4 core'
+    -
+      value: '1.5 units CEU'
   field_certificate_cta:
     -
       uri: 'https://google.com'
@@ -54,15 +59,30 @@ default:
   field_certificate_duration:
     -
       value: '1 semester, Fall or Spring'
+  field_certificate_format:
+    -
+      value: 'Full-time online study'
+  field_certificate_length:
+    -
+      value: '1 semester'
+  field_certificate_offered:
+    -
+      value: 'Fall and Spring'
+  field_certificate_prereq:
+    -
+      value: '3 years undergrad'
   field_certificate_prerequisite:
     -
       value: 'Data Analytics'
-  field_certificate_short_descript:
-    -
-      value: 'Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling, and machine learning on complex data sets.'
   field_certificate_shortname:
     -
       value: 'Data Science'
+  field_certificate_short_descript:
+    -
+      value: 'Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling, and machine learning on complex data sets.'
+  field_certificate_tuition:
+    -
+      value: '$8,000 (USD)'
   field_term_ref_certificate_type:
     -
       entity: 0be4dd5b-5e24-401e-9ebf-b222fbd39313
