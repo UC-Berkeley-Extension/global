@@ -15,7 +15,6 @@ module:
   ckeditor: 0
   color: 0
   component: 0
-  component_example: 0
   components: 0
   config: 0
   content_moderation: 0
