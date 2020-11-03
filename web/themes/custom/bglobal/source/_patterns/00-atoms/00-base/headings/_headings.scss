@@ -1,10 +1,12 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+
 h1, .h1 {
 	line-height: 1.2;
   font-size: $font-size-large * 1.5;
   margin: $space-half 0;
   letter-spacing: 1px;
+  font-family: $font-bitter;
 }
 
 h2, .h2 {
@@ -17,29 +19,48 @@ h2, .h2 {
 
 h3, .h3 {
 	line-height: 1.2;
+  font-family: $font-bitter;
   font-size: $font-size-large;
   margin: $space-half 0;
 }
 
 h4, .h5 {
   line-height: 1.2;
+  font-family: $font-bitter;
   font-size: $font-size-large;
   color: $founders-rock;
   margin: $space-half 0;
   font-weight: 400;
 }
 
-h5 {
-	
+h5, .h5 { 
+  font-family: $font-bitter;
+  font-size: $font-size-med-2 * 1.1;
+}
+h6, .h6 { 
+  font-family: $font-bitter;
+  font-size: $font-size-med-2;
 }
 
-h6 {
-	
+.lead {
+  font-size: $font-size-med-2 * 1.1;
 }
 
-.p {
-  font-size: 1em;
+.body-1 {
+  font-size: $font-size-med-2;
+}
+
+p, .body-2 {
+  font-size: $font-size-med;
   font-family: $font;
+}
+
+.caption {
+  font-size: $font-size-small-2;
+}
+
+.emphasis {
+  font-weight: bold;
 }
 
 .block-header {

@@ -1,7 +1,7 @@
-.button {
+.button, input[type=submit] {
   display: inline-block;
   font-weight: 600;
-  color: #212529;
+  color: $california-gold;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -11,27 +11,33 @@
   padding: 1rem 2rem;
   font-size: 1.5rem;
   line-height: 1.5;
-  background-color: $california-gold;
+  background-color: $berkeley-blue;
   @include transition(all, 0.1s, ease-out);
-
   &:hover,
   &:focus {
-    background-color: $berkeley-blue;
-    color: $white;
+    filter: brightness(50%);
+    cursor: pointer;
   }
 }
 
-a.button {
-  color: $berkeley-blue;
+a.button, input[type=submit] {
+  color: $california-gold;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $white;
+    filter: brightness(50%);
+    cursor: pointer;
   }
 }
 
 .button-small {
   font-size: 1em;
   padding: .5em 1em;
+}
+
+@media (max-width: $bp-med) {
+  a.button, .button, input[type=submit] {
+    width: 100%;
+  }
 }
