@@ -1,0 +1,16 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/voices-list/voices-list.twig
+ -->
+<div class="voices__list" data-ng-controller="VoicesListController as voices">
+  <h2 class="voices__list__header block-header">Latest</h2>
+  <div class="voices__teaser__list">
+    <!-- TODO: RENAME TO TEASER -->
+    <a data-ng-repeat="blog in voices.blogs.nodes" data-ng-cloak data-ng-cloak class="voices__teaser__wrapper" data-ng-href="{{ blog.post.path }}">
+      <div class="voices__teaser__image">
+        <img data-ng-src="{{ blog.post.image.src }}" data-ng-alt="{{ blog.post.image.alt }}" class="voices__teaser__image__el"/>
+      </div>
+      <span class="voices__teaser__title">{{ blog.post.title }}</span>
+    </a>
+  </div>
+  <a clsss="more-link" data-ng-href="{{voices.attrs.more-link}}">More Link</a>
+</div>
