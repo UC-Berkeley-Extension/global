@@ -1,0 +1,44 @@
+diff --git a/core/modules/layout_builder/config/schema/layout_builder.schema.yml b/core/modules/layout_builder/config/schema/layout_builder.schema.yml
+index 862c90ecbe..567bb67eff 100644
+--- a/core/modules/layout_builder/config/schema/layout_builder.schema.yml
++++ b/core/modules/layout_builder/config/schema/layout_builder.schema.yml
+@@ -60,6 +60,9 @@ inline_block:
+     view_mode:
+       type: string
+       label: 'View mode'
++    block_uuid:
++      type: string
++      label: 'Block UUID'
+     block_revision_id:
+       type: integer
+       label: 'Block revision ID'
+diff --git a/core/modules/layout_builder/src/Plugin/Block/InlineBlock.php b/core/modules/layout_builder/src/Plugin/Block/InlineBlock.php
+index 0f2288d7b5..104fc995ab 100644
+--- a/core/modules/layout_builder/src/Plugin/Block/InlineBlock.php
++++ b/core/modules/layout_builder/src/Plugin/Block/InlineBlock.php
+@@ -229,7 +229,16 @@ protected function getEntity() {
+       if (!empty($this->configuration['block_serialized'])) {
+         $this->blockContent = unserialize($this->configuration['block_serialized']);
+       }
+-      elseif (!empty($this->configuration['block_revision_id'])) {
++      elseif (!empty($this->configuration['block_uuid'])) {
++        $entity = $this->entityTypeManager->getStorage('block_content')->loadByProperties(['uuid' => $this->configuration['block_uuid']]);
++        if (!$entity) {
++          $this->logger->error('Unable to load inline block content entity with UUID %uuid.', ['%uuid' => $this->configuration['block_uuid']]);
++        }
++        else {
++          $this->blockContent = current($entity);
++        }
++      }
++      elseif (empty($entity) && !empty($this->configuration['block_revision_id'])) {
+         $entity = $this->entityTypeManager->getStorage('block_content')->loadRevision($this->configuration['block_revision_id']);
+         $this->blockContent = $entity;
+       }
+@@ -287,6 +296,7 @@ public function saveBlockContent($new_revision = FALSE, $duplicate_block = FALSE
+         $block->setNewRevision();
+       }
+       $block->save();
++      $this->configuration['block_uuid'] = $block->uuid();
+       $this->configuration['block_revision_id'] = $block->getRevisionId();
+       $this->configuration['block_serialized'] = NULL;
+     }

@@ -115,7 +115,8 @@
     "patches": {
       "drupal/core": {
         "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch",
-        "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder) (https://www.drupal.org/project/drupal/issues/3049332)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
+        "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder) (https://www.drupal.org/project/drupal/issues/3049332)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
+        "Set Layout Builder blocks from UUID": "patches/lb-uuid.patch"
       },
       "drupal/block_field": {
         "Changing the available blocks for a 'Block (plugin)' field produces a Recoverable fatal error (https://www.drupal.org/project/block_field/issues/2861670)": "https://www.drupal.org/files/issues/2020-06-23/block_field-available-blocks-2861670-40.patch"
