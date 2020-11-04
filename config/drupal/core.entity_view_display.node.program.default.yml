@@ -79,6 +79,7 @@ third_party_settings:
               block_revision_id: 5
               block_serialized: null
               context_mapping: {  }
+              block_uuid: e349a631-440f-4ffc-b6de-6e8bce48e649
             additional: {  }
             weight: 1
           94c38af4-416a-4ecb-8fd6-bd134769836d:
@@ -198,20 +199,6 @@ third_party_settings:
           class:
             container: container
         components:
-          8cc6ef45-f4cc-4a1a-b068-af3343fb99eb:
-            uuid: 8cc6ef45-f4cc-4a1a-b068-af3343fb99eb
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Your Study Options'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 6
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
           823f7408-9f8c-4c66-adcb-41ca5f963168:
             uuid: 823f7408-9f8c-4c66-adcb-41ca5f963168
             region: content
@@ -224,7 +211,22 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: 3
+          8cc6ef45-f4cc-4a1a-b068-af3343fb99eb:
+            uuid: 8cc6ef45-f4cc-4a1a-b068-af3343fb99eb
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Your Study Options'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 6
+              block_serialized: null
+              context_mapping: {  }
+              block_uuid: 0b671609-3b3f-4624-90ca-0f0a9c2abef7
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -270,6 +272,7 @@ third_party_settings:
               block_revision_id: 4
               block_serialized: null
               context_mapping: {  }
+              block_uuid: 546bae8e-2d73-4871-9b57-1a53a7818a43
             additional: {  }
             weight: 0
           59766bd7-7e41-4ea2-b759-6b6fb2486854:
@@ -284,6 +287,7 @@ third_party_settings:
               block_revision_id: 3
               block_serialized: null
               context_mapping: {  }
+              block_uuid: 3e8afb12-ae97-4876-9ec9-958108a8c5ef
             additional: {  }
             weight: 0
         third_party_settings: {  }

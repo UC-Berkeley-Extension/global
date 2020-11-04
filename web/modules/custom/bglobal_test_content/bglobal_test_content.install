@@ -6,7 +6,7 @@
 
 /**
  * @inheritdoc
- */
+
 function bglobal_test_content_install($is_syncing) {
   // All our custom blocks are used by Layouts, so register them.
   $uuids = [
@@ -28,3 +28,4 @@ function bglobal_test_content_install($is_syncing) {
     }
   }
 }
+ */
