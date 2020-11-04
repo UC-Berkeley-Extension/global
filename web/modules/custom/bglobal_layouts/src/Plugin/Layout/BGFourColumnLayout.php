@@ -7,7 +7,7 @@ use Drupal\Core\Layout\LayoutDefault;
 use Drupal\Core\Render\Markup;
 
 /**
- * Configurable two column layout plugin class.
+ * Configurable four column layout plugin class.
  *
  * @internal
  *   Plugin classes are internal.
