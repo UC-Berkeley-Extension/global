@@ -3,20 +3,24 @@
 namespace Drupal\bglobal_layouts\Plugin\Layout;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Layout\LayoutDefault;
 use Drupal\Core\Render\Markup;
-use Drupal\layout_builder\Plugin\Layout\ThreeColumnLayout;
 
 /**
- * Configurable three column layout plugin class.
+ * Configurable one column layout plugin class.
  *
  * @internal
  *   Plugin classes are internal.
  */
-class BGThreeColumnLayout extends ThreeColumnLayout {
+class BGOneColumnLayout extends LayoutDefault {
 
   public function build(array $regions) {
     $build = parent::build($regions);
-    $build['#attributes']['class'][] = 'title-layout';
+    $build['#attributes']['class'] = [
+      'layout',
+      'title-layout',
+      $this->getPluginDefinition()->getTemplate(),
+    ];
     $title = $this->getConfiguration()['title'] ?? '';
     if ($title) {
       $build['title'] = [
