@@ -5,7 +5,7 @@
   <h2 class="voices__list__header block-header">Latest</h2>
   <div class="voices__teaser__list">
     {% for post in posts %} {# RENAME TEASER #}
-      <a href="{{ post.path }}" class="voices__teaser__block">
+      <a href="{{ post.path }}" class="voices__teaser__wrapper">
         <div class="voices__teaser__image">
           <img class="voices__teaser__image__el" src="{{ post.image.src }}" alt="{{ post.image.alt }}" />
         </div>

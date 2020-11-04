@@ -206,3 +206,6 @@ circleci/database/*
 .ddev/commands/
 .ddev/homeadditions/
 .ddev/nginx_full/
+/.eslintrc
+/berkeley_global.sublime-project
+/berkeley_global.sublime-workspace
