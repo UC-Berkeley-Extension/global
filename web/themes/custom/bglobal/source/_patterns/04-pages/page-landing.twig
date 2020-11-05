@@ -1,0 +1,118 @@
+<div id="page-wrapper" {% if modifier_class %}class="{{ modifier_class }}"{% endif %}>
+  <div id="page">
+    {% block page_header %}
+      {% include "@organisms/header/header.twig" %}
+    {% endblock %}
+
+    {% block page_hero %}
+      {% include "@molecules/hero/hero.twig" with {
+        'hero': {
+          'img': {
+            'src': "https://source.unsplash.com/random",
+            'alt': "Alt text here."
+          },
+          'title': "Experience Berkeley Global",
+          'subtitle': "Take courses from anywhere in the world",
+        }
+      } %}
+
+
+    {% endblock %}
+
+    <div id="main">
+      <main class="main-content{% if not full_width %} container{% endif %}" role="main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="content{% if not full_width %} container{% endif %}">
+
+          {% block page_content %}
+            <div class="padding-row">
+              <div class="grid-container-fluid grid-col-3-1">
+                <div>
+                  {% include "@molecules/voices/voices-spotlight.twig" with {
+                  'posts': [{
+                    'image': {
+                      'src': 'https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/global-logo-celebration-blog.jpg?itok=5PlyyzNQ',
+                      'alt': "Berkeley Global logo above group of students"
+                    },
+                    'title': "Announcing UC Berkeley Global",
+                    'content': "<p>One of the key initiatives at UC Berkeley is empowering engaged thinkers and global citizens to change our world. In that sense, global refers to a mindset rather than a geography.</p>",
+                    'path': 'https://voices.berkeley.edu/international/announcing-uc-berkeley-global',
+                    'tags': ["Student Story", "Test"]
+                  }]
+                } %}
+                </div>
+                <div>
+                  {% include "@molecules/info-sessions-list/info-sessions-list.twig" with {
+                  'sessions': [ 
+                    {
+                      'jsDate': {
+                        'month': 'OCT',
+                        'day': '13'
+                      },
+                      'enroll': 'http://go.pardot.com/l/102272/2018-05-21/4x3jsf',
+                      'title': "Legal Studies Global Access Program"
+                    },
+                    {
+                      'jsDate': {
+                        'month': 'OCT',
+                        'day': '15'
+                      },
+                      'title': "Post-Baccalaureate Health Professions Program",
+                      'enroll': 'http://go.pardot.com/l/102272/2017-11-03/442h6v'
+                    },
+                    {
+                      'jsDate': {
+                        'month': 'NOV',
+                        'day': '05'
+                      },
+                      'title': "Clinical Laboratory Scientist Preparatory Program",
+                      'enroll': 'http://go.pardot.com/l/102272/2017-11-02/43zvwn'
+                    } ] 
+                } %}
+                </div>
+              </div>
+            </div>
+            <div class="padding-row">
+              {% include "@molecules/voices/voices-list.twig" with {
+              'posts': [{
+                'image': {
+                  'src': 'https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/global-logo-celebration-blog.jpg?itok=5PlyyzNQ',
+                  'alt': "Berkeley Global logo above group of students"
+                },
+                'title': "Announcing UC Berkeley Global",
+                'content': "<p>One of the key initiatives at UC Berkeley is empowering engaged thinkers and global citizens to change our world. In that sense, global refers to a mindset rather than a geography.</p>",
+                'path': 'https://voices.berkeley.edu/international/announcing-uc-berkeley-global',
+                'tags': ["Student Story", "Test"]
+              }, {
+                'image': {
+                  'src': 'https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/entrepreneurship-ranking.jpg?itok=CSrsW6Qv',
+                  'alt': "Berkeley Global logo above group of students"
+                },
+                'title': "New Ranking: UC Berkeley Is #2 in the World for Entrepreneurs",
+                'content': "UC Berkeley ranks nationally as the Number 1 public and Number 2 university in the world for undergraduate programs that produce entrepreneurs who go on to obtain venture funding, according to... continue reading New Ranking: UC Berkeley Is #2 in the World for Entrepreneurs",
+                'path': 'https://voices.berkeley.edu/international/announcing-uc-berkeley-global',
+                'tags': ["Student Story", "Test"]
+              },
+              {
+                'image': {
+                  'src': 'https://voices.berkeley.edu/sites/default/files/styles/blog_well/public/covid-resources.jpg?itok=Mw4ifYH_',
+                  'alt': "Berkeley Global logo above group of students"
+                },
+                'title': "COVID-19 Resource Guide for Students",
+                'content': "According to the current order of the Health Officer of the County of Alameda, the following businesses are considered \'Essential Businesses\' and are therefore open.",
+                'path': 'https://voices.berkeley.edu/international/announcing-uc-berkeley-global',
+                'tags': ["Student Story", "Test"]
+              }]
+            } %}
+            </div>
+          {% endblock %}
+
+        </div>
+      </main>
+    </div>
+
+    {% block page_footer %}
+      {% include "@organisms/footer/footer.twig" %}
+    {% endblock %}
+  </div>
+</div>

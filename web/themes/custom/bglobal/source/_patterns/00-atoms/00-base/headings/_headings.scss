@@ -1,41 +1,38 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-bitter;
+  color: $black;
+}
 
 h1, .h1 {
 	// line-height: 1.2;
   font-size: $font-size-med * 4;
   margin: $space-half 0;
   letter-spacing: 1px;
-  font-family: $font-bitter;
 }
 
 h2, .h2 {
-  font-family: $font-bitter;
   font-size: $font-size-med * 3;
   margin: $space-half 0;
   letter-spacing: 1px;
 }
 
 h3, .h3 {
-  font-family: $font-bitter;
   font-size: $font-size-med * 2;
   margin: $space-half 0;
 }
 
-h4, .h5 {
-  font-family: $font-bitter;
+h4, .h4 {
   font-size: $font-size-med * 1.625;
-  color: $founders-rock;
   margin: $space-half 0;
   font-weight: 400;
 }
 
 h5, .h5 { 
-  font-family: $font-bitter;
   font-size: $font-size-med * 1.5;
 }
 h6, .h6 { 
-  font-family: $font-bitter;
   font-size: $font-size-med * 1.125;
 }
 
@@ -64,10 +61,10 @@ p, .body-2 {
 }
 
 .block-header {
-  font-size: 12px;
+  font-size: $font-size-med * 1.5; //12px
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
-  color: $berkeley-blue;
-  font-family: $font;
+  font-weight: thin;
+  // color: $berkeley-blue;
+  font-family: $font-light;
 }

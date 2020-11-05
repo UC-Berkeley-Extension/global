@@ -51,7 +51,9 @@ $screen-xs-max:              ($screen-sm-min - 1);
 $screen-sm-max:              ($screen-md-min - 1);
 $screen-md-max:              ($screen-lg-min - 1);
 
-
+// Padding
+$padding-row:   2em 0;
+.padding-row { padding: $padding-row;}
 //== Grid system
 //
 //## Define your custom responsive grid.
