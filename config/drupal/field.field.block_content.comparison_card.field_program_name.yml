@@ -1,0 +1,19 @@
+uuid: 79bf916b-31da-460e-91fd-728cc98b673c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comparison_card
+    - field.storage.block_content.field_program_name
+id: block_content.comparison_card.field_program_name
+field_name: field_program_name
+entity_type: block_content
+bundle: comparison_card
+label: 'Program Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

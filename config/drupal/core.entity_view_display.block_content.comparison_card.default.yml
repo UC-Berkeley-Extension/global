@@ -1,0 +1,51 @@
+uuid: cd8ce6a2-d26f-4bb1-b150-53cc41963cdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comparison_card
+    - field.field.block_content.comparison_card.body
+    - field.field.block_content.comparison_card.field_comparison_card_list_item
+    - field.field.block_content.comparison_card.field_online_or_classroom
+    - field.field.block_content.comparison_card.field_program_name
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: block_content.comparison_card.default
+targetEntityType: block_content
+bundle: comparison_card
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_comparison_card_list_item:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_online_or_classroom:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_program_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
