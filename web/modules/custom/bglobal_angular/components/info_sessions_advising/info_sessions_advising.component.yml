@@ -28,3 +28,9 @@ form_configuration:
     title: Program
     description: 'Enter an optional program ID. Leave default to dynamically pull from Page Title.'
     default_value: 'default'
+# TODO
+#  The image is now sourced from the Extension site. What's the best way to add it?
+#      It is the same every time this component is used
+#      Only needed on this page
+#      If it lived in an /images/ folder in this module, how would we call it here?
+#      Found a href="https://drupal.stackexchange.com/questions/184329/using-images-in-custom-module-not-through-css">this StakOverflow/a> but I don't really understand it
