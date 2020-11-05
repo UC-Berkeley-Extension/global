@@ -17,9 +17,9 @@
 
 .comparison-card__title {
   text-align: center;
-  padding: .35em;
+  padding: .5em;
   font-family: $font-bitter;
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 .comparison-card__body {
@@ -50,6 +50,11 @@
   padding: .75em .5em;
   border-bottom: 1px solid $gray;
   font-family: $font-bold;
+  background-color: $white;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .comparison-card__item__icon {

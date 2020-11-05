@@ -122,6 +122,9 @@
       },
       "drupal/layout_builder_tabs": {
         "Render array key error (https://www.drupal.org/project/layout_builder_tabs/issues/3150894)": "https://www.drupal.org/files/issues/2020-07-27/layout_builder_tabs-user_errors-3150894-5.patch"
+      },
+      "drupal/paragraphs": {
+        "Fix langcode error when using paragraphs in layout builder (https://www.drupal.org/project/paragraphs/issues/2901390#comment-13718531": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
       }
     }
   },

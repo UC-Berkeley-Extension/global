@@ -6,7 +6,7 @@ card:
     alt: 'Study in the classroom'
   src_red: '../../images/icon-check-red.svg'
   src_green: '../../images/icon-check-green.svg'
-  body: "Gain employable skills in Entrepreneurship while experiencing life as a Berkeley student! Study abroad and put lessons to work through an internship or eligibility for OPT."
+  program: 'Entrepreneurship'
   items:
     - check_red: false
       text: "Study-Abroad Experience"
