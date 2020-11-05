@@ -4,16 +4,9 @@
 <div data-ng-controller="VoicesInfoAdvisingController as infoSession">
   <div class="advising__info_session" data-ng-if="infoSession.view.count > 0">
     <h2 class="block-header">Info Sessions</h2>
-    <h3>This image is now sourced from the Extension site. What's the best way to add it?</h3>
-    <ul>
-      <li>It is the same every time this component is used</li>
-      <li>Only needed on this page</li>
-      <li>If it lived in an /images/ folder in this module, how would we call it here?</li>
-      <li>Found <a href="https://drupal.stackexchange.com/questions/184329/using-images-in-custom-module-not-through-css">this StakOverflow</a> but I don't really understand it</li>
-    </ul>
     <img class="quote-image" src="https://extension.berkeley.edu/international/professional/common/images/mariam-rahimi.png" alt="Student Advisor Mariam Rahimi" />
     <div>
-      <p class="blockquote">"Please join us for a free <a [href] = "indoSession.session.enroll" target="_blank">online information session</a>."</p>
+      <p class="blockquote">"Please join us for a free <a data-ng-href="{{infoSession.session.enroll}}" target="_blank">online information session</a>."</p>
       <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>
     </div>
   </div>

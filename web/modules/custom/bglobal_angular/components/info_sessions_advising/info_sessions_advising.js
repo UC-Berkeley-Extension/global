@@ -10,7 +10,7 @@ app.controller('VoicesInfoAdvisingController', ['$scope', '$element', 'VoicesFac
   vcc.attrs.feed = "info";
   VoicesFactory.getBlogs(vcc.attrs)
     .then((data) => {
-      vcc.sessions = data.sessions.splice(1);
+      vcc.session = data.sessions.splice(1)[0];
       vcc.view = data.view;
     })
     .catch((err) => {
