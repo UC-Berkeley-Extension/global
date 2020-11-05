@@ -1,3 +1,8 @@
+onecol_title_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/onecol_section_title/bg_onecol_section.css: {}
 twocol_title_section:
   version: VERSION
   css:

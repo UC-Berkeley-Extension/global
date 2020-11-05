@@ -1,3 +1,21 @@
+bglobal_onecol_section:
+  label: 'One column with section title'
+  path: layouts/onecol_section_title
+  template: layout--onecol-title-section
+  library: bglobal_layouts/onecol_title_section
+  class: '\Drupal\bglobal_layouts\Plugin\Layout\BGOneColumnLayout'
+  category: 'Columns: 1'
+  default_region: first
+  icon_map:
+    - [title]
+    - [first]
+    - [first]
+    - [first]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
 bglobal_twocol_section:
   label: 'Two column with section title'
   path: layouts/twocol_section_title
