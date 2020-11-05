@@ -11,8 +11,10 @@
 }
 
 .comparison-card.classroom {
-  background-color: $california-gold;
-  color: $black;
+  .comparison-card__title {
+    background-color: $california-gold;
+    color: $black;
+  }
 }
 
 .comparison-card__title {
@@ -36,13 +38,14 @@
 
 .comparison-card__image img {
   position: absolute;
-  top: -1em;
+  top: 0;
+  left: 1em;
 }
 
 .comparison-card__text,
 .comparison-card__item__text {
   flex: 0 1 calc(100% - 100px);
-  padding-left: .5em;
+  padding: 1em 1em 1em 3em;
 }
 
 .comparison-card__item {
@@ -59,4 +62,10 @@
 
 .comparison-card__item__icon {
   text-align: center;
+
+  img {
+    position: absolute;
+    top: 1.2em;
+    right: 1.5em;
+  }
 }

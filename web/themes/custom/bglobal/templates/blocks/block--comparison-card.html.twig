@@ -39,7 +39,7 @@
       {% set online = false %}
       {% set title = 'In the Classroom' %}
       {% set img_src = '/themes/custom/bglobal/source/images/icon-classroom.svg' %}
-      {% set program = content.field_program_name %}
+      {% set program = content.field_program_name.0['#context'].value %}
       {% set button_text = 'CLASSROOM OPTIONS' %}
       {% set button_url = '/classroom' %}
     {% endif %}
