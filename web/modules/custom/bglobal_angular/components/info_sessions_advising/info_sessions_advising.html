@@ -4,7 +4,7 @@
 <div data-ng-controller="VoicesInfoAdvisingController as infoSession">
   <div class="advising__info_session" data-ng-if="infoSession.view.count > 0">
     <h2 class="block-header">Info Sessions</h2>
-    <img class="quote-image" src="https://extension.berkeley.edu/international/professional/common/images/mariam-rahimi.png" alt="Student Advisor Mariam Rahimi" />
+    <img class="quote-image" data-ng-src="{{infoSession.adviser.src}}" data-ng-attr-alt="{{infoSession.adviser.src}}" />
     <div>
       <p class="blockquote">"Please join us for a free <a data-ng-href="{{infoSession.session.enroll}}" target="_blank">online information session</a>."</p>
       <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>

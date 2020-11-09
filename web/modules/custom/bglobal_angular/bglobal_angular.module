@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_preprocess_page()
+ * Creates the following variables:
+ *   - drupalSettings.nodeId
+ *   - drupalSettings.nodeType.
+ */
+function bglobal_angular_preprocess_page(&$variables) {
+  // Affect variable passed to page.html.twig and all of it's children
+  // echo "<h1>Hello World</h1>";
+  if (!empty($variables['node'])) {
+    $variables['#attached']['drupalSettings']['nodeId'] = $variables['node']->id();
+    $variables['#attached']['drupalSettings']['nodeType'] = $variables['node']->getType();
+  } else if ($variables['is_front']){
+    $variables['#attached']['drupalSettings']['nodeId'] = 0;
+    $variables['#attached']['drupalSettings']['nodeType'] = "Home";
+  }
+  dd($variables);
+}
+
+// function preprocess_block(&$variables) {
+// 
+// // Look at block object, it should have an id and 
+// // use drupal_get_path to set it 
+//   if $variables['block'] {
+//     if id on block is machine name of block {
+//       create url pattern with drupal_get_path
+//     }
+//   }
+// }
+
+// preprocess functions inject new variables
+// Same thing we do on twig to make variables available from node content
+// Always use if statements to make it as specific as possible so it only runs when it finds that thing. 
