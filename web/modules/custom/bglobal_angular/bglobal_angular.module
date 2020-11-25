@@ -4,32 +4,44 @@
  * Implements hook_preprocess_page()
  * Creates the following variables:
  *   - drupalSettings.nodeId
- *   - drupalSettings.nodeType.
+ *   - drupalSettings.nodeType
+ *   - drupalSettings.nodeTitle
  */
 function bglobal_angular_preprocess_page(&$variables) {
   // Affect variable passed to page.html.twig and all of it's children
-  // echo "<h1>Hello World</h1>";
   if (!empty($variables['node'])) {
     $variables['#attached']['drupalSettings']['nodeId'] = $variables['node']->id();
     $variables['#attached']['drupalSettings']['nodeType'] = $variables['node']->getType();
+    $variables['#attached']['drupalSettings']['nodeTitle'] = $variables['node']->getTitle();
   } else if ($variables['is_front']){
     $variables['#attached']['drupalSettings']['nodeId'] = 0;
-    $variables['#attached']['drupalSettings']['nodeType'] = "Home";
+    $variables['#attached']['drupalSettings']['nodeType'] = "home";
+    $variables['#attached']['drupalSettings']['nodeTitle'] = "Home";
   }
-  dd($variables);
 }
 
-// function preprocess_block(&$variables) {
-// 
-// // Look at block object, it should have an id and 
-// // use drupal_get_path to set it 
-//   if $variables['block'] {
-//     if id on block is machine name of block {
-//       create url pattern with drupal_get_path
-//     }
-//   }
-// }
+function bglobal_angular_preprocess_block(&$variables) {
+  // Affect variable passed to block.html.twig and all of it's children
+  if (!empty($variables['theme_hook_original'] == 'block')) {
+    $plugin_id = $variables['derivative_plugin_id'];
+    if ($plugin_id == 'info_sessions_advising') {
+      $module_handler = \Drupal::service('module_handler');
+      $module_path = file_create_url($module_handler->getModule('bglobal_angular')->getPath());
+      $variables['#attached']['drupalSettings'][$plugin_id]['imagePath'] = $module_path . "/images/";
+    }
+  }
+}
+
 
 // preprocess functions inject new variables
 // Same thing we do on twig to make variables available from node content
 // Always use if statements to make it as specific as possible so it only runs when it finds that thing. 
+// 
+// For Image Path stuff:
+// https://drupal.stackexchange.com/questions/184329/using-images-in-custom-module-not-through-css
+// 
+// Sample Debug:
+// dd($variables); (breaks everything, shows all variables)
+// echo '<pre>' . __FILE__ . ':' . __LINE__;
+// var_dump($variables['#attached']['drupalSettings']) ;
+// echo ' </pre>';

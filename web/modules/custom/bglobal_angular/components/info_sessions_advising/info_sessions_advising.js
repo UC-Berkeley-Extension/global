@@ -10,12 +10,12 @@ app.controller('VoicesInfoAdvisingController', ['$scope', '$element', 'VoicesFac
   vcc.attrs.feed = "info";
   vcc.adviser = {
     alt: "Student Adviser Mariam Rahimi",
-    src: "https://extension.berkeley.edu/international/professional/common/images/mariam-rahimi.png"
+    src: `${drupalSettings.info_sessions_advising.imagePath}mariam-rahimi.png`,
   }
   VoicesFactory.getBlogs(vcc.attrs)
     .then((data) => {
       vcc.session = data.sessions.splice(1)[0];
-      console.log(data);
+      // console.log(data);
       vcc.view = data.view;
     })
     .catch((err) => {
