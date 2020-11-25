@@ -1,0 +1,19 @@
+name: 'Angular: Info Sessions Advising'
+machine_name: info-sessions-advising
+type: pdb
+description: 'Info Sessions Advising angular template'
+package: NG2
+version: '1.0.0'
+core_version_requirement: ^8 || ^9
+module_status: active
+presentation: ng2
+configuration:
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'https://voices.berkeley.edu/info-sessions/json/cert/{$cert}/area/international'
+  cert:
+    type: textfield
+    title: Program
+    description: 'Enter an optional program ID. Leave default to dynamically pull from Page Title.'
+    default_value: 'default'

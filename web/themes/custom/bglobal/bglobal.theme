@@ -10,6 +10,15 @@ use Drupal\node\NodeInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Layout\LayoutDefault;
 
+// Put it in preprocessing if useful on all sorts of different twig variations
+// If Twig variable is unclear where it comes from, good to look for it in preprocessing
+// 
+// function bglobal_preprocess_node(&$variables) {
+//  if content type is x 
+//    then create new variable that concatenates these fields.
+// }
+//  
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
