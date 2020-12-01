@@ -1,0 +1,116 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/info-sessions-advising/info-sessions-advising.twig
+ -->
+<div data-ng-controller="ProductsController as productList">
+
+  <form name="spocc" id="spoccForm">
+  <div>
+    <div class="pc-tab" role="radiogroup" aria-label="Types of international products">
+      <input type="radio" name="pct" 
+             id="online-programs"
+             data-ng-checked="productList.filterVariables.tab == 'online-programs'"
+             data-ng-model="productList.filterVariables.tab" 
+             data-ng-change="updateCertList(updateUri, 'tab', 'online-programs')"
+             value="online-programs" 
+             aria-controls="spocc-programs" />
+      <input type="radio" name="pct"
+             id="study-abroad-programs" 
+             data-ng-checked="productList.filterVariables.tab == 'study-abroad-programs'"
+             data-ng-model="productList.filterVariables.tab" 
+             data-ng-change="updateCertList(updateUri, 'tab', 'study-abroad-programs')"
+             value="study-abroad-programs" 
+             aria-controls="spocc-study-abroad" />
+      <nav>
+        <ul>
+          <li class="online-programs mb-0" data-ng-cloak>
+            <label for="online-programs" class="noAfterContent"><span>Online Programs</span></label>
+          </li>
+          <li class="study-abroad-programs mb-0" data-ng-cloak>
+            <label for="study-abroad-programs" class="noAfterContent"><span>Study-Abroad Programs</span></label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="spocc-products" aria-label="Programs available to international students">
+      <!-- START skeleton screen programs -->
+      <div data-ng-hide="productList.loaded.certs" class="skl-certs-container" id="sklCertsInternational">
+        <div class="grid-container-fluid grid-col-1-3 programs-skl">
+          <div class="subjectFilter-skl">
+            <div class="subjectFilter-skl-title"></div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+            <div class="skl-radio-item">
+              <span class="skl-radio"></span>
+              <span class="skl-label"></span>
+            </div>
+          </div>
+          <div class="products-skl">
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+            <div class="blueblock-skl">
+              <div class="blueblock-skl-img"></div>
+              <div class="blueblock-skl-border"></div>
+              <div class="blueblock-skl-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END skeleton screen programs -->
+      <!-- Programs Tab -->     
+      <div class="online-programs" data-ng-if="productList.filterVariables.tab === 'online-programs'" id="spocc-programs" aria-live="polite">
+        <h2 class="sr-only">Online Programs</h2>
+        <p class="lead ng-cloak">Take online programs and courses from anywhere in the world! Receive a Berkeley-quality education from the comfort of your home; students on an F1 visa are not eligible.</p>
+        <div data-ng-include="productList.certListTemplate" class="products grid-container-fluid grid-container-products"></div>
+      </div>
+      <!-- Courses Tab -->
+      <div class="study-abroad-programs" data-ng-if="productList.filterVariables.tab === 'study-abroad-programs'" id="spocc-study-abroad" aria-live="polite">
+        <h2 class="sr-only">Study Abroad Programs</h2>
+        <p class="lead ng-cloak">Study abroad on a student visa for a semester or academic year with our full-time programs. You must apply and be admitted to one of our full-time programs to obtain a student visa.</p>
+        <div data-ng-include="productList.certListTemplate" class="products grid-container-fluid grid-container-products"></div>
+      </div>
+    </section>
+  </div>
+</form>
+
+</div>
