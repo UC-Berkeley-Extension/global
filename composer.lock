@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d41add6c297391340d8d7c1f9a5de4a",
+    "content-hash": "5f4f057d7cdfa4773385469eb20bcaae",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3444,6 +3444,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Fix langcode error when using paragraphs in layout builder (https://www.drupal.org/project/paragraphs/issues/2901390#comment-13718531": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7981,16 +7984,16 @@
         },
         {
             "name": "palantirnet/the-build",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/the-build.git",
-                "reference": "0ba4a3751b6a1c43efb914c4a2c89e7667b75d8c"
+                "reference": "0217134c57c29b09d617c3938221263cb16c9017"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/the-build/zipball/0ba4a3751b6a1c43efb914c4a2c89e7667b75d8c",
-                "reference": "0ba4a3751b6a1c43efb914c4a2c89e7667b75d8c",
+                "url": "https://api.github.com/repos/palantirnet/the-build/zipball/0217134c57c29b09d617c3938221263cb16c9017",
+                "reference": "0217134c57c29b09d617c3938221263cb16c9017",
                 "shasum": ""
             },
             "require": {
@@ -8022,7 +8025,7 @@
                 }
             ],
             "description": "Project setup templates and Phing build tasks for Drupal projects.",
-            "time": "2020-08-17T18:11:30+00:00"
+            "time": "2020-11-25T20:55:15+00:00"
         },
         {
             "name": "pdepend/pdepend",
