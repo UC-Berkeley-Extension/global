@@ -1,18 +1,148 @@
-{# data-ng-class="productsFactory.encodeTitles(program.name)"
-   data-ng-href="{{ productsFactory.decodeURLs(program.url) }}" #}
-{% set classes = [
-	'paragraph',
-	'paragraph--type-' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--display-mode-' ~ view_mode|clean_class,
-] %}
-
-<a class="blueBlock">
-  <div class="bb-imgs-wrapper">
-    <div class="bb-img" style="background-image: url('{{program.image.src}}');">{#  data-ng-style="{'background': [productsFactory.imageStyle(program.category, program.name)]}" #}</div>
+<form id="spoccForm" name="spocc">
+  <div>
+    <div aria-label="Types of international products" class="pc-tab" role="radiogroup">
+      <input aria-controls="spocc-programs" checked="checked" name="pct" type="radio" value="online-programs"> <input aria-controls="spocc-study-abroad" name="pct" type="radio" value="study-abroad-programs">
+      <nav>
+        <ul>
+          <li class="online-programs mb-0">
+            <label for="online-programs"><span>Online Programs</span></label>
+          </li>
+          <li class="study-abroad-programs mb-0">
+            <label for="study-abroad-programs"><span>Study-Abroad Programs</span></label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section aria-label="Programs available to international students" class="spocc-products">
+      <div aria-live="polite" class="online-programs" id="spocc-programs">
+        <h2 class="sr-only">
+          Online Programs
+        </h2>
+        <p class="lead">
+          Take online programs and courses from anywhere in the world! Receive a Berkeley-quality education from the comfort of your home; students on an F1 visa are not eligible.
+        </p>
+        <div class="products grid-container-fluid grid-container-products">
+          <div class="spocc-filters" id="subjectFilter">
+            <fieldset id="filter-toggles-programs">
+              <legend class="sr-only">Toggle filters for programs</legend>
+              <div class="switch-wrapper" id="filter-featured--programs">
+                <button aria-controls="spocc-programs-list" aria-pressed="false" class="switch switch-container" id="filter-featured--programs---button"><span>off</span> <span>on</span></button> <label class="switch" for="filter-featured--programs---button">Featured Programs Only</label>
+              </div>
+            </fieldset>
+            <div class="card mt-3" id="filter-programs">
+              <button aria-controls="#filter-programs--body" aria-expanded="false" class="card-header cardHeadingToggle collapsed d-md-none" data-target="#filter-programs--body" data-toggle="collapse" id="filter-programs--heading">
+              <h3 class="h4 marginless-p">
+                Academic Areas
+              </h3><span class="glyphicon cardHeaderIcon pull-right glyphicon-plus"><span class="sr-only">Expand or collapse section</span></span></button>
+              <fieldset aria-labelledby="filter-programs--heading" class="collapse filter-body" id="filter-programs--body">
+                <legend class="h4 m-0 filter-header bg-gray-light d-none d-md-block">Academic Areas</legend>
+                <div class="filter-body--fields">
+                  <p class="">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">All Academic Areas</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Art and Design</span> <span class="filter-count">(9)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Behavioral Health Sciences</span> <span class="filter-count">(9)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Business</span> <span class="filter-count">(30)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Construction and Sustainability</span> <span class="filter-count">(4)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Education</span> <span class="filter-count">(7)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label text-gray"><input aria-controls="spocc-programs-list" disabled="disabled" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Humanities and Languages</span> <span class="filter-count">(0)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Sciences, Mathematics and Biotechnology</span> <span class="filter-count">(6)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Technology and Information Management</span> <span class="filter-count">(14)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0">
+                    <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Writing, Editing and Technical Communication</span> <span class="filter-count">(5)</span></label>
+                  </p>
+                  <p class="mt-2 mb-0"></p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div aria-live="polite" class="products" id="spocc-programs-list">
+            <div class="cert-blocks">
+              <div class="m-t-15 blueBlocks-wrapper">
+                <a class="blueBlock editing" href="https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&amp;certificateId=17209&amp;selectedProgramAreaId=15550&amp;selectedProgramStreamId=15614">
+                <div class="bb-imgs-wrapper">
+                  <div class="bb-img" style="background: url(&quot;/images/programs/thumbnails/part-time-certificate_editing.jpg&quot;);"></div>
+                </div>
+                <div class="bb-border certs-pt-border"></div>
+                <div class="bb-text certs-pt-border">
+                  <p class="bb-content--superCategory">
+                    Part-Time Certificate
+                  </p>
+                  <h3 class="bb-content--title">
+                    Editing
+                  </h3>
+                </div></a> <a class="blueBlock interdisciplinary_writing_program" href="https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&amp;certificateId=63295746">
+                <div class="bb-imgs-wrapper">
+                  <div class="bb-img" style="background: url(&quot;/images/programs/thumbnails/part-time-certificate_interdisciplinary-writing-program.jpg&quot;);"></div>
+                </div>
+                <div class="bb-border certs-pt-border"></div>
+                <div class="bb-text certs-pt-border">
+                  <p class="bb-content--superCategory">
+                    Part-Time Certificate
+                  </p>
+                  <h3 class="bb-content--title">
+                    Interdisciplinary Writing Program
+                  </h3>
+                </div></a> <a class="blueBlock professional_writing" href="https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&amp;certificateId=17210">
+                <div class="bb-imgs-wrapper">
+                  <div class="bb-img" style="background: url(&quot;/images/programs/thumbnails/part-time-certificate_professional-writing.jpg&quot;);"></div>
+                </div>
+                <div class="bb-border certs-pt-border"></div>
+                <div class="bb-text certs-pt-border">
+                  <p class="bb-content--superCategory">
+                    Part-Time Certificate
+                  </p>
+                  <h3 class="bb-content--title">
+                    Professional Writing
+                  </h3>
+                </div></a> <a class="blueBlock technical_communication" href="https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&amp;certificateId=17211&amp;selectedProgramAreaId=15550&amp;selectedProgramStreamId=15615">
+                <div class="bb-imgs-wrapper">
+                  <div class="bb-img" style="background: url(&quot;/images/programs/thumbnails/part-time-certificate_technical-communication.jpg&quot;);"></div>
+                </div>
+                <div class="bb-border certs-pt-border"></div>
+                <div class="bb-text certs-pt-border">
+                  <p class="bb-content--superCategory">
+                    Part-Time Certificate
+                  </p>
+                  <h3 class="bb-content--title">
+                    Technical Communication
+                  </h3>
+                </div></a> <a class="blueBlock writing" href="https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&amp;certificateId=17208&amp;selectedProgramAreaId=15550&amp;selectedProgramStreamId=15616">
+                <div class="bb-imgs-wrapper">
+                  <div class="bb-img" style="background: url(&quot;/images/programs/thumbnails/part-time-certificate_writing.jpg&quot;);"></div>
+                </div>
+                <div class="bb-border certs-pt-border"></div>
+                <div class="bb-text certs-pt-border">
+                  <p class="bb-content--superCategory">
+                    Part-Time Certificate
+                  </p>
+                  <h3 class="bb-content--title">
+                    Writing
+                  </h3>
+                </div></a>
+              </div>
+              <p class="bg-warning"></p>
+            </div>
+          </div>
+          <p class="bg-warning"></p>
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="bb-border">{#  data-ng-class="[productsFactory.certBorderClass(program.category)]" #}</div>
-  <div class="bb-text">{#  data-ng-class="[productsFactory.certBorderClass(program.category)]" #}
-    <p class="bb-content--superCategory">{{ program.category }}</p>
-    <h3 class="bb-content--title">{{ program.name }}</h3>
-  </div>
-</a>
+</form>

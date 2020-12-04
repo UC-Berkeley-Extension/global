@@ -1,7 +1,15 @@
 program:
-  name: "Accelerated Health Sciences Program"
-  url: https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=59295420
-  category: "Post-Baccalaureate Program"
-  image: 
-    src: https://extension.berkeley.edu/images/programs/thumbnails/part-time-certificate_accounting.jpg
-    alt: "Berkeley Global logo above group of students"
+  - 
+    name: "Accelerated Health Sciences Program"
+    url: https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=59295420
+    category: "Post-Baccalaureate Program"
+    image: 
+      src: https://extension.berkeley.edu/images/programs/thumbnails/part-time-certificate_accounting.jpg
+      alt: "Berkeley Global logo above group of students"
+  - 
+    name: "Program 2"
+    url: https://extension.berkeley.edu/public/category/courseCategoryCertificateProfile.do?method=load&certificateId=59295420
+    category: "Full Time Certificate"
+    image: 
+      src: https://extension.berkeley.edu/images/programs/thumbnails/part-time-certificate_accounting.jpg
+      alt: "Berkeley Global logo above group of students"

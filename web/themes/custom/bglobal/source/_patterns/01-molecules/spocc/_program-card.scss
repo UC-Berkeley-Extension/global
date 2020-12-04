@@ -90,12 +90,57 @@
 }
 
 
-
+@media only screen and (min-width: map-get($grid-breakpoints, "sm")) {
+  .international-border {
+    border: 0px; /* Replace border with background */
+    background: $berkeley-blue;
+    background: url(/areas-of-study/white_promo_bground.png) 0 0;
+    color: $berkeley-blue;
+    h3 {
+      text-shadow: none;
+      color: $berkeley-blue;
+    }
+    .bb-content--superCategory {
+      font-style: italic;
+    }
+  }
+}
 @media only screen and (max-width: map-get($grid-breakpoints, "xs") - 1) {
   .blueBlock {
     grid-template-columns: 12.5% 63% 25%;
     grid-template-rows: auto;
     height: 80px;
+  }
+  .bb-border {
+      //grid-area: row-left;
+      grid-column-start: 1;
+      grid-column-end: span 1; // col2-start;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+  }
+  .bb-text {
+      //grid-area: row-main;
+      grid-column-start: 2;
+      grid-column-end: span 1; // col3-start;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+      background-size: 100% auto;
+      .bb-content--title {
+          max-width: fit-content;
+      }
+  }
+  .bb-imgs-wrapper {
+      //grid-area: row-right;
+      grid-column-start: 3;
+      grid-column-end: span 4;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+      height: auto;
+  }
+  .bb-img {
+      //height: 100%;
+      background-size: cover !important;
+      background-position: right !important;
   }
 }
 

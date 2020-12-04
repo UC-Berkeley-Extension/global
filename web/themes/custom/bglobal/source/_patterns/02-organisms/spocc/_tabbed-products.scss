@@ -1,0 +1,327 @@
+// skeleton screen min-height
+#spoccForm {
+  min-height: 500px;
+}
+
+.filter-header {
+  margin-bottom: 0;
+  margin-top: 14px;
+  font-family: $font-family-serif;
+  padding: $card-spacer-y $card-spacer-x;
+}
+.filter-body--fields {
+  padding: .6em;
+}
+.filter-label {
+  font-family: $font-family-sans-serif;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.filter-label-text {
+  font-size: 0.8em;
+  font-weight: lighter;
+  margin: 0px 5px;
+  width: calc(100% - 40px);
+}
+.filter-count {
+  text-align: right;
+}
+.filter-label-text.filter-label-info {
+  margin-left: 26px;
+}
+.flex-label {
+  display: flex;
+  align-items: flex-start;
+  input[type=radio] {
+    margin-right: 3px;
+    margin-top: 3px;
+  }
+}
+
+.checkbox-as-link {
+  input[type=checkbox] {
+    -webkit-appearance: none;
+  }
+  .checkbox-as-link--text {
+    text-decoration: underline;
+    color: $berkeley-blue;
+    font-weight: bolder;
+  }
+  .checkbox-as-link--arrow {
+    visibility: hidden;
+  }
+}
+
+#subjects:checked ~ nav .subjects label > span, 
+#programs:checked ~ nav .programs label > span, 
+#study-abroad-programs:checked ~ nav .study-abroad-programs label > span, 
+#online-programs:checked ~ nav .online-programs label > span, 
+#courses:checked ~ nav .courses label > span {
+  color: white;
+  padding-bottom: .5rem;
+  border-bottom: 3px solid white;
+}
+
+#subjects:checked ~ nav .subjects label, 
+#programs:checked ~ nav .programs label, 
+#study-abroad-programs:checked ~ nav .study-abroad-programs label, 
+#online-programs:checked ~ nav .online-programs label, 
+#courses:checked ~ nav .courses label{
+  padding-top: .5rem;
+}
+/* Component Needs */
+.pc-tab {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  background: $berkeley-blue;
+  & > nav {
+    width: 100%;
+  }
+  & > input {
+    display: none;
+  }
+  & > nav > ul {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 76px;
+    grid-auto-flow: column;
+    list-style: none;
+    margin: 0 !important;
+    padding-inline-start: 0px;
+    & > li {
+      text-align: center;
+      min-height: 76px; // Height is here to allow for the border-bottom to work on the span
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background: lighten($color: $berkeley-blue, $amount: 10);
+      }
+      &:active {
+        background: darken($color: $berkeley-blue, $amount: 10);
+      }
+      & > label {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        color: $california-gold; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        margin-bottom: 0px;
+        & > span {
+          max-width: 138px;
+        }
+      }
+    }
+  }
+}
+
+
+.spocc-products {
+  padding-top: 104px;
+  & > div {
+    display: block;
+  }
+}
+.spocc-checkbox--title {
+  text-indent: -1.7em;
+  margin-left: 1.6em;
+  padding-right: 1em;
+}
+
+// Program Block Styles
+.blueBlocks-wrapper {
+  display: grid;
+  grid-gap: 25px;
+  //grid-template-columns: repeat(auto-fill, minmax(calc(180px - 20px), 180px));
+  margin-bottom: 30px;
+}
+.tag-container {
+  .tag {
+    margin-left: 7px;
+    padding: 0 6.5px;
+    font-size: 0.5625em;
+  }
+}
+
+.spocc-line {
+  margin: 0;
+  position: absolute;
+  bottom: 7px;
+  width: 100vw;
+  @media only screen and (max-width: map-get($grid-breakpoints, "md") - 1) {
+    display: none;
+  }
+}
+
+.spocc {
+  --tab-offset: 124px;
+  //online learning page styles
+  #firstInfoRow.fullwidth {
+    h2 {
+      font-family: $font-family-serif; // FLAG: NEW FONT
+      font-size: 2rem;
+    }
+  }
+
+  h2, .h2 {
+    font-size: 2em;
+  }
+  #mainContentContainer {
+    margin-top: calc(-1 * var(--tab-offset));;
+  }
+  .courses-wrapper {
+    grid-gap: 30px;
+  }
+  p.blockquote {
+    font-family: $font-family-serif; // FLAG: NEW FONT
+  }
+  .online-faq {
+    dt {
+      margin: 10px 0 0;
+    }
+    dd {
+      margin-bottom: 2em;
+    }
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, "md") - 1) {
+    #mainContentContainer {
+      margin-top: -92px;
+    }
+  }
+  @media only screen and (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg") - 1) {
+    #mainContentContainer {
+      margin-top: -100px;
+    }
+  }
+}
+#pagePublicHome.spocc {
+  --tab-offset: 0px;
+  #mainContentContainer {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, "md") - 1) {
+    #mainContentContainer {
+      margin-top: 0;
+    }
+  }
+  @media only screen and (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg") - 1) {
+    #mainContentContainer {
+      margin-top: 0;
+    }
+  }
+}
+@media only screen and (max-width: map-get($grid-breakpoints, "xs") - 1) {}
+// ==== END skeleton screens ====
+@media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+  .spocc-filters {
+    grid-column: col1 / col3;
+  }
+  .grid-container-products {
+    grid-gap: 20px !important;
+    & > .products {
+      grid-column: col4 / col12;
+    }
+  }
+  .filter-body {
+    display: block !important;
+  }
+}
+@media only screen and (min-width: map-get($grid-breakpoints, "sm")) {
+  .course-wrapper > .grid-container-products{
+    grid-gap: 30px;
+  }
+  .online-faq-container {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 8fr 4fr;
+  }
+
+  #subjects:checked ~ nav .subjects label, 
+  #programs:checked ~ nav .programs label, 
+  #study-abroad-programs:checked ~ nav .study-abroad-programs label, 
+  #online-programs:checked ~ nav .online-programs label, 
+  #courses:checked ~ nav .courses label{
+    z-index: 2;
+    & > span {
+     color: #111;
+     padding-bottom: 0px;
+     border-bottom: 0px;
+   }
+   &::before {
+     margin-bottom: -1px;
+     border-top-width: 1px;
+     background: white;
+   }
+  }
+  .pc-tab {
+    // padding: 0;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    & > nav {
+      position: relative;
+      z-index: 1;
+      & > ul {
+        display: block;
+        margin: 0 0 0 3em;
+        & > li {
+          display: block;
+          min-height: auto;
+          & > label {
+            display: inline-block;
+            width: auto;
+            padding: 2.2em 3.3em 1.6em 2em !important; // changed from 1.5 cause it was showing line below inactive tabs
+            float: left;
+            // Needed to overload international label styling:
+            font-size: 100%;
+            font-weight: 600;
+            position: relative;
+            margin: 0 -0.6em;
+            color: inherit;
+            text-decoration: none;
+            &::before {
+              content: ''; 
+              position: absolute;
+              top: 0; right: 0; bottom: .5em; left: 0;
+              z-index: -1;
+              border-radius: 10px 10px 0 0;
+              background: #eee;
+              box-shadow: 0 2px hsla(0,0%,100%,.5) inset;
+              transform: perspective(2em) rotateX(4deg);
+              transform-origin: bottom left;
+              border: .12em solid #aaa;
+              border-bottom: 0px;
+              &:hover {
+                background: #f2f2f2;
+              }
+            }
+          }
+        }
+      }
+    }  
+    .search-form {
+      padding: 15px 10px 110px;
+    }
+    // END
+  }
+  .spocc-products {
+    padding-top: 0px;
+    & > div {
+      margin-top: 2em;
+    }
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "sm") - 1) {}
+
+@media only screen and (min-width: map-get($grid-breakpoints, "xs")) {
+  .blueBlocks-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(calc(180px - 25px), 180px));
+  }
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "xs") - 1) {}
