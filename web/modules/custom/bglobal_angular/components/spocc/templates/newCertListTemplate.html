@@ -8,17 +8,13 @@
                   data-ng-attr-aria-pressed="{{productList.filterVariables.featured.programs.filter}}"
                   data-ng-click="updateCertList(updateBinaryUriSwitch, 'featured', 'true')"
                   aria-controls="spocc-programs-list">
-            <span>off</span>
-            <span>on</span>
+            <span aria-label="off"></span>
+            <span aria-label="on"></span>
           </button>
           <label for="filter-featured--programs---button" class="switch noAfterContent">Featured Programs Only</label>
         </div>
       </fieldset>
       <div id="filter-programs" class="card mt-3" data-ng-if="productList.filterVariables.tab === 'online-programs'">
-        <button class="card-header cardHeadingToggle collapsed d-md-none" id="filter-programs--heading" data-toggle="collapse" data-target="#filter-programs--body" aria-expanded="false" aria-controls="#filter-programs--body" data-ng-init="accordionListeners('#filter-programs--body')">
-          <h3 class="h4 marginless-p">Academic Areas</h3>
-          <span class="glyphicon cardHeaderIcon pull-right glyphicon-plus"><span class="sr-only">Expand or collapse section</span></span>
-        </button>
         <fieldset id="filter-programs--body" class="collapse filter-body" aria-labelledby="filter-programs--heading">
           <!-- desktop filter header -->
           <legend class="h4 m-0 filter-header bg-gray-light d-none d-md-block">Academic Areas</legend>
