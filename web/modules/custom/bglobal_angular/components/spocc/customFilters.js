@@ -1,6 +1,5 @@
 /* global writeDebug,angular,app,encodeFilter,pageType  */
 /* eslint no-unused-vars: 0 */
-console.log("heeeey");
 function isFeatured(value, type, filters) {
   return !filters.featured[type].filter
     || (filters.featured[type].filter && (value.featured === 'Featured' || value.featured === 'true'));

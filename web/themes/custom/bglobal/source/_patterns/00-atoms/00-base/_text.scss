@@ -3,6 +3,11 @@ p {
 	margin-bottom: $space;
 }
 
+.lead {
+  font-size: $font-size-large;
+  font-weight: 300;
+}
+
 /* Blockquote */
 blockquote {
   border-left: 1px solid $gray;

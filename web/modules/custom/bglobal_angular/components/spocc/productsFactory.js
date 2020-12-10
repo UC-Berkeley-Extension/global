@@ -61,7 +61,7 @@ app.factory('productsFactory', ['$http', '$q', 'filterVariablesFactory', '$locat
     return border[type] || 'gap-border';
   };
 
-  pf.imageStyle = (catStringToEncode, prgStringToEncode) => `url('/images/programs/thumbnails/${pf.encodeImagePath(catStringToEncode)}_${pf.encodeImagePath(prgStringToEncode)}.jpg')`;
+  pf.imageStyle = (catStringToEncode, prgStringToEncode) => `url('https://extension.berkeley.edu/images/programs/thumbnails/${pf.encodeImagePath(catStringToEncode)}_${pf.encodeImagePath(prgStringToEncode)}.jpg')`;
 
   // Used in newCertBlocksTemplate.html to assign a class to load the programs' images
   pf.encodeImagePath = (stringToEncode) => stringToEncode.replace(/ |\/|\u2013|\u2014/g, '-').replace(/[()]|,/g, '').toLowerCase();

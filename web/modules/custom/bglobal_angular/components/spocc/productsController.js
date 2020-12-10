@@ -1,8 +1,6 @@
 /* global writeDebug,angular,app,pageTitle,programFilters,
 encodeFilter,encodeCamelCase,encodeName */
-
-console.log("hello spocc");
-    // src: `${drupalSettings.info_sessions_advising.imagePath}mariam-rahimi.png`,
+// src: `${drupalSettings.info_sessions_advising.imagePath}mariam-rahimi.png`,
 
 /* * Useful functions * */
 /**
