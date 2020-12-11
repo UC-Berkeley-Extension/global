@@ -15,7 +15,7 @@ js:
   //ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-route.min.js: { type: external, minified: true, crossorigin: anonymous }
   //ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-aria.min.js: { type: external, minified: true, crossorigin: anonymous }
   ../voices_common/voices_functions.js: {}
-  ../voices_common/voices_bootstrap.js: {}
+  ../common/bootstrap.js: {}
 
 
 
