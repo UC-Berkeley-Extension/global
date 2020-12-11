@@ -6,6 +6,8 @@
  *   - drupalSettings.nodeId
  *   - drupalSettings.nodeType
  *   - drupalSettings.nodeTitle
+ *   - drupalSettings.info_sessions_advising.imagePath
+ *   - drupalSettings.spocc.templatesPath
  */
 function bglobal_angular_preprocess_page(&$variables) {
   // Affect variable passed to page.html.twig and all of it's children
@@ -24,10 +26,13 @@ function bglobal_angular_preprocess_block(&$variables) {
   // Affect variable passed to block.html.twig and all of it's children
   if (!empty($variables['theme_hook_original'] == 'block')) {
     $plugin_id = $variables['derivative_plugin_id'];
+    $module_handler = \Drupal::service('module_handler');
+    $module_path = file_create_url($module_handler->getModule('bglobal_angular')->getPath());  
     if ($plugin_id == 'info_sessions_advising') {
-      $module_handler = \Drupal::service('module_handler');
-      $module_path = file_create_url($module_handler->getModule('bglobal_angular')->getPath());
       $variables['#attached']['drupalSettings'][$plugin_id]['imagePath'] = $module_path . "/images/";
+    }
+    if ($plugin_id == 'spocc') {
+      $variables['#attached']['drupalSettings'][$plugin_id]['templatesPath'] = $module_path . "/components/spocc/templates/";
     }
   }
 }
