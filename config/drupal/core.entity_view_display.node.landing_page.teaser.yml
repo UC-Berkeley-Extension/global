@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing_page.field_components
-    - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_school_microsite
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - user
@@ -15,12 +14,16 @@ targetEntityType: node
 bundle: landing_page
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
-  field_components: true
-  field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true
+  layout_builder__layout: true

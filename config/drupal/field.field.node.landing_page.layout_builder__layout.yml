@@ -1,16 +1,16 @@
-uuid: 4927e1a8-4bd3-4843-b401-4b51a97dc5cd
+uuid: 778f67d3-47fc-4da4-8484-eec0482a3a9a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.layout_builder__layout
-    - node.type.landing_page_lb
+    - node.type.landing_page
   module:
     - layout_builder
-id: node.landing_page_lb.layout_builder__layout
+id: node.landing_page.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: node
-bundle: landing_page_lb
+bundle: landing_page
 label: Layout
 description: ''
 required: false
