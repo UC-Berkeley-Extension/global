@@ -1,18 +1,18 @@
-{# data-ng-class="productsFactory.encodeTitles(program.name)"
-   data-ng-href="{{ productsFactory.decodeURLs(program.url) }}" #}
-{% set classes = [
-	'paragraph',
-	'paragraph--type-' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--display-mode-' ~ view_mode|clean_class,
-] %}
-
-<a class="blueBlock">
+<a class="blueBlock editing" href="{{ program.url }}">
   <div class="bb-imgs-wrapper">
-    <div class="bb-img" style="background-image: url('{{program.image.src}}');">{#  data-ng-style="{'background': [productsFactory.imageStyle(program.category, program.name)]}" #}</div>
+    <div class="bb-img" 
+      data-name="{{ program.name }}" data-category="{{ program.category }}"></div>
   </div>
-  <div class="bb-border">{#  data-ng-class="[productsFactory.certBorderClass(program.category)]" #}</div>
-  <div class="bb-text">{#  data-ng-class="[productsFactory.certBorderClass(program.category)]" #}
-    <p class="bb-content--superCategory">{{ program.category }}</p>
-    <h3 class="bb-content--title">{{ program.name }}</h3>
+  <div class="bb-border certs-pt-border"></div>
+  <div class="bb-text certs-pt-border">
+    <p class="bb-content--superCategory">
+      {{ program.category }}
+    </p>
+    <h3 class="bb-content--title">
+      {{ program.name }}
+    </h3>
   </div>
 </a>
+{% if loop.last %}
+  <script src="/patterns/01-molecules-spocc-program-card/molecules-program-card.js"></script>
+{% endif %}

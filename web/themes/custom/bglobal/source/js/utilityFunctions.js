@@ -1,3 +1,4 @@
+
 // 'Hello, World' --> 'hello'
 const encodeFilter = (string) => {
   if (string === 'International') return false;

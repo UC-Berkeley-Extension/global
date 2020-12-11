@@ -86,21 +86,7 @@
             <div class="cert-blocks">
               <div class="m-t-15 blueBlocks-wrapper">
                 {% for program in programs %}
-                <a class="blueBlock editing" href="{{ program.url }}">
-                  <div class="bb-imgs-wrapper">
-                    <div class="bb-img" 
-                      data-name="{{ program.name }}" data-category="{{ program.category }}"></div>
-                  </div>
-                  <div class="bb-border certs-pt-border"></div>
-                  <div class="bb-text certs-pt-border">
-                    <p class="bb-content--superCategory">
-                      {{ program.category }}
-                    </p>
-                    <h3 class="bb-content--title">
-                      {{ program.name }}
-                    </h3>
-                  </div>
-                </a>
+                  {% include '@molecules/spocc/program-card.twig' with {'program':program} %}
                 {% endfor %}
               </div>
               <p class="bg-warning"></p>
@@ -113,12 +99,4 @@
   </div>
 </form>
 
-<script>
-const bbImg = document.querySelectorAll('.bb-img');
-const encodeImagePath = (stringToEncode) => stringToEncode.replace(/ |\/|\u2013|\u2014/g, '-').replace(/[()]|,/g, '').toLowerCase();
-const imageStyle = (catStringToEncode, prgStringToEncode) => `url('https://extension.berkeley.edu/images/programs/thumbnails/${encodeImagePath(catStringToEncode)}_${encodeImagePath(prgStringToEncode)}.jpg')`;
-
-bbImg.forEach((img) => {
-  img.style.background = imageStyle(img.dataset.category,img.dataset.name);
-})
-</script>
+<script src="" />
