@@ -87,16 +87,14 @@
               <div class="m-t-15 blueBlocks-wrapper">
                 {% for program in programs %}
                   {% include '@molecules/spocc/program-card.twig' with {'program':program} %}
+                {% else %}
+                  <p class="bg-warning">No programs match your query</p>
                 {% endfor %}
               </div>
-              <p class="bg-warning"></p>
             </div>
           </div>
-          <p class="bg-warning"></p>
         </div>
       </div>
     </section>
   </div>
 </form>
-
-<script src="" />

@@ -13,6 +13,7 @@
     </h3>
   </div>
 </a>
-{% if loop.last %}
+
+{% if loop.last or not loop %}
   <script src="/patterns/01-molecules-spocc-program-card/molecules-program-card.js"></script>
 {% endif %}

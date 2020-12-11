@@ -46,7 +46,7 @@
   }
 }
 .bb-imgs-wrapper, .fallback-img {
-  background: url("/images/programs/thumbnails/default.jpg") 0 0;
+  background: url("/modules/custom/bglobal_angular/images/default.jpg") 0 0;
   background-size: 100% auto !important;
   background-color: #33618d;
 }
@@ -90,21 +90,7 @@
 }
 
 
-@media only screen and (min-width: map-get($grid-breakpoints, "sm")) {
-  .international-border {
-    border: 0px; /* Replace border with background */
-    background: $berkeley-blue;
-    background: url(/areas-of-study/white_promo_bground.png) 0 0;
-    color: $berkeley-blue;
-    h3 {
-      text-shadow: none;
-      color: $berkeley-blue;
-    }
-    .bb-content--superCategory {
-      font-style: italic;
-    }
-  }
-}
+@media only screen and (min-width: map-get($grid-breakpoints, "sm")) {}
 @media only screen and (max-width: map-get($grid-breakpoints, "xs") - 1) {
   .blueBlock {
     grid-template-columns: 12.5% 63% 25%;
