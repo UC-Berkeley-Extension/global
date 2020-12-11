@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.article.field_term_ref_editorial_section
-    - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.page.field_term_ref_editorial_section
     - field.field.node.view_page.field_term_ref_editorial_section
     - taxonomy.vocabulary.editorial_section
@@ -16,19 +15,15 @@ scheme_settings:
   vocabularies:
     - editorial_section
   fields:
-    -
+    0:
       entity_type: node
       bundle: article
       field: field_term_ref_editorial_section
-    -
-      entity_type: node
-      bundle: landing_page
-      field: field_term_ref_editorial_section
-    -
+    2:
       entity_type: node
       bundle: view_page
       field: field_term_ref_editorial_section
-    -
+    3:
       entity_type: node
       bundle: page
       field: field_term_ref_editorial_section
