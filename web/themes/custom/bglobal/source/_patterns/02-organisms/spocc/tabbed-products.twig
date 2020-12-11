@@ -1,0 +1,100 @@
+<form id="spoccForm" name="spocc">
+  <div>
+    <div aria-label="Types of international products" class="pc-tab" role="radiogroup">
+      <input aria-controls="spocc-programs" 
+        checked="checked" 
+        name="pct" 
+        type="radio" 
+        value="online-programs"> 
+      <input aria-controls="spocc-study-abroad" 
+        name="pct" 
+        type="radio" 
+        value="study-abroad-programs">
+      <nav>
+        <ul>
+          <li class="online-programs mb-0">
+            <label for="online-programs"><span>Online Programs</span></label>
+          </li>
+          <li class="study-abroad-programs mb-0">
+            <label for="study-abroad-programs"><span>Study-Abroad Programs</span></label>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section aria-label="Programs available to international students" class="spocc-products">
+      <div aria-live="polite" class="online-programs" id="spocc-programs">
+        <h2 class="sr-only">
+          Online Programs
+        </h2>
+        <p class="lead">
+          Take online programs and courses from anywhere in the world! Receive a Berkeley-quality education from the comfort of your home; students on an F1 visa are not eligible.
+        </p>
+        <div class="products grid-container-fluid grid-container-products">
+          <div class="spocc-filters" id="subjectFilter">
+            <form>
+              <fieldset id="filter-toggles-programs">
+                <legend class="sr-only">Toggle filters for programs</legend>
+                <div class="switch-wrapper" id="filter-featured--programs">
+                  <button aria-controls="spocc-programs-list" aria-pressed="false" class="switch switch-container" id="filter-featured--programs---button">
+                    <span aria-label="off"></span> 
+                    <span aria-label="on"></span>
+                  </button>
+                  <label class="switch" for="filter-featured--programs---button">Featured Programs Only</label>
+                </div>
+              </fieldset>
+              <div class="card mt-3" id="filter-programs">
+                <fieldset aria-labelledby="filter-programs--heading" class="collapse filter-body" id="filter-programs--body">
+                  <legend class="h4 m-0 filter-header bg-gray-light d-none d-md-block">Academic Areas</legend>
+                  <div class="filter-body--fields">
+                    <p class="">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">All Academic Areas</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Art and Design</span> <span class="filter-count">(9)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Behavioral Health Sciences</span> <span class="filter-count">(9)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Business</span> <span class="filter-count">(30)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Construction and Sustainability</span> <span class="filter-count">(4)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Education</span> <span class="filter-count">(7)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label text-gray"><input aria-controls="spocc-programs-list" disabled="disabled" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Humanities and Languages</span> <span class="filter-count">(0)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Sciences, Mathematics and Biotechnology</span> <span class="filter-count">(6)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Technology and Information Management</span> <span class="filter-count">(14)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0">
+                      <label class="checkbox-as-link flex-label"><input aria-controls="spocc-programs-list" name="programRadio" type="radio" value="true"> <span class="filter-label-text">Writing, Editing and Technical Communication</span> <span class="filter-count">(5)</span></label>
+                    </p>
+                    <p class="mt-2 mb-0"></p>
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <div aria-live="polite" class="products" id="spocc-programs-list">
+            <div class="cert-blocks">
+              <div class="m-t-15 blueBlocks-wrapper">
+                {% for program in programs %}
+                  {% include '@molecules/spocc/program-card.twig' with {'program':program} %}
+                {% else %}
+                  <p class="bg-warning">No programs match your query</p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</form>

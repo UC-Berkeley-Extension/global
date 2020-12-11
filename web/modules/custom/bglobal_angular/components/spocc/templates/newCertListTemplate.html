@@ -1,0 +1,115 @@
+<div id="subjectFilter" class="spocc-filters">
+  <form>
+    <fieldset id="filter-toggles-programs" data-ng-if="productList.filterVariables.featured.programs.show">
+      <legend class="sr-only">Toggle filters for programs</legend>
+      <div id="filter-featured--programs" class="switch-wrapper"  data-ng-if="productList.filterVariables.featured.programs.show">
+        <button id="filter-featured--programs---button" class="switch switch-container" data-ng-class="{checked:productList.filterVariables.featured.programs.filter}" 
+                data-ng-attr-aria-pressed="{{productList.filterVariables.featured.programs.filter}}"
+                data-ng-click="updateCertList(updateBinaryUriSwitch, 'featured', 'true')"
+                aria-controls="spocc-programs-list">
+          <span aria-label="off"></span>
+          <span aria-label="on"></span>
+        </button>
+        <label for="filter-featured--programs---button" class="switch noAfterContent">Featured Programs Only</label>
+      </div>
+    </fieldset>
+    <div id="filter-programs" class="card mt-3" data-ng-if="productList.filterVariables.tab === 'online-programs'">
+      <fieldset id="filter-programs--body" class="collapse filter-body" aria-labelledby="filter-programs--heading">
+        <!-- desktop filter header -->
+        <legend class="h4 m-0 filter-header bg-gray-light d-none d-md-block">Academic Areas</legend>
+        <div class="filter-body--fields">
+          <p class="">
+            <label class="noAfterContent checkbox-as-link flex-label">
+              <input  type="radio"
+                      data-ng-model="productList.filterVariables.academicAreas.all"
+                      data-ng-value="true"
+                      data-ng-change="updateCertList(updateUri, 'academicArea', 'all')"
+                      name="programRadio"
+                      aria-controls="spocc-programs-list">
+              <span class="filter-label-text">All Academic Areas</span>
+              <!-- <span>({{ area.programs.count || 00 }})</span> -->
+            </label> 
+          </p>
+          <p class="mt-2 mb-0" data-ng-repeat="(key, area) in productList.filterVariables.academicAreas">
+            <label class="noAfterContent checkbox-as-link flex-label" data-ng-if="area.name" data-ng-class="{'text-gray': area.count.programs <= 0}">
+              <input  type="radio"
+                      data-ng-model="productList.filterVariables.academicAreas[key].filter"
+                      data-ng-disabled="area.count.programs <= 0"
+                      data-ng-value="true"
+                      data-ng-change="updateCertList(updateUri, 'academicArea', key)"
+                      name="programRadio"
+                      aria-controls="spocc-programs-list">
+              <span class="filter-label-text">{{ area.name }}</span>
+              <span class="filter-count">({{ area.count.programs || 00 }})</span>
+            </label> 
+          </p>
+        </div>
+      </fieldset>
+    </div>
+    <div id="filter-international" class="card mt-3"  data-ng-if="productList.filterVariables.tab === 'study-abroad-programs'">
+      <button class="card-header cardHeadingToggle collapsed d-md-none" id="filter-international--heading" data-toggle="collapse" data-target="#filter-international--body" aria-expanded="false" aria-controls="#filter-international--body" data-ng-init="accordionListeners('#filter-international--body')">
+        <h3 class="h4 marginless-p">Filter Your Results</h3>
+        <span class="glyphicon cardHeaderIcon pull-right glyphicon-plus"><span class="sr-only">Expand or collapse section</span></span>
+      </button>
+      <fieldset id="filter-international--body" class="collapse filter-body" aria-labelledBy="filter-international--heading">
+        <legend class="h4 m-0 filter-header bg-gray-light d-none d-md-block">Filter Your Results</legend>
+        <div class="filter-body--fields">
+          <div id="filter-international--professional">
+            <label class="noAfterContent spocc-checkbox">
+              <p class="mb-0 spocc-checkbox--title">
+                <input
+                      type="checkbox"
+                      data-ng-model="productList.filterVariables.international.professional.filter"
+                      data-ng-change="updateCertList(updateListUri, 'international')"
+                    aria-controls="spocc-programs-list">
+                <span class="filter-label">Professionals </span>
+                <span class="filter-count">({{ productList.filterVariables.international.professional.count || 00 }})</span>
+                <!-- <span class="tag-container" data-ng-repeat="tag in productList.filterVariables.tags.professional track by $index">
+                  <span class="tag" data-ng-class="[productList.filterVariables.tags.professional[$index]]"></span>
+                </span> -->
+              </p>
+              <p class="filter-label-info filter-label-text">Earn a professional certificate, then apply for internships or OPT.</p>
+            </label> 
+          </div>
+          <div id="filter-international--academic">
+            <label class="noAfterContent spocc-checkbox">
+              <p class="mb-0 spocc-checkbox--title">
+                <input
+                    type="checkbox"
+                    data-ng-model="productList.filterVariables.international.academic.filter"
+                    data-ng-change="updateCertList(updateListUri, 'international')"
+                    aria-controls="spocc-programs-list">
+                <span class="filter-label">University Students </span>
+                <span class="filter-count"> ({{ productList.filterVariables.international.academic.count || 00 }})</span>
+                <!-- <span class="tag-container" data-ng-repeat="tag in productList.filterVariables.tags.academic track by $index">
+                  <span class="tag" data-ng-class="[productList.filterVariables.tags.academic[$index]]"></span>
+                </span> -->
+              </p>
+              <p class="filter-label-info filter-label-text">Immerse yourself in UC Berkeley campus life for a semester or full academic year.</p>
+            </label>
+          </div>
+          <div id="filter-international--highSchool">
+            <label class="noAfterContent spocc-checkbox">
+              <p class="mb-0 spocc-checkbox--title">
+                <input
+                    type="checkbox"
+                    data-ng-model="productList.filterVariables.international.highSchool.filter"
+                    data-ng-change="updateCertList(updateListUri, 'international')"
+                    aria-controls="spocc-programs-list">
+                <span class="filter-label">High School Graduates </span>
+                <span class="filter-count"> ({{ productList.filterVariables.international.highSchool.count || 00 }})</span>
+                <!-- <span class="tag-container" data-ng-repeat="tag in productList.filterVariables.tags.highSchool track by $index">
+                  <span class="tag" data-ng-class="[productList.filterVariables.tags.highSchool[$index]]"></span>
+                </span> -->
+              </p>
+              <p class="filter-label-info filter-label-text">Attend college-level courses and receive personalized advising.</p>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    </div>
+  </form>
+</div>
+<div id="spocc-programs-list" aria-live="polite" data-ng-include="productList.certBlocksTemplate" class="products"></div>
+<p class="bg-warning ng-cloak" data-ng-bind="error"></p>
