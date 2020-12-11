@@ -3,10 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
-    - block_content.type.call_to_action
-    - block_content.type.english_proficiency
-    - block_content.type.feature_box
     - field.field.node.program.body
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_shortname
@@ -67,39 +63,6 @@ third_party_settings:
           class:
             container: container
         components:
-          14daad3b-42b9-4630-9156-46c0fb834a27:
-            uuid: 14daad3b-42b9-4630-9156-46c0fb834a27
-            region: second
-            configuration:
-              id: 'inline_block:call_to_action'
-              label: 'Apply Now'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 5
-              block_serialized: null
-              context_mapping: {  }
-              block_uuid: e349a631-440f-4ffc-b6de-6e8bce48e649
-            additional: {  }
-            weight: 1
-          94c38af4-416a-4ecb-8fd6-bd134769836d:
-            uuid: 94c38af4-416a-4ecb-8fd6-bd134769836d
-            region: second
-            configuration:
-              id: 'field_block:node:program:field_program_description'
-              label: 'Program Description'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
           79f11ad0-65e7-4218-933b-01db5da0ddf9:
             uuid: 79f11ad0-65e7-4218-933b-01db5da0ddf9
             region: first
@@ -157,6 +120,24 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          94c38af4-416a-4ecb-8fd6-bd134769836d:
+            uuid: 94c38af4-416a-4ecb-8fd6-bd134769836d
+            region: second
+            configuration:
+              id: 'field_block:node:program:field_program_description'
+              label: 'Program Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -212,21 +193,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 3
-          8cc6ef45-f4cc-4a1a-b068-af3343fb99eb:
-            uuid: 8cc6ef45-f4cc-4a1a-b068-af3343fb99eb
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Your Study Options'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 6
-              block_serialized: null
-              context_mapping: {  }
-              block_uuid: 0b671609-3b3f-4624-90ca-0f0a9c2abef7
-            additional: {  }
-            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -259,37 +225,7 @@ third_party_settings:
             bg-light: bg-light
             bg-teal: 0
           title: 'International Students'
-        components:
-          1417fed0-935c-4594-a0fb-afbe659da2bf:
-            uuid: 1417fed0-935c-4594-a0fb-afbe659da2bf
-            region: first
-            configuration:
-              id: 'inline_block:feature_box'
-              label: 'International Student Info'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 4
-              block_serialized: null
-              context_mapping: {  }
-              block_uuid: 546bae8e-2d73-4871-9b57-1a53a7818a43
-            additional: {  }
-            weight: 0
-          59766bd7-7e41-4ea2-b759-6b6fb2486854:
-            uuid: 59766bd7-7e41-4ea2-b759-6b6fb2486854
-            region: second
-            configuration:
-              id: 'inline_block:english_proficiency'
-              label: 'English Proficiency Requirements'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 3
-              block_serialized: null
-              context_mapping: {  }
-              block_uuid: 3e8afb12-ae97-4876-9ec9-958108a8c5ef
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
