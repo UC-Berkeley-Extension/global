@@ -3,10 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.body
+    - block_content.type.feature_box
+    - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_email
+    - field.field.node.program.field_program_featured
     - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_voices_feed_id
     - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_tags
     - field.field.node.program.field_term_ref_academic_level
     - field.field.node.program.field_term_ref_certificate_type
     - field.field.node.program.field_term_ref_delivery_method
@@ -19,8 +25,10 @@ dependencies:
   module:
     - bglobal_layouts
     - bglobal_pardot
+    - component
     - layout_builder
     - layout_discovery
+    - link
     - text
     - user
     - views
@@ -54,6 +62,78 @@ third_party_settings:
               id: 'extra_field_block:node:program:links'
             additional: {  }
             weight: 6
+          c0b4907b-ef73-4620-ae7e-fc3e1dd4b1ae:
+            uuid: c0b4907b-ef73-4620-ae7e-fc3e1dd4b1ae
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_application_cta'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 8
+          ac2be1fb-3374-448f-b3e2-45c9e4959824:
+            uuid: ac2be1fb-3374-448f-b3e2-45c9e4959824
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_cost'
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_decimal
+            additional: {  }
+            weight: 9
+          5d549a82-380f-4ee6-8f26-9d99db3d9abb:
+            uuid: 5d549a82-380f-4ee6-8f26-9d99db3d9abb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_email'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+            additional: {  }
+            weight: 10
+          5889fbac-decd-49d8-8e49-18a02742409a:
+            uuid: 5889fbac-decd-49d8-8e49-18a02742409a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_featured'
+              formatter:
+                label: above
+                settings:
+                  format: default
+                  format_custom_false: ''
+                  format_custom_true: ''
+                third_party_settings: {  }
+                type: boolean
+            additional: {  }
+            weight: 11
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -82,25 +162,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          2e103050-e686-431e-abe4-936c607d1dd2:
-            uuid: 2e103050-e686-431e-abe4-936c607d1dd2
-            region: first
-            configuration:
-              id: 'field_block:node:program:field_program_shortname'
-              label: 'Program Shortname'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 2
           3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c:
             uuid: 3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c
             region: first
@@ -137,7 +198,41 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 0
+            weight: 1
+          d172cf4e-6b34-4185-bef2-083f52ac666f:
+            uuid: d172cf4e-6b34-4185-bef2-083f52ac666f
+            region: second
+            configuration:
+              id: 'inline_block:feature_box'
+              label: 'Student testomonial'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 1
+              block_serialized: null
+              context_mapping: {  }
+              block_uuid: 5ce929ea-7d1b-4447-95ec-dcdca40b7e09
+            additional: {  }
+            weight: 3
+          2e103050-e686-431e-abe4-936c607d1dd2:
+            uuid: 2e103050-e686-431e-abe4-936c607d1dd2
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_program_shortname'
+              label: 'Program Shortname'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -169,6 +264,21 @@ third_party_settings:
                 page_title: page_title
                 success_location: success_location
                 error_location: error_location
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          79827359-ce24-44a4-bf96-6dbb600443cd:
+            uuid: 79827359-ce24-44a4-bf96-6dbb600443cd
+            region: second
+            configuration:
+              id: 'component:info_sessions_advising'
+              label: 'Angular: Info Sessions Advising'
+              provider: component
+              label_display: '0'
+              form_configuration:
+                info-sessions-advising: ''
+                info: ''
+                cert: default
               context_mapping: {  }
             additional: {  }
             weight: 0
@@ -237,12 +347,61 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_program_application_cta:
+    weight: 17
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_cost:
+    weight: 18
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
   field_program_description:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_program_email:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_program_featured:
+    weight: 20
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_program_voices_feed_id:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_ref_certificates:
     weight: 8
@@ -252,6 +411,14 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_tags:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_term_ref_academic_level:
     weight: 0
@@ -283,7 +450,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  body: true
   field_program_shortname: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true

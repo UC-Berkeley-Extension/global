@@ -1,0 +1,21 @@
+uuid: 70cc43ac-0601-40bd-a5cc-cfbaaea7caab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_email
+    - node.type.program
+id: node.program.field_program_email
+field_name: field_program_email
+entity_type: node
+bundle: program
+label: Email
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: extension@berkeley.edu
+default_value_callback: ''
+settings: {  }
+field_type: email

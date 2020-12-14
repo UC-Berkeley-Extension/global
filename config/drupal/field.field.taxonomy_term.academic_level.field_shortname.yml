@@ -1,0 +1,19 @@
+uuid: af105a66-da15-4631-913e-a9cf1aa84af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_shortname
+    - taxonomy.vocabulary.academic_level
+id: taxonomy_term.academic_level.field_shortname
+field_name: field_shortname
+entity_type: taxonomy_term
+bundle: academic_level
+label: Shortname
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

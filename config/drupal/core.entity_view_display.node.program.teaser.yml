@@ -4,10 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.program.body
+    - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_email
+    - field.field.node.program.field_program_featured
     - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_voices_feed_id
     - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_tags
     - field.field.node.program.field_term_ref_academic_level
     - field.field.node.program.field_term_ref_certificate_type
     - field.field.node.program.field_term_ref_delivery_method
@@ -16,19 +21,15 @@ dependencies:
     - field.field.node.program.layout_builder__layout
     - node.type.program
   module:
-    - text
     - user
 id: node.program.teaser
 targetEntityType: node
 bundle: program
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
+  content_moderation_control:
+    weight: -20
+    settings: {  }
     third_party_settings: {  }
     region: content
   links:
@@ -37,9 +38,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_program_application_cta: true
+  field_program_cost: true
   field_program_description: true
+  field_program_email: true
+  field_program_featured: true
   field_program_shortname: true
+  field_program_voices_feed_id: true
   field_ref_certificates: true
+  field_tags: true
   field_term_ref_academic_level: true
   field_term_ref_certificate_type: true
   field_term_ref_delivery_method: true
