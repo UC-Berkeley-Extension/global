@@ -1,0 +1,19 @@
+uuid: d10c6250-e18e-4b09-8e7a-eba992bb2945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_cost
+    - node.type.certificate
+id: node.certificate.field_certificate_cost
+field_name: field_certificate_cost
+entity_type: node
+bundle: certificate
+label: 'Certificate Cost'
+description: 'The cost of the certificate.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

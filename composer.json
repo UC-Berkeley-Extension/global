@@ -48,6 +48,7 @@
     "drupal/menu_item_extras": "^2.12",
     "drupal/paragraphs": "^1.12",
     "drupal/pathauto": "^1.8",
+    "drupal/rabbit_hole": "^1.0@beta",
     "drupal/term_condition": "1.x-dev",
     "drupal/twig_field_value": "^2.0",
     "drupal/twig_tweak": "^2.6",
@@ -110,7 +111,11 @@
     },
     "patches": {
       "drupal/core": {
-        "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch"
+        "Views twig template suggestions": "https://www.drupal.org/files/issues/2020-05-16/2118743-183-twig-debug-info.patch",
+        "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder) (https://www.drupal.org/project/drupal/issues/3049332)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
+      },
+      "drupal/block_field": {
+        "Changing the available blocks for a 'Block (plugin)' field produces a Recoverable fatal error (https://www.drupal.org/project/block_field/issues/2861670)": "https://www.drupal.org/files/issues/2020-06-23/block_field-available-blocks-2861670-40.patch"
       },
       "drupal/menu_item_extras": {
         "Error when creating new menus (https://www.drupal.org/project/menu_item_extras/issues/3061342)": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin_0.patch"

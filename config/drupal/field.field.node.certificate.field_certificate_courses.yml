@@ -1,0 +1,23 @@
+uuid: cb20c9b5-5081-4608-8695-7f322fc0680c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_courses
+    - node.type.certificate
+id: node.certificate.field_certificate_courses
+field_name: field_certificate_courses
+entity_type: node
+bundle: certificate
+label: 'Certificate Courses'
+description: 'Course details'
+required: false
+translatable: false
+default_value:
+  -
+    value: '4 core'
+  -
+    value: '1.5 units CEU'
+default_value_callback: ''
+settings: {  }
+field_type: string

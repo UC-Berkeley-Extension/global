@@ -1,0 +1,21 @@
+uuid: d8fd98eb-a532-46f0-add6-138cfdbb40ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_toefl
+id: block_content.english_proficiency.field_esl_toefl
+field_name: field_esl_toefl
+entity_type: block_content
+bundle: english_proficiency
+label: TOEFL
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '90'
+default_value_callback: ''
+settings: {  }
+field_type: string

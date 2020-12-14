@@ -1,0 +1,19 @@
+uuid: 2d37a1a4-2ed8-4a54-b45d-a87cf5a217fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_program_application_cta
+field_name: field_program_application_cta
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

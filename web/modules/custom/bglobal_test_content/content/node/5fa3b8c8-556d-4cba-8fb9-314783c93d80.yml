@@ -32,11 +32,20 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: ''
       langcode: en
       pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
   body:
     -
       value: "<p>This is an article page.</p>\r\n"

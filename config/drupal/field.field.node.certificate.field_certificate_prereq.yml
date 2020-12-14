@@ -1,0 +1,21 @@
+uuid: a21abb6a-cb02-4ed1-b5e1-e8414458d848
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_prereq
+    - node.type.certificate
+id: node.certificate.field_certificate_prereq
+field_name: field_certificate_prereq
+entity_type: node
+bundle: certificate
+label: Prerequisite
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '3 years undergrad'
+default_value_callback: ''
+settings: {  }
+field_type: string

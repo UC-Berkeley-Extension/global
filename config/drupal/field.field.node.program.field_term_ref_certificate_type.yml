@@ -1,0 +1,29 @@
+uuid: db398b5e-2948-4dca-bf84-9ba15d3dcb64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_ref_certificate_type
+    - node.type.program
+    - taxonomy.vocabulary.certificate_type
+id: node.program.field_term_ref_certificate_type
+field_name: field_term_ref_certificate_type
+entity_type: node
+bundle: program
+label: 'Certificate Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      certificate_type: certificate_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
