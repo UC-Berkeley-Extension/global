@@ -2103,7 +2103,6 @@ button, input, select, textarea {
   margin: 0 1px 0; }
 
 input, textarea {
-  width: 100%;
   border: 1px solid #EEEEEE;
   padding: 0.5em 0.65rem; }
 
