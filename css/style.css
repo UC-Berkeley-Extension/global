@@ -1964,7 +1964,11 @@ fieldset {
 
 label {
   display: block;
-  padding-bottom: 0.5em; }
+  padding-bottom: 0.5em;
+  font-weight: 600; }
+
+input[type="checkbox"] + label {
+  display: inline-block; }
 
 button, input, select, textarea {
   font-family: inherit;
@@ -2016,6 +2020,12 @@ input[type="search"]::-webkit-search-decoration {
 
 .is-valid {
   border-color: #C4820E; }
+
+.form-wrapper {
+  margin-bottom: 1em; }
+
+.js-form-item:not(.js-form-type-textarea) {
+  margin-bottom: 1em; }
 
 /*------------------------------------*\
     $SPECIFIC FORMS
