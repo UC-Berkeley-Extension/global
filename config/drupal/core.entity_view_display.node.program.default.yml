@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.feature_box
+    - block_content.type.basic
+    - block_content.type.english_proficiency
+    - block_content.type.hero
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
@@ -20,8 +22,6 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
-    - views.view.certificate_quick_view
-    - views.view.study_options
   module:
     - bglobal_layouts
     - bglobal_pardot
@@ -31,7 +31,6 @@ dependencies:
     - link
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: true
@@ -42,26 +41,58 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          8f1480e3-742a-47c5-b709-b70aab82ac65:
-            uuid: 8f1480e3-742a-47c5-b709-b70aab82ac65
+          3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c:
+            uuid: 3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c
             region: content
             configuration:
+              id: 'field_block:node:program:field_term_ref_certificate_type'
+              label: 'Certificate Type'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:program:content_moderation_control'
+                view_mode: view_mode
             additional: {  }
-            weight: 7
-          9ede018e-bcbf-4545-b364-1352f7c9ef2f:
-            uuid: 9ede018e-bcbf-4545-b364-1352f7c9ef2f
+            weight: 16
+          79f11ad0-65e7-4218-933b-01db5da0ddf9:
+            uuid: 79f11ad0-65e7-4218-933b-01db5da0ddf9
             region: content
             configuration:
+              id: 'field_block:node:program:field_term_ref_delivery_method'
+              label: 'Delivery Method'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:program:links'
+                view_mode: view_mode
             additional: {  }
-            weight: 6
+            weight: 15
+          f034e96e-d079-4b2e-8475-fae928fb58b6:
+            uuid: f034e96e-d079-4b2e-8475-fae928fb58b6
+            region: content
+            configuration:
+              id: 'inline_block:hero'
+              label: 'Program Hero'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 6
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 17
           c0b4907b-ef73-4620-ae7e-fc3e1dd4b1ae:
             uuid: c0b4907b-ef73-4620-ae7e-fc3e1dd4b1ae
             region: content
@@ -81,142 +112,10 @@ third_party_settings:
                 third_party_settings: {  }
                 type: link
             additional: {  }
-            weight: 8
-          ac2be1fb-3374-448f-b3e2-45c9e4959824:
-            uuid: ac2be1fb-3374-448f-b3e2-45c9e4959824
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_cost'
-              formatter:
-                label: above
-                settings:
-                  thousand_separator: ''
-                  decimal_separator: .
-                  scale: 2
-                  prefix_suffix: true
-                third_party_settings: {  }
-                type: number_decimal
-            additional: {  }
-            weight: 9
-          5d549a82-380f-4ee6-8f26-9d99db3d9abb:
-            uuid: 5d549a82-380f-4ee6-8f26-9d99db3d9abb
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_email'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: basic_string
-            additional: {  }
-            weight: 10
-          5889fbac-decd-49d8-8e49-18a02742409a:
-            uuid: 5889fbac-decd-49d8-8e49-18a02742409a
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_featured'
-              formatter:
-                label: above
-                settings:
-                  format: default
-                  format_custom_false: ''
-                  format_custom_true: ''
-                third_party_settings: {  }
-                type: boolean
-            additional: {  }
-            weight: 11
-        third_party_settings: {  }
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: Subheader
-          column_widths: 25-75
-          class:
-            container: container
-        components:
-          79f11ad0-65e7-4218-933b-01db5da0ddf9:
-            uuid: 79f11ad0-65e7-4218-933b-01db5da0ddf9
-            region: first
-            configuration:
-              id: 'field_block:node:program:field_term_ref_delivery_method'
-              label: 'Delivery Method'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c:
-            uuid: 3a75cb75-9bd2-4941-a4d5-0ab7e3ea0b8c
-            region: first
-            configuration:
-              id: 'field_block:node:program:field_term_ref_certificate_type'
-              label: 'Certificate Type'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_label
-                settings:
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
-          94c38af4-416a-4ecb-8fd6-bd134769836d:
-            uuid: 94c38af4-416a-4ecb-8fd6-bd134769836d
-            region: second
-            configuration:
-              id: 'field_block:node:program:field_program_description'
-              label: 'Program Description'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
-          d172cf4e-6b34-4185-bef2-083f52ac666f:
-            uuid: d172cf4e-6b34-4185-bef2-083f52ac666f
-            region: second
-            configuration:
-              id: 'inline_block:feature_box'
-              label: 'Student testomonial'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 1
-              block_serialized: null
-              context_mapping: {  }
-              block_uuid: 5ce929ea-7d1b-4447-95ec-dcdca40b7e09
-            additional: {  }
-            weight: 3
+            weight: 18
           2e103050-e686-431e-abe4-936c607d1dd2:
             uuid: 2e103050-e686-431e-abe4-936c607d1dd2
-            region: first
+            region: content
             configuration:
               id: 'field_block:node:program:field_program_shortname'
               label: 'Program Shortname'
@@ -232,7 +131,35 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 14
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Subheader
+          column_widths: 75-25
+          class:
+            bg-light: 0
+            bg-teal: 0
+        components:
+          94c38af4-416a-4ecb-8fd6-bd134769836d:
+            uuid: 94c38af4-416a-4ecb-8fd6-bd134769836d
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_program_description'
+              label: 'Program Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -284,58 +211,43 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Study Options'
-          class:
-            container: container
-        components:
-          823f7408-9f8c-4c66-adcb-41ca5f963168:
-            uuid: 823f7408-9f8c-4c66-adcb-41ca5f963168
-            region: content
-            configuration:
-              id: 'views_block:study_options-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 3
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Curriculum
-          class:
-            bg-light: 0
-            bg-teal: 0
-        components:
-          5c709a48-2d65-4b88-8052-eea1b6ba2a3d:
-            uuid: 5c709a48-2d65-4b88-8052-eea1b6ba2a3d
-            region: content
-            configuration:
-              id: 'views_block:certificate_quick_view-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
         layout_id: bglobal_twocol_section
         layout_settings:
           label: International
-          column_widths: 25-75
+          column_widths: 50-50
           class:
             bg-light: bg-light
             bg-teal: 0
           title: 'International Students'
-        components: {  }
+        components:
+          b50a10e1-e2e5-43f7-b063-ddf1a2a22198:
+            uuid: b50a10e1-e2e5-43f7-b063-ddf1a2a22198
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: 'International Students '
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 7
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          f2559f89-1af0-4c58-878a-57c2cd7c0b68:
+            uuid: f2559f89-1af0-4c58-878a-57c2cd7c0b68
+            region: second
+            configuration:
+              id: 'inline_block:english_proficiency'
+              label: 'English Proficiency Requirements'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 9
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
