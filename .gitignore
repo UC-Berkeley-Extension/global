@@ -209,3 +209,4 @@ circleci/database/*
 /.eslintrc
 /berkeley_global.sublime-project
 /berkeley_global.sublime-workspace
+/my-sql-dump-global.sql

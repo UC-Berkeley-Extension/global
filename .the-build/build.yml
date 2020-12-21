@@ -39,6 +39,27 @@ drupal:
         username: "db"
         password: "db"
         host: "127.0.0.1"
+      # Configuration for the database loading utility. (from /vendor/palantirnet/the-build/defaults.yml:127)
+      load_db:
+        # Pattern to match gzipped database dump files.
+        export_pattern: "my-sql-dump-global.sql"
+        # The following two commands are composed to load the database into Drupal:
+        #   $> gunzip -c FILENAME.sql.gz | drush sqlc
+        #
+        # Command to extract text contents of the backup file.
+        # contents_command: gunzip -c
+        # -----
+        # Tommaso 12/21/20: The Above wasn't working, possibly because of a gzip 
+        # issue with the live server.
+        contents_command: cat
+        # Command to load database contents into Drupal.
+        mysql_command: drush sqlc
+
+        # Load a specific file rather than one matching the `export_pattern`. This can be used
+        # if your build relies on a seed database that is checked in to the repository.
+        # Otherwise, you may occasionally want to set this value at run time:
+        #   $> phing load-db -Ddb.load.file=artifacts/foo.sql.gz
+        file: "my-sql-dump-global.sql"
 
       settings:
         # Use the Pantheon convention

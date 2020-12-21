@@ -127,12 +127,18 @@
       },
       "drupal/layout_builder_tabs": {
         "Render array key error (https://www.drupal.org/project/layout_builder_tabs/issues/3150894)": "https://www.drupal.org/files/issues/2020-07-27/layout_builder_tabs-user_errors-3150894-5.patch"
+      },
+      "drupal/menu_item_extras": {
+        "User error on rendering second level menu items with Layout Builder (https://www.drupal.org/project/menu_item_extras/issues/3020650)": "https://www.drupal.org/files/issues/2020-09-25/layout_builder-3020650-40.patch"
       }
     }
   },
   "scripts": {
     "post-install-cmd": [
-        "echo 'Setting directory permissions...' && sudo chmod -R a+w web/sites"
+        "echo 'Setting directory permissions...' && sudo chmod -R a+w web/sites",
+        "~/vendor/bin/terminus drush berkeleyglobal.dev --  cr",
+        "~/vendor/bin/terminus drush berkeleyglobal.dev --  sql-dump > my-sql-dump-global.sql",
+        "sudo chmod -R a+w my-sql-dump-global.sql"
     ]
   }
 }
