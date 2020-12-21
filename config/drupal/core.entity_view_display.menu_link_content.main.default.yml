@@ -7,6 +7,7 @@ dependencies:
     - system.menu.main
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
 third_party_settings:
   layout_builder:
@@ -29,6 +30,47 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories:
+      - 'Berkely Global Pardot Forms'
+      - 'Chaos Tools'
+      - Component
+      - 'Content fields'
+      - 'Custom block types'
+      - Devel
+      - Forms
+      - Help
+      - 'Inline blocks'
+      - 'Lists (Views)'
+      - Menus
+      - System
+      - User
+      - Workbench
+      - core
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Berkely Global Pardot Forms': {  }
+        'Chaos Tools': {  }
+        Component: {  }
+        'Content fields': {  }
+        'Custom block types': {  }
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        Menus:
+          - 'menu_block:main'
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        core: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts:
+        - layout_onecol
+        - layout_twocol_section
+        - layout_threecol_section
+        - layout_fourcol_section
 id: menu_link_content.main.default
 targetEntityType: menu_link_content
 bundle: main
