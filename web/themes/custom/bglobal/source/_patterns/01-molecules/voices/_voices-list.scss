@@ -2,7 +2,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+    // grid-gap: 1em;
   }
   &__wrapper {
     &:hover img,
@@ -28,5 +28,7 @@
   &__title {
     font-family: $font-bitter;
     font-weight: 800;
+    font-size: 1.25em;
+    color: $black;
   }
 }

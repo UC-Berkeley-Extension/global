@@ -5,18 +5,7 @@
     {% endblock %}
 
     {% block page_hero %}
-      {% include "@molecules/hero/hero.twig" with {
-        'hero': {
-          'img': {
-            'src': "https://source.unsplash.com/random",
-            'alt': "Alt text here."
-          },
-          'title': "Experience Berkeley Global",
-          'subtitle': "Take courses from anywhere in the world",
-        }
-      } %}
-
-
+      {% include "@molecules/hero/hero.twig" %}
     {% endblock %}
 
     <div id="main">
@@ -107,6 +96,11 @@
             </div>
           {% endblock %}
 
+          <!-- SPOCC goes here -->
+
+          {% block page_form %}
+            {% include "@atoms/forms/forms.twig" with { 'forms': {'title': 'Contact Us'} } %}
+          {% endblock %}
         </div>
       </main>
     </div>

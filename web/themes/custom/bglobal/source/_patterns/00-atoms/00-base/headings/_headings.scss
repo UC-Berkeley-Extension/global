@@ -37,7 +37,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-family: $font;
+  font-family: $font-light;
   font-size: $font-size-med * 1.5;
   font-weight: 200;
 }
@@ -61,10 +61,14 @@ p, .body-2 {
 }
 
 .block-header {
-  font-size: $font-size-med * 1.5; //12px
+  font-size: $font-size-med * 1.2; //12px
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: thin;
   // color: $berkeley-blue;
   font-family: $font-light;
+}
+
+.list-style-none {
+  list-style-type: none;
 }
