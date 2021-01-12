@@ -131,8 +131,8 @@
       "drupal/menu_item_extras": {
         "User error on rendering second level menu items with Layout Builder (https://www.drupal.org/project/menu_item_extras/issues/3020650)": "https://www.drupal.org/files/issues/2020-09-25/layout_builder-3020650-40.patch"
       },
-      "drupal/menu_item_extras": {
-          "User error on rendering second level menu items with Layout Builder (https://www.drupal.org/project/menu_item_extras/issues/3020650)": "https://www.drupal.org/files/issues/2020-09-25/layout_builder-3020650-40.patch"
+      "drupal/paragraphs": {
+        "Fix langcode error when using paragraphs in layout builder (https://www.drupal.org/project/paragraphs/issues/2901390#comment-13718531": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
       }
     }
   },
