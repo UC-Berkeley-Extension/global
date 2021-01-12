@@ -1,0 +1,18 @@
+uuid: c061068e-e04a-46b4-ab57-c33ccdc26026
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_esl_cambridge
+field_name: field_esl_cambridge
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -15,6 +15,10 @@ fieldset {
 label {
 	display: block;
 	padding-bottom: $space-half;
+  font-weight: 600;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
 }
 
 button, input, select, textarea {
@@ -24,10 +28,11 @@ button, input, select, textarea {
 }
 
 input, textarea {
-	width: 100%;
+  // width: 100%;
 	border: 1px solid $gray;
 	padding: $pad-half 0.65rem;
 }
+
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
 	-webkit-appearance: none;
@@ -84,8 +89,12 @@ input[type="search"]::-webkit-search-decoration {
 	border-color: $medalist;
 }
 
-
-
+.form-wrapper { 
+  margin-bottom: 1em; 
+}
+.js-form-item:not(.js-form-type-textarea) {
+  margin-bottom: 1em;
+}
 
 /*------------------------------------*\
     $SPECIFIC FORMS

@@ -1,0 +1,21 @@
+uuid: 99874879-ae3a-4508-a131-91b0d22585af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_daad
+id: block_content.english_proficiency.field_esl_daad
+field_name: field_esl_daad
+entity_type: block_content
+bundle: english_proficiency
+label: DAAD
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: C1
+default_value_callback: ''
+settings: {  }
+field_type: string

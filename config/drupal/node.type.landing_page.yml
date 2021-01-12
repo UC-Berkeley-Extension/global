@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing Page'
 type: landing_page
-description: 'Creates a section front marketing page.'
+description: 'Landing page that can be created utilizing Layout Builder.'
 help: ''
 new_revision: true
 preview_mode: 1

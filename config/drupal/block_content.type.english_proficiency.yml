@@ -1,0 +1,8 @@
+uuid: f6f39929-8733-4bf5-b711-ec75724454d1
+langcode: en
+status: true
+dependencies: {  }
+id: english_proficiency
+label: 'English Proficiency'
+revision: 1
+description: 'Default information for ESL requirements.'

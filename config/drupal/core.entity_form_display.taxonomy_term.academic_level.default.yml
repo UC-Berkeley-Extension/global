@@ -1,0 +1,38 @@
+uuid: 4f4119ad-9021-454a-91c4-e181f8ef7a27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.academic_level.field_shortname
+    - taxonomy.vocabulary.academic_level
+id: taxonomy_term.academic_level.default
+targetEntityType: taxonomy_term
+bundle: academic_level
+mode: default
+content:
+  field_shortname:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

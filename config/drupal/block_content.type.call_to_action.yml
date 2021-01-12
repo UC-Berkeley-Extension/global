@@ -1,0 +1,8 @@
+uuid: d723e1aa-5760-4b63-82aa-b5bed705a5d4
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action
+label: 'Call to Action'
+revision: 1
+description: 'Prints a call-to-action link.'

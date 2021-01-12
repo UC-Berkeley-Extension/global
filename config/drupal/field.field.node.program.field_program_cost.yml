@@ -1,0 +1,23 @@
+uuid: a3d1613a-0d81-4a28-a5ab-6bdf1771c779
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_cost
+    - node.type.program
+id: node.program.field_program_cost
+field_name: field_program_cost
+entity_type: node
+bundle: program
+label: Cost
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

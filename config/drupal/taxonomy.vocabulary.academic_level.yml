@@ -1,0 +1,8 @@
+uuid: ef61c716-b096-4983-a8d1-0201c7ae26ad
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Level'
+vid: academic_level
+description: 'The target student level for a certificate or program.'
+weight: 0

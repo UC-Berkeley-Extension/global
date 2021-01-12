@@ -33,3 +33,13 @@ abbr {
 .text-right {
   text-align: right;
 }
+
+
+/* Address */
+address {
+  font-style: normal;
+  margin-bottom: 1em;
+  & > p {
+    margin: 0;
+  }
+}

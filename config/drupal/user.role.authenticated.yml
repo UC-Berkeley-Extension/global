@@ -48,6 +48,7 @@ permissions:
   - 'edit own video media'
   - 'edit own view_page content'
   - 'post comments'
+  - 'rabbit hole bypass node'
   - 'revert article revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'

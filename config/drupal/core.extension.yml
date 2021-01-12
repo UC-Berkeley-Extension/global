@@ -5,7 +5,6 @@ module:
   bglobal_angular: 0
   bglobal_layouts: 0
   bglobal_pardot: 0
-  bglobal_test_content: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -22,7 +21,6 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
-  default_content: 0
   devel: 0
   diff: 0
   dynamic_page_cache: 0
@@ -53,7 +51,9 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  rabbit_hole: 0
   rdf: 0
+  rh_node: 0
   search: 0
   serialization: 0
   shortcut: 0
