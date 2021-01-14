@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - block_content.type.english_proficiency
     - block_content.type.hero
+    - block_content.type.info_card
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
@@ -22,9 +22,12 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
+  content:
+    - 'block_content:comparison_card:415ad855-597f-440a-9355-09ab65febb77'
   module:
     - bglobal_layouts
     - bglobal_pardot
+    - block_content
     - component
     - layout_builder
     - layout_discovery
@@ -44,16 +47,16 @@ third_party_settings:
             bg-light: 0
             bg-teal: 0
         components:
-          9c7ac10a-2fd7-442e-a6bd-66079bf15150:
-            uuid: 9c7ac10a-2fd7-442e-a6bd-66079bf15150
+          33f4d20d-09a0-43bc-a3a2-1a11df79719e:
+            uuid: 33f4d20d-09a0-43bc-a3a2-1a11df79719e
             region: content
             configuration:
               id: 'inline_block:hero'
-              label: 'Program Name Hero'
+              label: 'Program Hero'
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
-              block_revision_id: 27
+              block_revision_id: 32
               block_serialized: null
               context_mapping: {  }
             additional: {  }
@@ -69,8 +72,26 @@ third_party_settings:
             bg-teal: 0
           title: ''
         components:
-          c06c3bae-a19f-4c01-a1d1-ace42b70f03b:
-            uuid: c06c3bae-a19f-4c01-a1d1-ace42b70f03b
+          15ce456c-b46e-4f21-a79c-8447210a4e26:
+            uuid: 15ce456c-b46e-4f21-a79c-8447210a4e26
+            region: first
+            configuration:
+              id: 'field_block:node:program:field_program_description'
+              label: 'Program Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          8795a62d-5815-4bc7-a77a-6614d58aae2b:
+            uuid: 8795a62d-5815-4bc7-a77a-6614d58aae2b
             region: second
             configuration:
               id: 'inline_block:info_card'
@@ -78,21 +99,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               view_mode: full
-              block_revision_id: 28
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          4e24859d-5f29-476c-8b11-cfc075ff8a99:
-            uuid: 4e24859d-5f29-476c-8b11-cfc075ff8a99
-            region: first
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Placeholder for program description field'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 29
+              block_revision_id: 33
               block_serialized: null
               context_mapping: {  }
             additional: {  }
@@ -133,22 +140,22 @@ third_party_settings:
             bg-teal: 0
           title: 'Instructor Profile'
         components:
-          66cec568-88e9-4a78-b922-f11fdcfe767b:
-            uuid: 66cec568-88e9-4a78-b922-f11fdcfe767b
+          36fa6153-508f-428c-8ac8-7ae7103dfeab:
+            uuid: 36fa6153-508f-428c-8ac8-7ae7103dfeab
             region: first
             configuration:
               id: 'inline_block:info_card'
-              label: 'Instructor name'
+              label: 'Instructor Profile Photo'
               provider: layout_builder
               label_display: '0'
               view_mode: full
-              block_revision_id: 30
+              block_revision_id: 34
               block_serialized: null
               context_mapping: {  }
             additional: {  }
             weight: 0
-          b16bbcf6-4dcc-4973-81ef-d17ba37ae0c3:
-            uuid: b16bbcf6-4dcc-4973-81ef-d17ba37ae0c3
+          2f629a2c-658e-44f4-8606-56f73899d18d:
+            uuid: 2f629a2c-658e-44f4-8606-56f73899d18d
             region: second
             configuration:
               id: 'inline_block:basic'
@@ -156,7 +163,7 @@ third_party_settings:
               provider: layout_builder
               label_display: visible
               view_mode: full
-              block_revision_id: 31
+              block_revision_id: 35
               block_serialized: null
               context_mapping: {  }
             additional: {  }
