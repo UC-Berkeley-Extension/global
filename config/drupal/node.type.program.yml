@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: 'main:'
+    parent: 'main:menu_link_content:3ce77c76-8c63-40dd-b3a6-645763fc9c7e'
 name: Program
 type: program
 description: 'Programs are the main information about degree and certificate programs offered by Berkeley Global.'

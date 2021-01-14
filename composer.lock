@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5136f4ca78d72499603632fe44c7d8e",
+    "content-hash": "7444ba9498625c3f868cc2dd0ac79eb5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3260,6 +3260,7 @@
                     }
                 },
                 "patches_applied": {
+                    "Error when creating new menus (https://www.drupal.org/project/menu_item_extras/issues/3061342)": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin_0.patch",
                     "User error on rendering second level menu items with Layout Builder (https://www.drupal.org/project/menu_item_extras/issues/3020650)": "https://www.drupal.org/files/issues/2020-09-25/layout_builder-3020650-40.patch"
                 }
             },
