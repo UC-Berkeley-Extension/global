@@ -116,7 +116,7 @@ If you try a `phing` command and get the error `Buildfile: build.xml does not ex
 
 ### `[phingcall] ... The remote end hung up unexpectedly`
 
-If you try `phing artifact` and get an error, you might need to extend permissions on your artifacts folder. Run `chmod -R 776 artifacts` from your host machine. 
+If you try `phing artifact` and get an error, you might need to extend permissions on your artifacts folder. Run `chmod -R 776 artifacts` from your host machine. If you still get errors, try restarting the virtual machine (`ddev restart` after exiting ssh).
 
 You might get a `You have changes which must be committed before you may build an artifact` error next. Go to your `global/.git/gitconfig` file and set `filemode` to false. 
 
@@ -182,7 +182,7 @@ The site is deployed to the `berkeleyglobal` Pantheon account and follows Panthe
 
 Files that control this build process can be found in the `/.the-build` directory in project root.
 
-Running the artifact process will automatically deploy to the `deploy` multisite environment on Pantheon. Once your changes have been tested there, you can merge them to the `dev` server using the Pantheon dashboard.
+Running the artifact process will automatically deploy to the `master` branch on Pantheon.
 
 When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- configuration changes are imported automatically and the Drupal database update script is run.
 
@@ -206,7 +206,7 @@ To build a deployment artifact, follow these steps:
 1. `ddev ssh`
 1. `cd ..` -- This should put you in the `/var/www/html` directory
 1. `phing artifact`
-1. When prompted to `Push artifact changes to the 'deploy' branch?`, enter `[0]` to accept.
+1. When prompted with a password, enter your Pantheon dashboard password
 
 This process can take 5 minutes or so, as the entire node and composer install processes must take place.
 
@@ -214,11 +214,11 @@ This process can take 5 minutes or so, as the entire node and composer install p
 
 For documentation on other commands available, see [The Build github documentation](https://github.com/palantirnet/the-build/blob/develop/docs/artifacts.md). A few notes:
 
-* You can deploy from any branch, and it will always be pushed to the `deploy` environment on Pantheon.
+* You can deploy from any branch, and it will always be pushed to the `master` environment on Pantheon.
 * If you want to spin up a new multisite environment on Pantheon, change the `remote_branch` target when running the build:
     - e.g. `phing artifact -D artifact.git.remote_branch=mytest` will create a `mytest` branch that can be accessed in the `Multisite` section of the Pantheon dashboard.
     - Note that Pantheon limits the branch name to *11 lowercase characters*. [See the Pantheon documentation for more information](https://pantheon.io/docs/multidev).
-
+    - Once your changes have been tested there, you can merge them to the `dev` server using the Pantheon dashboard.
 
 When the task finishes, visit the site at https://deploy-berkeleyglobal.pantheonsite.io/
 
@@ -230,7 +230,7 @@ After deploying an artifact, you can run additional commands using `drush` or `t
 
 The options for how the artifact is built are located in `.the-build/build.yml` and may be edited.
 
-For instance, if you do not want to use `deploy`, you can change the `artifact.git.remote_branch` from `deploy` to `master`. Doing so will push all artifacts to the DEV server for testing.
+For instance, if you do not want to use `master`, you can change the `artifact.git.remote_branch` from `master` to `deploy`. Doing so will push all artifacts to the `deploy` instance in the `Multisite` section of the Pantheon dashboard testing.
 
 ### Pantheon scripts
 

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.article.field_term_ref_editorial_section
+    - field.field.node.certificate.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.page.field_term_ref_editorial_section
+    - field.field.node.program.field_term_ref_editorial_section
     - field.field.node.view_page.field_term_ref_editorial_section
     - taxonomy.vocabulary.editorial_section
 id: editorial_section
@@ -18,7 +20,15 @@ scheme_settings:
   fields:
     -
       entity_type: node
-      bundle: article
+      bundle: view_page
+      field: field_term_ref_editorial_section
+    -
+      entity_type: node
+      bundle: program
+      field: field_term_ref_editorial_section
+    -
+      entity_type: node
+      bundle: page
       field: field_term_ref_editorial_section
     -
       entity_type: node
@@ -26,9 +36,9 @@ scheme_settings:
       field: field_term_ref_editorial_section
     -
       entity_type: node
-      bundle: view_page
+      bundle: certificate
       field: field_term_ref_editorial_section
     -
       entity_type: node
-      bundle: page
+      bundle: article
       field: field_term_ref_editorial_section

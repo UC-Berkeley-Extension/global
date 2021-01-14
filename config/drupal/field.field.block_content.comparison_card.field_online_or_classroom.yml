@@ -1,0 +1,21 @@
+uuid: d225ea60-2dc6-45bd-906a-e9bc01d02093
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comparison_card
+    - field.storage.block_content.field_online_or_classroom
+  module:
+    - options
+id: block_content.comparison_card.field_online_or_classroom
+field_name: field_online_or_classroom
+entity_type: block_content
+bundle: comparison_card
+label: 'Online or Classroom'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 49ee7456-c2c6-4076-9f04-bc294d241c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comparison_card
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.comparison_card.body
+field_name: body
+entity_type: block_content
+bundle: comparison_card
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

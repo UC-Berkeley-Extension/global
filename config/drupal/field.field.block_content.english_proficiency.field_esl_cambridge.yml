@@ -1,0 +1,23 @@
+uuid: e2427906-9742-445e-a209-7231b7fb6c01
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_cambridge
+id: block_content.english_proficiency.field_esl_cambridge
+field_name: field_esl_cambridge
+entity_type: block_content
+bundle: english_proficiency
+label: 'Cambridge C1 Advanced'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Cambridge C1 Advanced'
+  off_label: 'false'
+field_type: boolean

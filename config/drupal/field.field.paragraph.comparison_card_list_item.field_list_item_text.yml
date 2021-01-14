@@ -1,0 +1,19 @@
+uuid: e26ae252-4ff5-4147-be6a-311ecc2a3ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_text
+    - paragraphs.paragraphs_type.comparison_card_list_item
+id: paragraph.comparison_card_list_item.field_list_item_text
+field_name: field_list_item_text
+entity_type: paragraph
+bundle: comparison_card_list_item
+label: 'List Item Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

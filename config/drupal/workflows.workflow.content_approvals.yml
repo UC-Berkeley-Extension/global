@@ -6,6 +6,7 @@ dependencies:
     - node.type.article
     - node.type.landing_page
     - node.type.page
+    - node.type.program
     - node.type.view_page
   module:
     - content_moderation
@@ -62,5 +63,6 @@ type_settings:
       - article
       - landing_page
       - page
+      - program
       - view_page
   default_moderation_state: draft

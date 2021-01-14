@@ -1,0 +1,21 @@
+uuid: e4b25a4f-bb11-415e-8a7e-eaba6f6f2219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_tuition
+    - node.type.certificate
+id: node.certificate.field_certificate_tuition
+field_name: field_certificate_tuition
+entity_type: node
+bundle: certificate
+label: 'Tuition and fees'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '$8,000 (USD)'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: a4e671d4-1dc0-4dba-be03-8d13ced7a0ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.academic_level.field_shortname
+    - taxonomy.vocabulary.academic_level
+  module:
+    - text
+id: taxonomy_term.academic_level.default
+targetEntityType: taxonomy_term
+bundle: academic_level
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_shortname:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

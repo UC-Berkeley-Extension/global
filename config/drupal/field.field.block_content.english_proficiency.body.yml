@@ -1,0 +1,27 @@
+uuid: 2a068c0c-3949-4cd9-b2f4-fa1756cd6dcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.english_proficiency.body
+field_name: body
+entity_type: block_content
+bundle: english_proficiency
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>If English is not your first language, you must submit official evidence of English-language proficiency.</p>\r\n\r\n<p>Because English-language proficiency test centers are closed due to COVID-19, you can meet our English-language requirement in any of the following ways:</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

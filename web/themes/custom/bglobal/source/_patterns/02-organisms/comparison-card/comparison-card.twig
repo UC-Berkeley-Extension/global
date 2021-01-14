@@ -1,0 +1,30 @@
+<div class="comparison-card{% if online %} online{% else %} classroom{% endif %}">
+  <div class="comparison-card__title">
+    {{ card.title }}
+  </div>
+  <div class="comparison-card__body">
+    <div class="comparison-card__image"><img src="{{ card.img.src }}" alt="{{ card.img.alt }}"></div>
+    <div class="comparison-card__text">
+      {% if online %}
+        <span>Access classroom-style interactive learning from anywhere in the world! Attend scheduled online sessions with your instructor and classmates in addition to completing your coursework.</span>
+      {% else %}
+        <span>Gain employable skills in {{ card.program }} while experiencing life as a Berkeley student! Study abroad and put lessons to work through an internship or eligibility for OPT.</span>
+      {% endif %}
+    </div>
+  </div>
+  {% for item in card.items %}
+    <div class="comparison-card__item">
+      <div class="comparison-card__item__icon">
+        <img {% if item.check_red %} src="{{ card.src_red }}" {% else %} src="{{ card.src_green }} {% endif %}">
+      </div>
+      <div class="comparison-card__item__text">{{ item.text }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+{# @TODO Change button style here, especially to change the class for button color on the card. #}
+{% include '@atoms/buttons/button.twig' with {
+  'classes': 'btn btn-lg',
+  'url': card.button_url,
+  'text': card.button_text,
+}%}

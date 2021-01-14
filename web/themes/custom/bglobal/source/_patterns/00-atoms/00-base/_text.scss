@@ -3,6 +3,11 @@ p {
 	margin-bottom: $space;
 }
 
+.lead {
+  font-size: $font-size-large;
+  font-weight: 300;
+}
+
 /* Blockquote */
 blockquote {
   border-left: 1px solid $gray;
@@ -27,4 +32,14 @@ abbr {
 /* Alignment */
 .text-right {
   text-align: right;
+}
+
+
+/* Address */
+address {
+  font-style: normal;
+  margin-bottom: 1em;
+  & > p {
+    margin: 0;
+  }
 }

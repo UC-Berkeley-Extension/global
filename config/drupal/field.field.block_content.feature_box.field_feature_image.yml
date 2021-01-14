@@ -1,0 +1,28 @@
+uuid: 863a0a4b-f4b2-4ed4-b3c1-b32aa8e5870b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.feature_box
+    - field.storage.block_content.field_feature_image
+    - media.type.image
+id: block_content.feature_box.field_feature_image
+field_name: field_feature_image
+entity_type: block_content
+bundle: feature_box
+label: 'Feature Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,13 @@
+online: true
+card:
+  title: "Live Online"
+  img:
+    src: '../../images/icon-online.svg'
+    alt: 'Study online'
+  src_red: '../../images/icon-check-red.svg'
+  src_green: '../../images/icon-check-green.svg'
+  items:
+    - check_red: true
+      text: "Study-Abroad Experience"
+    - check_red: false
+      text: "Online Learning Flexibility"

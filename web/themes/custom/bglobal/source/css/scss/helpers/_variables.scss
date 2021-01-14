@@ -4,12 +4,14 @@
 
 // Berkeley Web Basic Colors
 $gray : #EEEEEE;
+$gray-dark : #333;
 $bg-gray: #f2f2f2;
 $web-gray: #888888;
 $white : #ffffff;
 $black : #000000;
 $text-gray: #212529;
 $teal: #4F758B; // Background color for components
+$success-teal: #00B2A9;
 
 // Berkeley Primary Palettes
 $berkeley-blue: #003262;
@@ -37,6 +39,8 @@ $font-light: "Open Sans Light", "Helvetica", "Arial", sans-serif;
 $font-bold: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
 $font-italic: "Open Sans Italic", "Helvetica", "Arial", sans-serif;
 $font-bitter: "Bitter", Georgia, Times, "Times New Roman", serif;
+$font-family-serif: $font-bitter;
+$font-family-sans-serif: $font;
 $font-bitter-italic: "Bitter Italic", Georgia, Times, "Times New Roman", serif;
 
 $font-size-small : 0.75em;
@@ -60,6 +64,7 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
+
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
@@ -73,6 +78,11 @@ $spacers: map-merge(
   ),
   $spacers
 );
+
+// // Cards
+
+$card-spacer-y:                     .75rem !default;
+$card-spacer-x:                     1.25rem !default;
 
 //Borders
 $border-med: 3px;

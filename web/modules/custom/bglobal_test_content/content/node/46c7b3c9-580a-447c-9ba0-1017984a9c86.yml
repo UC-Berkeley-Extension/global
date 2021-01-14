@@ -5,6 +5,7 @@ _meta:
   bundle: view_page
   default_langcode: en
   depends:
+    b14062f8-fca5-4e45-bf22-0d184e8ba7d8: taxonomy_term
     5da523c5-e0eb-4c0d-b387-cb1810c9c85d: taxonomy_term
 default:
   revision_uid:
@@ -31,11 +32,20 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: ''
       langcode: en
       pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
   body:
     -
       value: "<p>This is a View page.</p>\r\n"
@@ -46,6 +56,9 @@ default:
       target_id: test_content_vuew
       display_id: embed_1
       data: 'a:5:{s:5:"pager";s:0:"";s:8:"argument";s:0:"";s:5:"limit";s:0:"";s:6:"offset";s:0:"";s:5:"title";i:0;}'
+  field_term_ref_editorial_section:
+    -
+      entity: b14062f8-fca5-4e45-bf22-0d184e8ba7d8
   field_term_ref_school_microsite:
     -
       entity: 5da523c5-e0eb-4c0d-b387-cb1810c9c85d

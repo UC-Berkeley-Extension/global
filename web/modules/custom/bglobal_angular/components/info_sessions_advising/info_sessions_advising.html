@@ -1,0 +1,21 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/info-sessions-advising/info-sessions-advising.twig
+ -->
+<div data-ng-controller="VoicesInfoAdvisingController as infoSession">
+  <div class="advising__info_session" data-ng-if="infoSession.view.count > 0">
+    <h2 class="block-header">Info Sessions</h2>
+    <img class="quote-image" data-ng-src="{{infoSession.adviser.src}}" data-ng-attr-alt="{{infoSession.adviser.src}}" />
+    <div>
+      <p class="blockquote">"Please join us for a free <a data-ng-href="{{infoSession.session.enroll}}" target="_blank">online information session</a>."</p>
+      <p class="caption">&mdash;Mariam Rahimi, Admissions Adviser</p>
+    </div>
+  </div>
+
+  <div data-ng-if="infoSession.view.count <= 0">
+    <p>We frequently offer information sessions about our programs for international students. Check back soon or fill out our contact form and request to be placed on our email list for updates!</p>
+    <div>
+      <blockquote class="blockquote">"It is an honor to connect with students from all over the world and have them be part of our Berkeley community!"</blockquote>
+      <p class="attribution">&mdash;Mariam Rahimi, Admissions Adviser</p>
+    </div>
+  </div>
+</div>

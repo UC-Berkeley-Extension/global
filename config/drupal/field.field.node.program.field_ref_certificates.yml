@@ -1,0 +1,28 @@
+uuid: c8133e69-2ba3-4781-b2d2-273b45a05f6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_certificates
+    - node.type.certificate
+    - node.type.program
+id: node.program.field_ref_certificates
+field_name: field_ref_certificates
+entity_type: node
+bundle: program
+label: Certificates
+description: 'The certificates offered by this program.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      certificate: certificate
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

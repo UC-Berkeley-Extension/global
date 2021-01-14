@@ -1,0 +1,24 @@
+uuid: 5fff4366-e4bd-4145-9230-369c22acfa5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_waiver
+  module:
+    - text
+id: block_content.english_proficiency.field_esl_waiver
+field_name: field_esl_waiver
+entity_type: block_content
+bundle: english_proficiency
+label: Waiver
+description: 'Optional waiver guidelines for ESL requirements.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>You may request a waiver if you meet one of the following requirements:</p>\r\n\r\n<ul>\r\n\t<li>You have completed one year of full-time college-level instruction entirely in the English language.</li>\r\n\t<li>You have successfully completed a university-level program in a country or region where English is the official language.</li>\r\n\t<li>You are from a country or region on the exempt list.<span>&nbsp;</span><a href=\"#contact\">Contact an adviser</a><span>&nbsp;</span>for more information.</li>\r\n</ul>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

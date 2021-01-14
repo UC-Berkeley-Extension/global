@@ -1,0 +1,71 @@
+.comparison-card {
+  border: 1px white solid;
+  margin-bottom: 1.5em;
+}
+
+.comparison-card.online {
+  .comparison-card__title {
+    background-color: $success-teal;
+    color: $white;
+  }
+}
+
+.comparison-card.classroom {
+  .comparison-card__title {
+    background-color: $california-gold;
+    color: $black;
+  }
+}
+
+.comparison-card__title {
+  text-align: center;
+  padding: .5em;
+  font-family: $font-bitter;
+  font-size: 1.5em;
+}
+
+.comparison-card__body {
+  background-color: $gray;
+  display: flex;
+  padding: .75em .5em;
+}
+
+.comparison-card__image,
+.comparison-card__item__icon {
+  position: relative;
+  flex: 0 1 100px;
+}
+
+.comparison-card__image img {
+  position: absolute;
+  top: 0;
+  left: 1em;
+}
+
+.comparison-card__text,
+.comparison-card__item__text {
+  flex: 0 1 calc(100% - 100px);
+  padding: 1em 1em 1em 3em;
+}
+
+.comparison-card__item {
+  display: flex;
+  padding: .75em .5em;
+  border-bottom: 1px solid $gray;
+  font-family: $font-bold;
+  background-color: $white;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.comparison-card__item__icon {
+  text-align: center;
+
+  img {
+    position: absolute;
+    top: 1.2em;
+    right: 1.5em;
+  }
+}

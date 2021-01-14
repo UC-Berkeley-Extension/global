@@ -1,0 +1,19 @@
+uuid: 3be73b5a-d023-4eb0-9fc7-0893ba2908bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_prerequisite
+    - node.type.certificate
+id: node.certificate.field_certificate_prerequisite
+field_name: field_certificate_prerequisite
+entity_type: node
+bundle: certificate
+label: 'Certificate Prerequisite'
+description: 'Requirements for the certificate.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

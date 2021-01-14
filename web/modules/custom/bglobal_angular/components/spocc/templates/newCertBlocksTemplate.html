@@ -1,0 +1,27 @@
+<!-- programs list ("certs") -->
+<!-- <div class="angular-loading" data-ng-if="!productList.loaded.certs">
+  <p>Loading Programs...</p>
+  <div class="loader loader--style3" ng-include="productList.loadingIndicator">  </div>
+</div> -->
+<div class="cert-blocks" data-ng-cloak>
+  <div class="m-t-15 blueBlocks-wrapper ng-cloak">
+    <a  class="blueBlock"
+        data-ng-repeat="product in productList.certList | orderBy: 'name'" 
+        data-ng-class="productsFactory.encodeTitles(product.name)"
+        data-ng-href="{{ productsFactory.decodeURLs(product.url) }}">
+        <div class="bb-imgs-wrapper">
+          <div class="bb-img" data-ng-style="{'background': [productsFactory.imageStyle(product.category, product.name)]}"></div>
+        </div>
+      <div class="bb-border" data-ng-class="[productsFactory.certBorderClass(product.category)]"></div>
+      <div class="bb-text" data-ng-class="[productsFactory.certBorderClass(product.category)]">
+        <p class="bb-content--superCategory">{{ product.category }}</p>
+        <h3 class="bb-content--title">{{ product.name }}</h3>
+      </div>
+    </a>
+  </div>
+  <div data-ng-if="productList.certList.length === 0 && productList.loaded.certs">
+    <p class="lead mb-0">No results found.</p>
+    <p>Please select different filters.</p>
+  </div>
+  <p class="bg-warning ng-cloak" data-ng-bind="error"></p>
+</div>

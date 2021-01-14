@@ -1,0 +1,29 @@
+uuid: cbc76f14-e8bd-41c9-9097-702fe4d4ab7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.program
+    - taxonomy.vocabulary.tags
+id: node.program.field_tags
+field_name: field_tags
+entity_type: node
+bundle: program
+label: Tags
+description: "Use to list keywords\r\n"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

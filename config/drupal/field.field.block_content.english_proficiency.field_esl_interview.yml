@@ -1,0 +1,24 @@
+uuid: 3dfbc587-a008-40eb-91d2-b34088b4448b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_interview
+  module:
+    - text
+id: block_content.english_proficiency.field_esl_interview
+field_name: field_esl_interview
+entity_type: block_content
+bundle: english_proficiency
+label: Interview
+description: 'Optional interview requirements for the program.'
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p><strong>If you do not meet any of the above criteria</strong>, you can request an English-language interview through our department. If you are interested in this option, please select, \"I would like to request an English interview\" in your online application.</p>\r\n\r\n<p><strong>Note</strong>: Transcripts and credentials should reflect the program that you completed in English. Our Admissions department will assess all documentation and inform you if additional items are needed. Please note that our admissions process is holistic and meeting the English-language proficiency requirement does not guarantee acceptance. Email<span>&nbsp;</span><a href=\"mailto:internationaladmissions@berkeley.edu\">internationaladmissions@berkeley.edu</a><span>&nbsp;</span>with questions or to learn more.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

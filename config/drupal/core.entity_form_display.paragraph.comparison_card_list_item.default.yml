@@ -1,0 +1,30 @@
+uuid: 2cef4f2d-e60d-4895-a937-c07661de4a63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.comparison_card_list_item.field_list_item_icon
+    - field.field.paragraph.comparison_card_list_item.field_list_item_text
+    - paragraphs.paragraphs_type.comparison_card_list_item
+id: paragraph.comparison_card_list_item.default
+targetEntityType: paragraph
+bundle: comparison_card_list_item
+mode: default
+content:
+  field_list_item_icon:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_list_item_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

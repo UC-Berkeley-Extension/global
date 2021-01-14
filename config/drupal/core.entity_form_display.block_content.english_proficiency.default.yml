@@ -1,0 +1,116 @@
+uuid: 2e483b94-af31-4cf1-995e-9a31dd56a1b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.field.block_content.english_proficiency.body
+    - field.field.block_content.english_proficiency.field_esl_cambridge
+    - field.field.block_content.english_proficiency.field_esl_daad
+    - field.field.block_content.english_proficiency.field_esl_ielts
+    - field.field.block_content.english_proficiency.field_esl_interview
+    - field.field.block_content.english_proficiency.field_esl_tem
+    - field.field.block_content.english_proficiency.field_esl_toefl
+    - field.field.block_content.english_proficiency.field_esl_waiver
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_test_scores:
+      children:
+        - field_esl_toefl
+        - field_esl_ielts
+        - field_esl_daad
+        - field_esl_cambridge
+        - field_esl_tem
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Test Scores'
+id: block_content.english_proficiency.default
+targetEntityType: block_content
+bundle: english_proficiency
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_esl_cambridge:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_esl_daad:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_esl_ielts:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_esl_interview:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_esl_tem:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_esl_toefl:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_esl_waiver:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
