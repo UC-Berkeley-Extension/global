@@ -1,0 +1,10 @@
+uuid: ae733695-944d-4eb9-99aa-1f7ca1834198
+langcode: en
+status: true
+dependencies: {  }
+id: comparison_card_list_item
+label: 'Comparison card list item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,75 @@
+uuid: ed01a9c7-b279-485f-94f9-02128d26fd30
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comparison_card
+    - field.field.block_content.comparison_card.body
+    - field.field.block_content.comparison_card.field_comparison_card_list_item
+    - field.field.block_content.comparison_card.field_online_or_classroom
+    - field.field.block_content.comparison_card.field_program_name
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_list_items:
+      children: {  }
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'List Items'
+id: block_content.comparison_card.default
+targetEntityType: block_content
+bundle: comparison_card
+mode: default
+content:
+  field_comparison_card_list_item:
+    type: paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: comparison_card_list_item
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_online_or_classroom:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_program_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

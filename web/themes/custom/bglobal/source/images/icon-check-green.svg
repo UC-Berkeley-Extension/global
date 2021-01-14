@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .chkBox-positive-a {
+        fill: #00a699;
+      }
+
+      .chkBox-positive-b {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="chkBox-positive-a" d="M16,20H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0H16a4,4,0,0,1,4,4V16A4,4,0,0,1,16,20Z"/>
+  <path class="chkBox-positive-b" d="M16,0h-.3L9.9,10.1,7.2,7.4a2.42,2.42,0,0,0-3.5,0,2.42,2.42,0,0,0,0,3.5L11,18.2,19.9,2.8A4.22,4.22,0,0,0,16,0Z"/>
+</svg>
