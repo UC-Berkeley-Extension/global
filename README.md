@@ -116,7 +116,7 @@ If you try a `phing` command and get the error `Buildfile: build.xml does not ex
 
 ### `[phingcall] ... The remote end hung up unexpectedly`
 
-If you try `phing artifact` and get an error, you might need to extend permissions on your artifacts folder. Run `chmod -R 776 artifacts` from your host machine. 
+If you try `phing artifact` and get an error, you might need to extend permissions on your artifacts folder. Run `chmod -R 776 artifacts` from your host machine. If you still get errors, try restarting the virtual machine (`ddev restart` after exiting ssh).
 
 You might get a `You have changes which must be committed before you may build an artifact` error next. Go to your `global/.git/gitconfig` file and set `filemode` to false. 
 
