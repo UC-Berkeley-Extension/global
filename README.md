@@ -61,6 +61,9 @@ Visit https://global.ddev.site and login as `admin\admin`.
 
 *Hint:* If you forget the password, use `drush uli` to get a login link.
 
+Use FTP (instructions on Pantheon) to copy the image folders in web/sites/default/files to the matching local directory (these folders will have timestamp names plus the `inline-images` folder). If you run into permissions issues, change your local files directory to allow write (either chmod 776 ~/Sites/global/web/sites/default/files by `cmd+I` on the folder in Finder).
+
+
 ## Updating After Installation
 
 From your host machine
