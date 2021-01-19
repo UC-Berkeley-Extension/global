@@ -3,17 +3,17 @@
 #}
 {# *ngFor="let post of posts" data-ng-cloak  #}
 <div class="voices__spotlight">
-  <h2 class="voices__spotlight__header block-header">Spotlight</h2>
+  <h2 class="voices__spotlight__header block-header lead">Spotlight</h2>
   <div class="voices__spotlight__teaser">
     <div class="voices__spotlight__teaser__image" style="background-image: url('{{posts[0].image.src}}');">
       <span class="voices__spotlight__teaser__image__ribbon">{{ posts[0].tags[0] }}</span>
-   </div>
+    </div>
     <div class="voices__spotlight__teaser__summary">
       <h3 class="voices__spotlight__teaser__title marginless-p">
         <strong><a href="{{ posts[0].path }}" class="blog-header">{{ posts[0].title }}</a></strong>
       </h3>
       <div class="voices__spotlight__teaser__body">{{ posts[0].content }}</div>
-      <div class="voices__spotlight__teaser__cta__wrapper text-right mb-0"><a class="voices__spotlight__teaser__cta__link button button-small" href="{{ posts[0].path }}">Continue Reading<span class="sr-only"> {{ posts[0].title }}</span></a></p>
+      <div class="more-link-container"><a class="more-link" href="{{ posts[0].path }}">Continue Reading<span class="sr-only"> {{ posts[0].title }}</span></a></div>
     </div>
   </div>
 </div>

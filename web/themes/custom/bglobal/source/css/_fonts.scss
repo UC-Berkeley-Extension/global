@@ -11,6 +11,14 @@
 }
 
 @font-face {
+  font-family: 'Open Sans Light';
+  font-weight: thin;
+  font-style: thin;
+  src: url('../fonts/OpenSans-Light-webfont.woff'),
+       url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
   font-family: 'Open Sans Bold';
   font-weight: normal;
   font-style: normal;
