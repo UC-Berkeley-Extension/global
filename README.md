@@ -55,14 +55,14 @@ You should now be in the DDEV virtual machine at the prompt:
 Run the following commands.
 - `cd ..` - this will put you in `/var/www/html`
 - `phing install` - to install the Drupal site from scratch.
-- The `admin` user will then have its password set to `admin`.
+  - If you were able to download the database from the pantheon instance, login credentials will match those
+  - If you weren't able to download the database, the `admin` user will then have its password set to `admin`.
 
-Visit https://global.ddev.site and login as `admin\admin`.
+Visit https://global.ddev.site and login.
 
 *Hint:* If you forget the password, use `drush uli` to get a login link.
 
 To ensure image files come through, visit your [Pantheon Dashboard Export section](https://dashboard.pantheon.io/sites/7a43f5b4-f7a9-4542-a2f3-eeda766d848b#dev/content/export), click Export Files, then download the files folder. Copy the contents to your local `~/User/Sites/global/web/sites/default/files` folder. 
-
 
 
 
@@ -104,6 +104,12 @@ And run these from inside the DDEV container:
 
 
 ## Troubleshooting
+
+### `sh: terminus: command not found` on `composer install` ###
+Make sure you have terminus installed on your machine by typing `which terminus`. 
+
+  - If it returns a file path (e.g. `/Users/username/vendor/bin`), add it to your $PATH with this command: `export PATH=[the path returned by the which terminus command]:$PATH`
+  - If it returns blank, you might need to install terminus (see [Setting up Terminus](https://github.com/UC-Berkeley-Extension/global#setting-up-terminus)). 
 
 ### `ddev start` errors
 
