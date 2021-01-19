@@ -137,7 +137,7 @@
   "scripts": {
     "post-install-cmd": [
         "echo 'Setting directory permissions...' && sudo chmod -R a+w web/sites",
-        "if [ -e ~/vendor/bin/terminus ]; then ~/vendor/bin/terminus drush berkeleyglobal.dev --  cr; ~/vendor/bin/terminus drush berkeleyglobal.dev --  sql-dump > my-sql-dump-global.sql ; sudo chmod -R a+w my-sql-dump-global.sql ; fi"
+        "if [ -e ~/Sites/global/artifacts ]; then terminus drush berkeleyglobal.dev --  cr; terminus drush berkeleyglobal.dev --  sql-dump > my-sql-dump-global.sql ; sudo chmod -R a+w my-sql-dump-global.sql ; fi"
     ]
   }
 }
