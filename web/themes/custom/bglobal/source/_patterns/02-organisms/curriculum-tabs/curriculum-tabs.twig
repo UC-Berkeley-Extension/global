@@ -24,19 +24,41 @@
           <h3>Data Analytics Full-Time Certificate</h3>
           <p>Learn to collect, process, analyze and interpret data in order to develop actionable business insights. Expand your skills by learning how to leverage statistics, data mining and big data to develop strategies in marketing, retail, health care, finance and other fields.</p>
           <!-- Prerequisites -->
-           <div class="tab" >
-            <input type="checkbox" id="cert1-prereqs" />
-            <label class="tab-label card-title" for="cert1-prereqs">Prerequisites</label>
-            <div class="tab-content panel">
-              <p>Knowledge of statistics (fulfill this prerequisite by taking Introduction to Statistics online).</p>
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Prerequisites
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <p>Knowledge of statistics (fulfill this prerequisite by taking Introduction to Statistics online).</p>
+              </div>
             </div>
           </div>
+
           <!-- Courses -->
-          <div class="tab">
-            <input type="checkbox" id="cert1-courses" />
-            <label class="tab-label card-title" for="cert1-courses">Core Courses</label>
-            <div class="tab-content panel">
-               <ul>
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Core Courses
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
                   <li>
                     <p><a>Introduction to Data Analytics</a> | COMPSCI X407.9</p>
                   </li>
@@ -51,28 +73,53 @@
                   </li>
                   <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
                 </ul>
+              </div>
             </div>
           </div>
           
-          <div class="tab">
-            <input type="checkbox" id="cert1-benefits" />
-            <label class="tab-label card-title" for="cert1-benefits">Program Benefits</label>
-            <div class="tab-content panel">
-               <ul>
+          <!-- program benefits -->
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Program Benefits
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
                   <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
                   <li>Certificate of completion</li>
                 </ul>
+              </div>
             </div>
           </div>
           
-          <div class="tab">
-            <input type="checkbox" id="cert1-outcomes" />
-            <label class="tab-label card-title" for="cert1-outcomes">Outcomes</label>
-            <div class="tab-content panel">
-               <ul>
-                <li>Understand statistics, coding, data mining, visualization and reporting.</li>
-                <li>Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL.</li>
-              </ul>
+          <!-- outcomes -->
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Outcomes
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
+                  <li>Understand statistics, coding, data mining, visualization and reporting.</li>
+                  <li>Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL.</li>
+                </ul>
+              </div>
             </div>
           </div>
           <p><a data-ng-href="{{ program.appUrl }}" class="btn  mt-5 btn-success btn-lg">APPLY NOW</a></p>
@@ -117,72 +164,116 @@
           <h3>Data Science Full-Time Certificate</h3>
           <p>Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.</p>
           <!-- Prerequisites -->
-           <div class="tab">
-            <input type="checkbox" id="cert2-prereqs" />
-            <label class="tab-label card-title" for="cert2-prereqs">Prerequisites</label>
-            <div class="tab-content panel">
-              <p>Completion of the:</p>
-              <ul><li><a>Data Analytics Full-Time Certificate</a></li></ul>
-              <p>Or</p>
-              <ul>
-                <li><a>Introduction to Data Analytics</a> | COMPSCI X407.9</li>
-                and
-                <li>Ability to program in at least one high-level programming language. You can complete this prerequisite by taking one of the following online courses before applying:
-                  <ul>
-                    <li><a>C++ Programming</a> | EL ENG X412.1</li>  
-                    <li><a>Introduction to C Language Programming</a> | EL ENG X24</li>  
-                    <li><a>JavaScript and jQuery: An Introduction</a> | COMPSCI X452.1</li>  
-                    <li><a>First Course in Java</a> | EL ENG X429.9</li>  
-                    <li><a>Programming Python</a> | COMPSCI X434</li>  
-                    <li><a>Introduction to Computers and Programming</a> | COMPSCI X444.4</li>  
-                  </ul>
-                </li>
-              </ul>
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Prerequisites
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <p>Completion of the:</p>
+                <ul><li><a>Data Analytics Full-Time Certificate</a></li></ul>
+                <p>Or</p>
+                <ul>
+                  <li><a>Introduction to Data Analytics</a> | COMPSCI X407.9</li>
+                  and
+                  <li>Ability to program in at least one high-level programming language. You can complete this prerequisite by taking one of the following online courses before applying:
+                    <ul>
+                      <li><a>C++ Programming</a> | EL ENG X412.1</li>  
+                      <li><a>Introduction to C Language Programming</a> | EL ENG X24</li>  
+                      <li><a>JavaScript and jQuery: An Introduction</a> | COMPSCI X452.1</li>  
+                      <li><a>First Course in Java</a> | EL ENG X429.9</li>  
+                      <li><a>Programming Python</a> | COMPSCI X434</li>  
+                      <li><a>Introduction to Computers and Programming</a> | COMPSCI X444.4</li>  
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <!-- Courses -->
-          <div class="tab">
-            <input type="checkbox" id="cert2-courses" />
-            <label class="tab-label card-title" for="cert2-courses">Core Courses</label>
-            <div class="tab-content panel">
-              <ul>
-                <!-- repeat list of core courses -->
-                <li>
-                  <p><a>Introduction to Data Science</a> | COMPSCI X415.2</p>
-                  <p><a>Python for Data Analysis and Scientific Computing</a> | COMPSCI X433.3</p>
-                  <p><a>Introduction to Big Data</a> | COMPSCI X409.2</p>
-                  <p><a>Business Intelligence With SQL Server</a> | EL ENG X404.8</p>
-                  <p><a>Career Development Leadership Skills</a> | BUS ADM 2055</p>
-                </li>
-                <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Leadership Skills</a> | BUS ADM 2055 </li>
-              </ul>
+          <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Core Courses
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
+                  <!-- repeat list of core courses -->
+                  <li>
+                    <p><a>Introduction to Data Science</a> | COMPSCI X415.2</p>
+                    <p><a>Python for Data Analysis and Scientific Computing</a> | COMPSCI X433.3</p>
+                    <p><a>Introduction to Big Data</a> | COMPSCI X409.2</p>
+                    <p><a>Business Intelligence With SQL Server</a> | EL ENG X404.8</p>
+                    <p><a>Career Development Leadership Skills</a> | BUS ADM 2055</p>
+                  </li>
+                  <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Leadership Skills</a> | BUS ADM 2055 </li>
+                </ul>
+              </div>
             </div>
           </div>
           
-          <div class="tab">
-            <input type="checkbox" id="cert2-benefits" />
-            <label class="tab-label card-title" for="cert2-benefits">Program Benefits</label>
-            <div class="tab-content panel">
-               <ul>
-                <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
-                <li>Certificate of completion</li>
-              </ul>
+          <!-- Program Benefits -->
+          <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Program Benefits
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
+                  <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
+                  <li>Certificate of completion</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="tab">
-            <input type="checkbox" id="cert2-outcomes" />
-            <label class="tab-label card-title" for="cert2-outcomes">Outcomes</label>
-            <div class="tab-content panel">
-              <ul>
-              <!-- repeat outcomes in program -->
-                <li>Perform advanced data wrangling, data mining, statistical modeling and machine learning on large, complex data sets.</li>
-                <li>Run data collection and cleaning, modeling, evaluation, visualization, reporting and deployment.</li>
-                <li>Develop solutions using Spark, R, Python, TensorFlow, relational databases and SQL.</li>
-              </ul>
+          <!-- Outcomes -->
+          <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Outcomes
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <ul>
+                <!-- repeat outcomes in program -->
+                  <li>Perform advanced data wrangling, data mining, statistical modeling and machine learning on large, complex data sets.</li>
+                  <li>Run data collection and cleaning, modeling, evaluation, visualization, reporting and deployment.</li>
+                  <li>Develop solutions using Spark, R, Python, TensorFlow, relational databases and SQL.</li>
+                </ul>
+              </div>
             </div>
           </div>
+          <!-- app link -->
           <p><a class="btn mt-5 btn-success btn-lg">APPLY NOW</a></p>
         </div>
         <div class="structure-immersive-outcomes">
