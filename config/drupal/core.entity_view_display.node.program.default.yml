@@ -78,17 +78,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
-          125adf0c-651f-49cd-9634-f8751c1d5994:
-            uuid: 125adf0c-651f-49cd-9634-f8751c1d5994
-            region: first
-            configuration:
-              id: system_main_block
-              label: 'Main page content'
-              provider: system
-              label_display: '0'
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
           f243edce-247c-4286-939c-8803f9d3dcc3:
             uuid: f243edce-247c-4286-939c-8803f9d3dcc3
             region: second
