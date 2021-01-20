@@ -19,7 +19,7 @@
 
     <!-- START Tab Content: CERT 1 -->
     <div class="pdp-tab pdp-tab-1">
-      <div class="grid-col-2-1">
+      <div class="grid-container-fluid grid-col-2-1">
         <div id="program-1">
           <h3>Data Analytics Full-Time Certificate</h3>
           <p>Learn to collect, process, analyze and interpret data in order to develop actionable business insights. Expand your skills by learning how to leverage statistics, data mining and big data to develop strategies in marketing, retail, health care, finance and other fields.</p>
@@ -159,7 +159,7 @@
 
     <!-- START Tab Content: CERT 2 -->
     <div class="pdp-tab pdp-tab-2">
-      <div class="grid-col-2-1">
+      <div class="grid-container-fluid grid-col-2-1">
         <div id="program-2">
           <h3>Data Science Full-Time Certificate</h3>
           <p>Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.</p>
@@ -200,7 +200,8 @@
           </div>
 
           <!-- Courses -->
-          <div class="accordion__title-wrapper">
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
               <h5 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
@@ -229,7 +230,8 @@
           </div>
           
           <!-- Program Benefits -->
-          <div class="accordion__title-wrapper">
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
               <h5 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
@@ -239,7 +241,7 @@
               </h5>
             </div>
             <div id="accordion--{{ loop.index }}"
-                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
                 {# {{ item.content }} #}
                 <ul>
@@ -249,9 +251,9 @@
               </div>
             </div>
           </div>
-
           <!-- Outcomes -->
-          <div class="accordion__title-wrapper">
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
               <h5 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
@@ -260,8 +262,7 @@
                 </button>
               </h5>
             </div>
-            <div id="accordion--{{ loop.index }}"
-                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+            <div id="accordion--{{ loop.index }}" class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
                 {# {{ item.content }} #}
                 <ul>
@@ -311,57 +312,57 @@
 
     <!-- START Tab Content: PDP -->
     <div class="pdp-tab pdp-tab-3">
-      <div class="grid-col-2-1">
+      <div class="grid-container-fluid grid-col-2-1">
         <div id="program-3">
           <h3>Data Science Professional Diploma Program With Specialization Electives</h3>
           <p>Complete the coursework in the <strong>Data Analytics </strong> and <strong>Data Science</strong> certificates, and take 4 additional semester units to complete this program.</p>
           <!-- Subject area course list -->
           <!-- <%@ include file="/international/professional/common/liveOnline-courses.jsp"%> -->          
           <!-- data-if program.agile -->
-          <div class="tab">
-            <input type="checkbox" id="pdp-agile-courses-1" />
-            <label class="tab-label card-title" for="pdp-agile-courses-1">Semester 1</label>
-            <div class="tab-content panel">
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Semester 1
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <!-- data-ng-if="program.agile" -->
+                <ul>
+                  <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40372&showSections=false">Agile Principles and Practices</a></li>
+                  <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion__item">
+            <div class="accordion__title-wrapper">
+              <h5 class="accordion__title">
+                <button type="button" class="accordion__button"
+                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                  aria-controls="accordion--{{ loop.index }}">
+                  Semester 2
+                </button>
+              </h5>
+            </div>
+            <div id="accordion--{{ loop.index }}"
+                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+              <div class="accordion__content">
+                {# {{ item.content }} #}
+                <!-- data-ng-if="program.agile" -->
               <!-- data-ng-if="program.agile" -->
-              <ul>
-                <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40372&showSections=false">Agile Principles and Practices</a></li>
-                <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tab" data-ng-if="program.agile">
-            <input type="checkbox" id="pdp-agile-courses-2" />
-            <label class="tab-label card-title" for="pdp-agile-courses-2">Semester 2</label>
-            <div class="tab-content panel">
-              <!-- data-ng-if="program.agile" -->
-              <ul>
-                <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40329&showSections=false">Project Leadership and Building High-Performing Teams</a></li>
-                <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
-              </ul>
-            </div>
-          </div>
-          <!-- data-ng-if="!program.agile" -->
-          <div class="tab">
-            <input type="checkbox" id="pdp-courses-1" />
-            <label class="tab-label card-title" for="pdp-courses-1">Semester 1</label>
-            <div class="tab-content panel">
-              <!-- data-ng-if="!program.agile" -->
-              <ul data-ng-if="!program.agile">
-                <li><a href="https://extension.berkeley.edu/" target="_blank" rel="noopener noreferrer">Elective of your choice</a> from our catalog</li>
-                <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
-              </ul>
-            </div>
-          </div>
-          <!-- data-ng-if="!program.agile" -->
-          <div class="tab">
-            <input type="checkbox" id="pdp-courses-2" />
-            <label class="tab-label card-title" for="pdp-courses-2">Semester 2</label>
-            <div class="tab-content panel">
-          <!-- data-ng-if="!program.agile" -->
-              <ul>
-                <li><a href="https://extension.berkeley.edu/" target="_blank" rel="noopener noreferrer">Elective of your choice</a> from our catalog</li>
-              </ul>
+                <ul>
+                  <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40329&showSections=false">Project Leadership and Building High-Performing Teams</a></li>
+                  <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -369,9 +370,10 @@
           <h3 >Capstone Portfolio Course</h3>
           <!-- data-ng-if="program.capstone" -->
           <p>To show off your new Data Analtics and Data Science skills, you'll create a comprehensive portfolio of work that can be shown to employers. You'll work with your instructor to gather all of your printed and digital materials and strategically combine them into a professional portfolio. This will help you market yourself and gain a competitive edge as you prepare for your <a href="#internships">internship</a> and <a href="#internships-opt">Optional Practical Training</a>.</p>
-          <a data-ng-href="{{ program.appUrl }}" class="btn btn-success btn-lg mt-5">APPLY NOW</a>
+          <!-- appLink -->
+          <a class="btn btn-success btn-lg mt-5">APPLY NOW</a>
         </div>
-        <div>
+        <div class="structure-immersive-outcomes">
           <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive3">
             <caption>Live Online Data Science</caption>
             <tr class="font-size-sm">

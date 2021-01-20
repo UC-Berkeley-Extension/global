@@ -104,6 +104,12 @@ $columns: map-merge(
   $columns
 );
 
+@media (max-width: map-get($grid-breakpoints, "sm")) {
+  .d-mobile-none {
+    display: none;
+  }
+}
+
 // MIXINS
 @mixin column-variants($parent, $column) {
   #{$parent} {
@@ -337,6 +343,7 @@ $columns: map-merge(
     > :nth-child(2n){
       grid-column: col9 / col12;
     }
+    grid-gap: var(--spacer-lg);
   }
 }
 .grid-col-2-3 {
