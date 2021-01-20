@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - block_content.type.hero
-    - block_content.type.info_card
     - field.field.node.program.field_program_application_cta
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
@@ -23,7 +21,8 @@ dependencies:
     - field.field.node.program.layout_builder__layout
     - node.type.program
   content:
-    - 'block_content:comparison_card:415ad855-597f-440a-9355-09ab65febb77'
+    - 'block_content:comparison_card:1c0e47c0-76b2-48d9-afee-17be20832ef7'
+    - 'block_content:comparison_card:f2f2bbeb-7933-402a-84b0-66fb2a3d31d1'
   module:
     - bglobal_layouts
     - bglobal_pardot
@@ -32,6 +31,7 @@ dependencies:
     - layout_builder
     - layout_discovery
     - link
+    - system
     - text
     - user
 third_party_settings:
@@ -46,64 +46,18 @@ third_party_settings:
           class:
             bg-light: 0
             bg-teal: 0
-        components:
-          33f4d20d-09a0-43bc-a3a2-1a11df79719e:
-            uuid: 33f4d20d-09a0-43bc-a3a2-1a11df79719e
-            region: content
-            configuration:
-              id: 'inline_block:hero'
-              label: 'Program Hero'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 32
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: bglobal_twocol_section
         layout_settings:
           label: 'Section 1'
-          column_widths: 67-33
+          column_widths: 33-67
           class:
             bg-light: 0
             bg-teal: 0
           title: ''
-        components:
-          15ce456c-b46e-4f21-a79c-8447210a4e26:
-            uuid: 15ce456c-b46e-4f21-a79c-8447210a4e26
-            region: first
-            configuration:
-              id: 'field_block:node:program:field_program_description'
-              label: 'Program Description'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          8795a62d-5815-4bc7-a77a-6614d58aae2b:
-            uuid: 8795a62d-5815-4bc7-a77a-6614d58aae2b
-            region: second
-            configuration:
-              id: 'inline_block:info_card'
-              label: 'Student Testimonial'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 33
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: bglobal_twocol_section
@@ -115,11 +69,25 @@ third_party_settings:
             bg-teal: 0
           title: 'Not Sure Which Format is Right for You?'
         components:
-          b445131f-be0c-42a1-b5dc-37aa98e34c13:
-            uuid: b445131f-be0c-42a1-b5dc-37aa98e34c13
+          0f704a65-0bc2-40c9-83b8-48c1678c5176:
+            uuid: 0f704a65-0bc2-40c9-83b8-48c1678c5176
+            region: second
+            configuration:
+              id: 'block_content:1c0e47c0-76b2-48d9-afee-17be20832ef7'
+              label: 'In the Classroom'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          ce7c7fd3-a9fd-421b-a698-033879abcec4:
+            uuid: ce7c7fd3-a9fd-421b-a698-033879abcec4
             region: first
             configuration:
-              id: 'block_content:415ad855-597f-440a-9355-09ab65febb77'
+              id: 'block_content:f2f2bbeb-7933-402a-84b0-66fb2a3d31d1'
               label: 'Live Online'
               provider: block_content
               label_display: '0'
@@ -134,36 +102,22 @@ third_party_settings:
         layout_id: bglobal_twocol_section
         layout_settings:
           label: 'Instructor Profile'
-          column_widths: 33-67
+          column_widths: 50-50
           class:
             bg-light: 0
             bg-teal: 0
           title: 'Instructor Profile'
         components:
-          36fa6153-508f-428c-8ac8-7ae7103dfeab:
-            uuid: 36fa6153-508f-428c-8ac8-7ae7103dfeab
-            region: first
-            configuration:
-              id: 'inline_block:info_card'
-              label: 'Instructor Profile Photo'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 34
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          2f629a2c-658e-44f4-8606-56f73899d18d:
-            uuid: 2f629a2c-658e-44f4-8606-56f73899d18d
+          f1d35d18-8474-43bf-8052-91df4ddc85ca:
+            uuid: f1d35d18-8474-43bf-8052-91df4ddc85ca
             region: second
             configuration:
               id: 'inline_block:basic'
-              label: 'Lead Instructor: Seema Saharan'
+              label: '  Lead Instructor: Stephen Torres'
               provider: layout_builder
               label_display: visible
               view_mode: full
-              block_revision_id: 35
+              block_revision_id: 22
               block_serialized: null
               context_mapping: {  }
             additional: {  }

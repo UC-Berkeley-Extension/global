@@ -1,0 +1,32 @@
+uuid: 0ce12f32-1114-42ab-8a58-aaf96fb4d4bb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73daaaad-e3ed-4bae-9ba4-2dae3d1c52ff'
+  module:
+    - block_content
+    - term_condition
+  theme:
+    - bglobal
+id: featuresofliveonlinelearning
+theme: bglobal
+region: disabled
+weight: 0
+provider: null
+plugin: 'block_content:73daaaad-e3ed-4bae-9ba4-2dae3d1c52ff'
+settings:
+  id: 'block_content:73daaaad-e3ed-4bae-9ba4-2dae3d1c52ff'
+  label: 'Features of Live Online Learning'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }
