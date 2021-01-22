@@ -224,14 +224,14 @@ function bglobal_preprocess_block(&$variables) {
       $nid = $node->id();
       $node_type= $node->getType();
       $node_title = $node->getTitle();
-      if ($ntype == 'program') {
+      if ($node_type == 'program') {
         $variables['content']['bglobal']['node']['#nid'] = $nid;
         $variables['content']['bglobal']['node']['#type'] = $node_type;
         $variables['content']['bglobal']['node']['#title'] = $node_title;
         $variables['content']['bglobal']['node']['#shortname'] = $node->get('field_program_shortname')->getString();
         $variables['content']['bglobal']['node']['#link'] = $node->get('field_program_application_cta')->getValue();
         $variables['content']['bglobal']['node']['#certType'] = $node->get('field_term_ref_certificate_type')->entity->label();
-        // echo '<pre>' . __FILE__ . ': ' . $ntype;
+        // echo '<pre>' . __FILE__ . ': ' . $node_type;
           // var_dump($variables['content']);
         // echo '</pre>';
         // dd($variables);
