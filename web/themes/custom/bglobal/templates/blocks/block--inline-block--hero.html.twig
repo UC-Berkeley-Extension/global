@@ -35,14 +35,25 @@
           'src': file_url(content.field_hero_image.0['#media'].field_media_image.entity.uri.value|image_style('full_width')),
           'alt': content.field_hero_image.0.entity.field_media_image.alt,
           },
-        'title': content.field_title.0['#context'].value,
-        'subtitle': content.field_subtitle.0,
+        'title': label,
+        'label_display': elements['#configuration'].label_display,
+        'subtitle': content.field_hero__subtitle.0['#text'],
         'link': {
           'url': content.field_cta_link.0['#url'],
           'text': content.field_cta_link.0['#title'],
           'classes': 'hero__btn btn__warning btn__large button',
-          }
         }
+      },
+      'node': {
+        'title': content.bglobal.node['#title'],
+        'shortname': content.bglobal.node['#shortname'],
+        'certType': content.bglobal.node['#certType'],
+        'type': content.bglobal.node['#type'],
+        'link': {
+          'url': content.bglobal.node['#link'][0].uri,
+          'text': content.bglobal.node['#link'][0].title,
+        },
+      }
     } %}
   {% endblock %}
 </div>
