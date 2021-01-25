@@ -23,6 +23,7 @@ class BGFourColumnLayout extends LayoutDefault {
     ];
     $title = $this->getConfiguration()['title'] ?? '';
     if ($title) {
+      $build['#attributes']['id'][] = preg_replace(['/\s/', '/[^a-zA-Z0-9\-]/' ], ['-', ''], strtolower($title));
       $build['title'] = [
         '#markup' => Markup::create($title),
       ];
