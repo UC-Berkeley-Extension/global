@@ -16,25 +16,33 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  field_cta_link:
-    weight: 1
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_hero__subtitle:
+  info:
+    type: string_textfield
     weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero__subtitle:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
+  field_cta_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_hero_image:
     type: media_library_widget
-    weight: 2
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
