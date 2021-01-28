@@ -1,0 +1,8 @@
+uuid: 00a9891d-898a-4379-ab48-7478cfa91ca8
+langcode: en
+status: true
+dependencies: {  }
+id: another_study_option
+label: 'Another Study Option'
+revision: 0
+description: 'Add this block on Programs that have both an Online and a Classroom component'

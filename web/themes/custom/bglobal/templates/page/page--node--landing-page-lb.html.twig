@@ -48,6 +48,12 @@
 {% embed '@pages/page.twig' with {
   'logo': {
     'src': '/themes/custom/bglobal/source/images/logo.png',
+  },
+  'hero': {
+    'img': {
+      'src': "https://source.unsplash.com/random",
+      'alt': "Alt text here."
+    }
   }
 } %}
 
@@ -56,8 +62,11 @@
       {% block header_blocks %}
         {{ page.header }}
       {% endblock %}
-
     {% endembed %}
+  {% endblock %}
+
+  {% block page_hero %}
+    {% include "@molecules/hero/hero.twig" %}
   {% endblock %}
 
   {% block page_content %}

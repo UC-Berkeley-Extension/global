@@ -1,14 +1,14 @@
-uuid: 3cc425b8-4b8a-4b05-aea9-5f561b84dda8
+uuid: 6bb46b4a-fa45-4a37-94ae-20f426bb58a2
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.storage.block_content.field_subtitle
+    - field.storage.block_content.field_hero__subtitle
   module:
     - text
-id: block_content.hero.field_subtitle
-field_name: field_subtitle
+id: block_content.hero.field_hero__subtitle
+field_name: field_hero__subtitle
 entity_type: block_content
 bundle: hero
 label: Subtitle

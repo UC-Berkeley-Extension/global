@@ -55,11 +55,16 @@ You should now be in the DDEV virtual machine at the prompt:
 Run the following commands.
 - `cd ..` - this will put you in `/var/www/html`
 - `phing install` - to install the Drupal site from scratch.
-- The `admin` user will then have its password set to `admin`.
+  - If you were able to download the database from the pantheon instance, login credentials will match those
+  - If you weren't able to download the database, the `admin` user will then have its password set to `admin`.
 
-Visit https://global.ddev.site and login as `admin\admin`.
+Visit https://global.ddev.site and login.
 
 *Hint:* If you forget the password, use `drush uli` to get a login link.
+
+To ensure image files come through, visit your [Pantheon Dashboard Export section](https://dashboard.pantheon.io/sites/7a43f5b4-f7a9-4542-a2f3-eeda766d848b#dev/content/export), click Export Files, then download the files folder. Copy the contents to your local `~/User/Sites/global/web/sites/default/files` folder. 
+
+
 
 ## Updating After Installation
 
@@ -99,6 +104,12 @@ And run these from inside the DDEV container:
 
 
 ## Troubleshooting
+
+### `sh: terminus: command not found` on `composer install` ###
+Make sure you have terminus installed on your machine by typing `which terminus`. 
+
+  - If it returns a file path (e.g. `/Users/username/vendor/bin`), add it to your $PATH with this command: `export PATH=[the path returned by the which terminus command]:$PATH`
+  - If it returns blank, you might need to install terminus (see [Setting up Terminus](https://github.com/UC-Berkeley-Extension/global#setting-up-terminus)). 
 
 ### `ddev start` errors
 
@@ -188,8 +199,29 @@ When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- 
 
 *NOTE: the Pantheon build is not currently using Config Split, which may be desired for local development once the site goes live.*
 
+## Before your first deployment
+Make the following changes to artifact.xml. I believe this file is part of the Palantir repository so changes won't be tracked here. One day we'll find a way to make these changes permanent:
+
+### :42
+```    
+  - <property name="artifact.git.temporary_branch" value="artifact-${artifact.git.commit}" override="true" />
+  + <property name="artifact.git.temporary_branch" value="a-${artifact.git.commit}" override="true" />
+```
+### Below the first exec in `name="artifact-updateCode"`
+```
+  + <echo>Loosening rights on /sites folder.</echo>    
+  + <exec dir="${artifact.directory}" command="chmod -R 777 var/www/html/web/sites/" checkreturn="false" logoutput="true" />
+  + <echo>Loosened rights on /sites folder.</echo>
+```
+### First line in `name="artifact-commit"`
+```
+  + <!-- Discard changes to files in directories that Pantheon doesn't like you to touch -->
+  + <exec command="git checkout web/sites/default/files" dir="${artifact.directory}" />
+  + <exec command="git checkout sites/default/files" dir="${artifact.directory}" />
+```
 
 ## Pre-deployment
+Permissions for the artifacts folder keep getting reset. You might have to run `sudo chmod -R 777 artifacts/build/` from your host machine before running `phing artifact`.
 
 When preparing an artifact for an environment other than `live`, normal best practice is to use the Pantheon dashboard to copy live database and files to the target environment. See [the Pantheon workflow documentation](https://pantheon.io/docs/pantheon-workflow) for details.
 

@@ -1,5 +1,8 @@
 .voices__spotlight {
   // width: 66%;
+  a.blog-header {
+    color: $black;
+  }
   &__teaser {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,6 +26,13 @@
     }
     &__title {
       font-family: $font-bitter;
+    }
+  }
+  a.voices__spotlight__teaser__cta__link {
+    background: none;
+    color: black;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

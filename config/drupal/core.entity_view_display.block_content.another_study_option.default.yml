@@ -1,0 +1,22 @@
+uuid: 137fd0e2-8b2c-4e2d-8eec-f18f2170a4be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.another_study_option
+    - field.field.block_content.another_study_option.body
+  module:
+    - text
+id: block_content.another_study_option.default
+targetEntityType: block_content
+bundle: another_study_option
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
