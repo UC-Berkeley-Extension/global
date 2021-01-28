@@ -16,22 +16,6 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  info:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_hero__subtitle:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
   field_cta_link:
     weight: 2
     settings:
@@ -40,6 +24,14 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_hero__subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_hero_image:
     type: media_library_widget
     weight: 3
@@ -47,5 +39,13 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   info: true
