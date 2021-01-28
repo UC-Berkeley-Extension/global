@@ -203,20 +203,25 @@ When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- 
 Make the following changes to artifact.xml. I believe this file is part of the Palantir repository so changes won't be tracked here. One day we'll find a way to make these changes permanent:
 
 ### :42
-- <property name="artifact.git.temporary_branch" value="artifact-${artifact.git.commit}" override="true" />
-+ <property name="artifact.git.temporary_branch" value="a-${artifact.git.commit}" override="true" />
-
+```    
+  - <property name="artifact.git.temporary_branch" value="artifact-${artifact.git.commit}" override="true" />
+  + <property name="artifact.git.temporary_branch" value="a-${artifact.git.commit}" override="true" />
+```
 ### Below the first exec in `name="artifact-updateCode"`
-+ <echo>Loosening rights on /sites folder.</echo>    
-+ <exec dir="${artifact.directory}" command="chmod -R 777 var/www/html/web/sites/" checkreturn="false" logoutput="true" />
-+ <echo>Loosened rights on /sites folder.</echo>
-
+```
+  + <echo>Loosening rights on /sites folder.</echo>    
+  + <exec dir="${artifact.directory}" command="chmod -R 777 var/www/html/web/sites/" checkreturn="false" logoutput="true" />
+  + <echo>Loosened rights on /sites folder.</echo>
+```
 ### First line in `name="artifact-commit"`
-+ <!-- Discard changes to files in directories that Pantheon doesn't like you to touch -->
-+ <exec command="git checkout web/sites/default/files" dir="${artifact.directory}" />
-+ <exec command="git checkout sites/default/files" dir="${artifact.directory}" />
+```
+  + <!-- Discard changes to files in directories that Pantheon doesn't like you to touch -->
+  + <exec command="git checkout web/sites/default/files" dir="${artifact.directory}" />
+  + <exec command="git checkout sites/default/files" dir="${artifact.directory}" />
+```
 
 ## Pre-deployment
+Permissions for the artifacts folder keep getting reset. You might have to run `sudo chmod -R 777 artifacts/build/` from your host machine before running `phing artifact`.
 
 When preparing an artifact for an environment other than `live`, normal best practice is to use the Pantheon dashboard to copy live database and files to the target environment. See [the Pantheon workflow documentation](https://pantheon.io/docs/pantheon-workflow) for details.
 
