@@ -199,6 +199,22 @@ When deployments are pushed to `deploy`, `dev`, and `test` -- but not `live` -- 
 
 *NOTE: the Pantheon build is not currently using Config Split, which may be desired for local development once the site goes live.*
 
+## Before your first deployment
+Make the following changes to artifact.xml. I believe this file is part of the Palantir repository so changes won't be tracked here. One day we'll find a way to make these changes permanent:
+
+### :42
+- <property name="artifact.git.temporary_branch" value="artifact-${artifact.git.commit}" override="true" />
++ <property name="artifact.git.temporary_branch" value="a-${artifact.git.commit}" override="true" />
+
+### Below the first exec in `name="artifact-updateCode"`
++ <echo>Loosening rights on /sites folder.</echo>    
++ <exec dir="${artifact.directory}" command="chmod -R 777 var/www/html/web/sites/" checkreturn="false" logoutput="true" />
++ <echo>Loosened rights on /sites folder.</echo>
+
+### First line in `name="artifact-commit"`
++ <!-- Discard changes to files in directories that Pantheon doesn't like you to touch -->
++ <exec command="git checkout web/sites/default/files" dir="${artifact.directory}" />
++ <exec command="git checkout sites/default/files" dir="${artifact.directory}" />
 
 ## Pre-deployment
 
