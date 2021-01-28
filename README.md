@@ -221,6 +221,7 @@ Make the following changes to artifact.xml. I believe this file is part of the P
 ```
 
 ## Pre-deployment
+Permissions for the artifacts folder keep getting reset. You might have to run `sudo chmod -R 777 artifacts/build/` from your host machine before running `phing artifact`.
 
 When preparing an artifact for an environment other than `live`, normal best practice is to use the Pantheon dashboard to copy live database and files to the target environment. See [the Pantheon workflow documentation](https://pantheon.io/docs/pantheon-workflow) for details.
 
