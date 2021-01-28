@@ -1,0 +1,32 @@
+uuid: 478464bf-2f28-405f-b4fd-2fcf556d76fd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero:815d500f-f3d3-4150-9d04-ed7d086c2434'
+  module:
+    - block_content
+    - term_condition
+  theme:
+    - bglobal
+id: programhero
+theme: bglobal
+region: disabled
+weight: 0
+provider: null
+plugin: 'block_content:815d500f-f3d3-4150-9d04-ed7d086c2434'
+settings:
+  id: 'block_content:815d500f-f3d3-4150-9d04-ed7d086c2434'
+  label: 'Program Hero'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }

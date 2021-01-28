@@ -1,0 +1,22 @@
+uuid: c7b3c35c-ba0b-46e4-bc7a-c8275504c1ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.program_page_index
+    - field.field.block_content.program_page_index.body
+  module:
+    - text
+id: block_content.program_page_index.default
+targetEntityType: block_content
+bundle: program_page_index
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

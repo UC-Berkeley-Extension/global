@@ -1,0 +1,8 @@
+uuid: dc9a05b6-328f-4e70-9ead-a1920711edf4
+langcode: en
+status: true
+dependencies: {  }
+id: program_page_index
+label: 'Program Page Index'
+revision: 0
+description: 'The internal page links for program pages'
