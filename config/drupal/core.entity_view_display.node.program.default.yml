@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.another_study_option
+    - block_content.type.basic
     - block_content.type.call_to_action
     - block_content.type.hero
     - block_content.type.program_page_index
@@ -23,12 +23,11 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
-    - views.view.study_options
   content:
-    - 'block_content:basic:c9585798-412f-4708-a1f8-d338be36a707'
-    - 'block_content:basic:e0069ec5-4ba0-4767-ba4a-9da21402163d'
-    - 'block_content:basic:f38809bf-ca9c-4bca-88fa-dc94caf8e693'
-    - 'block_content:hero:815d500f-f3d3-4150-9d04-ed7d086c2434'
+    - 'block_content:basic:43186cd8-6669-46bb-aeb4-a5ee48bde3c2'
+    - 'block_content:basic:6b682db9-d598-41c3-9c37-2719ab36f146'
+    - 'block_content:basic:714f1115-63f3-400f-8117-81197a284388'
+    - 'block_content:hero:d85a2c60-a3d8-4c94-a9d8-11165b334909'
   module:
     - bglobal_layouts
     - bglobal_pardot
@@ -39,7 +38,6 @@ dependencies:
     - link
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
     allow_custom: true
@@ -53,11 +51,11 @@ third_party_settings:
             bg-light: 0
             bg-teal: 0
         components:
-          f5579bd0-aad7-4fe9-add8-c46d40e09c8a:
-            uuid: f5579bd0-aad7-4fe9-add8-c46d40e09c8a
+          d6c2d2c1-5fe9-4964-9b49-b690291dc77c:
+            uuid: d6c2d2c1-5fe9-4964-9b49-b690291dc77c
             region: content
             configuration:
-              id: 'block_content:815d500f-f3d3-4150-9d04-ed7d086c2434'
+              id: 'block_content:d85a2c60-a3d8-4c94-a9d8-11165b334909'
               label: 'Program Hero'
               provider: block_content
               label_display: '0'
@@ -110,16 +108,16 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 4
-          16c4ec56-926e-492e-8c6c-2c8749bd7c93:
-            uuid: 16c4ec56-926e-492e-8c6c-2c8749bd7c93
+          b78eb065-11b7-4363-9a4f-5f53cd1c7472:
+            uuid: b78eb065-11b7-4363-9a4f-5f53cd1c7472
             region: first
             configuration:
               id: 'inline_block:program_page_index'
-              label: 'Program Index'
+              label: 'Page Outline'
               provider: layout_builder
               label_display: '0'
               view_mode: full
-              block_revision_id: 49
+              block_revision_id: 51
               block_serialized: null
               context_mapping: {  }
             additional: {  }
@@ -133,7 +131,7 @@ third_party_settings:
           class:
             bg-teal: bg-teal
             bg-light: 0
-          title: Advising
+          title: ''
         components:
           f8486b83-99be-49b5-ac9e-5b3fd532cb36:
             uuid: f8486b83-99be-49b5-ac9e-5b3fd532cb36
@@ -184,30 +182,6 @@ third_party_settings:
             bg-light: 0
             bg-teal: 0
           title: 'Your Study Options'
-        components:
-          81d12c6b-92e6-419e-865a-75cdeb2a18e0:
-            uuid: 81d12c6b-92e6-419e-865a-75cdeb2a18e0
-            region: first
-            configuration:
-              id: 'views_block:study_options-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: bglobal_twocol_section
-        layout_settings:
-          label: 'Another Study Option'
-          column_widths: 75-25
-          class:
-            bg-light: 0
-            bg-teal: 0
-          title: 'Another Study Option'
         components: {  }
         third_party_settings: {  }
       -
@@ -228,8 +202,8 @@ third_party_settings:
             bg-light: 0
             bg-teal: 0
         components:
-          eca2b0c6-03cb-4d20-96e4-6c44b1b1b5ab:
-            uuid: eca2b0c6-03cb-4d20-96e4-6c44b1b1b5ab
+          f2a709f3-3ba0-4e69-8f86-57e47956daa4:
+            uuid: f2a709f3-3ba0-4e69-8f86-57e47956daa4
             region: content
             configuration:
               id: 'inline_block:hero'
@@ -237,7 +211,7 @@ third_party_settings:
               provider: layout_builder
               label_display: visible
               view_mode: full
-              block_revision_id: 50
+              block_revision_id: 52
               block_serialized: null
               context_mapping: {  }
             additional: {  }
@@ -253,12 +227,12 @@ third_party_settings:
             bg-teal: 0
           title: ''
         components:
-          26b2be3f-a266-43b4-a444-72597e70a72a:
-            uuid: 26b2be3f-a266-43b4-a444-72597e70a72a
+          31cba38c-a8b6-4c0a-9cab-4396b3bf651b:
+            uuid: 31cba38c-a8b6-4c0a-9cab-4396b3bf651b
             region: first
             configuration:
-              id: 'block_content:f38809bf-ca9c-4bca-88fa-dc94caf8e693'
-              label: 'Your Path to a Career in {{ PROGRAM SHORTNAME }}'
+              id: 'block_content:43186cd8-6669-46bb-aeb4-a5ee48bde3c2'
+              label: 'Your Path to a Career'
               provider: block_content
               label_display: visible
               status: true
@@ -267,11 +241,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          1a3f4326-9e4e-4e0d-af3a-2f9c81efe347:
-            uuid: 1a3f4326-9e4e-4e0d-af3a-2f9c81efe347
+          048f5070-dd53-45ed-8efd-fc427ae07e47:
+            uuid: 048f5070-dd53-45ed-8efd-fc427ae07e47
             region: second
             configuration:
-              id: 'block_content:e0069ec5-4ba0-4767-ba4a-9da21402163d'
+              id: 'block_content:6b682db9-d598-41c3-9c37-2719ab36f146'
               label: 'Our Graduates are Working'
               provider: block_content
               label_display: '0'
@@ -292,25 +266,25 @@ third_party_settings:
             bg-teal: 0
           title: 'Another Study Option'
         components:
-          88a6f9fb-d95e-4b83-9c57-e1a5f1f6c5b9:
-            uuid: 88a6f9fb-d95e-4b83-9c57-e1a5f1f6c5b9
+          7cbddfc2-7c62-4f53-b7e0-5e74407d1002:
+            uuid: 7cbddfc2-7c62-4f53-b7e0-5e74407d1002
             region: first
             configuration:
-              id: 'inline_block:another_study_option'
-              label: 'Another Study Option Program Default'
+              id: 'inline_block:basic'
+              label: 'Another Study Option {{ PROGRAM SHORT NAME }} Classroom'
               provider: layout_builder
               label_display: '0'
               view_mode: full
-              block_revision_id: 56
+              block_revision_id: 55
               block_serialized: null
               context_mapping: {  }
             additional: {  }
             weight: 0
-          e49a77f9-65a4-4c6b-b8b7-184d75ac36c5:
-            uuid: e49a77f9-65a4-4c6b-b8b7-184d75ac36c5
+          478595b2-afbe-40c7-9f55-ce7d92054354:
+            uuid: 478595b2-afbe-40c7-9f55-ce7d92054354
             region: second
             configuration:
-              id: 'block_content:c9585798-412f-4708-a1f8-d338be36a707'
+              id: 'block_content:714f1115-63f3-400f-8117-81197a284388'
               label: 'Online Study Option Benefits'
               provider: block_content
               label_display: '0'
@@ -359,17 +333,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 2
-        third_party_settings: {  }
-      -
-        layout_id: bglobal_twocol_section
-        layout_settings:
-          label: 'Advising Row'
-          column_widths: 50-50
-          class:
-            bg-teal: bg-teal
-            bg-light: 0
-          title: ''
-        components: {  }
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
