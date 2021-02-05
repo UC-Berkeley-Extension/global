@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   module:
+    - term_condition
     - workbench_access
   theme:
     - bglobal
 id: workbenchaccessinformation
 theme: bglobal
-region: content
+region: disabled
 weight: 2
 provider: null
 plugin: workbench_access_block
@@ -19,4 +20,10 @@ settings:
   label_display: visible
   context_mapping:
     node: '@node.node_route_context:node'
-visibility: {  }
+visibility:
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }
