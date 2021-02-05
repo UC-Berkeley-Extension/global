@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.field_landing_page_cta
+    - field.field.node.landing_page.field_landing_page_hero_image
+    - field.field.node.landing_page.field_landing_page_hero_subtitle
     - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_school_microsite
     - field.field.node.landing_page.layout_builder__layout
@@ -26,6 +29,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_landing_page_cta: true
+  field_landing_page_hero_image: true
+  field_landing_page_hero_subtitle: true
   field_term_ref_editorial_section: true
   field_term_ref_school_microsite: true
   layout_builder__layout: true
