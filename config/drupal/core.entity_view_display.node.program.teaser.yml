@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
     - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_hero_image
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_voices_feed_id
     - field.field.node.program.field_ref_certificates
@@ -43,6 +44,7 @@ hidden:
   field_program_description: true
   field_program_email: true
   field_program_featured: true
+  field_program_hero_image: true
   field_program_shortname: true
   field_program_voices_feed_id: true
   field_ref_certificates: true

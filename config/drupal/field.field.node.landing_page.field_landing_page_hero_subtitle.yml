@@ -1,0 +1,21 @@
+uuid: 2d31ca88-db6a-465f-9476-41bcce4bbdea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_hero_subtitle
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_landing_page_hero_subtitle
+field_name: field_landing_page_hero_subtitle
+entity_type: node
+bundle: landing_page
+label: 'Hero Subtitle'
+description: 'Shows up under the page title in the hero'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
