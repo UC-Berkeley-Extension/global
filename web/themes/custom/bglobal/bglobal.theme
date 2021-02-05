@@ -9,15 +9,67 @@ use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Layout\LayoutDefault;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 
-// Put it in preprocessing if useful on all sorts of different twig variations
-// If Twig variable is unclear where it comes from, good to look for it in preprocessing
-// 
-// function bglobal_preprocess_node(&$variables) {
-//  if content type is x 
-//    then create new variable that concatenates these fields.
-// }
-//  
+function bglobal_preprocess_page(&$variables) {
+  // Affect variable passed to page.html.twig and all of it's children
+  if (!empty($variables['node'])) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $nodeId = $variables['node']->id();
+    $nodeType = $variables['node']->getType();
+    $nodeTitle = $variables['node']->getTitle();
+    $variables['content']['bglobal']['#nodeId'] = $nodeId;
+    $variables['content']['bglobal']['#nodeType'] = $nodeType;
+    $variables['content']['bglobal']['#nodeTitle'] = $nodeTitle;
+
+    if ( $nodeType == 'program') {
+      $cta = $node->get("field_program_application_cta");
+      $variables['content']['bglobal']['program'] = [
+        "#application_cta" => $cta,
+        "#description" => $node->get("field_program_description")->getString(),
+        "#email" => $node->get("field_program_email")->getString(),
+        "#featured" => $node->get("field_program_featured")->getString(),
+        "#shortName" => $node->get("field_program_shortname")->getString(),
+        "#voices" => $node->get("field_program_voices_feed_id")->getString(),
+        "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
+      ];
+      if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
+        $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
+      }
+      populateHeroFields($node, 'field_program_hero_image', $variables);
+      $variables['content']['bglobal']['hero']["#cta"] = $cta;
+    }
+    if ( $nodeType == 'landing_page') {
+      $variables['content']['bglobal']['hero'] = [
+        "#subtitle" => $node->get("field_landing_page_hero_subtitle")->getString(),
+        "#cta" => $node->get("field_landing_page_cta")->getString(),
+      ];
+      populateHeroFields($node, 'field_landing_page_hero_image', $variables);
+    }
+  }
+  // dd($variables);
+  // Only on home
+  if ($variables['is_front']){
+
+  }
+}
+
+/**
+ * Creates hero fields in the `content` object
+ * @param  \Drupal::routeMatch() $node      The node object
+ * @param  string $fieldName The name of the field in this content type
+ * @return none            
+ */
+function populateHeroFields($node, $fieldName, &$variables) {
+  if (!empty($node->get($fieldName)[0])) {
+    $heroMediaId = $node->get($fieldName)[0]->getValue()['target_id'];
+    $variables['content']['bglobal']['hero']['#alt'] = Media::load($heroMediaId)->field_media_image[0]->getValue()['alt'];
+    $heroFileId = Media::load($heroMediaId)->field_media_image[0]->getValue()['target_id'];
+    $file = File::load($heroFileId);
+    $variables['content']['bglobal']['hero']['#uri'] = $file->getFileUri();
+  }
+}
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -224,6 +276,8 @@ function bglobal_preprocess_block(&$variables) {
       $nid = $node->id();
       $node_type= $node->getType();
       $node_title = $node->getTitle();
+
+      // PROGRAMS
       if ($node_type == 'program') {
         $node_cta = $node->get('field_program_application_cta')->getValue();
         if ($node_cta && $node_cta['0']['uri']) {
@@ -234,7 +288,9 @@ function bglobal_preprocess_block(&$variables) {
         $variables['content']['bglobal']['node']['#title'] = $node_title;
         $variables['content']['bglobal']['node']['#shortname'] = $node->get('field_program_shortname')->getString();
         $variables['content']['bglobal']['node']['#link'] = $node_cta;
-        $variables['content']['bglobal']['node']['#certType'] = $node->get('field_term_ref_certificate_type')->entity->label();
+        if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
+          $variables['content']['bglobal']['node']['#certType'] = $node->get('field_term_ref_certificate_type')->entity->label();
+        }
       }
     }
     
@@ -243,3 +299,4 @@ function bglobal_preprocess_block(&$variables) {
     }
   }
 }
+

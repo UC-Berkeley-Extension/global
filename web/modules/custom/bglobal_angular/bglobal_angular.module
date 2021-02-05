@@ -1,27 +1,5 @@
 <?php
 
-/**
- * Implements hook_preprocess_page()
- * Creates the following variables:
- *   - drupalSettings.nodeId
- *   - drupalSettings.nodeType
- *   - drupalSettings.nodeTitle
- *   - drupalSettings.info_sessions_advising.imagePath
- *   - drupalSettings.spocc.templatesPath
- */
-function bglobal_angular_preprocess_page(&$variables) {
-  // Affect variable passed to page.html.twig and all of it's children
-  if (!empty($variables['node'])) {
-    $variables['#attached']['drupalSettings']['nodeId'] = $variables['node']->id();
-    $variables['#attached']['drupalSettings']['nodeType'] = $variables['node']->getType();
-    $variables['#attached']['drupalSettings']['nodeTitle'] = $variables['node']->getTitle();
-  } else if ($variables['is_front']){
-    $variables['#attached']['drupalSettings']['nodeId'] = 0;
-    $variables['#attached']['drupalSettings']['nodeType'] = "home";
-    $variables['#attached']['drupalSettings']['nodeTitle'] = "Home";
-  }
-}
-
 function bglobal_angular_preprocess_block(&$variables) {
   // Affect variable passed to block.html.twig and all of it's children
   if (!empty($variables['theme_hook_original'] == 'block')) {

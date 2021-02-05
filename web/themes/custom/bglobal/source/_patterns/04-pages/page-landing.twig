@@ -9,8 +9,7 @@
     {% endblock %}
 
     <div id="main">
-      <main class="main-content{% if not full_width %} container{% endif %}" role="main">
-        <a id="main-content" tabindex="-1"></a>
+      <main id="main-content" class="main-content{% if not full_width %} container{% endif %}" role="main">
         <div class="content{% if not full_width %} container{% endif %}">
 
           {% block page_content %}

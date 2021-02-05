@@ -2,8 +2,8 @@ hero:
   img:
     src: "https://source.unsplash.com/random"
     alt: "Alt text here."
-  title: "Experience Berkeley Global"
-  subtitle: "Quality education from anywhere in the world"
+  title: "Data Science"
+  subtitle: "Full Time Classroom Certificate"
   label_display: visible
   link:
     url: "#"

@@ -1,5 +1,5 @@
 {% if node.type == 'program' %}
-  {% set title = node.shortname %}
+  {% set title = node.subtitle %}
   {% set subtitle = node.certType %}
   {% set url = node.link.url %}
   {% set text = node.link.text %}
@@ -13,9 +13,11 @@
 {% endif %}
 
 <section class="hero__container">
-  <div class="hero__image__container">
-    <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
-  </div>
+  {% if hero.img.src is not empty %}
+    <div class="hero__image__container">
+      <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
+    </div>
+  {% endif %}
   <div class="hero__text__container container">
     {% if title %}
       <h2 class="hero__title">

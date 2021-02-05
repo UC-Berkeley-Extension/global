@@ -43,13 +43,31 @@
  * @see html.html.twig
  */
 #}
-{% set modifier_class = 'berkeley-school' %}
 {% set full_width = true %}
+{% if content.bglobal.hero['#uri'] is not empty %}
+  {% set heroSrc = file_url(content.bglobal.hero['#uri']|image_style('full_width')) %}
+  {% else %}
+    {% set heroSrc = "" %}
+{% endif %}
 
-{% embed '@pages/page.twig' with {
+{% embed '@pages/page-landing.twig' with {
   'logo': {
     'src': '/themes/custom/bglobal/source/images/logo.png',
-  }
+  },
+  'hero': {
+    'title': content.bglobal["#nodeTitle"],
+    'subtitle': content.bglobal.hero["#subtitle"],
+    'img': {
+      'src': heroSrc,
+      'alt': content.bglobal.hero['#alt'],
+    },
+    'link': {
+      'url': content.bglobal.hero['#cta'][0].uri,
+      'text': content.bglobal.hero['#cta'][0].title,
+      'classes': 'hero__btn btn__warning btn__large button',
+    },
+    'label_display': 'visible',
+  },
 } %}
 
   {% block page_header %}
