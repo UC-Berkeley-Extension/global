@@ -45,7 +45,7 @@ function bglobal_preprocess_page(&$variables) {
     }
     if ( $nodeType == 'landing_page') {
       $variables['content']['bglobal']['hero'] = [
-        "#subtitle" => $node->get("field_landing_page_hero_subtitle")->getString(),
+        "#subtitle" => $node->get("field_landing_page_hero_subtitle")->getValue(),
         "#cta" => $node->get("field_landing_page_cta")->getString(),
       ];
       populateHeroFields($node, 'field_landing_page_hero_image', $variables);
