@@ -39,6 +39,9 @@ function bglobal_preprocess_page(&$variables) {
       if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
         $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
       }
+      if (!empty($node->get('field_term_ref_delivery_method')->entity)) {
+        $variables['content']['bglobal']['program']['#delivery'] = $node->get("field_term_ref_delivery_method")->entity->label();
+      }
       populateHeroFields($node, 'field_program_hero_image', $variables);
       $variables['content']['bglobal']['hero']["#cta"] = $cta;
       $variables['#attached']['drupalSettings']['program'] = $variables['content']['bglobal']['program'];

@@ -1,5 +1,6 @@
 {% if node.type == 'program' %}
   {% set title = node.subtitle %}
+  {% set delivery = node.delivery %}
   {% set subtitle = node.certType %}
   {% set url = node.link.url %}
   {% set text = node.link.text %}
@@ -26,7 +27,7 @@
     {% endif %}
     {% if subtitle %}
       <p class="hero__subtitle">
-        <span class="highlight--blue">{{ subtitle }}</span>
+        <span class="highlight--blue">{{ delivery }} {{ subtitle }}</span>
       </p>
     {% endif %}
     {% if url %}
