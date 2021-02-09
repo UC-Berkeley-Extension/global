@@ -9,7 +9,7 @@
       {% include "@molecules/hero/hero.twig" %}
     {% endblock %}
 
-    <div id="main">
+    <div id="main" data-ng-controller="ProgramController">
       <main id="main-content" class="main-content{% if not full_width %} container{% endif %}" role="main">
         <div class="content{% if not full_width %} container{% endif %}">
 

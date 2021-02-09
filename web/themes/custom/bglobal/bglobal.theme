@@ -22,8 +22,10 @@ function bglobal_preprocess_page(&$variables) {
     $variables['content']['bglobal']['#nodeId'] = $nodeId;
     $variables['content']['bglobal']['#nodeType'] = $nodeType;
     $variables['content']['bglobal']['#nodeTitle'] = $nodeTitle;
-
     if ( $nodeType == 'program') {
+      // Set the theme library that connects Program pages to Angular 
+      $variables['#attached']['library'][] = 'bglobal/programs';
+      
       $cta = $node->get("field_program_application_cta");
       $variables['content']['bglobal']['program'] = [
         "#application_cta" => $cta,
@@ -39,6 +41,7 @@ function bglobal_preprocess_page(&$variables) {
       }
       populateHeroFields($node, 'field_program_hero_image', $variables);
       $variables['content']['bglobal']['hero']["#cta"] = $cta;
+      $variables['#attached']['drupalSettings']['program'] = $variables['content']['bglobal']['program'];
     }
     if ( $nodeType == 'landing_page') {
       $variables['content']['bglobal']['hero'] = [
