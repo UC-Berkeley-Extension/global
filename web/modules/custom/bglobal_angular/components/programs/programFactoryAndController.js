@@ -1,4 +1,4 @@
-function removePoundFromKeys = (obj) => {
+const removePoundFromKeys = (obj) => {
   const newObj = {};
   Object.entries(obj).forEach((pair) => {
     let key = pair[0];
