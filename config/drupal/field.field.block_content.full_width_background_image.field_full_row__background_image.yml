@@ -1,0 +1,28 @@
+uuid: c89d6d5c-10cb-493f-958b-c92810c26002
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_background_image
+    - field.storage.block_content.field_full_row__background_image
+    - media.type.image
+id: block_content.full_width_background_image.field_full_row__background_image
+field_name: field_full_row__background_image
+entity_type: block_content
+bundle: full_width_background_image
+label: 'Background Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
