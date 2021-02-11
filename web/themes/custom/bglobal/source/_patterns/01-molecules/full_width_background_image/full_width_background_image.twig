@@ -1,0 +1,23 @@
+<section class="full-width-row__container">
+  {% if img.src is not empty %}
+    <div class="full-width-row__image__container">
+      <img class="full-width-row__image" src="{{ img.src }}" alt="{{ img.alt }}">
+    </div>
+  {% endif %}
+  {% if title or text %}
+    <div class="full-width-row__text__container container">
+      <div class="full-width-row__box">
+        {% if title %}
+          <h2 class="full-width-row__title">
+            <span class="">{{ title }}</span>
+          </h2>
+        {% endif %}
+        {% if text %}
+          <div class="full-width-row__text">
+            {{ text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+</section>
