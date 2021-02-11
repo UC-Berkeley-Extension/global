@@ -14,7 +14,9 @@
         {% endif %}
         {% if text %}
           <div class="full-width-row__text">
-            {{ text }}
+            {% autoescape false %} 
+              {{ text }}
+            {% endautoescape %}
           </div>
         {% endif %}
       </div>

@@ -1,4 +1,3 @@
-
 {#
 /**
  * @file
@@ -32,12 +31,11 @@
   {% block content %}
     {% include '@molecules/full_width_background_image/full_width_background_image.twig' with {
       'img': {
-        'src': file_url(content.field_full_row__background_image.0['#media'].field_media_image.entity.uri.value|image_style('full_width')),
+        'src': file_url(content.field_full_row__background_image.0['#media'].field_media_image.entity.uri.value),
         'alt': content.field_full_row__background_image.0.entity.field_media_image.alt,
-        },
-        'title': label,
-        'text': content.field_full_row__overlay_text.0['#text'],
       },
+      'title': label,
+      'text': content.field_full_row__overlay_text.0['#text'],
     } %}
   {% endblock %}
 </div>
