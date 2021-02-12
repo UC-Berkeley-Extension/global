@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
     - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_future
     - field.field.node.program.field_program_hero_image
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_voices_feed_id
@@ -101,6 +102,21 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          35157811-0c3a-40c3-a6ea-dab0139c2c90:
+            uuid: 35157811-0c3a-40c3-a6ea-dab0139c2c90
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_future'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: bglobal_twocol_section
@@ -398,6 +414,13 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_program_future:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: first
   field_program_hero_image:
     type: entity_reference_entity_view
     weight: 21

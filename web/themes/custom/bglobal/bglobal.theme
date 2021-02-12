@@ -29,11 +29,12 @@ function bglobal_preprocess_page(&$variables) {
       $cta = $node->get("field_program_application_cta");
       $variables['content']['bglobal']['program'] = [
         "#application_cta" => $cta,
-        "#description" => $node->get("field_program_description")->getString(),
-        "#email" => $node->get("field_program_email")->getString(),
-        "#featured" => $node->get("field_program_featured")->getString(),
-        "#shortName" => $node->get("field_program_shortname")->getString(),
-        "#voices" => $node->get("field_program_voices_feed_id")->getString(),
+        "#description" => $node->field_program_description->value,
+        "#email" => $node->field_program_email->value,
+        "#featured" => $node->field_program_featured->value,
+        "#shortName" => $node->field_program_shortname->value,
+        "#future" => $node->field_program_future->value,
+        "#voices" => $node->field_program_voices_feed_id->value,
         "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
       ];
       if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
