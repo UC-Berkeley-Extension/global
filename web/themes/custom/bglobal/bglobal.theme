@@ -37,6 +37,24 @@ function bglobal_preprocess_page(&$variables) {
         "#voices" => $node->field_program_voices_feed_id->value,
         "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
       ];
+      if (!empty($node->get('field_ref_certificates'))) {
+        $certificates = [];
+        foreach ($node->field_ref_certificates as $reference) {  
+          $cert = $reference->entity;
+          $courses = [];
+          if (!empty($cert->field_certificate_courses)) {
+            foreach ($cert->field_certificate_courses as $course) {
+              $courses[] = $course->value;
+            }
+          }
+          $certificates[] = [
+            "name" => $cert->title->value,
+            "offered" => $cert->field_certificate_offered->value,
+            "courses" => $courses,
+          ];
+        }
+        $variables['content']['bglobal']['program']['#certificates'] = $certificates;
+      }
       if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
         $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
       }

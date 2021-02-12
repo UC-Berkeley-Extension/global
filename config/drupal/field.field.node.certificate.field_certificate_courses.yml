@@ -13,11 +13,7 @@ label: 'Certificate Courses'
 description: 'Course details'
 required: false
 translatable: false
-default_value:
-  -
-    value: '4 core'
-  -
-    value: '1.5 units CEU'
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: string

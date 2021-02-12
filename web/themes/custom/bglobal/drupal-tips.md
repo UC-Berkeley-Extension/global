@@ -17,3 +17,7 @@ dd($variables)
 ```
     var dump: {{ content | json_encode(constant('JSON_PRETTY_PRINT')) }}
 ```
+
+## Resources
+* [Working with Entity fields programmatically][https://drupalbook.org/drupal/9111-working-entity-fields-programmatically]
+    - How to get and set stuff from fields
