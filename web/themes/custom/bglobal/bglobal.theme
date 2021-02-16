@@ -22,7 +22,7 @@ function bglobal_preprocess_page(&$variables) {
     $variables['content']['bglobal']['#nodeId'] = $nodeId;
     $variables['content']['bglobal']['#nodeType'] = $nodeType;
     $variables['content']['bglobal']['#nodeTitle'] = $nodeTitle;
-    if ( $nodeType == 'program') {
+    if ($nodeType == 'program') {
       // Set the theme library that connects Program pages to Angular 
       $variables['#attached']['library'][] = 'bglobal/programs';
       
