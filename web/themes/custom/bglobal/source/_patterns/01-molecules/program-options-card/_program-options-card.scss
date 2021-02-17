@@ -1,0 +1,43 @@
+.program-options-card {
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);
+    display: grid;
+    max-width: 400px;
+    min-height: 500px;
+}
+.program-options-card__border {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='90' width='400'%3E%3Cpolygon points='0,0 400,0 400,90 0,40' style='fill:%23FDB515;stroke:none;' /%3E%3C/svg%3E");
+  height: 90px;
+  text-align: right;
+  p {
+    font-size: 1.2em;
+    margin: 0;
+    padding-top: 1em;
+    padding-right: 2em;
+    text-transform: uppercase;
+  }
+}
+.program-options-card__border.blue {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='90' width='400'%3E%3Cpolygon points='0,0 400,0 400,90 0,40' style='fill:%23003262;stroke:none;' /%3E%3C/svg%3E");
+  p {
+    color: $white;
+  }
+}
+.program-options-card__border.yellow-blue {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='90' width='400'%3E%3Cpolygon points='0,0 400,0 0,90' style='fill:%23FDB515;stroke:none;' /%3E%3Cpolygon points='0,0 400,0 400,90' style='fill:%23003262;stroke:none;' /%3E%3C/svg%3E");
+  p {
+    color: $white;
+  }
+}
+.program-options-card__text {
+  padding: 0 2em 1em 2em;
+  h3 {
+    font-size: 1.55em;
+    line-height: 1.3em;
+    margin: 0;
+  }
+}
+.program-options-card__button-container {
+  padding: 0 2em 2em;
+  text-align: right;
+  align-self: end;
+}

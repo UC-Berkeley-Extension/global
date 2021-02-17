@@ -8,8 +8,8 @@
   border: none;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  padding: 0.75em 1.25em;
   line-height: 1.5;
   background-color: $berkeley-blue;
   @include transition(all, 0.1s, ease-out);
@@ -23,7 +23,6 @@
 a.button, input[type=submit] {
   color: $california-gold;
   text-decoration: none;
-
   &:hover,
   &:focus {
     filter: brightness(50%);
@@ -31,9 +30,19 @@ a.button, input[type=submit] {
   }
 }
 
+.button-large {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
 .button-small {
   font-size: 1em;
   padding: .5em 1em;
+}
+
+a.button.button-warning {
+  background-color: $california-gold;
+  color: $berkeley-blue;
 }
 
 .more-link-container {

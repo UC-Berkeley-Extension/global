@@ -1,0 +1,7 @@
+program:
+  name: "Data Science Full-Time Certificate"
+  body: "Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling and machine learning on complex data sets."
+  duration: "1 semester"
+  prerequisite: "Data Analytics Full-Time Certificate"
+  cost: "$11,000 (USD)"
+borderClass: "blue"

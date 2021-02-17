@@ -1,0 +1,24 @@
+{% set classes = [
+  'program-options-card__border ',
+    borderClass ? borderClass,
+] | merge(classes|default([])) %}
+
+<div class="program-options-card">
+  <div class="{{ classes|join(' ') }}">
+    <p>{{ program.duration }}</p>
+  </div>
+  <div class="program-options-card__text">
+    <h3>{{ program.name }}</h3>
+    <p>{{ program.body }}</p>
+    <ul>
+      <li><strong>Duration:</strong> {{ program.duration }}{% if program.borderClass != 'yellow-blue' %}, Fall or Spring{% endif %}</li>
+      <li><strong>Cost:</strong> {{ program.cost }}</li>
+    {% if program.prerequisite %}
+      <li><strong>Prerequisite:</strong> {{ program.prerequisite }}</li>
+    {% endif %}
+    </ul>
+  </div>
+  <div class="program-options-card__button-container">
+    <a class="button button-warning" src="#">LEARN MORE</a>
+  </div>
+</div>
