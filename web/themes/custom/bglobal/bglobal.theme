@@ -35,6 +35,7 @@ function bglobal_preprocess_page(&$variables) {
         "#shortName" => $node->field_program_shortname->value,
         "#future" => $node->field_program_future->value,
         "#voices" => $node->field_program_voices_feed_id->value,
+        "#capstone" => $node->field_program_capstone->value,
         "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
       ];
       if (!empty($node->get('field_ref_certificates'))) {
@@ -51,6 +52,11 @@ function bglobal_preprocess_page(&$variables) {
             "name" => $cert->title->value,
             "offered" => $cert->field_certificate_offered->value,
             "courses" => $courses,
+            "description" => $cert->field_certificate_short_descript->value,
+            "prerequisites" => $cert->field_certificate_prerequisite->value,
+            "length" => $cert->field_certificate_length->value,
+            "offered" => $cert->field_certificate_offered->value,
+
           ];
         }
         $variables['content']['bglobal']['program']['#certificates'] = $certificates;
