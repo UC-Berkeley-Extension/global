@@ -30,6 +30,16 @@ program:
           objectId: 53249985
           name: Programming Python
           number: COMPSCI X434
+      benefits:
+        -
+          "Remote internship with a Bay Area company ($3,000 USD additional fee)"
+        -
+          "Certificate of completion"
+      outcomes:
+        -
+          "Understand statistics, coding, data mining, visualization and reporting."
+        -
+          "Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL."
     -
       name: Data Science
       description: Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.
@@ -58,8 +68,16 @@ program:
           objectId: 40921
           name: Business Intelligence With SQL Server 
           number: EL ENG X404.8
-
-
-
-
+      benefits:
+        -
+          "Remote internship with a Bay Area company ($3,000 USD additional fee)"
+        -
+          "Certificate of completion"
+      outcomes:
+        -
+          "Perform advanced data wrangling, data mining, statistical modeling and machine learning on large, complex data sets."
+        -
+          "Run data collection and cleaning, modeling, evaluation, visualization, reporting and deployment."
+        -
+          "Develop solutions using Spark, R, Python, TensorFlow, relational databases and SQL."
 

@@ -20,6 +20,7 @@ app.controller('ProgramController',  ['$scope', 'programFactory', ($scope, progr
   const pc = {};
   const pf = programFactory;
   $scope.program = pf.program;
+  console.log($scope.program);
   return pc;
 }]);
 

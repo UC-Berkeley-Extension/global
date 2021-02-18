@@ -55,7 +55,7 @@
             <div id="accordion--coreCourses"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {% if program.certificates[0].courses != "<div certificate-courses data-cert=\"0\"></div>" %}
+                {% if program.certificates[0].courses != "<div certificate-courses data-cert='0'></div>" %}
                   <ul>
                   {% for course in program.certificates[0].courses %}
                     <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
@@ -83,10 +83,11 @@
             <div id="accordion--benefits"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# <ul>
-                  <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
-                  <li>Certificate of completion</li>
-                </ul> #}
+                <ul>
+                  {% for benefit in program.certificates[0].benefits %}
+                    <li>{{ benefit }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>
@@ -105,10 +106,11 @@
             <div id="accordion--outcomes"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# <ul>
-                  <li>Understand statistics, coding, data mining, visualization and reporting.</li>
-                  <li>Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL.</li>
-                </ul> #}
+                <ul>
+                  {% for outcome in program.certificates[0].outcomes %}
+                    <li>{{ outcome }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>
@@ -185,7 +187,7 @@
             <div id="accordion--coreCourses2"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {% if program.certificates[1].courses != "<div certificate-courses data-cert=\"1\"></div>" %}
+                {% if program.certificates[1].courses != "<div certificate-courses data-cert='1'></div>" %}
                   <ul>
                   {% for course in program.certificates[1].courses %}
                     <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
@@ -213,7 +215,11 @@
             <div id="accordion--benefits2"
                   class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-
+                <ul>
+                  {% for benefit in program.certificates[1].benefits %}
+                    <li>{{ benefit }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>
@@ -230,7 +236,11 @@
             </div>
             <div id="accordion--outcomes2" class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-
+                <ul>
+                  {% for outcome in program.certificates[1].outcomes %}
+                    <li>{{ outcome }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>

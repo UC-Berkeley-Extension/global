@@ -31,7 +31,7 @@
   {% block content %}
     {% include '@organisms/curriculum-tabs/curriculum-tabs.twig' with {
       'program': {
-        'name': content.bglobal.program["#shortName"],
+        'shortName': content.bglobal.program["#shortName"],
         'certificate_type': content.bglobal.program['#certificate_type'],
         'cta': {
           'url': content.bglobal.hero['#cta'][0].uri,
@@ -44,6 +44,8 @@
             'prerequisites': content.bglobal.program['#certificates'][0].prerequisites,
             'offered': content.bglobal.program['#certificates'][0].offered,
             'length': content.bglobal.program['#certificates'][0].length,
+            'benefits': content.bglobal.program['#certificates'][0].benefits,
+            'outcomes': content.bglobal.program['#certificates'][0].outcomes,
             'courses': "<div certificate-courses data-cert='0'></div>",
             }, {
             'name': content.bglobal.program['#certificates'][1].name,
@@ -51,6 +53,8 @@
             'prerequisites': content.bglobal.program['#certificates'][1].prerequisites,
             'offered': content.bglobal.program['#certificates'][1].offered,
             'length': content.bglobal.program['#certificates'][1].length,
+            'benefits': content.bglobal.program['#certificates'][1].benefits,
+            'outcomes': content.bglobal.program['#certificates'][1].outcomes,
             'courses': "<div certificate-courses data-cert='1'></div>",
           }],
         }

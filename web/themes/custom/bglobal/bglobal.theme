@@ -24,18 +24,17 @@ function bglobal_preprocess_page(&$variables) {
     $variables['content']['bglobal']['#nodeTitle'] = $nodeTitle;
     if ($nodeType == 'program') {
       // Set the theme library that connects Program pages to Angular 
-      $cta = $node->get("field_program_application_cta");
       $variables['#attached']['library'][] = 'bglobal/programs';
+      setHeroVariables($node, 'field_program_hero_image', $variables);
       setProgramNodeVariables($node, $variables);
-      populateHeroFields($node, 'field_program_hero_image', $variables);
-      $variables['content']['bglobal']['hero']["#cta"] = $cta;
+      $variables['content']['bglobal']['hero']["#cta"] = $node->get("field_program_application_cta");
     }
     if ( $nodeType == 'landing_page') {
       $variables['content']['bglobal']['hero'] = [
         "#subtitle" => $node->get("field_landing_page_hero_subtitle")->getValue(),
         "#cta" => $node->get("field_landing_page_cta")->getString(),
       ];
-      populateHeroFields($node, 'field_landing_page_hero_image', $variables);
+      setHeroVariables($node, 'field_landing_page_hero_image', $variables);
     }
   }
   // dd($variables);
@@ -51,7 +50,7 @@ function bglobal_preprocess_page(&$variables) {
  * @param  string $fieldName The name of the field in this content type
  * @return none            
  */
-function populateHeroFields($node, $fieldName, &$variables) {
+function setHeroVariables($node, $fieldName, &$variables) {
   if (!empty($node->get($fieldName)[0])) {
     $heroMediaId = $node->get($fieldName)[0]->getValue()['target_id'];
     $variables['content']['bglobal']['hero']['#alt'] = Media::load($heroMediaId)->field_media_image[0]->getValue()['alt'];
@@ -67,47 +66,79 @@ function populateHeroFields($node, $fieldName, &$variables) {
  * @param  ref object &$variables References the variables object
  */
 function setProgramNodeVariables($node, &$variables) {
-  $cta = $node->get("field_program_application_cta");
-  $variables['content']['bglobal']['program'] = [
-    "#application_cta" => $cta,
-    "#description" => $node->field_program_description->value,
-    "#email" => $node->field_program_email->value,
-    "#featured" => $node->field_program_featured->value,
-    "#shortName" => $node->field_program_shortname->value,
-    "#future" => $node->field_program_future->value,
-    "#voices" => $node->field_program_voices_feed_id->value,
-    "#capstone" => $node->field_program_capstone->value,
-    "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
-  ];
-  if (!empty($node->get('field_ref_certificates'))) {
-    $certificates = [];
-    foreach ($node->field_ref_certificates as $reference) {  
-      $cert = $reference->entity;
-      $courses = [];
-      if (!empty($cert->field_certificate_courses)) {
-        foreach ($cert->field_certificate_courses as $course) {
-          $courses[] = $course->value;
-        }
+    if (!empty($node)) {
+      $program = empty($variables['content']['bglobal']['program']) ? [] : $variables['content']['bglobal']['program'];
+  
+      if (!empty($node->get('field_program_application_cta'))) {
+        $program["#application_cta"] = $node->get("field_program_application_cta");
       }
-      $certificates[] = [
-        "name" => $cert->title->value,
-        "offered" => $cert->field_certificate_offered->value,
-        "courses" => $courses,
-        "description" => $cert->field_certificate_short_descript->value,
-        "prerequisites" => $cert->field_certificate_prerequisite->value,
-        "length" => $cert->field_certificate_length->value,
-
-      ];
+      if (!empty($node->get('field_program_description'))) {
+        $program["#description"] = $node->field_program_description->value;
+      }
+      if (!empty($node->get('field_program_email'))) {
+        $program["#email"] = $node->field_program_email->value;
+      }
+      if (!empty($node->get('field_program_featured'))) {
+        $program["#featured"] = $node->field_program_featured->value;
+      }
+      if (!empty($node->get('field_program_shortname'))) {
+        $program["#shortName"] = $node->field_program_shortname->value;
+      }
+      if (!empty($node->get('field_program_future'))) {
+        $program["#future"] = $node->field_program_future->value;
+      }
+      if (!empty($node->get('field_program_voices_feed_id'))) {
+        $program["#voices"] = $node->field_program_voices_feed_id->value;
+      }
+      if (!empty($node->get('field_term_ref_academic_level'))) {
+        $program["#academicLevel"] = $node->get("field_term_ref_academic_level")->entity->label();
+      }
+      
+      if (!empty($node->get('field_ref_certificates'))) {
+        $certificates = [];
+        foreach ($node->field_ref_certificates as $reference) {  
+          $cert = $reference->entity;
+          $courses = [];
+          if (!empty($cert->field_certificate_courses)) {
+            foreach ($cert->field_certificate_courses as $course) {
+              $courses[] = $course->value;
+            }
+          }
+          $benefits = [];
+          if (!empty($cert->field_certificate_benefits)) {
+            foreach($cert->field_certificate_benefits as $benefit){
+              $benefits[] = $benefit->value;
+            }
+          }
+          $outcomes = [];
+          if (!empty($cert->field_certificate_outcomes)) {
+            foreach($cert->field_certificate_outcomes as $outcome){
+              $outcomes[] = $outcome->value;
+            }
+          }
+          $certificates[] = [
+            "name" => $cert->title->value,
+            "offered" => $cert->field_certificate_offered->value,
+            "courses" => $courses,
+            "description" => $cert->field_certificate_short_descript->value,
+            "prerequisites" => $cert->field_certificate_prerequisite->value,
+            "length" => $cert->field_certificate_length->value,
+            "capstone" => $cert->field_program_capstone,
+            "benefits" => $benefits,
+            "outcomes" => $outcomes,
+          ];
+        }
+        $program['#certificates'] = $certificates;
+      }
+      if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
+        $program['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
+      }
+      if (!empty($node->get('field_term_ref_delivery_method')->entity)) {
+        $program['#delivery'] = $node->get("field_term_ref_delivery_method")->entity->label();
+      }
+      $variables['#attached']['drupalSettings']['program'] = $program;
+      $variables['content']['bglobal']['program'] = $program;
     }
-    $variables['content']['bglobal']['program']['#certificates'] = $certificates;
-  }
-  if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
-    $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
-  }
-  if (!empty($node->get('field_term_ref_delivery_method')->entity)) {
-    $variables['content']['bglobal']['program']['#delivery'] = $node->get("field_term_ref_delivery_method")->entity->label();
-  }
-  $variables['#attached']['drupalSettings']['program'] = $variables['content']['bglobal']['program'];
 }
 
 
@@ -337,7 +368,6 @@ function bglobal_preprocess_block(&$variables) {
     // Curriculum Block
     if ($plugin_id == 'full_time_curriculum_tabs') {
       setProgramNodeVariables($node, $variables);
-      // dd($variables['content']['bglobal']['program']['#certificates']);
     }
   }
 }
