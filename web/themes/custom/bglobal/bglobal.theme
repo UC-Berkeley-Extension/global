@@ -87,6 +87,9 @@ function setProgramNodeVariables($node, &$variables) {
       if (!empty($node->get('field_program_future'))) {
         $program["#future"] = $node->field_program_future->value;
       }
+      if (!empty($node->get('field_program_capstone'))) {
+        $program["#capstone"] = $node->field_program_capstone->value;
+      }
       if (!empty($node->get('field_program_voices_feed_id'))) {
         $program["#voices"] = $node->field_program_voices_feed_id->value;
       }
@@ -123,7 +126,6 @@ function setProgramNodeVariables($node, &$variables) {
             "description" => $cert->field_certificate_short_descript->value,
             "prerequisites" => $cert->field_certificate_prerequisite->value,
             "length" => $cert->field_certificate_length->value,
-            "capstone" => $cert->field_program_capstone,
             "benefits" => $benefits,
             "outcomes" => $outcomes,
           ];

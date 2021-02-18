@@ -1,0 +1,8 @@
+uuid: ea0caa5d-7ea0-4a67-9cfd-f10677ea543c
+langcode: en
+status: true
+dependencies: {  }
+id: full_time_curriculum_tabs
+label: 'Full Time Certificate Program Curriculum Tabs'
+revision: 0
+description: 'The tabs with more details about each certificates that makes up a Full time Certificate Program'

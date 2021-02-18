@@ -5,9 +5,11 @@ dependencies:
   config:
     - block_content.type.call_to_action
     - block_content.type.english_proficiency
+    - block_content.type.full_time_curriculum_tabs
     - block_content.type.full_width_background_image
     - block_content.type.program_page_index
     - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
@@ -102,21 +104,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          35157811-0c3a-40c3-a6ea-dab0139c2c90:
-            uuid: 35157811-0c3a-40c3-a6ea-dab0139c2c90
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_future'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: text_default
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
       -
         layout_id: bglobal_twocol_section
@@ -186,8 +173,22 @@ third_party_settings:
           class:
             bg-light: 0
             bg-teal: 0
-          title: Curriculum
-        components: {  }
+          title: ''
+        components:
+          6b445d5d-e43b-46cc-ace3-4ccca1ed1f47:
+            uuid: 6b445d5d-e43b-46cc-ace3-4ccca1ed1f47
+            region: first
+            configuration:
+              id: 'inline_block:full_time_curriculum_tabs'
+              label: 'Certificate Tabs'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 69
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -379,6 +380,16 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_program_capstone:
+    weight: 23
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: first
   field_program_cost:
     weight: 18
     label: above

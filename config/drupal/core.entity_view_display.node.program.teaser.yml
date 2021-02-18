@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
@@ -41,6 +42,7 @@ content:
     region: content
 hidden:
   field_program_application_cta: true
+  field_program_capstone: true
   field_program_cost: true
   field_program_description: true
   field_program_email: true
