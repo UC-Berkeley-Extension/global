@@ -24,52 +24,11 @@ function bglobal_preprocess_page(&$variables) {
     $variables['content']['bglobal']['#nodeTitle'] = $nodeTitle;
     if ($nodeType == 'program') {
       // Set the theme library that connects Program pages to Angular 
-      $variables['#attached']['library'][] = 'bglobal/programs';
-      
       $cta = $node->get("field_program_application_cta");
-      $variables['content']['bglobal']['program'] = [
-        "#application_cta" => $cta,
-        "#description" => $node->field_program_description->value,
-        "#email" => $node->field_program_email->value,
-        "#featured" => $node->field_program_featured->value,
-        "#shortName" => $node->field_program_shortname->value,
-        "#future" => $node->field_program_future->value,
-        "#voices" => $node->field_program_voices_feed_id->value,
-        "#capstone" => $node->field_program_capstone->value,
-        "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
-      ];
-      if (!empty($node->get('field_ref_certificates'))) {
-        $certificates = [];
-        foreach ($node->field_ref_certificates as $reference) {  
-          $cert = $reference->entity;
-          $courses = [];
-          if (!empty($cert->field_certificate_courses)) {
-            foreach ($cert->field_certificate_courses as $course) {
-              $courses[] = $course->value;
-            }
-          }
-          $certificates[] = [
-            "name" => $cert->title->value,
-            "offered" => $cert->field_certificate_offered->value,
-            "courses" => $courses,
-            "description" => $cert->field_certificate_short_descript->value,
-            "prerequisites" => $cert->field_certificate_prerequisite->value,
-            "length" => $cert->field_certificate_length->value,
-            "offered" => $cert->field_certificate_offered->value,
-
-          ];
-        }
-        $variables['content']['bglobal']['program']['#certificates'] = $certificates;
-      }
-      if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
-        $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
-      }
-      if (!empty($node->get('field_term_ref_delivery_method')->entity)) {
-        $variables['content']['bglobal']['program']['#delivery'] = $node->get("field_term_ref_delivery_method")->entity->label();
-      }
+      $variables['#attached']['library'][] = 'bglobal/programs';
+      setProgramNodeVariables($node, $variables);
       populateHeroFields($node, 'field_program_hero_image', $variables);
       $variables['content']['bglobal']['hero']["#cta"] = $cta;
-      $variables['#attached']['drupalSettings']['program'] = $variables['content']['bglobal']['program'];
     }
     if ( $nodeType == 'landing_page') {
       $variables['content']['bglobal']['hero'] = [
@@ -101,6 +60,56 @@ function populateHeroFields($node, $fieldName, &$variables) {
     $variables['content']['bglobal']['hero']['#uri'] = $file->getFileUri();
   }
 }
+
+/**
+ * Maps Program Node values to a custom object `content.bglobal.program` and to the drupalSettings object
+ * @param  \Drupal::routeMatch() $node      The node object
+ * @param  ref object &$variables References the variables object
+ */
+function setProgramNodeVariables($node, &$variables) {
+  $cta = $node->get("field_program_application_cta");
+  $variables['content']['bglobal']['program'] = [
+    "#application_cta" => $cta,
+    "#description" => $node->field_program_description->value,
+    "#email" => $node->field_program_email->value,
+    "#featured" => $node->field_program_featured->value,
+    "#shortName" => $node->field_program_shortname->value,
+    "#future" => $node->field_program_future->value,
+    "#voices" => $node->field_program_voices_feed_id->value,
+    "#capstone" => $node->field_program_capstone->value,
+    "#academicLevel" => $node->get("field_term_ref_academic_level")->entity->label(),
+  ];
+  if (!empty($node->get('field_ref_certificates'))) {
+    $certificates = [];
+    foreach ($node->field_ref_certificates as $reference) {  
+      $cert = $reference->entity;
+      $courses = [];
+      if (!empty($cert->field_certificate_courses)) {
+        foreach ($cert->field_certificate_courses as $course) {
+          $courses[] = $course->value;
+        }
+      }
+      $certificates[] = [
+        "name" => $cert->title->value,
+        "offered" => $cert->field_certificate_offered->value,
+        "courses" => $courses,
+        "description" => $cert->field_certificate_short_descript->value,
+        "prerequisites" => $cert->field_certificate_prerequisite->value,
+        "length" => $cert->field_certificate_length->value,
+
+      ];
+    }
+    $variables['content']['bglobal']['program']['#certificates'] = $certificates;
+  }
+  if (!empty($node->get('field_term_ref_certificate_type')->entity)) {
+    $variables['content']['bglobal']['program']['#certificate_type'] = $node->get("field_term_ref_certificate_type")->entity->label();
+  }
+  if (!empty($node->get('field_term_ref_delivery_method')->entity)) {
+    $variables['content']['bglobal']['program']['#delivery'] = $node->get("field_term_ref_delivery_method")->entity->label();
+  }
+  $variables['#attached']['drupalSettings']['program'] = $variables['content']['bglobal']['program'];
+}
+
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -324,9 +333,11 @@ function bglobal_preprocess_block(&$variables) {
         }
       }
     }
-    
-    // Hero Block
-    if ($plugin_id == 'hero') {
+
+    // Curriculum Block
+    if ($plugin_id == 'full_time_curriculum_tabs') {
+      setProgramNodeVariables($node, $variables);
+      // dd($variables['content']['bglobal']['program']['#certificates']);
     }
   }
 }

@@ -1,12 +1,11 @@
 program:
-  name: Full Time Certificate Program in Data Science
+  shortName: Data Science
   certificate_type: Full-Time
   cta:
     -
       uri: https://extension.berkeley.edu/portal/applications/applicationProfile.do?method=loadApplicationIndex&applicationProfileId=53774039
       text: Apply Now
   delivery: Online
-  shortName: Data Science
   certificates:
     -
       name: Data Analytics
@@ -14,6 +13,23 @@ program:
       prerequisites: <p>Knowledge of statistics (fulfill this prerequisite by taking <a href="/search/publicCourseSearchDetails.do?method=load&amp;courseId=27584459">Introduction to Statistics</a> online).</p>
       offered: Fall and Spring
       length: 1 semester
+      courses: 
+        -
+          objectId: 17484859
+          name: Introduction to Data Analytics
+          number: COMPSCI X407.9
+        -
+          objectId: 40645
+          name: Introduction to Databases
+          number: COMPSCI X409.1
+        -
+          objectId: 38377986
+          name: Data Analytics and Visualization
+          number: COMPSCI X465
+        -
+          objectId: 53249985
+          name: Programming Python
+          number: COMPSCI X434
     -
       name: Data Science
       description: Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.
@@ -25,6 +41,24 @@ program:
         </ul>'
       offered: Fall and Spring
       length: 1 semester
+      courses: 
+        -
+          objectId: 39287923
+          name: Introduction to Data Science 
+          number: COMPSCI X415.2
+        -
+          objectId: 17545604
+          name: Python for Data Analysis and Scientific Computing 
+          number: COMPSCI X433.3
+        -
+          objectId: 40646
+          name: Introduction to Big Data 
+          number: COMPSCI X409.2
+        -
+          objectId: 40921
+          name: Business Intelligence With SQL Server 
+          number: EL ENG X404.8
+
 
 
 
