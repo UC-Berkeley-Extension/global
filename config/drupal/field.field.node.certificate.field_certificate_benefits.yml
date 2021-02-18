@@ -1,0 +1,21 @@
+uuid: 28b221e2-c8b8-4bf1-8fad-b7b9c8c9e619
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_benefits
+    - node.type.certificate
+  module:
+    - text
+id: node.certificate.field_certificate_benefits
+field_name: field_certificate_benefits
+entity_type: node
+bundle: certificate
+label: 'Certificate Benefits'
+description: 'Benefits of the certificate, listed in the Benefits accordion in the Curriculum component on program pages'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

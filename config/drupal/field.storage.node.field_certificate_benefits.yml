@@ -1,20 +1,19 @@
-uuid: 6082e730-5e25-4000-a4e0-7893070e3962
+uuid: f1e3acc0-1c18-4a63-af4f-b58aa18a14cf
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_certificate_prereq
-field_name: field_certificate_prereq
+    - text
+id: node.field_certificate_benefits
+field_name: field_certificate_benefits
 entity_type: node
-type: string
+type: text
 settings:
   max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+module: text
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

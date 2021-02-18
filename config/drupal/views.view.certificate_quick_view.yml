@@ -1,13 +1,10 @@
 uuid: 4144fc60-2f6e-4966-a242-21fb32d0a221
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_certificate_courses
-    - field.storage.node.field_certificate_format
     - field.storage.node.field_certificate_length
-    - field.storage.node.field_certificate_offered
-    - field.storage.node.field_certificate_prereq
     - field.storage.node.field_certificate_shortname
     - field.storage.node.field_certificate_tuition
     - field.storage.node.field_term_ref_certificate_type
@@ -268,69 +265,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_certificate_format:
-          id: field_certificate_format
-          table: node__field_certificate_format
-          field: field_certificate_format
-          relationship: field_ref_certificates
-          group_type: group
-          admin_label: ''
-          label: Format
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_certificate_courses:
           id: field_certificate_courses
           table: node__field_certificate_courses
@@ -391,132 +325,6 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: ul
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_certificate_offered:
-          id: field_certificate_offered
-          table: node__field_certificate_offered
-          field: field_certificate_offered
-          relationship: field_ref_certificates
-          group_type: group
-          admin_label: ''
-          label: Offered
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_certificate_prereq:
-          id: field_certificate_prereq
-          table: node__field_certificate_prereq
-          field: field_certificate_prereq
-          relationship: field_ref_certificates
-          group_type: group
-          admin_label: ''
-          label: Prerequisite
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
           separator: ', '
           field_api_classes: false
           plugin_id: field
@@ -673,10 +481,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_certificate_courses'
-        - 'config:field.storage.node.field_certificate_format'
         - 'config:field.storage.node.field_certificate_length'
-        - 'config:field.storage.node.field_certificate_offered'
-        - 'config:field.storage.node.field_certificate_prereq'
         - 'config:field.storage.node.field_certificate_shortname'
         - 'config:field.storage.node.field_certificate_tuition'
         - 'config:field.storage.node.field_term_ref_certificate_type'
@@ -718,10 +523,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_certificate_courses'
-        - 'config:field.storage.node.field_certificate_format'
         - 'config:field.storage.node.field_certificate_length'
-        - 'config:field.storage.node.field_certificate_offered'
-        - 'config:field.storage.node.field_certificate_prereq'
         - 'config:field.storage.node.field_certificate_shortname'
         - 'config:field.storage.node.field_certificate_tuition'
         - 'config:field.storage.node.field_term_ref_certificate_type'

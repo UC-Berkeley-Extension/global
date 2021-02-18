@@ -10,7 +10,7 @@ field_name: field_certificate_short_descript
 entity_type: node
 bundle: certificate
 label: 'Certificate Short Description'
-description: 'A summary of the certificate.'
+description: 'A summary of the certificate. Appears in the Curriculum Tabs component in the Program pages'
 required: false
 translatable: false
 default_value: {  }

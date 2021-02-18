@@ -1,19 +1,21 @@
-uuid: 3be73b5a-d023-4eb0-9fc7-0893ba2908bb
+uuid: a66f3377-8d66-4a05-9499-1a159e272ce5
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_certificate_prerequisite
     - node.type.certificate
+  module:
+    - text
 id: node.certificate.field_certificate_prerequisite
 field_name: field_certificate_prerequisite
 entity_type: node
 bundle: certificate
-label: 'Certificate Prerequisite'
-description: 'Requirements for the certificate.'
+label: 'Certificate Prerequisites'
+description: 'Appears in the Prerequisites accordion in the Curriculum component.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: text_long
