@@ -12,6 +12,7 @@ dependencies:
     - node.type.landing_page
   module:
     - layout_builder
+    - layout_builder_restrictions
     - link
     - text
     - user
@@ -61,6 +62,71 @@ third_party_settings:
             additional: {  }
             weight: 2
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Chaos Tools':
+          - 'entity_view:node'
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        'Workbench Access': {  }
+        core: {  }
+      blacklisted_blocks:
+        'Content fields':
+          - 'field_block:node:landing_page:created'
+          - 'field_block:node:landing_page:changed'
+          - 'field_block:node:landing_page:revision_default'
+          - 'field_block:node:landing_page:default_langcode'
+          - 'field_block:node:landing_page:field_term_ref_editorial_section'
+          - 'extra_field_block:node:landing_page:links'
+          - 'field_block:node:landing_page:menu_link'
+          - 'extra_field_block:node:landing_page:content_moderation_control'
+          - 'field_block:node:landing_page:moderation_state'
+          - 'field_block:node:landing_page:promote'
+          - 'field_block:node:landing_page:status'
+          - 'field_block:node:landing_page:rh_action'
+          - 'field_block:node:landing_page:rh_redirect_fallback_action'
+          - 'field_block:node:landing_page:rh_redirect'
+          - 'field_block:node:landing_page:rh_redirect_response'
+          - 'field_block:node:landing_page:revision_timestamp'
+          - 'field_block:node:landing_page:revision_log'
+          - 'field_block:node:landing_page:revision_translation_affected'
+          - 'field_block:node:landing_page:revision_uid'
+          - 'field_block:node:landing_page:sticky'
+          - 'field_block:node:landing_page:langcode'
+          - 'field_block:node:landing_page:vid'
+          - 'field_block:user:user:changed'
+          - 'field_block:user:user:created'
+          - 'field_block:user:user:default_langcode'
+          - 'field_block:user:user:mail'
+          - 'field_block:user:user:init'
+          - 'field_block:user:user:langcode'
+          - 'field_block:user:user:access'
+          - 'field_block:user:user:login'
+          - 'extra_field_block:user:user:member_for'
+          - 'field_block:user:user:name'
+          - 'field_block:user:user:user_picture'
+          - 'field_block:user:user:preferred_admin_langcode'
+          - 'field_block:user:user:preferred_langcode'
+          - 'field_block:user:user:roles'
+          - 'field_block:user:user:timezone'
+          - 'field_block:user:user:uid'
+          - 'field_block:user:user:status'
+        'Inline blocks':
+          - 'inline_block:another_study_option'
+          - 'inline_block:comparison_card'
+          - 'inline_block:english_proficiency'
+          - 'inline_block:full_time_curriculum_tabs'
+          - 'inline_block:full_width_background_image'
+          - 'inline_block:program_page_index'
+      allowed_layouts: {  }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page

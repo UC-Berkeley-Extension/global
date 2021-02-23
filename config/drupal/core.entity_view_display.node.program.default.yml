@@ -39,6 +39,7 @@ dependencies:
     - block_content
     - component
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - link
     - text
@@ -167,30 +168,6 @@ third_party_settings:
         components: {  }
         third_party_settings: {  }
       -
-        layout_id: bglobal_onecol_section
-        layout_settings:
-          label: Curriculum
-          class:
-            bg-light: 0
-            bg-teal: 0
-          title: ''
-        components:
-          6b445d5d-e43b-46cc-ace3-4ccca1ed1f47:
-            uuid: 6b445d5d-e43b-46cc-ace3-4ccca1ed1f47
-            region: first
-            configuration:
-              id: 'inline_block:full_time_curriculum_tabs'
-              label: 'Certificate Tabs'
-              provider: layout_builder
-              label_display: visible
-              view_mode: full
-              block_revision_id: 69
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
         layout_id: layout_onecol
         layout_settings:
           label: 'Welcome to San Francisco'
@@ -208,6 +185,30 @@ third_party_settings:
               label_display: visible
               view_mode: full
               block_revision_id: 66
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_onecol_section
+        layout_settings:
+          label: Curriculum
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: ''
+        components:
+          a5005d9a-41d8-4ef6-a7d8-31420c8c8ef0:
+            uuid: a5005d9a-41d8-4ef6-a7d8-31420c8c8ef0
+            region: first
+            configuration:
+              id: 'inline_block:full_time_curriculum_tabs'
+              label: 'Curriculum Tabs'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 69
               block_serialized: null
               context_mapping: {  }
             additional: {  }
@@ -358,6 +359,67 @@ third_party_settings:
             additional: {  }
             weight: 2
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Chaos Tools':
+          - 'entity_view:node'
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        'Workbench Access': {  }
+        core: {  }
+      blacklisted_blocks:
+        'Content fields':
+          - 'field_block:node:program:created'
+          - 'field_block:node:program:changed'
+          - 'field_block:node:program:revision_default'
+          - 'field_block:node:program:default_langcode'
+          - 'field_block:node:program:field_term_ref_editorial_section'
+          - 'extra_field_block:node:program:links'
+          - 'field_block:node:program:menu_link'
+          - 'extra_field_block:node:program:content_moderation_control'
+          - 'field_block:node:program:moderation_state'
+          - 'field_block:node:program:promote'
+          - 'field_block:node:program:rh_action'
+          - 'field_block:node:program:rh_redirect_fallback_action'
+          - 'field_block:node:program:rh_redirect'
+          - 'field_block:node:program:rh_redirect_response'
+          - 'field_block:node:program:revision_translation_affected'
+          - 'field_block:node:program:sticky'
+          - 'field_block:node:program:uid'
+          - 'field_block:node:program:langcode'
+          - 'field_block:node:program:status'
+          - 'field_block:node:program:revision_timestamp'
+          - 'field_block:node:program:vid'
+          - 'field_block:node:program:revision_log'
+          - 'field_block:node:program:revision_uid'
+          - 'field_block:user:user:changed'
+          - 'field_block:user:user:created'
+          - 'field_block:user:user:default_langcode'
+          - 'field_block:user:user:mail'
+          - 'field_block:user:user:init'
+          - 'field_block:user:user:langcode'
+          - 'field_block:user:user:access'
+          - 'field_block:user:user:login'
+          - 'extra_field_block:user:user:member_for'
+          - 'field_block:user:user:name'
+          - 'field_block:user:user:user_picture'
+          - 'field_block:user:user:preferred_admin_langcode'
+          - 'field_block:user:user:preferred_langcode'
+          - 'field_block:user:user:roles'
+          - 'field_block:user:user:timezone'
+          - 'field_block:user:user:uid'
+          - 'field_block:user:user:status'
+        'Inline blocks':
+          - 'inline_block:full_time_curriculum_tabs'
+      allowed_layouts: {  }
 id: node.program.default
 targetEntityType: node
 bundle: program
