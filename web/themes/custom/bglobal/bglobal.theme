@@ -27,7 +27,6 @@ function bglobal_preprocess_page(&$variables) {
       $variables['#attached']['library'][] = 'bglobal/programs';
       setHeroVariables($node, 'field_program_hero_image', $variables);
       setProgramNodeVariables($node, $variables);
-      $variables['content']['bglobal']['hero']["#cta"] = $node->get("field_program_application_cta");
     }
     if ( $nodeType == 'landing_page') {
       $variables['content']['bglobal']['hero'] = [
@@ -70,6 +69,11 @@ function setProgramNodeVariables($node, &$variables) {
       $program = empty($variables['content']['bglobal']['program']) ? [] : $variables['content']['bglobal']['program'];
   
       if (!empty($node->get('field_program_application_cta'))) {
+        $node_cta = $node->get('field_program_application_cta')->getValue();
+        if ($node_cta && $node_cta['0']['uri']) {
+          $node_cta['0']['uri'] = str_replace('internal:', '', $node_cta['0']['uri']);
+        }
+        $variables['content']['bglobal']['hero']["#cta"] = $node_cta;
         $program["#application_cta"] = $node->get("field_program_application_cta");
       }
       if (!empty($node->get('field_program_description'))) {
