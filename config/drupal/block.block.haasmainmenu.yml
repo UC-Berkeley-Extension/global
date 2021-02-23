@@ -11,8 +11,8 @@ dependencies:
     - bglobal
 id: haasmainmenu
 theme: bglobal
-region: header
-weight: -5
+region: disabled
+weight: -7
 provider: null
 plugin: 'menu_block:haas-main-menu'
 settings:
