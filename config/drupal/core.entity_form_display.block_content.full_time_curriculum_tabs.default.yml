@@ -1,0 +1,20 @@
+uuid: 0a275ab4-121d-4def-9c93-44f4c8564217
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_time_curriculum_tabs
+id: block_content.full_time_curriculum_tabs.default
+targetEntityType: block_content
+bundle: full_time_curriculum_tabs
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

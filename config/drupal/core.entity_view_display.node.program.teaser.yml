@@ -5,10 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
     - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_future
+    - field.field.node.program.field_program_hero_image
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_voices_feed_id
     - field.field.node.program.field_ref_certificates
@@ -39,10 +42,13 @@ content:
     region: content
 hidden:
   field_program_application_cta: true
+  field_program_capstone: true
   field_program_cost: true
   field_program_description: true
   field_program_email: true
   field_program_featured: true
+  field_program_future: true
+  field_program_hero_image: true
   field_program_shortname: true
   field_program_voices_feed_id: true
   field_ref_certificates: true

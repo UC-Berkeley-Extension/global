@@ -3,11 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
     - node.type.landing_page
     - node.type.page
     - node.type.program
-    - node.type.view_page
   module:
     - content_moderation
 id: content_approvals
@@ -60,9 +58,7 @@ type_settings:
         - published
   entity_types:
     node:
-      - article
       - landing_page
       - page
       - program
-      - view_page
   default_moderation_state: draft

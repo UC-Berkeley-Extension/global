@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_description
     - field.field.node.program.field_program_email
     - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_future
+    - field.field.node.program.field_program_hero_image
     - field.field.node.program.field_program_shortname
     - field.field.node.program.field_program_voices_feed_id
     - field.field.node.program.field_ref_certificates
@@ -22,6 +25,8 @@ dependencies:
   module:
     - field_group
     - link
+    - media_library
+    - path
     - text
 third_party_settings:
   field_group:
@@ -30,9 +35,7 @@ third_party_settings:
         - title
         - field_program_featured
         - field_program_shortname
-        - field_term_ref_academic_level
-        - field_term_ref_school_microsite
-        - field_term_ref_editorial_section
+        - field_program_description
       parent_name: ''
       weight: 0
       format_type: details
@@ -46,6 +49,7 @@ third_party_settings:
       label: Metadata
     group_title_tag:
       children:
+        - field_term_ref_academic_level
         - field_term_ref_certificate_type
         - field_term_ref_delivery_method
       parent_name: ''
@@ -61,8 +65,8 @@ third_party_settings:
       label: 'Title tag'
     group_hero_section:
       children:
-        - field_program_description
         - field_program_application_cta
+        - field_program_hero_image
       parent_name: ''
       weight: 2
       format_type: details
@@ -90,10 +94,12 @@ third_party_settings:
       label: 'Study Options'
     group_program_details:
       children:
+        - field_program_future
         - field_program_cost
         - field_tags
         - field_program_voices_feed_id
         - field_program_email
+        - field_program_capstone
       parent_name: ''
       weight: 4
       format_type: details
@@ -111,22 +117,29 @@ bundle: program
 mode: default
 content:
   field_program_application_cta:
-    weight: 34
+    weight: 46
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
+  field_program_capstone:
+    weight: 53
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_program_cost:
-    weight: 41
+    weight: 49
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_program_description:
-    weight: 33
+    weight: 43
     settings:
       rows: 5
       placeholder: ''
@@ -134,7 +147,7 @@ content:
     type: text_textarea
     region: content
   field_program_email:
-    weight: 44
+    weight: 52
     settings:
       size: 60
       placeholder: ''
@@ -148,6 +161,21 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_program_future:
+    weight: 48
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_program_hero_image:
+    type: media_library_widget
+    weight: 47
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
   field_program_shortname:
     weight: 42
     settings:
@@ -157,7 +185,7 @@ content:
     type: string_textfield
     region: content
   field_program_voices_feed_id:
-    weight: 43
+    weight: 51
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -174,7 +202,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_tags:
-    weight: 42
+    weight: 50
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -190,34 +218,40 @@ content:
     type: options_select
     region: content
   field_term_ref_certificate_type:
-    weight: 47
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_term_ref_delivery_method:
-    weight: 48
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_term_ref_editorial_section:
-    weight: 45
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_term_ref_school_microsite:
     weight: 44
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_term_ref_delivery_method:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_term_ref_editorial_section:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_term_ref_school_microsite:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -232,7 +266,6 @@ hidden:
   created: true
   layout_builder__layout: true
   moderation_state: true
-  path: true
   promote: true
   sticky: true
   uid: true

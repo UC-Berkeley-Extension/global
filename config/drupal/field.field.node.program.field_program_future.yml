@@ -1,0 +1,21 @@
+uuid: e4cbdf2e-da30-44af-839b-22ce1b38c00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_future
+    - node.type.program
+  module:
+    - text
+id: node.program.field_program_future
+field_name: field_program_future
+entity_type: node
+bundle: program
+label: 'Outcomes statement'
+description: 'Content goes in "Your Path" component e.g. <em>Imagine yourself using Spark or Python to analyze complex data sets. Creating a visualization of data to guide decision-making. Running statistical models to forecast business growth.</em>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

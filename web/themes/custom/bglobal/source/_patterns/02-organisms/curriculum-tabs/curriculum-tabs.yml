@@ -1,1 +1,83 @@
-curriculum-tabs.yml
+program:
+  shortName: Data Science
+  certificate_type: Full-Time
+  cta:
+    -
+      uri: https://extension.berkeley.edu/portal/applications/applicationProfile.do?method=loadApplicationIndex&applicationProfileId=53774039
+      text: Apply Now
+  delivery: Online
+  certificates:
+    -
+      name: Data Analytics
+      description: Learn to collect, process, analyze and interpret data in order to develop actionable business insights. Expand your skills by learning how to leverage statistics, data mining and big data to develop strategies in marketing, retail, health care, finance and other fields.
+      prerequisites: <p>Knowledge of statistics (fulfill this prerequisite by taking <a href="/search/publicCourseSearchDetails.do?method=load&amp;courseId=27584459">Introduction to Statistics</a> online).</p>
+      offered: Fall and Spring
+      length: 1 semester
+      courses: 
+        -
+          objectId: 17484859
+          name: Introduction to Data Analytics
+          number: COMPSCI X407.9
+        -
+          objectId: 40645
+          name: Introduction to Databases
+          number: COMPSCI X409.1
+        -
+          objectId: 38377986
+          name: Data Analytics and Visualization
+          number: COMPSCI X465
+        -
+          objectId: 53249985
+          name: Programming Python
+          number: COMPSCI X434
+      benefits:
+        -
+          "Remote internship with a Bay Area company ($3,000 USD additional fee)"
+        -
+          "Certificate of completion"
+      outcomes:
+        -
+          "Understand statistics, coding, data mining, visualization and reporting."
+        -
+          "Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL."
+    -
+      name: Data Science
+      description: Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.
+      prerequisites: '<p>Completion of the</p>
+        <ul>
+          <li>
+            <a href="/international/professional/data-science/#program1">Data Analytics Full-Time Certificate</a>
+          </li>
+        </ul>'
+      offered: Fall and Spring
+      length: 1 semester
+      courses: 
+        -
+          objectId: 39287923
+          name: Introduction to Data Science 
+          number: COMPSCI X415.2
+        -
+          objectId: 17545604
+          name: Python for Data Analysis and Scientific Computing 
+          number: COMPSCI X433.3
+        -
+          objectId: 40646
+          name: Introduction to Big Data 
+          number: COMPSCI X409.2
+        -
+          objectId: 40921
+          name: Business Intelligence With SQL Server 
+          number: EL ENG X404.8
+      benefits:
+        -
+          "Remote internship with a Bay Area company ($3,000 USD additional fee)"
+        -
+          "Certificate of completion"
+      outcomes:
+        -
+          "Perform advanced data wrangling, data mining, statistical modeling and machine learning on large, complex data sets."
+        -
+          "Run data collection and cleaning, modeling, evaluation, visualization, reporting and deployment."
+        -
+          "Develop solutions using Spark, R, Python, TensorFlow, relational databases and SQL."
+

@@ -1,0 +1,11 @@
+hero:
+  img:
+    src: "https://source.unsplash.com/random"
+    alt: "Alt text here."
+  title: "Data Science"
+  subtitle: "Full Time Classroom Certificate"
+  label_display: visible
+  link:
+    url: "#"
+    text: "Learn More"
+    classes: "hero__btn btn__warning btn__large button"

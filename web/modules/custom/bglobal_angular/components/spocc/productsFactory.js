@@ -6,7 +6,7 @@ app.factory('productsFactory', ['$http', '$q', 'filterVariablesFactory', '$locat
   const fvf = filterVariablesFactory;
   pf.filterVariables = fvf.filterVariables;
   // Not sure if the cors anywhere proxy is needed here
-  pf.urlBuilder = (instance) => `https://cors-anywhere.herokuapp.com/https://${instance}-berkeley-web-services.pantheon.berkeley.edu/programs/`;
+  pf.urlBuilder = (instance) => `https://${instance}-berkeley-web-services.pantheon.berkeley.edu/programs/`;
   pf.errorCount = 0;
   pf.getDataSwitch = (type, pageTitle) => {
     if (pf[type]) {

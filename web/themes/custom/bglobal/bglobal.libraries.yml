@@ -1,5 +1,5 @@
 global:
-  version: VERSION
+  version: 1.0
   css:
     theme:
       dist/css/style.css: {}
@@ -11,3 +11,10 @@ global:
     - core/drupalSettings
     - core/modernizr
     - core/jquery
+
+programs:
+  version: 0.1
+  js:
+    ../../../modules/custom/bglobal_angular/components/programs/programFactoryAndController.js: {}
+  dependencies:
+    - component/angularjs_lib

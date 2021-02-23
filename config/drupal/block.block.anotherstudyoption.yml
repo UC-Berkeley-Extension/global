@@ -1,0 +1,32 @@
+uuid: 8de71470-bc96-44a6-bfac-43d470a6052a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:another_study_option:0b89985a-83ad-48e4-8010-7e1b2e5b272a'
+  module:
+    - block_content
+    - term_condition
+  theme:
+    - bglobal
+id: anotherstudyoption
+theme: bglobal
+region: disabled
+weight: 0
+provider: null
+plugin: 'block_content:0b89985a-83ad-48e4-8010-7e1b2e5b272a'
+settings:
+  id: 'block_content:0b89985a-83ad-48e4-8010-7e1b2e5b272a'
+  label: 'Another Study Option'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }
