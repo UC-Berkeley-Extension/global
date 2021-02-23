@@ -55,7 +55,9 @@ function setHeroVariables($node, $fieldName, &$variables) {
     $variables['content']['bglobal']['hero']['#alt'] = Media::load($heroMediaId)->field_media_image[0]->getValue()['alt'];
     $heroFileId = Media::load($heroMediaId)->field_media_image[0]->getValue()['target_id'];
     $file = File::load($heroFileId);
-    $variables['content']['bglobal']['hero']['#uri'] = $file->getFileUri();
+    if (isset($file)) {
+      $variables['content']['bglobal']['hero']['#uri'] = $file->getFileUri();
+    }
   }
 }
 
