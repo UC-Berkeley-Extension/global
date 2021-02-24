@@ -10,7 +10,7 @@ dependencies:
 id: workbenchaccessinformation
 theme: bglobal
 region: disabled
-weight: -3
+weight: 2
 provider: null
 plugin: workbench_access_block
 settings:

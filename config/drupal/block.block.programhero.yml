@@ -9,7 +9,7 @@ dependencies:
 id: programhero
 theme: bglobal
 region: disabled
-weight: -4
+weight: 0
 provider: null
 plugin: 'block_content:815d500f-f3d3-4150-9d04-ed7d086c2434'
 settings:

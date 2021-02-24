@@ -7,7 +7,6 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - haas-main-menu
       - main
     parent: 'main:'
 name: 'Landing Page'

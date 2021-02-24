@@ -12,7 +12,7 @@ dependencies:
 id: featuresofliveonlinelearning
 theme: bglobal
 region: disabled
-weight: -5
+weight: 0
 provider: null
 plugin: 'block_content:73daaaad-e3ed-4bae-9ba4-2dae3d1c52ff'
 settings:
