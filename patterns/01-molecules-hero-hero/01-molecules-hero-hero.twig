@@ -1,20 +1,42 @@
+{% if node.type == 'program' %}
+  {% set title = node.subtitle %}
+  {% set delivery = node.delivery %}
+  {% set url = node.link.url %}
+  {% set text = node.link.text %}
+  {% if node.certType == 'Full-Time Certificate' %}
+    {% set subtitle = "#{node.delivery} #{node.certType}" %}
+  {% else %} 
+    {% set subtitle = node.certType %}
+  {% endif %}
+{% else %} 
+  {% if hero.label_display == 'visible' %}
+    {% set title = hero.title %}
+  {% endif %}
+  {% set subtitle = hero.subtitle %}
+  {% set url = hero.link.url %}
+  {% set text = hero.link.text %}
+{% endif %}
 <section class="hero__container">
-  <div class="hero__image__container">
-    <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
-  </div>
+  {% if hero.img.src is not empty %}
+    <div class="hero__image__container">
+      <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
+    </div>
+  {% endif %}
   <div class="hero__text__container container">
-    <h2 class="hero__title">
-      <span class="highlight--blue">{{ hero.title }}</span>
-    </h2>
-    {% if hero.subtitle %}
-    <p class="hero__subtitle">
-      <span class="highlight--blue">{{ hero.subtitle }}</span>
-    </p>
+    {% if title %}
+      <h2 class="hero__title">
+        <span class="highlight--blue">{{ title }}</span>
+      </h2>
     {% endif %}
-    {% if hero.link.url %}
+    {% if subtitle %}
+      <p class="hero__subtitle">
+        <span class="highlight--blue">{{ subtitle }}</span>
+      </p>
+    {% endif %}
+    {% if url %}
       <div class="hero__btn__container">
         <div>
-          <a class="{{ hero.link.classes }}" href="{{ hero.link.url }}">{{ hero.link.text }}</a>
+          <a class="{{ hero.link.classes }}" href="{{ url }}">{{ text }}</a>
         </div>
       </div>
     {% endif %}

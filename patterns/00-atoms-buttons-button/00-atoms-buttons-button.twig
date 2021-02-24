@@ -1,10 +1,13 @@
-{%
-	set classes = [
-	'button',
-	modifier_class,
-]
-%}
+{% set classes = [
+  'button ',
+    buttonClasses ? buttonClasses,
+] | merge(classes|default([])) %}
 
-<a class="{{ classes|join(' ')|trim }}" href="{{ url }}">
+<a class="{{ classes|join(' ') }}" href="{{ url }}">
 	{{ text }}
 </a>
+{# 
+<a class="classes|join(' ')|trim" href="{{ url }}">
+  {{ text }}
+</a>
+ #}

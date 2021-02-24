@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Welcome to San Francisco</title>
+		<!-- Styleguides should not be indexed by search engines. -->
+		<meta name="robots" content="none" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="stylesheet" href="../../css/style.css?1614208418709" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1614208418709" media="all" />
+
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  
+  </head>
+  <body class="body"><section class="full-width-row__container">
+      <div class="full-width-row__image__container">
+      <img class="full-width-row__image" src="https://source.unsplash.com/random" alt="Alt text here.">
+    </div>
+        <div class="full-width-row__text__container container">
+      <div class="full-width-row__box">
+                  <h2 class="full-width-row__title">
+            <span class="">Welcome to San Francisco</span>
+          </h2>
+                          <div class="full-width-row__text">
+             
+              <p>Immerse yourself in all the opportunities this vibrant, temperate, multicultural city has to offer, with beautiful views, access to nature and world-class events. The city and surrounding regions are home to beaches, hiking trails, museums, famed restaurants and so much more.</p> <p>The city is also the northern neighbor of Silicon Valley, the tech and venture funding capital of the world. Companies from virtually every industry operate in the Bay Area, and many have offices in downtown San Francisco. You may walk by the site of your future internship on the way to class!</p>
+                      </div>
+              </div>
+    </div>
+  </section><script src="../../js/drupal_core/jquery.min.js"></script>
+	<script src="../../js/drupal_core/drupal.js"></script>
+	<script src="../../js/all.js?1614208418709"></script>
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h4>Description</h4>\n<p>Full width content divider using an image as a background with optional overlay text</p>\n","patternBreadcrumb":{"patternType":"molecules","patternSubtype":"full_width_background_image"},"patternExtension":"twig","patternName":"Full width background Image","patternPartial":"molecules-full_width_background_image","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"<h4>Description</h4>\n<p>Full width content divider using an image as a background with optional overlay text</p>\n","patternBreadcrumb":{"patternType":"molecules","patternSubtype":"full_width_background_image"},"patternExtension":"twig","patternName":"Full width background Image","patternPartial":"molecules-full_width_background_image","patternState":"","patternEngineName":"twig-php","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1614208418709">
+  (function() {
+    if (self != top) {
+      var cb = '1614208418709';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1614208418709" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+  
+  </body>
+</html>
