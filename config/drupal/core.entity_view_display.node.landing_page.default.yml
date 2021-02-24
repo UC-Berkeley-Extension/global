@@ -3,13 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_landing_page_cta
+    - field.field.node.landing_page.field_landing_page_hero_image
+    - field.field.node.landing_page.field_landing_page_hero_subtitle
     - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_school_microsite
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - layout_builder
-    - layout_discovery
+    - layout_builder_restrictions
+    - link
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -17,53 +22,111 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_builder_blank
         layout_settings:
           label: ''
         components:
-          bfcb0319-3daf-4da4-8db9-04d8cd15944f:
-            uuid: bfcb0319-3daf-4da4-8db9-04d8cd15944f
-            region: content
+          46894069-b6b6-4b09-80b8-01408609cdb4:
+            uuid: 46894069-b6b6-4b09-80b8-01408609cdb4
+            region: null
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:landing_page:content_moderation_control'
+              id: 'field_block:node:landing_page:field_landing_page_cta'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
             additional: {  }
             weight: 0
-          bb70c810-3340-4f69-ae2a-42cbd2d3f1d9:
-            uuid: bb70c810-3340-4f69-ae2a-42cbd2d3f1d9
-            region: content
+          edb66c01-e507-4f53-ba9e-867397ef1410:
+            uuid: edb66c01-e507-4f53-ba9e-867397ef1410
+            region: null
             configuration:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_term_ref_school_microsite'
+              id: 'field_block:node:landing_page:field_landing_page_hero_subtitle'
               formatter:
                 label: above
-                settings:
-                  link: true
+                settings: {  }
                 third_party_settings: {  }
-                type: entity_reference_label
+                type: text_default
             additional: {  }
             weight: 2
-          e8dda3bb-225d-4cb5-bacb-0ec79388e21e:
-            uuid: e8dda3bb-225d-4cb5-bacb-0ec79388e21e
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_term_ref_editorial_section'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 3
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Chaos Tools':
+          - 'entity_view:node'
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        'Workbench Access': {  }
+        core: {  }
+      blacklisted_blocks:
+        'Content fields':
+          - 'field_block:node:landing_page:created'
+          - 'field_block:node:landing_page:changed'
+          - 'field_block:node:landing_page:revision_default'
+          - 'field_block:node:landing_page:default_langcode'
+          - 'field_block:node:landing_page:field_term_ref_editorial_section'
+          - 'extra_field_block:node:landing_page:links'
+          - 'field_block:node:landing_page:menu_link'
+          - 'extra_field_block:node:landing_page:content_moderation_control'
+          - 'field_block:node:landing_page:moderation_state'
+          - 'field_block:node:landing_page:promote'
+          - 'field_block:node:landing_page:status'
+          - 'field_block:node:landing_page:rh_action'
+          - 'field_block:node:landing_page:rh_redirect_fallback_action'
+          - 'field_block:node:landing_page:rh_redirect'
+          - 'field_block:node:landing_page:rh_redirect_response'
+          - 'field_block:node:landing_page:revision_timestamp'
+          - 'field_block:node:landing_page:revision_log'
+          - 'field_block:node:landing_page:revision_translation_affected'
+          - 'field_block:node:landing_page:revision_uid'
+          - 'field_block:node:landing_page:sticky'
+          - 'field_block:node:landing_page:langcode'
+          - 'field_block:node:landing_page:vid'
+          - 'field_block:user:user:changed'
+          - 'field_block:user:user:created'
+          - 'field_block:user:user:default_langcode'
+          - 'field_block:user:user:mail'
+          - 'field_block:user:user:init'
+          - 'field_block:user:user:langcode'
+          - 'field_block:user:user:access'
+          - 'field_block:user:user:login'
+          - 'extra_field_block:user:user:member_for'
+          - 'field_block:user:user:name'
+          - 'field_block:user:user:user_picture'
+          - 'field_block:user:user:preferred_admin_langcode'
+          - 'field_block:user:user:preferred_langcode'
+          - 'field_block:user:user:roles'
+          - 'field_block:user:user:timezone'
+          - 'field_block:user:user:uid'
+          - 'field_block:user:user:status'
+        'Inline blocks':
+          - 'inline_block:another_study_option'
+          - 'inline_block:comparison_card'
+          - 'inline_block:english_proficiency'
+          - 'inline_block:full_time_curriculum_tabs'
+          - 'inline_block:full_width_background_image'
+          - 'inline_block:program_page_index'
+      allowed_layouts: {  }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -74,6 +137,34 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_landing_page_cta:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: null
+  field_landing_page_hero_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_landing_page_hero_subtitle:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: null
   field_term_ref_editorial_section:
     weight: 2
     label: above

@@ -1,0 +1,21 @@
+uuid: c9f10d77-24ad-4c7d-830d-5263c7d73afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_outcomes
+    - node.type.certificate
+  module:
+    - text
+id: node.certificate.field_certificate_outcomes
+field_name: field_certificate_outcomes
+entity_type: node
+bundle: certificate
+label: 'Certificate Outcomes'
+description: "<p>Outcomes of taking this certificate as seen on the Curriculum component on Program pages.</p>\r\n<p><em>e.g. Understand statistics, coding, data mining, visualization and reporting</em></p>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

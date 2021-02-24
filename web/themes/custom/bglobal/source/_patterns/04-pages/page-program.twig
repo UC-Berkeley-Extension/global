@@ -6,21 +6,11 @@
 
     {% block page_hero %}
       <!-- make hero-program version -->
-      {% include "@molecules/hero/hero.twig" with {
-        'hero': {
-          'img': {
-            'src': "https://source.unsplash.com/random",
-            'alt': "Alt text here."
-          },
-          'title': "Business Administration and Management",
-          'subtitle': "Classroom Full-Time Certificate",
-        }
-      } %}
+      {% include "@molecules/hero/hero.twig" %}
     {% endblock %}
 
-    <div id="main">
-      <main class="main-content{% if not full_width %} container{% endif %}" role="main">
-        <a id="main-content" tabindex="-1"></a>
+    <div id="main" data-ng-controller="ProgramController">
+      <main id="main-content" class="main-content{% if not full_width %} container{% endif %}" role="main">
         <div class="content{% if not full_width %} container{% endif %}">
 
           {% block page_content %}
@@ -93,6 +83,8 @@
         </div>
       </main>
     </div>
-
+    {% block page_footer %}
+      {% include "@organisms/footer/footer.twig" %}
+    {% endblock %}
   </div>
 </div>

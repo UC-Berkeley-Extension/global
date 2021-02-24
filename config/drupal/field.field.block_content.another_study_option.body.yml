@@ -15,7 +15,11 @@ label: Body
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    summary: ''
+    value: "<div>\r\n  <p>Interested in studying {{ program.shortName }} remotely? Check out these full-time and part-time {{ program.altDelivery }} options.</p>\r\n  <p><a class=\"btn btn-lg btn-success\" href=\"/international/professional/{{ program.shortName }}/{{ program.altDelivery }}\">EXPLORE {{ program.altDelivery }} OPTIONS</a></p>\r\n</div>"
+    format: full_html
 default_value_callback: ''
 settings:
   display_summary: false

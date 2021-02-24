@@ -1,0 +1,46 @@
+
+.full-width-row__container { // Changed from `hero`
+  display: grid;
+  grid-template-rows: minmax(450px, max-content);
+}
+
+.full-width-row__image__container { // Changed from `hero`
+  position: relative;
+  overflow: hidden;
+  grid-area: 1 / 1;
+}
+
+.full-width-row__text__container { // Changed from `hero`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-area: 1 / 1;
+  padding: 2em 2em;
+  z-index: 2;
+}
+
+img.full-width-row__image { // Changed from `hero`
+  display: grid;
+  max-width: 100%;  // !important
+  position: absolute;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.full-width-row__box { // Changed from `hero`
+  background-color: white;
+  border: 1px solid #333;
+  padding: 1em;
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+.full-width-row__title { // Changed from `hero`
+  font-size: 2rem;
+  line-height: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+
+.full-width-row__text { // Changed from `hero`
+  font-size: .75rem;
+  line-height: normal;
+}

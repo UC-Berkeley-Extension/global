@@ -4,6 +4,7 @@ hero:
     alt: "Alt text here."
   title: "Experience Berkeley Global"
   subtitle: "Quality education from anywhere in the world"
+  label_display: visible
   link:
     url: "#"
     text: "Learn More"

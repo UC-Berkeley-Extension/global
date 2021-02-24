@@ -1,18 +1,16 @@
-uuid: a92ff99b-e71b-4e27-8c25-69cda50237ad
+uuid: 93ccabc3-7e4b-4ec8-a470-53e763f69070
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_certificate_prerequisite
 field_name: field_certificate_prerequisite
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

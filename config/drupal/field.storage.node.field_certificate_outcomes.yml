@@ -1,0 +1,20 @@
+uuid: b29b7647-e2b8-4de6-ac54-9dd512b81474
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_certificate_outcomes
+field_name: field_certificate_outcomes
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

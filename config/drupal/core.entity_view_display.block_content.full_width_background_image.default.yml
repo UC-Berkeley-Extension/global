@@ -1,0 +1,32 @@
+uuid: 285ce4b8-cdd6-4d01-8950-7358ceeabf65
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_background_image
+    - field.field.block_content.full_width_background_image.field_full_row__background_image
+    - field.field.block_content.full_width_background_image.field_full_row__overlay_text
+  module:
+    - text
+id: block_content.full_width_background_image.default
+targetEntityType: block_content
+bundle: full_width_background_image
+mode: default
+content:
+  field_full_row__background_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_full_row__overlay_text:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

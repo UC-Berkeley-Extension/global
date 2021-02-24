@@ -1,4 +1,3 @@
-<hr class="line-light mb-5"/>
 <div id="curriculum">
   <h2>Curriculum</h2>
 
@@ -9,9 +8,9 @@
     <input type="radio" name="pdp-tab" id="pdp-tab-3">
     
     <div class="pdp-tabs-wrapper">
-      <label for="pdp-tab-1" class="label-tab-1">Data Analytics <span>Full-Time Certificate</span></label>
-      <label for="pdp-tab-2" class="label-tab-2">Data Analytics <span>Full-Time Certificate</span></label>
-      <label for="pdp-tab-3" class="label-tab-3">Data Analytics <span>Professional Diploma Program</span></label>  
+      <label for="pdp-tab-1" class="label-tab-1">{{ program.certificates[0].name }} <span>Full-Time Certificate</span></label>
+      <label for="pdp-tab-2" class="label-tab-2">{{ program.certificates[1].name }} <span>Full-Time Certificate</span></label>
+      <label for="pdp-tab-3" class="label-tab-3">{{ program.shortName }} <span>Professional Diploma Program</span></label>  
     </div>
 
     <hr class="line-light pdp-tab-line d-mobile-none" />
@@ -21,24 +20,23 @@
     <div class="pdp-tab pdp-tab-1">
       <div class="grid-container-fluid grid-col-2-1">
         <div id="program-1">
-          <h3>Data Analytics Full-Time Certificate</h3>
-          <p>Learn to collect, process, analyze and interpret data in order to develop actionable business insights. Expand your skills by learning how to leverage statistics, data mining and big data to develop strategies in marketing, retail, health care, finance and other fields.</p>
+          <h3>{{ program.certificates[0].name }} Full-Time Certificate</h3>
+          <p>{{ program.certificates[0].description }}</p>
           <!-- Prerequisites -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--prerequisites">
                   Prerequisites
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--prerequisites"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <p>Knowledge of statistics (fulfill this prerequisite by taking Introduction to Statistics online).</p>
+                <p>{{ program.certificates[0].prerequisites | raw }}</p>
               </div>
             </div>
           </div>
@@ -46,33 +44,27 @@
           <!-- Courses -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--coreCourses">
                   Core Courses
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--coreCourses"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <ul>
-                  <li>
-                    <p><a>Introduction to Data Analytics</a> | COMPSCI X407.9</p>
-                  </li>
-                  <li>
-                    <p><a>Introduction to Databases</a> | COMPSCI X409.1</p>
-                  </li>
-                  <li>
-                    <p><a>Data Analytics and Visualization</a> | COMPSCI X465</p>
-                  </li>
-                  <li>
-                    <p><a>Programming Python</a> | COMPSCI X434</p>
-                  </li>
-                  <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
-                </ul>
+                {% if program.certificates[0].courses != "<div certificate-courses data-cert='0'></div>" %}
+                  <ul>
+                  {% for course in program.certificates[0].courses %}
+                    <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
+                  {% endfor %}
+                    <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
+                  </ul>
+                {% else %}
+                  {{ program.certificates[0].courses | raw }}
+                {% endif %}
               </div>
             </div>
           </div>
@@ -80,21 +72,21 @@
           <!-- program benefits -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--benefits">
                   Program Benefits
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--benefits"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
                 <ul>
-                  <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
-                  <li>Certificate of completion</li>
+                  {% for benefit in program.certificates[0].benefits %}
+                    <li>{{ benefit }}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -103,37 +95,36 @@
           <!-- outcomes -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--outcomes">
                   Outcomes
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--outcomes"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
                 <ul>
-                  <li>Understand statistics, coding, data mining, visualization and reporting.</li>
-                  <li>Extract and analyze data using tools such as tables, charts, pivot tables, statistical analysis, R, Python, databases and SQL.</li>
+                  {% for outcome in program.certificates[0].outcomes %}
+                    <li>{{ outcome }}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
           </div>
-          <p><a data-ng-href="{{ program.appUrl }}" class="btn  mt-5 btn-success btn-lg">APPLY NOW</a></p>
         </div>
         <div class="structure-immersive-outcomes">
           <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive1">
-            <caption>Live Online Data Analytics</caption>
+            <caption>{{ program.delivery }} {{ program.certificates[0].name }}</caption>
             <tr class="font-size-sm">
               <th scope="row">Length</th>
-              <td>1 semester</td>
+              <td>{{ program.certificates[0].length }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Format</th>
-              <td>Full-time online study</td>
+              <td>{{ program.certificate_type }} {{ program.delivery }} study</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Courses</th>
@@ -141,7 +132,7 @@
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Offered</th>
-              <td>Fall and Spring</td>
+              <td>{{ program.certificates[0].offered }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Prerequisite</th>
@@ -161,40 +152,23 @@
     <div class="pdp-tab pdp-tab-2">
       <div class="grid-container-fluid grid-col-2-1">
         <div id="program-2">
-          <h3>Data Science Full-Time Certificate</h3>
-          <p>Learn to perform advanced data wrangling, data mining, statistical modeling and machine learning on data sets that may be very large and complex. Prepare for a data scientist role by analyzing large quantities of unstructured historical data to develop innovative solutions to complex business problems.</p>
+          <h3>{{ program.certificates[1].name }} Full-Time Certificate</h3>
+          <p>{{ program.certificates[1].description }}</p>
           <!-- Prerequisites -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--prerequisites2">
                   Prerequisites
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--prerequisites2"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <p>Completion of the:</p>
-                <ul><li><a>Data Analytics Full-Time Certificate</a></li></ul>
-                <p>Or</p>
-                <ul>
-                  <li><a>Introduction to Data Analytics</a> | COMPSCI X407.9</li>
-                  and
-                  <li>Ability to program in at least one high-level programming language. You can complete this prerequisite by taking one of the following online courses before applying:
-                    <ul>
-                      <li><a>C++ Programming</a> | EL ENG X412.1</li>  
-                      <li><a>Introduction to C Language Programming</a> | EL ENG X24</li>  
-                      <li><a>JavaScript and jQuery: An Introduction</a> | COMPSCI X452.1</li>  
-                      <li><a>First Course in Java</a> | EL ENG X429.9</li>  
-                      <li><a>Programming Python</a> | COMPSCI X434</li>  
-                      <li><a>Introduction to Computers and Programming</a> | COMPSCI X444.4</li>  
-                    </ul>
-                  </li>
-                </ul>
+                <p>{{ program.certificates[1].prerequisites | raw }}</p>
               </div>
             </div>
           </div>
@@ -202,29 +176,27 @@
           <!-- Courses -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--coreCourses2">
                   Core Courses
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--coreCourses2"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <ul>
-                  <!-- repeat list of core courses -->
-                  <li>
-                    <p><a>Introduction to Data Science</a> | COMPSCI X415.2</p>
-                    <p><a>Python for Data Analysis and Scientific Computing</a> | COMPSCI X433.3</p>
-                    <p><a>Introduction to Big Data</a> | COMPSCI X409.2</p>
-                    <p><a>Business Intelligence With SQL Server</a> | EL ENG X404.8</p>
-                    <p><a>Career Development Leadership Skills</a> | BUS ADM 2055</p>
-                  </li>
-                  <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Leadership Skills</a> | BUS ADM 2055 </li>
-                </ul>
+                {% if program.certificates[1].courses != "<div certificate-courses data-cert='1'></div>" %}
+                  <ul>
+                  {% for course in program.certificates[1].courses %}
+                    <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
+                  {% endfor %}
+                    <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
+                  </ul>
+                {% else %}
+                  {{ program.certificates[1].courses | raw }}
+                {% endif %}
               </div>
             </div>
           </div>
@@ -232,21 +204,21 @@
           <!-- Program Benefits -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--benefits2">
                   Program Benefits
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--benefits2"
                   class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
                 <ul>
-                  <li>Remote internship with a Bay Area company ($3,000 USD additional fee)</li>
-                  <li>Certificate of completion</li>
+                  {% for benefit in program.certificates[1].benefits %}
+                    <li>{{ benefit }}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -254,39 +226,36 @@
           <!-- Outcomes -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--outcomes2">
                   Outcomes
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}" class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+            <div id="accordion--outcomes2" class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
                 <ul>
-                <!-- repeat outcomes in program -->
-                  <li>Perform advanced data wrangling, data mining, statistical modeling and machine learning on large, complex data sets.</li>
-                  <li>Run data collection and cleaning, modeling, evaluation, visualization, reporting and deployment.</li>
-                  <li>Develop solutions using Spark, R, Python, TensorFlow, relational databases and SQL.</li>
+                  {% for outcome in program.certificates[1].outcomes %}
+                    <li>{{ outcome }}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
           </div>
           <!-- app link -->
-          <p><a class="btn mt-5 btn-success btn-lg">APPLY NOW</a></p>
         </div>
         <div class="structure-immersive-outcomes">
           <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive2">
-            <caption>Live Online Data Science</caption>
+            <caption>{{ program.delivery }} {{ program.certificates[1].name }}</caption>
             <tr class="font-size-sm">
               <th scope="row">Length</th>
-              <td>1 semester</td>
+              <td>{{ program.certificates[1].length }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Format</th>
-              <td>Full-time online study</td>
+              <td>{{ program.certificate_type }} {{ program.delivery }} study</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Courses</th>
@@ -294,7 +263,7 @@
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Offered</th>
-              <td>Fall and Spring</td>
+              <td>{{ program.certificates[1].offered }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Prerequisite</th>
@@ -314,28 +283,22 @@
     <div class="pdp-tab pdp-tab-3">
       <div class="grid-container-fluid grid-col-2-1">
         <div id="program-3">
-          <h3>Data Science Professional Diploma Program With Specialization Electives</h3>
-          <p>Complete the coursework in the <strong>Data Analytics </strong> and <strong>Data Science</strong> certificates, and take 4 additional semester units to complete this program.</p>
-          <!-- Subject area course list -->
-          <!-- <%@ include file="/international/professional/common/liveOnline-courses.jsp"%> -->          
-          <!-- data-if program.agile -->
+          <h3>{{ program.shortName }} Professional Diploma Program With Specialization Electives</h3>
+          <p>Complete the coursework in the <strong>{{ program.certificates[0].name }} </strong> and <strong>{{ program.certificates[1].name }}</strong> certificates, and take 4 additional semester units to complete this program.</p>
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--semester1">
                   Semester 1
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--semester1"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <!-- data-ng-if="program.agile" -->
                 <ul>
-                  <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40372&showSections=false">Agile Principles and Practices</a></li>
                   <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
                 </ul>
               </div>
@@ -344,53 +307,44 @@
           
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
-              <h5 class="accordion__title">
+              <h4 class="accordion__title">
                 <button type="button" class="accordion__button"
                   aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--{{ loop.index }}">
+                  aria-controls="accordion--semester2">
                   Semester 2
                 </button>
-              </h5>
+              </h4>
             </div>
-            <div id="accordion--{{ loop.index }}"
+            <div id="accordion--semester2}"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {# {{ item.content }} #}
-                <!-- data-ng-if="program.agile" -->
-              <!-- data-ng-if="program.agile" -->
                 <ul>
-                  <li><a href="/search/publicCourseSearchDetails.do?method=load&courseId=40329&showSections=false">Project Leadership and Building High-Performing Teams</a></li>
                   <li><a href="https://extension.berkeley.edu/">Elective of your choice</a> from our catalog</li>
                 </ul>
               </div>
             </div>
           </div>
-          
-          <!-- data-ng-if="program.capstone" -->
-          <h3 >Capstone Portfolio Course</h3>
-          <!-- data-ng-if="program.capstone" -->
-          <p>To show off your new Data Analtics and Data Science skills, you'll create a comprehensive portfolio of work that can be shown to employers. You'll work with your instructor to gather all of your printed and digital materials and strategically combine them into a professional portfolio. This will help you market yourself and gain a competitive edge as you prepare for your <a href="#internships">internship</a> and <a href="#internships-opt">Optional Practical Training</a>.</p>
-          <!-- appLink -->
-          <a class="btn btn-success btn-lg mt-5">APPLY NOW</a>
+          {% if program.capstone == "Yes" %}
+            <h3 >Capstone Portfolio Course</h3>
+            <p>To show off your new {{ program.certificates[0].name }} and {{ program.certificates[1].name }} skills, you'll create a comprehensive portfolio of work that can be shown to employers. You'll work with your instructor to gather all of your printed and digital materials and strategically combine them into a professional portfolio. This will help you market yourself and gain a competitive edge as you prepare for your <a href="#internships">internship</a> and <a href="#internships-opt">Optional Practical Training</a>.</p>
+          {% endif %}
         </div>
         <div class="structure-immersive-outcomes">
           <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive3">
-            <caption>Live Online Data Science</caption>
+            <caption>{{ program.delivery }} {{ program.shortName }}</caption>
             <tr class="font-size-sm">
               <th scope="row">Length</th>
               <td>2 semesters</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Format</th>
-              <td>Full-time online study</td>
+              <td>{{ program.certificate_type }} {{ program.delivery }} study</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Courses</th>
               <td>
                 <p>8 core</p>
-                <p>{{ program.numberElectives}} elective</p>
-                <p data-ng-if="program.ceu">3 units CEU</p>
-                <p data-ng-if="program.capstone">1 capstone</p>
+                <p>{{ program.numberElectives}} elective TO DO</p>
               </td>
             </tr>
             <tr class="font-size-sm">
@@ -404,6 +358,7 @@
           </table>
         </div>
       </div>
+      <p><a href="{{ program.cta[0].uri }}" class="btn btn-success btn-lg mt-5">APPLY NOW</a></p>
     </div>
     <!-- END Tab Content: PDP -->
   </div>

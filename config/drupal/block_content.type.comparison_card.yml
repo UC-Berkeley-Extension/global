@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: comparison_card
-label: 'Comparison Card'
+label: 'Online/Classroom Comparison Card'
 revision: 0
 description: ''

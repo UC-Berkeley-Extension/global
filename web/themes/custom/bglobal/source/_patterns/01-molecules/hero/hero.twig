@@ -1,8 +1,13 @@
 {% if node.type == 'program' %}
-  {% set title = node.shortname %}
-  {% set subtitle = node.certType %}
+  {% set title = node.subtitle %}
+  {% set delivery = node.delivery %}
   {% set url = node.link.url %}
   {% set text = node.link.text %}
+  {% if node.certType == 'Full-Time Certificate' %}
+    {% set subtitle = "#{node.delivery} #{node.certType}" %}
+  {% else %} 
+    {% set subtitle = node.certType %}
+  {% endif %}
 {% else %} 
   {% if hero.label_display == 'visible' %}
     {% set title = hero.title %}
@@ -11,11 +16,12 @@
   {% set url = hero.link.url %}
   {% set text = hero.link.text %}
 {% endif %}
-
 <section class="hero__container">
-  <div class="hero__image__container">
-    <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
-  </div>
+  {% if hero.img.src is not empty %}
+    <div class="hero__image__container">
+      <img class="hero__image" src="{{ hero.img.src }}" alt="{{ hero.img.alt }}">
+    </div>
+  {% endif %}
   <div class="hero__text__container container">
     {% if title %}
       <h2 class="hero__title">

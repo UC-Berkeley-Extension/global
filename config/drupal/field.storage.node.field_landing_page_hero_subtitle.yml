@@ -1,0 +1,20 @@
+uuid: a2b00fde-7c38-4c51-8252-84d690c260c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_landing_page_hero_subtitle
+field_name: field_landing_page_hero_subtitle
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

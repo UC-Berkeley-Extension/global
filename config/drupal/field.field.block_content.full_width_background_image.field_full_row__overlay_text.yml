@@ -1,0 +1,21 @@
+uuid: cf1b6543-9839-45a1-9160-54fdd084a16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_background_image
+    - field.storage.block_content.field_full_row__overlay_text
+  module:
+    - text
+id: block_content.full_width_background_image.field_full_row__overlay_text
+field_name: field_full_row__overlay_text
+entity_type: block_content
+bundle: full_width_background_image
+label: 'Overlay Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
