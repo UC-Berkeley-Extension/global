@@ -8,8 +8,8 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: bglobal_local_tasks
 theme: bglobal
-region: header
-weight: -4
+region: content
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:
