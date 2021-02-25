@@ -26,7 +26,7 @@
     ] | merge(classes|default([])) %}
 <div class="certificate-options-card">
   <div class="{{ classes|join(' ') }}">
-    <p>{{ certificate.duration }}</p>
+    <p>{{ duration }}</p>
   </div>
   <div class="certificate-options-card__text">
     <h3>{{ certificate.name }} Full-Time {% if loop.last == false %}Certificate{% else %}Professional Program{% endif %}</h3>
