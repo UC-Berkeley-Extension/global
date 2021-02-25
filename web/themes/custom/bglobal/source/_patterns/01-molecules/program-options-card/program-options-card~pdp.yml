@@ -1,8 +1,5 @@
-program:
+certificate:
   name: "Data Science Full-Time Professional Program"
   body: "Complete the coursework in the Data Analytics and Data Science certificates, and take 4 additional semester units to complete this program."
-  duration: "2 semesters"
-  cost: "$22,000 (USD) + $1,000 (USD) per elective"
+  deliveryMethod: "Live Online"
 
-borderClass: "yellow-blue"
-  

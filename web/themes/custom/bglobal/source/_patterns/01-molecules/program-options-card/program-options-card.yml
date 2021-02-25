@@ -1,6 +1,5 @@
-program:
+certificate:
   name: "Data Analytics Full-Time Certificate"
   body: "Learn to collect, process, analyze and interpret data in order to develop actionable business insights. "
-  duration: "1 semester"
-  cost: "$11,000 (USD)"
+  deliveryMethod: "Live Online"
   

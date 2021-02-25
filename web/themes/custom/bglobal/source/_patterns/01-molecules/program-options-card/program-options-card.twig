@@ -1,24 +1,43 @@
-{% set classes = [
-  'program-options-card__border ',
-    borderClass ? borderClass,
-] | merge(classes|default([])) %}
 
-<div class="program-options-card">
+{% if certificate.deliveryMethod == "Live Online" %}
+  {% set cost = '$8,000 USD' %}
+{% else %}
+  {% set cost = '$11,000 (USD)' %}
+{% endif %}
+
+{% if loop.index == 1 %}
+  {% set borderClass = 'yellow' %}
+  {% set duration = '1 semester' %}
+{% elseif loop.index == 2 %}
+  {% set borderClass = 'blue' %}
+  {% set duration = '1 semester' %}
+{% else %}
+  {% set borderClass = 'yellow-blue' %}
+  {% set duration = '2 semesters' %}
+  {% set cost = '$22,000 (USD) + $1,000 (USD) per elective' %}
+{% endif %}
+
+{% set classes = [
+  'certificate-options-card__border ',
+    borderClass,
+    ] | merge(classes|default([])) %}
+
+<div class="certificate-options-card">
   <div class="{{ classes|join(' ') }}">
-    <p>{{ program.duration }}</p>
+    <p>{{ certificate.duration }}</p>
   </div>
-  <div class="program-options-card__text">
-    <h3>{{ program.name }}</h3>
-    <p>{{ program.body }}</p>
+  <div class="certificate-options-card__text">
+    <h3>{{ certificate.name }}</h3>
+    <p>{{ certificate.body }}</p>
     <ul>
-      <li><strong>Duration:</strong> {{ program.duration }}{% if program.borderClass != 'yellow-blue' %}, Fall or Spring{% endif %}</li>
-      <li><strong>Cost:</strong> {{ program.cost }}</li>
-    {% if program.prerequisite %}
-      <li><strong>Prerequisite:</strong> {{ program.prerequisite }}</li>
+      <li><strong>Duration:</strong> {{ duration }}{% if loop.last == false %}, Fall or Spring {% endif %}</li>
+      <li><strong>Cost:</strong> {{ cost }}</li>
+    {% if certificate.prerequisite %}
+      <li><strong>Prerequisite:</strong> {{ certificate.prerequisite }}</li>
     {% endif %}
     </ul>
   </div>
-  <div class="program-options-card__button-container">
+  <div class="certificate-options-card__button-container">
     <a class="button button-warning" src="#">LEARN MORE</a>
   </div>
 </div>
