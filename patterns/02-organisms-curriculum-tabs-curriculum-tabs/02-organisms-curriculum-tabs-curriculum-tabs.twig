@@ -1,3 +1,10 @@
+{% if program.delivery == "Live Online" %}
+  {% set cost = '$8,000 USD' %}
+  {% set full_cost = '$16,000 (USD) plus the cost of the internship and electives' %}
+{% else %}
+  {% set cost = '$11,000 (USD)' %}
+  {% set full_cost = '$22,000 (USD) plus the cost of the internship and electives' %}
+{% endif %}
 <div id="curriculum">
   <h2>Curriculum</h2>
 
@@ -16,31 +23,34 @@
     <hr class="line-light pdp-tab-line d-mobile-none" />
     <!-- END Tabs -->
 
-    <!-- START Tab Content: CERT 1 -->
-    <div class="pdp-tab pdp-tab-1">
+    <!-- START Tab Content: CERTS -->
+    {% for certificate in program.certificates %}
+
+    <div class="pdp-tab pdp-tab-{{ loop.index }}">
       <div class="grid-container-fluid grid-col-2-1">
-        <div id="program-1">
-          <h3>{{ program.certificates[0].name }} Full-Time Certificate</h3>
-          <p>{{ program.certificates[0].description }}</p>
+        <div id="program-{{ loop.index }}">
+          <h3>{{ certificate.name }} Full-Time Certificate</h3>
+          <p>{{ certificate.description }}</p>
           <!-- Prerequisites -->
-          <div class="accordion__item">
-            <div class="accordion__title-wrapper">
-              <h4 class="accordion__title">
-                <button type="button" class="accordion__button"
-                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--prerequisites">
-                  Prerequisites
-                </button>
-              </h4>
-            </div>
-            <div id="accordion--prerequisites"
-                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
-              <div class="accordion__content">
-                <p>{{ program.certificates[0].prerequisites | raw }}</p>
+          {% if certificate.prerequisites %}
+            <div class="accordion__item">
+              <div class="accordion__title-wrapper">
+                <h4 class="accordion__title">
+                  <button type="button" class="accordion__button"
+                    aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
+                    aria-controls="accordion--prerequisites">
+                    Prerequisites
+                  </button>
+                </h4>
+              </div>
+              <div id="accordion--prerequisites"
+                   class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
+                <div class="accordion__content">
+                  <p>{{ certificate.prerequisites | raw }}</p>
+                </div>
               </div>
             </div>
-          </div>
-
+          {% endif %}
           <!-- Courses -->
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
@@ -55,15 +65,15 @@
             <div id="accordion--coreCourses"
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
-                {% if program.certificates[0].courses != "<div certificate-courses data-cert='0'></div>" %}
+                {% if certificate.courses != "<div certificate-courses data-cert='0'></div>" %}
                   <ul>
-                  {% for course in program.certificates[0].courses %}
+                  {% for course in certificate.courses %}
                     <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
                   {% endfor %}
                     <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
                   </ul>
                 {% else %}
-                  {{ program.certificates[0].courses | raw }}
+                  {{ certificate.courses | raw }}
                 {% endif %}
               </div>
             </div>
@@ -84,7 +94,7 @@
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
                 <ul>
-                  {% for benefit in program.certificates[0].benefits %}
+                  {% for benefit in certificate.benefits %}
                     <li>{{ benefit }}</li>
                   {% endfor %}
                 </ul>
@@ -107,7 +117,7 @@
                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
               <div class="accordion__content">
                 <ul>
-                  {% for outcome in program.certificates[0].outcomes %}
+                  {% for outcome in certificate.outcomes %}
                     <li>{{ outcome }}</li>
                   {% endfor %}
                 </ul>
@@ -117,10 +127,10 @@
         </div>
         <div class="structure-immersive-outcomes">
           <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive1">
-            <caption>{{ program.delivery }} {{ program.certificates[0].name }}</caption>
+            <caption>{{ program.delivery }} {{ certificate.name }}</caption>
             <tr class="font-size-sm">
               <th scope="row">Length</th>
-              <td>{{ program.certificates[0].length }}</td>
+              <td>{{ certificate.length }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Format</th>
@@ -132,7 +142,7 @@
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Offered</th>
-              <td>{{ program.certificates[0].offered }}</td>
+              <td>{{ certificate.offered }}</td>
             </tr>
             <tr class="font-size-sm">
               <th scope="row">Prerequisite</th>
@@ -140,151 +150,21 @@
             </tr>
             <tr class="font-size-sm">
               <th scope="row"><strong>Tuition and fees</strong></th>
-              <td><strong>$8,000 (USD)</strong></td>
+              <td><strong>{{ cost }}</strong></td>
             </tr>
           </table>
         </div>
       </div>
     </div>
-    <!-- END Tab Content: CERT 1 -->
-
-    <!-- START Tab Content: CERT 2 -->
-    <div class="pdp-tab pdp-tab-2">
-      <div class="grid-container-fluid grid-col-2-1">
-        <div id="program-2">
-          <h3>{{ program.certificates[1].name }} Full-Time Certificate</h3>
-          <p>{{ program.certificates[1].description }}</p>
-          <!-- Prerequisites -->
-          <div class="accordion__item">
-            <div class="accordion__title-wrapper">
-              <h4 class="accordion__title">
-                <button type="button" class="accordion__button"
-                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--prerequisites2">
-                  Prerequisites
-                </button>
-              </h4>
-            </div>
-            <div id="accordion--prerequisites2"
-                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
-              <div class="accordion__content">
-                <p>{{ program.certificates[1].prerequisites | raw }}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Courses -->
-          <div class="accordion__item">
-            <div class="accordion__title-wrapper">
-              <h4 class="accordion__title">
-                <button type="button" class="accordion__button"
-                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--coreCourses2">
-                  Core Courses
-                </button>
-              </h4>
-            </div>
-            <div id="accordion--coreCourses2"
-                 class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
-              <div class="accordion__content">
-                {% if program.certificates[1].courses != "<div certificate-courses data-cert='1'></div>" %}
-                  <ul>
-                  {% for course in program.certificates[1].courses %}
-                    <li><a href="https://extension.berkeley.edu/search/publicCourseSearchDetails.do?method=load&courseId={{course.objectId}}&showSections=false">{{ course.name }}</a> | {{ course.number }}</li>
-                  {% endfor %}
-                    <li><a href="https://voices.berkeley.edu/international/preparing-students-next-step-their-careers" tab="_blank" rel="noreferrer noopener">Career Development Fundamentals</a> | BUS ADM 2054 </li>
-                  </ul>
-                {% else %}
-                  {{ program.certificates[1].courses | raw }}
-                {% endif %}
-              </div>
-            </div>
-          </div>
-          
-          <!-- Program Benefits -->
-          <div class="accordion__item">
-            <div class="accordion__title-wrapper">
-              <h4 class="accordion__title">
-                <button type="button" class="accordion__button"
-                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--benefits2">
-                  Program Benefits
-                </button>
-              </h4>
-            </div>
-            <div id="accordion--benefits2"
-                  class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
-              <div class="accordion__content">
-                <ul>
-                  {% for benefit in program.certificates[1].benefits %}
-                    <li>{{ benefit }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Outcomes -->
-          <div class="accordion__item">
-            <div class="accordion__title-wrapper">
-              <h4 class="accordion__title">
-                <button type="button" class="accordion__button"
-                  aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}"
-                  aria-controls="accordion--outcomes2">
-                  Outcomes
-                </button>
-              </h4>
-            </div>
-            <div id="accordion--outcomes2" class="accordion__content-wrapper{% if item.expanded %} expanded{% endif %}">
-              <div class="accordion__content">
-                <ul>
-                  {% for outcome in program.certificates[1].outcomes %}
-                    <li>{{ outcome }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- app link -->
-        </div>
-        <div class="structure-immersive-outcomes">
-          <table class="table table-light mt-4 align-self-end text-left" id="structure-immersive2">
-            <caption>{{ program.delivery }} {{ program.certificates[1].name }}</caption>
-            <tr class="font-size-sm">
-              <th scope="row">Length</th>
-              <td>{{ program.certificates[1].length }}</td>
-            </tr>
-            <tr class="font-size-sm">
-              <th scope="row">Format</th>
-              <td>{{ program.certificate_type }} {{ program.delivery }} study</td>
-            </tr>
-            <tr class="font-size-sm">
-              <th scope="row">Courses</th>
-              <td><p>4 core</p><p>1.5 units CEU</p></td>
-            </tr>
-            <tr class="font-size-sm">
-              <th scope="row">Offered</th>
-              <td>{{ program.certificates[1].offered }}</td>
-            </tr>
-            <tr class="font-size-sm">
-              <th scope="row">Prerequisite</th>
-              <td>3 years undergrad</td>
-            </tr>
-            <tr class="font-size-sm">
-              <th scope="row"><strong>Tuition and fees</strong></th>
-              <td><strong>$8,000 (USD)</strong></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- END Tab Content: CERT 2 -->
+    {% endfor %}
+    <!-- END Tab Content: CERTS -->
 
     <!-- START Tab Content: PDP -->
     <div class="pdp-tab pdp-tab-3">
       <div class="grid-container-fluid grid-col-2-1">
         <div id="program-3">
           <h3>{{ program.shortName }} Professional Diploma Program With Specialization Electives</h3>
-          <p>Complete the coursework in the <strong>{{ program.certificates[0].name }} </strong> and <strong>{{ program.certificates[1].name }}</strong> certificates, and take 4 additional semester units to complete this program.</p>
+          <p>Complete the coursework in the <strong>{{ certificate.name }} </strong> and <strong>{{ program.certificates[1].name }}</strong> certificates, and take 4 additional semester units to complete this program.</p>
           <div class="accordion__item">
             <div class="accordion__title-wrapper">
               <h4 class="accordion__title">
@@ -326,7 +206,7 @@
           </div>
           {% if program.capstone == "Yes" %}
             <h3 >Capstone Portfolio Course</h3>
-            <p>To show off your new {{ program.certificates[0].name }} and {{ program.certificates[1].name }} skills, you'll create a comprehensive portfolio of work that can be shown to employers. You'll work with your instructor to gather all of your printed and digital materials and strategically combine them into a professional portfolio. This will help you market yourself and gain a competitive edge as you prepare for your <a href="#internships">internship</a> and <a href="#internships-opt">Optional Practical Training</a>.</p>
+            <p>To show off your new {{ certificate.name }} and {{ program.certificates[1].name }} skills, you'll create a comprehensive portfolio of work that can be shown to employers. You'll work with your instructor to gather all of your printed and digital materials and strategically combine them into a professional portfolio. This will help you market yourself and gain a competitive edge as you prepare for your <a href="#internships">internship</a> and <a href="#internships-opt">Optional Practical Training</a>.</p>
           {% endif %}
         </div>
         <div class="structure-immersive-outcomes">
@@ -353,7 +233,7 @@
             </tr>
             <tr class="font-size-sm">
               <th scope="row"><strong>Tuition and Fees</strong></th>
-              <td><p><strong>$16,000 (USD) plus the cost of the internship and electives</strong></p></td>
+              <td><p><strong>{{ full_cost }}</strong></p></td>
             </tr>
           </table>
         </div>
