@@ -33,7 +33,6 @@
     {% include '@organisms/your-study-options/your-study-options.twig' with {
       'program': {
         'delivery': content.bglobal.program["#delivery"],
-        'certificates': content.bglobal.program['#certificates']
         'certificates': [
           content.bglobal.program['#certificates'][0], 
           content.bglobal.program['#certificates'][1],
