@@ -12,7 +12,7 @@ _core:
 id: bglobal_page_title
 theme: bglobal
 region: content
-weight: -5
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
