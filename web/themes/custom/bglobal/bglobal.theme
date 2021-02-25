@@ -372,9 +372,10 @@ function bglobal_preprocess_block(&$variables) {
         }
       }
     }
-
-    // Curriculum Block
-    if ($plugin_id == 'full_time_curriculum_tabs') {
+    
+    // Blocks that need program level vars
+    $program_blocks = ['full_time_curriculum_tabs', 'your_study_options'];
+    if (in_array($plugin_id, $program_blocks)) {
       setProgramNodeVariables($node, $variables);
     }
   }
