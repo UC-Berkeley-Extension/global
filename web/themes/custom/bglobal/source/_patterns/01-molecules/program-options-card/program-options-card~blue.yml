@@ -1,5 +1,4 @@
 certificate:
-  name: "Data Science Full-Time Certificate"
-  body: "Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling and machine learning on complex data sets."
-  prerequisite: "Data Analytics Full-Time Certificate"
+  name: "Data Science"
+  description: "Build upon the Data Analytics Certification. Learn advanced data wrangling, statistical modeling and machine learning on complex data sets."
   deliveryMethod: "Live Online"
