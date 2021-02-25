@@ -1,0 +1,8 @@
+uuid: 2659e128-eabd-4e9b-afac-42f608444a87
+langcode: en
+status: true
+dependencies: {  }
+id: your_study_options
+label: 'Your Study Options'
+revision: 0
+description: 'Placeholder for Your Study Options component for Full Time Certificates'
