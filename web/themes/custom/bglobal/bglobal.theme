@@ -11,6 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Layout\LayoutDefault;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
+use Drupal\block_content\BlockContentInterface;
 
 function bglobal_preprocess_page(&$variables) {
   // Affect variable passed to page.html.twig and all of it's children
@@ -346,7 +347,10 @@ function bglobal_preprocess_layout(&$variables) {
 function bglobal_preprocess_block(&$variables) {
   if (!empty($variables['theme_hook_original'] == 'block')) {
     // Get block type
-    $plugin_id = $variables['derivative_plugin_id'];
+    $content = $variables['elements']['content'];
+    if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+      $block_type = $content['#block_content']->bundle();
+    }
     // Get node object
     $node = \Drupal::routeMatch()->getParameter('node');
     
@@ -375,7 +379,7 @@ function bglobal_preprocess_block(&$variables) {
     
     // Blocks that need program level vars
     $program_blocks = ['full_time_curriculum_tabs', 'your_study_options'];
-    if (in_array($plugin_id, $program_blocks)) {
+    if (isset($block_type) && in_array($block_type, $program_blocks)) {
       setProgramNodeVariables($node, $variables);
     }
   }

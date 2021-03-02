@@ -4,19 +4,9 @@ status: true
 dependencies:
   config:
     - block_content.type.your_study_options
-    - field.field.block_content.your_study_options.body
-  module:
-    - text
 id: block_content.your_study_options.default
 targetEntityType: block_content
 bundle: your_study_options
 mode: default
-content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden: {  }
