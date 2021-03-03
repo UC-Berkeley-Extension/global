@@ -1,4 +1,4 @@
-name: 'Berkely Global Pardot Forms'
+name: 'Pardot Forms'
 type: module
 description: 'Custom form generation for Pardot.'
 core_version_requirement: ^8 || ^9
