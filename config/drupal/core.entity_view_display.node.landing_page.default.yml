@@ -66,8 +66,7 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       whitelisted_blocks:
-        'Chaos Tools':
-          - 'entity_view:node'
+        'Chaos Tools': {  }
         Devel: {  }
         Forms: {  }
         Help: {  }
@@ -85,6 +84,7 @@ third_party_settings:
           - 'field_block:node:landing_page:revision_default'
           - 'field_block:node:landing_page:default_langcode'
           - 'field_block:node:landing_page:field_term_ref_editorial_section'
+          - 'field_block:node:landing_page:langcode'
           - 'extra_field_block:node:landing_page:links'
           - 'field_block:node:landing_page:menu_link'
           - 'extra_field_block:node:landing_page:content_moderation_control'
@@ -96,12 +96,11 @@ third_party_settings:
           - 'field_block:node:landing_page:rh_redirect'
           - 'field_block:node:landing_page:rh_redirect_response'
           - 'field_block:node:landing_page:revision_timestamp'
+          - 'field_block:node:landing_page:vid'
           - 'field_block:node:landing_page:revision_log'
           - 'field_block:node:landing_page:revision_translation_affected'
           - 'field_block:node:landing_page:revision_uid'
           - 'field_block:node:landing_page:sticky'
-          - 'field_block:node:landing_page:langcode'
-          - 'field_block:node:landing_page:vid'
           - 'field_block:user:user:changed'
           - 'field_block:user:user:created'
           - 'field_block:user:user:default_langcode'
@@ -121,10 +120,10 @@ third_party_settings:
           - 'field_block:user:user:status'
         'Inline blocks':
           - 'inline_block:another_study_option'
-          - 'inline_block:comparison_card'
           - 'inline_block:english_proficiency'
           - 'inline_block:full_time_curriculum_tabs'
           - 'inline_block:full_width_background_image'
+          - 'inline_block:comparison_card'
           - 'inline_block:program_page_index'
       allowed_layouts: {  }
 id: node.landing_page.default

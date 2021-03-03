@@ -1,5 +1,5 @@
-name: 'Angular: Info Sessions List'
-description: 'Info Sessions List angular template'
+name: 'Info Sessions List (Voices)'
+description: 'List of 3 Info Sessions'
 type: 'block' # default
 enable_field: true
 js:
