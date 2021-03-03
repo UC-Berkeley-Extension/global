@@ -1,0 +1,10 @@
+diff --git a/component.info.yml b/component.info.yml
+index 1ec1b2e..78308e2 100644
+--- a/component.info.yml
++++ b/component.info.yml
+@@ -1,4 +1,4 @@
+-name: Component
++name: 'Blocks With External Data Sources'
+ type: module
+ description: 'Easily add JS components to Drupal as blocks, with only a single yml file.'
+ package: Component

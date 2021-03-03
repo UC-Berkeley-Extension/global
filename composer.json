@@ -133,6 +133,9 @@
       },
       "drupal/paragraphs": {
         "Fix langcode error when using paragraphs in layout builder (https://www.drupal.org/project/paragraphs/issues/2901390#comment-13718531": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
+      },
+      "drupal/component": {
+        "Rename Component Module for better UX in Layout Builder": "patches/rename-component-module.patch"
       }
     }
   },
