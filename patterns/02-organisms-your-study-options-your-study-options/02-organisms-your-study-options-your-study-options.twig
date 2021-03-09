@@ -1,7 +1,9 @@
 <div class="your-study-options">
   {% for certificate in program.certificates %}
-    {% set certificate = certificate|merge({'deliveryMethod': program.delivery}) %}
-    {% include "@molecules/program-options-card/program-options-card.twig" with certificate %}
+    {% if certificate %}
+      {% set certificate = certificate|merge({'deliveryMethod': program.delivery}) %}
+      {% include "@molecules/program-options-card/program-options-card.twig" with certificate %}
+    {% endif %}
   {% endfor %}
 </div>
 <ul>
