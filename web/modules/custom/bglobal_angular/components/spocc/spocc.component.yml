@@ -1,4 +1,4 @@
-name: 'SPoCC Block'
+name: 'Program Listings (SPoCC)'
 description: 'The Tabbed Layout of our Product Offerings'
 type: 'block' # default
 enable_field: true
