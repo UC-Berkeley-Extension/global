@@ -1,5 +1,5 @@
-name: 'Angular: Voices Post List'
-description: 'Voices List AngularJs template'
+name: 'Voices Post List (Voices)'
+description: 'Horizontal list of 3 Voices posts'
 type: 'block' # default
 enable_field: true
 js:

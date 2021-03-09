@@ -1,5 +1,5 @@
-name: 'Angular: Voices Post Spotlight'
-description: 'Voices Spotlight angular template'
+name: 'Voices Post Spotlight (Voices)'
+description: 'Voices Post Spotlight'
 type: 'block' # default
 enable_field: true
 js:

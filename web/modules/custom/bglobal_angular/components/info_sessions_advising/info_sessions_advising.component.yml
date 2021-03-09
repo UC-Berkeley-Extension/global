@@ -1,5 +1,5 @@
-name: 'Angular: Info Sessions Advising'
-description: 'Info Sessions Advising angular template'
+name: 'Info Sessions Advising (Voices)'
+description: 'Link to most recent info sessions with the advisor profile'
 type: 'block' # default
 enable_field: true
 js:

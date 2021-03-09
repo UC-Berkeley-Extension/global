@@ -35,7 +35,6 @@ dependencies:
     - 'block_content:basic:714f1115-63f3-400f-8117-81197a284388'
   module:
     - bglobal_layouts
-    - bglobal_pardot
     - block_content
     - component
     - layout_builder
@@ -128,31 +127,6 @@ third_party_settings:
                 info-sessions-advising: ''
                 info: ''
                 cert: default
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          15ce3b57-8fa6-4133-aab9-4f71eed48810:
-            uuid: 15ce3b57-8fa6-4133-aab9-4f71eed48810
-            region: first
-            configuration:
-              id: bglobal_pardot_block
-              label: 'Talk to an Advisor'
-              provider: bglobal_pardot
-              label_display: visible
-              action_url: 'https://go.pardot.com/l/102272/2016-11-04/2klckm'
-              field_list:
-                firstname: firstname
-                lastname: lastname
-                email: email
-                question: question
-                opt_in_contact: opt_in_contact
-              submit_label: 'Get Advising'
-              success_message: 'Success message...'
-              tracking_fields:
-                full_path: full_path
-                page_title: page_title
-                success_location: success_location
-                error_location: error_location
               context_mapping: {  }
             additional: {  }
             weight: 0
@@ -363,8 +337,9 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       whitelisted_blocks:
-        'Chaos Tools':
-          - 'entity_view:node'
+        'Chaos Tools': {  }
+        'Content fields':
+          - 'field_block:node:program:field_program_description'
         Devel: {  }
         Forms: {  }
         Help: {  }
@@ -376,49 +351,20 @@ third_party_settings:
         'Workbench Access': {  }
         core: {  }
       blacklisted_blocks:
-        'Content fields':
-          - 'field_block:node:program:created'
-          - 'field_block:node:program:changed'
-          - 'field_block:node:program:revision_default'
-          - 'field_block:node:program:default_langcode'
-          - 'field_block:node:program:field_term_ref_editorial_section'
-          - 'extra_field_block:node:program:links'
-          - 'field_block:node:program:menu_link'
-          - 'extra_field_block:node:program:content_moderation_control'
-          - 'field_block:node:program:moderation_state'
-          - 'field_block:node:program:promote'
-          - 'field_block:node:program:rh_action'
-          - 'field_block:node:program:rh_redirect_fallback_action'
-          - 'field_block:node:program:rh_redirect'
-          - 'field_block:node:program:rh_redirect_response'
-          - 'field_block:node:program:revision_translation_affected'
-          - 'field_block:node:program:sticky'
-          - 'field_block:node:program:uid'
-          - 'field_block:node:program:langcode'
-          - 'field_block:node:program:status'
-          - 'field_block:node:program:revision_timestamp'
-          - 'field_block:node:program:vid'
-          - 'field_block:node:program:revision_log'
-          - 'field_block:node:program:revision_uid'
-          - 'field_block:user:user:changed'
-          - 'field_block:user:user:created'
-          - 'field_block:user:user:default_langcode'
-          - 'field_block:user:user:mail'
-          - 'field_block:user:user:init'
-          - 'field_block:user:user:langcode'
-          - 'field_block:user:user:access'
-          - 'field_block:user:user:login'
-          - 'extra_field_block:user:user:member_for'
-          - 'field_block:user:user:name'
-          - 'field_block:user:user:user_picture'
-          - 'field_block:user:user:preferred_admin_langcode'
-          - 'field_block:user:user:preferred_langcode'
-          - 'field_block:user:user:roles'
-          - 'field_block:user:user:timezone'
-          - 'field_block:user:user:uid'
-          - 'field_block:user:user:status'
+        'Blocks With External Data Sources':
+          - 'component:spocc'
+          - 'component:voices_spotlight'
+        'Custom block types':
+          - comparison_card
+          - full_time_curriculum_tabs
+          - hero
+          - your_study_options
+        'Custom blocks': {  }
         'Inline blocks':
           - 'inline_block:full_time_curriculum_tabs'
+          - 'inline_block:hero'
+          - 'inline_block:comparison_card'
+          - 'inline_block:your_study_options'
       allowed_layouts: {  }
 id: node.program.default
 targetEntityType: node
