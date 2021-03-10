@@ -512,6 +512,9 @@ $columns: map-merge(
   }
 }
 
+.grid-gap-10 {
+  grid-gap: 10px;
+}
 // pdp grid additions
 // MIXINS
 @mixin column-variants($parent, $column) {
