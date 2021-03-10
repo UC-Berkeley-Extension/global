@@ -7,7 +7,22 @@
     max-width: 210px;
   }
 }
-
+.social-icon__wechat {
+  display: inline;
+  position: relative;
+  &:hover {
+    .wechat__qr {
+      top: 10px;
+      right:0;
+    }
+  }
+}
+.wechat__qr {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -10000px;
+}
 span.footer__info,
 span.footer__info a {
   text-align: center;
