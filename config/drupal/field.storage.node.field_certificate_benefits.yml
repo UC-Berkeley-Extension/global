@@ -1,0 +1,20 @@
+uuid: f1e3acc0-1c18-4a63-af4f-b58aa18a14cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_certificate_benefits
+field_name: field_certificate_benefits
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

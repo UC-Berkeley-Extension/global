@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .chkBox-negative-a {
+        fill: #ed5033;
+      }
+
+      .chkBox-negative-b {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="chkBox-negative-a" width="20" height="20" rx="4"/>
+    <line class="chkBox-negative-b" x1="6.14" y1="5.94" x2="13.89" y2="13.69"/>
+    <line class="chkBox-negative-b" x1="6.14" y1="13.69" x2="13.89" y2="5.94"/>
+  </g>
+</svg>

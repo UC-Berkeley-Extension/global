@@ -1,0 +1,511 @@
+uuid: d2c3fbe0-cffd-4c99-ae74-1fa5ebc77a8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - block_content.type.english_proficiency
+    - block_content.type.full_time_curriculum_tabs
+    - block_content.type.full_width_background_image
+    - block_content.type.program_page_index
+    - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
+    - field.field.node.program.field_program_cost
+    - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_email
+    - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_future
+    - field.field.node.program.field_program_hero_image
+    - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_voices_feed_id
+    - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_tags
+    - field.field.node.program.field_term_ref_academic_level
+    - field.field.node.program.field_term_ref_certificate_type
+    - field.field.node.program.field_term_ref_delivery_method
+    - field.field.node.program.field_term_ref_editorial_section
+    - field.field.node.program.field_term_ref_school_microsite
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  content:
+    - 'block_content:another_study_option:0b89985a-83ad-48e4-8010-7e1b2e5b272a'
+    - 'block_content:basic:43186cd8-6669-46bb-aeb4-a5ee48bde3c2'
+    - 'block_content:basic:4aa6477f-e663-4295-b45d-fc2bf43d6dc0'
+    - 'block_content:basic:6b682db9-d598-41c3-9c37-2719ab36f146'
+    - 'block_content:basic:714f1115-63f3-400f-8117-81197a284388'
+  module:
+    - bglobal_layouts
+    - block_content
+    - component
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: bglobal_twocol_section
+        layout_settings:
+          label: 'Section 1'
+          column_widths: 33-67
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: ''
+        components:
+          15ce456c-b46e-4f21-a79c-8447210a4e26:
+            uuid: 15ce456c-b46e-4f21-a79c-8447210a4e26
+            region: second
+            configuration:
+              id: 'field_block:node:program:field_program_description'
+              label: 'Program Description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          f243edce-247c-4286-939c-8803f9d3dcc3:
+            uuid: f243edce-247c-4286-939c-8803f9d3dcc3
+            region: second
+            configuration:
+              id: 'inline_block:call_to_action'
+              label: 'Apply Now Button'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 42
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 4
+          b78eb065-11b7-4363-9a4f-5f53cd1c7472:
+            uuid: b78eb065-11b7-4363-9a4f-5f53cd1c7472
+            region: first
+            configuration:
+              id: 'inline_block:program_page_index'
+              label: 'Page Outline'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 51
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_twocol_section
+        layout_settings:
+          label: Advising
+          column_widths: 50-50
+          class:
+            bg-teal: bg-teal
+            bg-light: 0
+          title: ''
+        components:
+          f8486b83-99be-49b5-ac9e-5b3fd532cb36:
+            uuid: f8486b83-99be-49b5-ac9e-5b3fd532cb36
+            region: second
+            configuration:
+              id: 'component:info_sessions_advising'
+              label: 'Angular: Info Sessions Advising'
+              provider: component
+              label_display: '0'
+              form_configuration:
+                info-sessions-advising: ''
+                info: ''
+                cert: default
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_onecol_section
+        layout_settings:
+          label: 'Your Study Options'
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: 'Your Study Options'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Welcome to San Francisco'
+          class:
+            bg-light: 0
+            bg-teal: 0
+        components:
+          0c135cd5-1a33-437f-9519-1bd33083432e:
+            uuid: 0c135cd5-1a33-437f-9519-1bd33083432e
+            region: content
+            configuration:
+              id: 'inline_block:full_width_background_image'
+              label: 'Welcome to San Francisco'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 66
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_onecol_section
+        layout_settings:
+          label: Curriculum
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: ''
+        components:
+          a5005d9a-41d8-4ef6-a7d8-31420c8c8ef0:
+            uuid: a5005d9a-41d8-4ef6-a7d8-31420c8c8ef0
+            region: first
+            configuration:
+              id: 'inline_block:full_time_curriculum_tabs'
+              label: 'Curriculum Tabs'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 69
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_twocol_section
+        layout_settings:
+          label: 'Your Path to a Career'
+          column_widths: 75-25
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: ''
+        components:
+          31cba38c-a8b6-4c0a-9cab-4396b3bf651b:
+            uuid: 31cba38c-a8b6-4c0a-9cab-4396b3bf651b
+            region: first
+            configuration:
+              id: 'block_content:43186cd8-6669-46bb-aeb4-a5ee48bde3c2'
+              label: 'Your Path to a Career'
+              provider: block_content
+              label_display: visible
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          048f5070-dd53-45ed-8efd-fc427ae07e47:
+            uuid: 048f5070-dd53-45ed-8efd-fc427ae07e47
+            region: second
+            configuration:
+              id: 'block_content:6b682db9-d598-41c3-9c37-2719ab36f146'
+              label: 'Our Graduates are Working'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_twocol_section
+        layout_settings:
+          label: 'Another Study Option'
+          column_widths: 75-25
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: 'Another Study Option'
+        components:
+          478595b2-afbe-40c7-9f55-ce7d92054354:
+            uuid: 478595b2-afbe-40c7-9f55-ce7d92054354
+            region: second
+            configuration:
+              id: 'block_content:714f1115-63f3-400f-8117-81197a284388'
+              label: 'Online Study Option Benefits'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          653b3546-aec6-4c70-bdde-98d4191d7906:
+            uuid: 653b3546-aec6-4c70-bdde-98d4191d7906
+            region: first
+            configuration:
+              id: 'block_content:0b89985a-83ad-48e4-8010-7e1b2e5b272a'
+              label: 'Another Study Option'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_twocol_section
+        layout_settings:
+          label: 'International Students'
+          column_widths: 50-50
+          class:
+            bg-light: bg-light
+            bg-teal: 0
+          title: 'International Students'
+        components:
+          7a05169a-6a9c-4f3d-9c03-3272f6fb55ab:
+            uuid: 7a05169a-6a9c-4f3d-9c03-3272f6fb55ab
+            region: first
+            configuration:
+              id: 'block_content:4aa6477f-e663-4295-b45d-fc2bf43d6dc0'
+              label: 'International Students Column Left'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          b2a84c7b-9abf-4384-abcd-c8f241329e6d:
+            uuid: b2a84c7b-9abf-4384-abcd-c8f241329e6d
+            region: second
+            configuration:
+              id: 'inline_block:english_proficiency'
+              label: 'English Proficiency Requirements'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 64
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: bglobal_onecol_section
+        layout_settings:
+          label: 'Student Stories'
+          class:
+            bg-light: 0
+            bg-teal: 0
+          title: 'Student Stories'
+        components:
+          70ce97cc-b684-4b04-bf72-81175f29df65:
+            uuid: 70ce97cc-b684-4b04-bf72-81175f29df65
+            region: first
+            configuration:
+              id: 'component:voices_list'
+              label: 'Angular: Voices Post List'
+              provider: component
+              label_display: '0'
+              form_configuration:
+                voices-list: ''
+                info: ''
+                cert: all
+                tag: '83'
+                post: all
+                more-link: 'https://voices.berkeley.edu/international'
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Chaos Tools': {  }
+        'Content fields':
+          - 'field_block:node:program:field_program_description'
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        'Workbench Access': {  }
+        core: {  }
+      blacklisted_blocks:
+        'Blocks With External Data Sources':
+          - 'component:spocc'
+          - 'component:voices_spotlight'
+        'Custom block types':
+          - comparison_card
+          - full_time_curriculum_tabs
+          - hero
+          - your_study_options
+        'Custom blocks': {  }
+        'Inline blocks':
+          - 'inline_block:full_time_curriculum_tabs'
+          - 'inline_block:hero'
+          - 'inline_block:comparison_card'
+          - 'inline_block:your_study_options'
+      allowed_layouts: {  }
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_program_application_cta:
+    weight: 17
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_program_capstone:
+    weight: 23
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: first
+  field_program_cost:
+    weight: 18
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_program_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_program_email:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_program_featured:
+    weight: 20
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_program_future:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: first
+  field_program_hero_image:
+    type: entity_reference_entity_view
+    weight: 21
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_program_voices_feed_id:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_ref_certificates:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_tags:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_academic_level:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_certificate_type:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_term_ref_delivery_method:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_program_shortname: true
+  field_term_ref_editorial_section: true
+  field_term_ref_school_microsite: true
+  layout_builder__layout: true

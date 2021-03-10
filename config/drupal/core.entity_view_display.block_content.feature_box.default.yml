@@ -1,0 +1,32 @@
+uuid: 0b0040e5-93ec-47a2-9048-7108f70c2a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.feature_box
+    - field.field.block_content.feature_box.body
+    - field.field.block_content.feature_box.field_feature_image
+  module:
+    - text
+id: block_content.feature_box.default
+targetEntityType: block_content
+bundle: feature_box
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_feature_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

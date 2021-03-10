@@ -1,0 +1,61 @@
+uuid: 24c293e9-b159-4372-acb9-f1bcf0c7ee91
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_program_application_cta
+    - field.field.node.program.field_program_capstone
+    - field.field.node.program.field_program_cost
+    - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_email
+    - field.field.node.program.field_program_featured
+    - field.field.node.program.field_program_future
+    - field.field.node.program.field_program_hero_image
+    - field.field.node.program.field_program_shortname
+    - field.field.node.program.field_program_voices_feed_id
+    - field.field.node.program.field_ref_certificates
+    - field.field.node.program.field_tags
+    - field.field.node.program.field_term_ref_academic_level
+    - field.field.node.program.field_term_ref_certificate_type
+    - field.field.node.program.field_term_ref_delivery_method
+    - field.field.node.program.field_term_ref_editorial_section
+    - field.field.node.program.field_term_ref_school_microsite
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_program_application_cta: true
+  field_program_capstone: true
+  field_program_cost: true
+  field_program_description: true
+  field_program_email: true
+  field_program_featured: true
+  field_program_future: true
+  field_program_hero_image: true
+  field_program_shortname: true
+  field_program_voices_feed_id: true
+  field_ref_certificates: true
+  field_tags: true
+  field_term_ref_academic_level: true
+  field_term_ref_certificate_type: true
+  field_term_ref_delivery_method: true
+  field_term_ref_editorial_section: true
+  field_term_ref_school_microsite: true
+  layout_builder__layout: true

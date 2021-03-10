@@ -1,0 +1,8 @@
+uuid: 579b5fb8-db45-4266-a912-11bfdbfceee8
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_background_image
+label: 'Full width background Image'
+revision: 0
+description: 'Full width content divider using an image as a background with optional overlay text'

@@ -1,0 +1,22 @@
+block.settings.bglobal_pardot_form_block:
+  type: block_settings
+  label: 'Custom Pardot form'
+  mapping:
+    action_url:
+      type: string
+      label: 'Form action URL'
+    field_list:
+      type: sequence
+      label: 'Field list'
+      sequence:
+        type: string
+        label: 'Field'
+    tracking_fields:
+      type: sequence
+      label: 'Hidden field list'
+      sequence:
+        type: string
+        label: 'Field'
+    submit_label:
+      type: string
+      label: 'Submit button label'

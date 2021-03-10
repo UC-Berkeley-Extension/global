@@ -1,0 +1,90 @@
+uuid: b10f97d9-dcde-4be5-a2a9-418161a00618
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.certificate.body
+    - field.field.node.certificate.field_certificate_benefits
+    - field.field.node.certificate.field_certificate_courses
+    - field.field.node.certificate.field_certificate_length
+    - field.field.node.certificate.field_certificate_offered
+    - field.field.node.certificate.field_certificate_outcomes
+    - field.field.node.certificate.field_certificate_prerequisite
+    - field.field.node.certificate.field_certificate_short_descript
+    - field.field.node.certificate.field_certificate_shortname
+    - field.field.node.certificate.field_certificate_tuition
+    - field.field.node.certificate.field_term_ref_editorial_section
+    - node.type.certificate
+  module:
+    - options
+    - text
+    - user
+id: node.certificate.default
+targetEntityType: node
+bundle: certificate
+mode: default
+content:
+  field_certificate_benefits:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_certificate_courses:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_length:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_certificate_offered:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_certificate_outcomes:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_certificate_prerequisite:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_certificate_short_descript:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_certificate_tuition:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  body: true
+  field_certificate_shortname: true
+  field_term_ref_editorial_section: true
+  links: true

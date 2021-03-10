@@ -1,0 +1,15 @@
+api_version: 1
+web_docroot: true
+php_version: 7.3
+drush_version: 10
+enforce_https: full
+
+workflows:
+  sync_code:
+    after:
+      - type: webphp
+        description: 'drush config:import'
+        script: private/scripts/import_config.php
+      - type: webphp
+        description: 'drush updatedb'
+        script: private/scripts/update_db.php

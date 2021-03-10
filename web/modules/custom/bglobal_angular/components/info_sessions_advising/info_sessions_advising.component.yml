@@ -1,0 +1,30 @@
+name: 'Info Sessions Advising (Voices)'
+description: 'Link to most recent info sessions with the advisor profile'
+type: 'block' # default
+enable_field: true
+js:
+  info_sessions_advising.js: {}
+template: info_sessions_advising.html
+# This component makes use of an existing shared library which is provided by
+#   another component (library type). This is how to share and manage common
+#   assets across different components.
+dependencies:
+ - component/angularjs_lib
+cache:
+  max-age: 60
+static_configuration:
+  limit: '3'
+form_configuration:
+  info-sessions-advising:
+    title: 'Info Sessions Advising'
+    type: item
+    description: ''
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'https://voices.berkeley.edu/info-sessions/json/cert/{$cert}/area/international'
+  cert:
+    type: textfield
+    title: Program
+    description: 'Enter an optional program ID. Leave default to use the page title.'
+    default_value: 'default'

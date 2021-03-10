@@ -1,0 +1,8 @@
+uuid: 7fdf7fd1-be79-4fa0-8539-32d2a4697ae8
+langcode: en
+status: true
+dependencies: {  }
+id: comparison_card
+label: 'Online/Classroom Comparison Card'
+revision: 0
+description: ''

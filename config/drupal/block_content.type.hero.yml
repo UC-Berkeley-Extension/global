@@ -1,0 +1,8 @@
+uuid: 7316f820-5601-42c0-bead-91639ab4feb9
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+revision: 0
+description: ''

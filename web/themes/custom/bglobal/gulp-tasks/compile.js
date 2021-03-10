@@ -26,41 +26,41 @@ function handleError(err) {
 module.exports = {
   // Compile Sass.
   compileSass: function () {
-    return src(['source/css/style.scss', './source/_patterns/**/**/*.scss'], {allowEmpty: true})
-        .pipe(sassGlob())
-        .pipe(sass({outputStyle: 'nested'}).on('error', handleError))
-        .pipe(
-            prefix({
-              cascade: false
-            })
-        )
-        .pipe(
-            rename(function (path) {
-              path.dirname = '';
-              return path;
-            })
-        )
-        .pipe(dest('./dist/css'));
+    return src(['./source/css/style.scss', './source/_patterns/**/**/*.scss'], {allowEmpty: true})
+      .pipe(sassGlob())
+      .pipe(sass({outputStyle: 'nested'}).on('error', handleError))
+      .pipe(
+          prefix({
+            cascade: false
+          })
+      )
+      .pipe(
+          rename(function (path) {
+            path.dirname = '';
+            return path;
+          })
+      )
+      .pipe(dest('./dist/css'));
   },
 
   // Compile JavaScript.
   compileJS: function () {
     return src(['./source/js/*.js'], {base: './'})
-        .pipe(sourcemaps.init())
-        .pipe(babel())
-        .pipe(
-            rename(function (path) {
-              // Currently not using ES6 modules so for now
-              // es6 files are compiled into individual JS files.
-              // Eventually this can use ES6 Modules and compile
-              // all files within a component directory into a single
-              // foo.bundle.js file. In that case the bundle name should
-              // reflect the components directory name.
-              path.dirname = '';
-              return path;
-            })
-        )
-        .pipe(sourcemaps.write('./'))
-        .pipe(dest('./dist/js'));
+      .pipe(sourcemaps.init())
+      .pipe(babel())
+      .pipe(
+          rename(function (path) {
+            // Currently not using ES6 modules so for now
+            // es6 files are compiled into individual JS files.
+            // Eventually this can use ES6 Modules and compile
+            // all files within a component directory into a single
+            // foo.bundle.js file. In that case the bundle name should
+            // reflect the components directory name.
+            path.dirname = '';
+            return path;
+          })
+      )
+      .pipe(sourcemaps.write('./'))
+      .pipe(dest('./dist/js'));
   }
-}
+};

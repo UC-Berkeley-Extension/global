@@ -1,30 +1,20 @@
-common:
-  version: VERSION
-  js:
-    js/dist/common.min.js: {}
 global:
-  version: VERSION
+  version: 1.0
   css:
     theme:
       dist/css/style.css: {}
-      dist/fonts/: {}
+      dist/fonts: {}
   js:
-    js/dist/: {}
+    dist/js/all.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
     - core/modernizr
     - core/jquery
-details:
-  version: VERSION
+
+programs:
+  version: 0.1
   js:
-    js/libraries/details-element-polyfill.js: {}
-accordion:
-  version: VERSION
-  js:
-    js/dist/accordion.min.js: {}
-chosen:
-  version: VERSION
-  js:
-    js/libraries/chosen.jquery.min.js: {}
-    js/dist/chosen.min.js: {}
+    ../../../modules/custom/bglobal_angular/components/programs/programFactoryAndController.js: {}
+  dependencies:
+    - component/angularjs_lib

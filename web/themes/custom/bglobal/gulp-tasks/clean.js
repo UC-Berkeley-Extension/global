@@ -15,6 +15,10 @@ module.exports = {
     return del(['./dist/js/*'], { force: true });
   },
 
+  cleanPublicJs: function() {
+    return del(['./public/js/*'], { force: true });
+  },
+
   // Clean image files.
   cleanImages: function() {
     return del(['./dist/images/*'], { force: true });

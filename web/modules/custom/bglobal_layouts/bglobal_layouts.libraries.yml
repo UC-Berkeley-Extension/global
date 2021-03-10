@@ -1,0 +1,20 @@
+onecol_title_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/onecol_section_title/bg_onecol_section.css: {}
+twocol_title_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/twocol_section_title/bg_twocol_section.css: {}
+threecol_title_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/threecol_section_title/bg_threecol_section.css: {}
+fourcol_title_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/fourcol_section_title/bg_fourcol_section.css: {}

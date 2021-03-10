@@ -3,25 +3,144 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_landing_page_cta
+    - field.field.node.landing_page.field_landing_page_hero_image
+    - field.field.node.landing_page.field_landing_page_hero_subtitle
+    - field.field.node.landing_page.field_term_ref_editorial_section
     - field.field.node.landing_page.field_term_ref_school_microsite
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
-    - entity_reference_revisions
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components:
+          46894069-b6b6-4b09-80b8-01408609cdb4:
+            uuid: 46894069-b6b6-4b09-80b8-01408609cdb4
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_landing_page_cta'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 0
+          edb66c01-e507-4f53-ba9e-867397ef1410:
+            uuid: edb66c01-e507-4f53-ba9e-867397ef1410
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_landing_page_hero_subtitle'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks:
+        'Blocks With External Data Sources':
+          - 'component:info_sessions_list'
+          - 'component:spocc'
+          - 'component:voices_list'
+          - 'component:voices_spotlight'
+        'Chaos Tools': {  }
+        'Content fields': {  }
+        'Custom block types':
+          - english_proficiency
+          - full_width_background_image
+        'Custom blocks':
+          - 'block_content:4aa6477f-e663-4295-b45d-fc2bf43d6dc0'
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
+        User: {  }
+        Workbench: {  }
+        'Workbench Access': {  }
+        core: {  }
+      blacklisted_blocks:
+        'Inline blocks':
+          - 'inline_block:another_study_option'
+          - 'inline_block:full_time_curriculum_tabs'
+          - 'inline_block:comparison_card'
+          - 'inline_block:program_page_index'
+          - 'inline_block:your_study_options'
+      allowed_layouts: {  }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_components:
-    type: entity_reference_revisions_entity_view
-    weight: 0
-    label: hidden
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_landing_page_cta:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: null
+  field_landing_page_hero_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
     settings:
       view_mode: default
-      link: ''
+      link: false
     third_party_settings: {  }
+    region: content
+  field_landing_page_hero_subtitle:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: null
+  field_term_ref_editorial_section:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_term_ref_school_microsite:
     weight: 1
@@ -32,4 +151,5 @@ content:
     type: entity_reference_label
     region: content
 hidden:
+  layout_builder__layout: true
   links: true

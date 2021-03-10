@@ -1,0 +1,104 @@
+# @file
+# Default build configuration properties.
+#
+# This file may be customized for your project. The full set of default values can be
+# found in the-build's repository.
+# @see https://github.com/palantirnet/the-build/blob/release-2.0/defaults.yml
+
+# These properties are used when building the settings.php and settings.yml for your
+# Drupal site, and by some of the targets in the default build.xml file.
+# @see .the-build/drupal/services.build.yml
+# @see .the-build/drupal/settings.build.php
+build:
+  host: pantheon
+
+drupal:
+  root: "web"
+
+  twig:
+    debug: true
+
+  # Comma-separated list of directories that should be present for Drupal development.
+  # EDIT: We removed creating the config split directories since they are different.
+  create_dirs: "${drupal.root}/modules/custom,${drupal.root}/themes/custom"
+
+  sites:
+    default:
+      # REQUIRED: Name of the sites subdirectory where the `settings.php` file
+      # should live.
+      dir: default
+
+      # REQUIRED: Your site's URI; the default should be the URI of your local
+      # development environment.
+      uri: "https://global.ddev.site"
+
+      # OPTIONAL: Drupal hash salt defaults to "temporary".
+      hash_salt: "IifzfbSZwhlFEBkbBzoKeXKfjVJMFkqXMlqJStlLlXOEPqHKhkRzOAryhyyjXlmI"
+
+      database:
+        username: "db"
+        password: "db"
+        host: "127.0.0.1"
+      # Configuration for the database loading utility. (from /vendor/palantirnet/the-build/defaults.yml:127)
+      load_db:
+        # Pattern to match gzipped database dump files.
+        export_pattern: "my-sql-dump-global.sql"
+        # The following two commands are composed to load the database into Drupal:
+        #   $> gunzip -c FILENAME.sql.gz | drush sqlc
+        #
+        # Command to extract text contents of the backup file.
+        # contents_command: gunzip -c
+        # -----
+        # Tommaso 12/21/20: The Above wasn't working, possibly because of a gzip 
+        # issue with the live server.
+        contents_command: cat
+        # Command to load database contents into Drupal.
+        mysql_command: drush sqlc
+
+        # Load a specific file rather than one matching the `export_pattern`. This can be used
+        # if your build relies on a seed database that is checked in to the repository.
+        # Otherwise, you may occasionally want to set this value at run time:
+        #   $> phing load-db -Ddb.load.file=artifacts/foo.sql.gz
+        file: "my-sql-dump-global.sql"
+
+      settings:
+        # Use the Pantheon convention
+        file_private_path: sites/default/files/private
+
+      # Path to the Drupal config directory, relative to the Drupal root.
+      config_sync_directory: "../config/drupal"
+
+      build:
+        settings_template: config/settings/settings.ddev.php
+        settings_dest: web/sites/default/settings.ddev.php
+        services_template: config/settings/development.services.yml
+        services_dest: web/sites/default/development.services.yml
+
+# To build an artifact from your code, add the URL to your artifact git repository.
+# @see https://github.com/palantirnet/the-build/blob/release-2.0/defaults.yml
+
+artifact:
+  gitignore_template: ".the-build/artifact/gitignore"
+  git:
+    remote: "ssh://codeserver.dev.7a43f5b4-f7a9-4542-a2f3-eeda766d848b@codeserver.dev.7a43f5b4-f7a9-4542-a2f3-eeda766d848b.drush.in:2222/~/repository.git"
+
+    # Name of a branch to use as the base, if the artifact.remote_branch does not yet
+    # exist on the artifact.git.remote repository.
+    remote_base_branch: master
+
+    # Name to use for the git remote on the artifact repository.
+    remote_name: origin
+
+    # Name to use for the git branch when doing a deployment.
+    remote_branch: master
+
+# Configuration for building the style guide.
+#
+# Use these properties if you're using a Composer + Yarn install process for your
+# style guide and need to customize the location or the build command.
+styleguide:
+  # Location of the style guide, relative to the project root.
+  root: "${drupal.root}/themes/custom/bglobal"
+  # Command to compile the style guide assets, for use during the build and artifact steps.
+  command: 'npm install && npm start build'
+  local_install: false

@@ -195,3 +195,18 @@ circleci/database/*
 
 # DDev
 /web/sites/default/drushrc.php
+.ddev/.dbimageBuild/
+.ddev/.ddev-docker-compose-base.yaml
+.ddev/.ddev-docker-compose-full.yaml
+.ddev/.global_commands/
+.ddev/.homeadditions/
+.ddev/.sshimageBuild/
+.ddev/.webimageBuild/
+.ddev/apache/
+.ddev/commands/
+.ddev/homeadditions/
+.ddev/nginx_full/
+/.eslintrc
+/berkeley_global.sublime-project
+/berkeley_global.sublime-workspace
+/my-sql-dump-global.sql

@@ -1,0 +1,21 @@
+uuid: b71cc58b-f2c8-4a4f-aebc-9e897dffa447
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.english_proficiency
+    - field.storage.block_content.field_esl_ielts
+id: block_content.english_proficiency.field_esl_ielts
+field_name: field_esl_ielts
+entity_type: block_content
+bundle: english_proficiency
+label: 'IELTS Academic Format'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '7'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 25aff7fd-4ad4-41d4-b717-5d41f476c45d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Certificate Type'
+vid: certificate_type
+description: 'Type classifications for certificates.'
+weight: 0

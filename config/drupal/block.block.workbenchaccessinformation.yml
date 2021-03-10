@@ -1,0 +1,29 @@
+uuid: 42234d0d-6f57-4804-a526-0dc2287855f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - term_condition
+    - workbench_access
+  theme:
+    - bglobal
+id: workbenchaccessinformation
+theme: bglobal
+region: disabled
+weight: -3
+provider: null
+plugin: workbench_access_block
+settings:
+  id: workbench_access_block
+  label: 'Workbench Access information'
+  provider: workbench_access
+  label_display: visible
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  term:
+    id: term
+    tid: null
+    show_if_no_terms: 0
+    negate: false
+    context_mapping: {  }

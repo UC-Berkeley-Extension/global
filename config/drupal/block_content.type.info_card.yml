@@ -1,0 +1,8 @@
+uuid: e456bcab-2224-4bf6-8c93-d75c2fb0077b
+langcode: en
+status: true
+dependencies: {  }
+id: info_card
+label: 'Info Card'
+revision: 0
+description: ''

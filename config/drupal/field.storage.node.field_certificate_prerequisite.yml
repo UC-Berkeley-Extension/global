@@ -1,0 +1,19 @@
+uuid: 93ccabc3-7e4b-4ec8-a470-53e763f69070
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_certificate_prerequisite
+field_name: field_certificate_prerequisite
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

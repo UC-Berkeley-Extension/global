@@ -1,0 +1,40 @@
+name: 'Voices Post Spotlight (Voices)'
+description: 'Voices Post Spotlight'
+type: 'block' # default
+enable_field: true
+js:
+  voices_spotlight.js: {}
+template: voices_spotlight.html
+# This component makes use of an existing shared library which is provided by
+#   another component (library type). This is how to share and manage common
+#   assets across different components.
+dependencies:
+ - component/angularjs_lib
+cache:
+  max-age: 60
+static_configuration:
+  limit: '3'
+form_configuration:
+  voices-spotlight:
+    title: 'Voices Spotlight'
+    type: item
+    description: ''
+  info:
+    type: item
+    title: 'Data endpoint'
+    description: 'single-post/tag/{$tag}/cert/{$cert}/area/International'
+  cert:
+    type: textfield
+    title: Programs
+    description: 'Enter an optional program ID. Use "all" for all programs.'
+    default_value: 'all'
+  tag:
+    type: textfield
+    title: Tags
+    description: 'Enter an optional tag ID. Use "all" for all tags.'
+    default_value: 'all'
+  post:
+    type: textfield
+    title: Posts
+    description: 'Enter an optional post ID. Use "all" for all posts.'
+    default_value: 'all'

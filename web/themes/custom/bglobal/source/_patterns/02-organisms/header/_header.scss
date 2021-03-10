@@ -1,8 +1,82 @@
-.site-header {
-  background-color: $berkeley-blue;
-  height: 100px;
+#top-banner {
+  .site-logo__image {
+    max-width: 350px;
+    padding: 1em 0;
+  }
+}
 
-  .haas & {
-    background-color: $soybean;
+.navbar {
+  // to place utility and search
+  border-top: 2.5em solid $berkeley-blue;
+  padding: 0 1em;
+}
+
+.navbar-mobile-toggle {
+  display: block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-color: transparent;
+  margin: 0;
+  padding: 6px 10px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .user-logged-in & {
+    top: 3em;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+  
+  .icon-bar {
+    background: none repeat scroll 0 0 $white;
+    margin-top: 4px;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  
+  @include breakpoint($bp-med) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.header-cal {
+  padding: 1em 0;
+  
+  @include breakpoint($bp-med) {
+    // for menu dropdown placement
+    position: relative;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 250px;
+  }
+}
+
+.header__mobile-drawer:not(.show) {
+  display: none;
+  
+  @include breakpoint($bp-med) {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// HAAS SPECIFIC STYLING
+
+.haas {
+  .navbar {
+    background-color: $berkeley-blue;
   }
 }

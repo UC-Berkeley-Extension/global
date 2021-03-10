@@ -6,13 +6,19 @@ body {
 }
 
 #main {
-  @include breakpoint($bp-med-2) {
+  @include breakpoint($bp-med) {
     min-height: 400px;
   }
 }
 
 .container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  @include container;
+}
+
+.bg-light {
+  background-color: $bg-gray;
+}
+
+.bg-teal {
+  background-color: $teal;
 }

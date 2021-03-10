@@ -1,0 +1,23 @@
+uuid: a07ae63b-8f12-498c-968d-3a566a88bd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_offered
+    - node.type.certificate
+  module:
+    - options
+id: node.certificate.field_certificate_offered
+field_name: field_certificate_offered
+entity_type: node
+bundle: certificate
+label: 'Term Offered'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Fall and Spring'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

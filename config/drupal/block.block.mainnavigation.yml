@@ -1,0 +1,34 @@
+uuid: 77b98ae8-af82-42b0-a25b-62e0001a5515
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+    - term_condition
+  theme:
+    - bglobal
+id: mainnavigation
+theme: bglobal
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '7'
+    negate: false
+    show_if_no_terms: 1
+    context_mapping: {  }

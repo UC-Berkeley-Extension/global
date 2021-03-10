@@ -8,9 +8,7 @@ libraries:
   - bglobal/global
 regions:
   header: 'Header'
-  navigation: 'Navigation'
   highlighted: 'Highlighted'
-  page_header: 'Page Header'
   content: 'Content'
   content_bottom: 'Content Bottom'
   footer: 'Footer'
@@ -38,3 +36,13 @@ component-libraries:
   drupal-components:
     paths:
       - source/_patterns/05-drupal-components
+
+# Layout Builder Sidebar styling was off because of an overly generic 
+# `all: initial` and because browsers changed how they compute chained 
+# `:not` selectors.
+# https://www.drupal.org/project/drupal/issues/2958588#comment-13957641
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        /core/themes/stable/css/core/dialog/off-canvas.reset.css: source/css/off-canvas.reset.css

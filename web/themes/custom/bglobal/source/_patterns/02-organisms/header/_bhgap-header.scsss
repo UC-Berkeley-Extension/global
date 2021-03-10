@@ -1,0 +1,24 @@
+
+/************ Header *************/
+
+.ribbon {
+  background: $primary;
+}
+
+#nav-stud-account {
+	color: white;
+	a:not(.btn):not(#shoppingCartLink) {
+		color: white;
+		text-decoration: underline;
+	}
+}
+.glyphicon-shopping-cart {
+	color: $light;
+}
+.dropdown-menu.sub-nav {
+	background-color: $celeste;
+}
+
+li#nav-cart-container .d-none {
+    color: white;
+}

@@ -5,6 +5,7 @@ package: Web services
 core_version_requirement: ^8 || ^9
 dependencies:
   - drupal:default_content
+  - drupal:block_content
 default_content:
   file:
     - a84b19bc-bc7b-4295-94ba-70d6de5fcdbc
@@ -15,6 +16,22 @@ default_content:
   node:
     - 5fa3b8c8-556d-4cba-8fb9-314783c93d80
     - 46c7b3c9-580a-447c-9ba0-1017984a9c86
+    - 912f098c-4d41-4f31-9cd4-ce0a46f425af
+    - 52eab51a-faf3-4171-8176-b8084caa3d93
+    - 3b380a9a-9feb-4432-bf74-024fc08cd63e
   taxonomy_term:
     - 4f64c2b0-36fd-436f-bb06-12c0b1724d8c
     - 5da523c5-e0eb-4c0d-b387-cb1810c9c85d
+    - 3483cf74-e67a-4226-95ae-8b50b56a6495
+    - dc96de0c-4681-4c15-b312-ea269623f0d7
+    - f5cdd0d9-c471-4095-a4cf-0f3015ca576a
+    - d062d1a4-7174-4d97-b6a6-55b4c6b5c50c
+    - b14062f8-fca5-4e45-bf22-0d184e8ba7d8
+    - ac9f286c-df5a-4083-bb97-b0b9933124b6
+    - bbd03e5c-58ef-4942-8d35-80229173d79b
+    - 3923996e-d637-427c-ae3b-273e2c69eada
+    - df60dbd4-3210-4d45-83f4-a38d0e0a55b9
+    - 660059f2-5e0f-46e8-81e3-b5604f0e4438
+    - 8c70eb74-a309-474a-8ecd-fd2f7d44dcb1
+    - 0be4dd5b-5e24-401e-9ebf-b222fbd39313
+    - aafc55b6-939f-4ea3-82f3-d60ecf4a6bce

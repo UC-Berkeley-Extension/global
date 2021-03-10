@@ -1,0 +1,12 @@
+uuid: ceffc197-6d2b-475b-b4c0-c3c5cc0ef2fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_time_curriculum_tabs
+id: block_content.full_time_curriculum_tabs.default
+targetEntityType: block_content
+bundle: full_time_curriculum_tabs
+mode: default
+content: {  }
+hidden: {  }

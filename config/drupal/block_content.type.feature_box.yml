@@ -1,0 +1,8 @@
+uuid: b466b4a8-cd8e-4526-918c-91bc0be12bd0
+langcode: en
+status: true
+dependencies: {  }
+id: feature_box
+label: 'Feature Box'
+revision: 1
+description: 'The feature box contains an image and a text area.'

@@ -1,0 +1,34 @@
+uuid: 163e0ceb-a7e6-4068-a0e1-62d7897dcb92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_items.field_text
+    - field.field.paragraph.accordion_items.field_title
+    - paragraphs.paragraphs_type.accordion_items
+  module:
+    - text
+id: paragraph.accordion_items.default
+targetEntityType: paragraph
+bundle: accordion_items
+mode: default
+content:
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

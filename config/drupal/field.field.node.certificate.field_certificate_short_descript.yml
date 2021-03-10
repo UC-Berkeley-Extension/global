@@ -1,0 +1,19 @@
+uuid: 1729f979-64b4-4eda-86da-dec973317b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_short_descript
+    - node.type.certificate
+id: node.certificate.field_certificate_short_descript
+field_name: field_certificate_short_descript
+entity_type: node
+bundle: certificate
+label: 'Certificate Short Description'
+description: 'A summary of the certificate. Appears in the Curriculum Tabs component in the Program pages'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

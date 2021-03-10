@@ -2,13 +2,16 @@
     $VARIABLES
 \*------------------------------------*/
 
-//Berkeley Web Basic Colors
+// Berkeley Web Basic Colors
 $gray : #EEEEEE;
+$gray-dark : #333;
+$bg-gray: #f2f2f2;
 $web-gray: #888888;
 $white : #ffffff;
 $black : #000000;
 $text-gray: #212529;
-$info-row-teal: #4F758B;
+$teal: #4F758B; // Background color for components
+$success-teal: #00B2A9;
 
 // Berkeley Primary Palettes
 $berkeley-blue: #003262;
@@ -30,11 +33,14 @@ $ion: #CFDD45;
 $soybean: #859438;
 $stone-pine: #584F29;
 
-//Typography
+// Typography
 $font: "Open Sans", "Helvetica", "Arial", sans-serif;
+$font-light: "Open Sans Light", "Helvetica", "Arial", sans-serif;
 $font-bold: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
 $font-italic: "Open Sans Italic", "Helvetica", "Arial", sans-serif;
 $font-bitter: "Bitter", Georgia, Times, "Times New Roman", serif;
+$font-family-serif: $font-bitter;
+$font-family-sans-serif: $font;
 $font-bitter-italic: "Bitter Italic", Georgia, Times, "Times New Roman", serif;
 
 $font-size-small : 0.75em;
@@ -58,18 +64,49 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
+
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($space * .25),
+    2: ($space * .5),
+    3: $space,
+    4: ($space * 1.5),
+    5: ($space * 3)
+  ),
+  $spacers
+);
+
+// // Cards
+
+$card-spacer-y:                     .75rem !default;
+$card-spacer-x:                     1.25rem !default;
+
 //Borders
 $border-med: 3px;
 $border-thick: 7px;
 
 //Breakpoints
-$bp-small : 24em;
+$bp-small : 24em; //384px @ standard 16px = 1em
 $bp-small-2 : 29.75em;
 $bp-small-3 : 39.8em;
-$bp-med : 46.8em;
-$bp-med-2 : 48em;
-$bp-large : 50em;
-$bp-large-2 : 66em;
+$bp-med : 48em; //768px @ standard 16px = 1em
+$bp-med-2 : 55em;
+$bp-large : 60em; //960px @ standard 16px = 1em
+$bp-large-2 : 66em; //1056px @ standard 16px = 1em
 $bp-xl : 73em;
 $bp-xxl : 89em;
 $bp-xxxl : 93em;
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: $bp-small,
+  sm: $bp-med,
+  md: $bp-large,
+  lg: $bp-xl,
+  xl: $bp-xxl,
+  xxl: $bp-xxxl
+) !default;
+

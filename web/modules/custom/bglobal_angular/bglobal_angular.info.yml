@@ -1,0 +1,7 @@
+name: Berkeley Global Angular Integration
+type: module
+description: 'Uses AngularJs to load components'
+package: 'Berkeley Global'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - component:component

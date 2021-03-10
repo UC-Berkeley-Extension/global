@@ -1,0 +1,18 @@
+<!-- Reference:
+  /web/themes/custom/bglobal/source/_patterns/01-molecules/voices-list/voices-spotlight.twig
+ -->
+<div class="voices__spotlight" data-ng-cloak>
+  <h2 class="voices__spotlight__header block-header">Spotlight</h2>
+  <div class="voices__spotlight__teaser">
+    <div class="voices__spotlight__teaser__image" [ngStyle]="{'background-image':'url('+teaser.image.src+')'}">
+      <span class="voices__spotlight__teaser__image__ribbon">{{ teaser.tags[0] || "Temp" }}</span>
+   </div>
+    <div class="voices__spotlight__teaser__summary">
+      <h3 class="voices__spotlight__teaser__title marginless-p">
+        <strong><a href="{{ teaser.path }}" class="">{{ teaser.title }}</a></strong>
+      </h3>
+      <div class="voices__spotlight__teaser__body" [innerHTML]="teaser.content"></div>
+      <div class="voices__spotlight__teaser__cta text--right"><a class="button button--small" href="{{ teaser.path }}">Continue Reading<span class="sr-only"> "{{ teaser.title }}"</span></a></div>
+    </div>
+  </div>
+</div>

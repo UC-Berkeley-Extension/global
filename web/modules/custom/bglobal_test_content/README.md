@@ -8,9 +8,12 @@ Right now, this module will create:
 
 * 2 images (in /web/sites/default/files/2020-10/)
 * 2 media items that contain those images
-* 2 Taxonomy terms in the 'school' vocabulary
-* 1 Article node assigned to the school vocabulary.
-* 1 View page node assigned to the school vocabulary.
+* 15 Taxonomy terms
+* 1 Article node assigned to the school vocabulary
+* 1 View page node assigned to the school vocabulary
+* 1 Program page node
+* 2 Certificate nodes assigned to the Program
+* 4 Custom Blocks used by Layout Builder
 
 The module is enabled as part of the site `setup.sh` process.
 

@@ -1,0 +1,27 @@
+uuid: d2d2de3d-79b9-4caf-96c0-8fc54dfcfa44
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_list_item_icon
+field_name: field_list_item_icon
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: green_check
+      label: 'Green Check'
+    -
+      value: red_x
+      label: 'Red X'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
