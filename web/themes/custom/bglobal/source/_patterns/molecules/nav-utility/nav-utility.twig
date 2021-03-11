@@ -3,9 +3,11 @@
 	{% block utility_menu %}
 		<ul id="secondary-menu" class="secondary-menu nav" aria-label="secondary navigation">
 			{% for item in utility_menu %}
-			<li class="secondary-menu-link leaf menu-link-{{ item.label|replace(" ", "-")|lower }}">
-				<a class="secondary-menu-link-item" {% if item.off_site %}target="_blank" rel="noopener noreferrer"{% endif %} href="{{ item.href }}">{{ item.label }}</a>
-			</li>
+        {% if item.label %}
+			  <li class="secondary-menu-link leaf menu-link-{{ item.label|replace({" ": "-"})|lower }}">
+				  <a class="secondary-menu-link-item" {% if item.off_site %}target="_blank" rel="noopener noreferrer"{% endif %} href="{{ item.href }}">{{ item.label }}</a>
+			  </li>
+        {% endif %}
 			{% endfor %}
 		</ul>
 	{% endblock %}
