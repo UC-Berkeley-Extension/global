@@ -1,0 +1,24 @@
+body {
+	background: $white;
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $text-gray;
+}
+
+#main {
+  @include breakpoint($bp-med) {
+    min-height: 400px;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.bg-light {
+  background-color: $bg-gray;
+}
+
+.bg-teal {
+  background-color: $teal;
+}

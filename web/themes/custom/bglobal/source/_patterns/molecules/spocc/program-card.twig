@@ -1,0 +1,19 @@
+<a class="blueBlock editing" href="{{ program.url }}">
+  <div class="bb-imgs-wrapper">
+    <div class="bb-img" 
+      data-name="{{ program.name }}" data-category="{{ program.category }}"></div>
+  </div>
+  <div class="bb-border certs-pt-border"></div>
+  <div class="bb-text certs-pt-border">
+    <p class="bb-content--superCategory">
+      {{ program.category }}
+    </p>
+    <h3 class="bb-content--title">
+      {{ program.name }}
+    </h3>
+  </div>
+</a>
+
+{% if loop.last or not loop %}
+  <script src="/patterns/01-molecules-spocc-program-card/molecules-program-card.js"></script>
+{% endif %}
