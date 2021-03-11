@@ -30,9 +30,9 @@
 //@import "scss/objects/messaging";
 
 // Berkeley Global component SCSS files
-@import "../_patterns/00-atoms/**/*.scss";
-@import "../_patterns/01-molecules/**/*.scss";
-@import "../_patterns/02-organisms/**/*.scss";
-@import "../_patterns/03-templates/*.scss";
-//@import "../_patterns/04-pages/**/*.scss";
-@import "../_patterns/05-drupal-components/**/*.scss";
+@import "../_patterns/atoms/**/*.scss";
+@import "../_patterns/molecules/**/*.scss";
+@import "../_patterns/organisms/**/*.scss";
+@import "../_patterns/templates/*.scss";
+@import "../_patterns/pages/**/*.scss";
+@import "../_patterns/drupal-components/**/*.scss";
