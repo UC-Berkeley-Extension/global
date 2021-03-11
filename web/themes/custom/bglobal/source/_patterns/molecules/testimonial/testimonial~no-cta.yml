@@ -1,0 +1,12 @@
+testimonial:
+  img:
+    src: "https://extension.berkeley.edu/international/professional/data-science/images/quote-internships-datascience.jpg"
+    alt: "Swathi Annamalai, Senior Data Scientist at CostPlus World Market."
+  image: |-
+    <img src="https://extension.berkeley.edu/international/professional/data-science/images/quote-internships-datascience.jpg" alt="Swathi Annamalai, Senior Data Scientist at CostPlus World Market." class="quote-image">
+  body: "Data excites me, and I am always curious about uncovering hidden trends and telling stories that are untold."
+  link:
+    url: 
+      external: false
+      routeName: "<nolink>"
+    text: "Swathi Annamalai, Senior Data Scientist at CostPlus World Market"
