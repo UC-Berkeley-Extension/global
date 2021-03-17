@@ -20,22 +20,22 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - source/_patterns/00-atoms
+      - source/_patterns/atoms
   molecules:
     paths:
-      - source/_patterns/01-molecules
+      - source/_patterns/molecules
   organisms:
     paths:
-      - source/_patterns/02-organisms
+      - source/_patterns/organisms
   templates:
     paths:
-      - source/_patterns/03-templates
+      - source/_patterns/templates
   pages:
     paths:
-      - source/_patterns/04-pages
+      - source/_patterns/pages
   drupal-components:
     paths:
-      - source/_patterns/05-drupal-components
+      - source/_patterns/drupal-components
 
 # Layout Builder Sidebar styling was off because of an overly generic 
 # `all: initial` and because browsers changed how they compute chained 

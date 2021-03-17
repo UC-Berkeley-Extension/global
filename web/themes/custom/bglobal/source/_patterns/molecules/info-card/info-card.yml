@@ -1,0 +1,9 @@
+info_card:
+  img: 
+    src: "https://picsum.photos/id/122/250/250"
+    alt: "alt text here"
+  title: "Industry Growth"
+  body: "10% growth rate through 2026 for administrative service managers"
+  link: 
+    url: "http://google.com"
+    text: Bureau of Labor Statistics
