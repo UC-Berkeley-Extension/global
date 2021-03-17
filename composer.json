@@ -142,7 +142,7 @@
     "post-install-cmd": [
         "echo 'Setting `web/sites` directory permissions...' && sudo chmod -R a+w web/sites",
         "echo 'Setting `artifacts` directory permissions...' && sudo chmod -R a+w artifacts",
-        "if [ -e ~/Sites/global/artifacts ]; then terminus drush berkeleyglobal.dev --  cr; terminus drush berkeleyglobal.dev --  sql-dump > my-sql-dump-global.sql ; sudo chmod -R a+w my-sql-dump-global.sql ; fi"
+        "if [ -e ~/Sites/global/artifacts ] ; then terminus drush berkeleyglobal.dev --  cr ; terminus drush berkeleyglobal.dev --  sql-dump > my-sql-dump-global.sql ; sudo rm -R web/sites/default/files/* ; terminus backup:create berkeleyglobal.dev --element=files ; sudo curl -o web/sites/default/files.tar.gz `terminus backup:get berkeleyglobal.dev --element=files` ; sudo chmod -R a+w my-sql-dump-global.sql ; fi"
     ]
   }
 }
