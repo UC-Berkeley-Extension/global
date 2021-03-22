@@ -34,11 +34,11 @@
 
         <!-- Create the public files directory and make it world writable. -->
         <mkdir dir="${drupal.root}/${drupal.site.settings.file_public_path}" />
-        <chmod file="${drupal.root}/${drupal.site.settings.file_public_path}" mode="744" />
+        <!-- Moved below after files 'Updating site files' <chmod file="${drupal.root}/${drupal.site.settings.file_public_path}" mode="744" /> -->
 
         <!-- Create the private files directory and make it private. -->
         <mkdir dir="${drupal.root}/${drupal.site.settings.file_private_path}" />
-        <chmod file="${drupal.root}/${drupal.site.settings.file_private_path}" mode="640" />
+        <!-- Moved below after files 'Updating site files' <chmod file="${drupal.root}/${drupal.site.settings.file_private_path}" mode="640" /> -->
 
         <!-- Copy the settings.build.php and services.build.php templates into place. -->
         <copy todir="${build.dir}" overwrite="true" mode="544">
@@ -79,6 +79,16 @@
         </drush>
         <!-- Database info from .the-build/build.yml:42 -->
         <phingcall target="drupal-load-db" />
+        <echo>Deleting the database source file</echo>
+        <exec command="rm ${drupal.site.load_db.export_pattern}" passthru="true"/>
+        <echo>Updating site files</echo>
+        <echo>${drupal.root}/${drupal.site.settings.file_public_path}</echo>
+        <exec dir="${drupal.root}/sites/default" command="gunzip -c files.tar.gz | tar xopf -" passthru="true"/>
+        <exec dir="${drupal.root}/sites/default" command="mv files_dev/* files" passthru="true"/>
+        <exec dir="${drupal.root}/sites/default" command="rm -r files_dev" passthru="true"/>
+        <exec dir="${drupal.root}/sites/default" command="rm files.tar.gz -f" passthru="true"/>
+        <chmod file="${drupal.root}/${drupal.site.settings.file_public_path}" mode="744" />
+        <chmod file="${drupal.root}/${drupal.site.settings.file_private_path}" mode="640" />
         <drush command="cache-rebuild" />
     </target>
 
