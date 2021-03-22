@@ -11,7 +11,7 @@ app.controller('VoicesListController', ['$scope', '$element', 'VoicesFactory', (
   VoicesFactory.getBlogs(vcc.attrs)
     .then((blogs) => {
       vcc.blogs = blogs;
-      vcc.blogs.nodes = vcc.blogs.nodes.splice(1)
+      if (document.querySelector(".voices_spotlight")) vcc.blogs.nodes = vcc.blogs.nodes.splice(1);
       if (vcc.attrs.limit) vcc.blogs.nodes.splice(vcc.attrs.limit);
     })
     .catch((err) => {
