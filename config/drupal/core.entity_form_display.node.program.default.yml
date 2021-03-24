@@ -22,7 +22,9 @@ dependencies:
     - field.field.node.program.field_term_ref_school_microsite
     - field.field.node.program.layout_builder__layout
     - node.type.program
+    - workflows.workflow.content_approvals
   module:
+    - content_moderation
     - field_group
     - link
     - media_library
@@ -241,6 +243,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 8
@@ -265,7 +273,6 @@ content:
 hidden:
   created: true
   layout_builder__layout: true
-  moderation_state: true
   promote: true
   sticky: true
   uid: true
