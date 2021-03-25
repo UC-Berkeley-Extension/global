@@ -11,15 +11,15 @@ dependencies:
     - bglobal
 id: haasmainmenu
 theme: bglobal
-region: disabled
-weight: -7
+region: header
+weight: -5
 provider: null
 plugin: 'menu_block:haas-main-menu'
 settings:
   id: 'menu_block:haas-main-menu'
   label: 'Haas Main Menu'
   provider: menu_block
-  label_display: visible
+  label_display: '0'
   follow: false
   follow_parent: child
   level: 1
@@ -34,4 +34,5 @@ visibility:
       -
         target_id: '1'
     negate: false
-    show_if_no_terms: false
+    show_if_no_terms: 0
+    context_mapping: {  }

@@ -12,8 +12,8 @@ _core:
   default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
 id: bglobal_tools
 theme: bglobal
-region: header
-weight: -3
+region: disabled
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
