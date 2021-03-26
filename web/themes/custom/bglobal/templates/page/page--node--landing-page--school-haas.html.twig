@@ -44,14 +44,34 @@
  */
 #}
 {% set full_width = true %}
+{% if content.bglobal.hero['#uri'] is not empty %}
+  {% set heroSrc = file_url(content.bglobal.hero['#uri']|image_style('full_width')) %}
+  {% else %}
+    {% set heroSrc = "" %}
+{% endif %}
 {% set modifier_class = 'haas' %}
 
-{% embed '@pages/page/page.twig' with {
+{% embed '@pages/landing/page-landing.twig' with {
   'logo': {
     'src': '/themes/custom/bglobal/source/images/haas-logo.png',
     'url': '/academic/entrepreneurship'
-  }
+  },
+  'hero': {
+    'title': content.bglobal["#nodeTitle"],
+    'subtitle': content.bglobal.hero["#subtitle"][0].value,
+    'img': {
+      'src': heroSrc,
+      'alt': content.bglobal.hero['#alt'],
+    },
+    'link': {
+      'url': content.bglobal.hero['#cta'][0].uri,
+      'text': content.bglobal.hero['#cta'][0].title,
+      'classes': 'hero__btn btn__warning btn__large button',
+    },
+    'label_display': 'visible',
+  },
 } %}
+
   {% block page_header %}
     {% embed "@organisms/header/header.twig" %}
       {% block header_blocks %}
