@@ -27,11 +27,13 @@
       {% endif %}
 
       {% if field.type != 'hidden' %}
-      <div class="pardot-form pardot-form-{{ key }}">
-        <label>
+      <div class="pardot-form pardot-form-{{ key }} pardot-form-{{ field.type }}">
+        {% if field.type != 'checkbox' %}
+        <label for="{{ key }}">
           {{ field.label }}
           {% if field.required %} * {% endif %}
         </label>
+        {% endif %}
 
         {% set required = '' %}
         {% if field.required %}
@@ -39,10 +41,10 @@
         {% endif %}
 
         {% if field.type == 'textarea' %}
-          <textarea rows={{ field.rows }} cols={{ field.cols }} name="{{ key }}" {{ required }}/></textarea>
+          <textarea rows={{ field.rows }} cols={{ field.cols }} name="{{ key }}" id="{{ key }}" {{ required }}/></textarea>
 
         {% elseif field.type == 'select' %}
-          <select name="{{ key }}" {{ required }} />
+          <select name="{{ key }}" id="{{ key }}" {{ required }} />
           {% for option in field.options %}
             {% set selected = '' %}
             {% if option == field.default_value %}
@@ -53,15 +55,20 @@
           </select>
 
         {% else %}
-          <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
+          <input type="{{ field.type }}" value="{{ default_value }}" name="{{ key }}" id="{{ key }}" {{ required }} />
         {% endif %}
 
-        {% if field.description %}
-          <div class="pardot-form-description pardot-form-description-{{ key }}">{{ field.description }}</div>
+        {% if field.type == 'checkbox' %}
+          {% if field.description %}
+             <label for="{{ key }}" class="pardot-form-{{ field.type }}--label">
+              {{ field.description }}
+              {% if field.required %} * {% endif %}
+            </label>
+          {% endif %}
         {% endif %}
       </div>
       {% else %}
-        <input type="{{ field.type }}" id="pardot-hidden-{{ key }}" value="{{ default_value }}" name="{{ key }}" {{ required }} />
+        <input type="{{ field.type }}" id="pardot-hidden-{{ key }}" value="{{ default_value }}" name="{{ key }}" id="{{ key }}" {{ required }} />
       {% endif %}
     {% endfor %}
 
