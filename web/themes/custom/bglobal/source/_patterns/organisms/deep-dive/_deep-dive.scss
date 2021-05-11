@@ -1,0 +1,76 @@
+
+.deep-dive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 60px;
+  .link-card {
+    width: 170px;
+    height: 170px;
+    background-size: contain; 
+    margin: 10px 20px 10px 0px;
+    display: flex;
+  }
+  .link-card-title {
+    font-family: $font;
+    font-size: 1em;
+    font-weight: 100;
+    background: $haas-light-blue;
+    color: #fff;
+    text-align: center;
+    align-self: flex-end;
+    flex-grow: 1;
+    min-height: 70px;
+    padding: 2px;
+    &:hover {
+      font-weight: bold;
+      background: $haas-cyan-blue !important;
+      cursor: pointer;
+    }
+  }
+  .link-card-title-text {
+    position: relative;
+    top: 17px;
+  }
+  .link-card-link {
+    text-decoration: none;
+  }
+
+  //container
+  //image link-card
+  .link-card {
+    &.link-card-scholarships {
+      background-image: url("../images/others/scholarships-landing-button.jpg");
+    }
+    &.link-card-faculty {
+      background-image:url("../images/others/faculty-landing-button.jpg");
+    }
+    &.link-card-curriculum {
+      background-image:url("../images/others/curriculum-landing-button.jpg");
+    }
+    &.link-card-outside-of-class {
+      background-image:url("../images/others/outside-of-class-landing-button.jpg"); 
+    } 
+    &.link-card-about {
+      background-image:url("../images/others/about-landing-button.jpg");  
+    }
+    &.link-card-student-services {
+      background-image: url("../images/others/student-services-landing-button.jpg");  
+    }
+    &.link-card-contact {
+      background-image: url("../images/others/contact-landing-button.jpg");
+    }
+    &.link-card-costs {
+      background-image: url("../images/others/costs-landing-button.jpg");
+    }
+    &.link-card-community {
+      background-image: url("../images/others/community-landing-button.jpg");
+    }
+    &.link-card-internships {
+      background-image: url("../images/others/internships-landing-button.jpg");
+    }
+  }
+}
+
+
+
