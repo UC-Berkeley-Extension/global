@@ -1,0 +1,28 @@
+linkCard:
+  -
+    title: Scholarships
+    shorthand: scholarships
+  -
+    title: Faculty
+    shorthand: faculty
+  -
+    title: Curriculum
+    shorthand: curriculum
+  -
+    title: "Outside Of Class"
+    shorthand: out-of-class
+  -
+    title: About
+    shorthand: about
+  -
+    title: "Student Services"
+    shorthand: sstudenttu-services
+  -
+    title: Community
+    shorthand: community
+  -
+    title: Costs
+    shorthand: costs
+  -
+    title: "Optional Practical Training"
+    shorthand: internships

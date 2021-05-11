@@ -1,0 +1,20 @@
+<div class="deep-dive">
+  {% for linkCard in linkCards %}
+      {# {% set certificate = certificate|merge({'deliveryMethod': program.delivery}) %} #}
+      {# {% include "@molecules/program-options-card/program-options-card.twig" with certificate %} #}
+    <div class="link-card link-card-{{linkcCard.shorthand}}">
+      <div class="link-card-title">
+        <div class="link-card-title-text">
+          <p><a class="link-card-link" href="/international/academic/bhgap/{{linkcCard.shorthand}}">{{linkcCard.title}}</a></p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="link-card link-card-contact">
+    <div class="link-card-title" id="link-card-title-contact">
+      <div class="link-card-title-text">
+        <p><a class="link-card-link" href="#contact">Get Advising</a></p>
+      </div>
+    </div>
+  </div>
+</div>
