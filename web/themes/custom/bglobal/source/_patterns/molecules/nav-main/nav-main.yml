@@ -1,0 +1,18 @@
+main_menu:
+  item:
+    label: "Programs"
+    children:
+      column:
+        children:
+          child: "Professional"
+            children: 
+              grandchild: 
+                label: "Entrepreneurship"
+                off-site: false
+                href: "/professional/entrepreneurship"
+              grandchild: 
+                label: "Business Administration"
+                off-site: false
+                href: "/professional/entrepreneurship"
+
+
