@@ -16,10 +16,10 @@
 						</div>
 					</div>
 					<address>
-						<p>1995 University Ave., Suite 300</p>
-						<p>Berkeley, CA 94704-7000</p>
-						<p><a href="mailto:internationaladmissions@berkeley.edu">internationaladmissions@berkeley.edu</a></p>
-						<p>Phone: <a href="tel:+15106422564">+1 510-642-2564</a></p>
+						<p>{{ footer.addressLine1 }}</p>
+						<p>{{ footer.addressLine2 }}</p>
+						<p><a href="mailto:{{footer.email}}">{{ footer.email }}</a></p>
+						<p>Phone: <a href="tel:+15106422564">{{ footer.phone }}</a></p>
 					</address>
 				</div>
 				<!-- copyright + destiny logo -->
@@ -32,34 +32,20 @@
 			<div>
 				<!-- Navigation Links -->
 				<div class="grid-col-2 footer__navigation-links">
+				{% for section in footer.sections %}
 					<div>
-						<p class="m-0">Programs</p>
+						<p class="m-0">{{ section.label }}</p>
+
+						{% if section.children %}
 						<ul class="list-unstyled">
-							<li><a href="/international/professional">Programs for Professionals</a></li>
-							<li><a href="/online">Online Learning</a></li>
-							<li><a href="/international/academic">Programs for University Students</a></li>
-							<li><a href="/international/professional">Programs for High School Students</a></li>
-							<li><a href="/custom/common/events.jsp">Events</a></li>
+							{% for child in section.children %}
+							<li><a href="{{ link.url }}">{{ child.text }}</a></li>
+							{% endfor %}
 						</ul>
+						{% endif %}
 					</div>
-					<div>
-						<p class="m-0">Student Resources</p>
-						<ul class="list-unstyled">
-							<li><a href="/">About Us</a></li>
-							<li><a href="/">Student Services</a></li>
-							<li><a href="/">Berkeley Life</a></li>
-							<li><a href="/">VISA Information</a></li>
-							<li><a href="/">Latest COVID-19 Information</a></li>
-						</ul>
-					</div>
-					<div>
-						<p class="m-0">Graduates</p>
-						<ul class="list-unstyled">
-							<li><a href="" target="_blank" rel="noopener noreferrer">Student Stories</a></li>
-							<li><a href="" target="_blank" rel="noopener noreferrer">Professional Pathways</a></li>
-							<li><a href="" target="_blank" rel="noopener noreferrer">Blog Home</a></li>
-						</ul>
-					</div>
+				{% endfor %}
+			
 				</div>
 				<!-- Social -->
 				<div id="social-media" class="footer__social-media">

@@ -2,15 +2,76 @@ footer:
   logo: 
     src: "https://picsum.photos/id/122/250/250"
     alt: "Berkeley Global logo"
-  address:
-    street: "Berkeley"
-    city: "Berkeley"
-    state: "Berkeley"
+  addressLine1: "1995 University Ave., Suite 300"
+  addressLine2: "Berkeley, CA 94704-7000"
   email: "internationaladmissions@berkeley.edu"
   phone: "+1 510-642-2564"
   destinyLogo: 
     src: "https://picsum.photos/id/122/250/250"
     alt: "Berkeley Global logo"
-  link: 
-    url: "http://google.com"
-    text: Bureau of Labor Statistics
+  sections:
+    -
+      label: "Programs"
+      children: 
+        -
+          url: "/international/professional"
+          text: "Programs for Professionals"
+          off-site: false
+        -
+          url: "/online"
+          text: "Online Learning"
+          off-site: false
+        -
+          url: "/international/academic"
+          text: "Programs for University Students"
+          off-site: false
+        -
+          url: "/international/professional"
+          text: "Programs for High School Students"
+          off-site: false
+    -
+      label: "Student Resources"
+      children: 
+        -
+          url: "/about"
+          text: "About Us"
+          off-site: false
+        -
+          url: "/student-services"
+          text: "Student Services"
+          off-site: false
+        -
+          url: "/about/berkeley-life"
+          text: "Berkeley Life"
+          off-site: false
+        -
+          url: "/student-services/visa-information"
+          text: "VISA Information"
+          off-site: false
+        -
+          url: "https://voices.berkeley.edu"
+          text: "Latest COVID-19 Information"
+          off-site: false
+    -
+      label: "Graduates"
+      children: 
+        -
+          url: "/about"
+          text: "About Us"
+          off-site: true
+        -
+          url: "/student-services"
+          text: "Student Services"
+          off-site: true
+        -
+          url: "/about/berkeley-life"
+          text: "Berkeley Life"
+          off-site: true
+        -
+          url: "/student-services/visa-information"
+          text: "VISA Information"
+          off-site: true
+        -
+          url: "https://voices.berkeley.edu"
+          text: "Latest COVID-19 Information"
+          off-site: true
