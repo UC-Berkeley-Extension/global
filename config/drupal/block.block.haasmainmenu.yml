@@ -12,7 +12,7 @@ dependencies:
 id: haasmainmenu
 theme: bglobal
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: 'menu_block:haas-main-menu'
 settings:
@@ -24,9 +24,12 @@ settings:
   follow_parent: child
   level: 1
   depth: 0
-  expand: false
+  expand_all_items: false
   parent: 'haas-main-menu:'
   suggestion: haas_main_menu
+  label_type: block
+  label_link: false
+  expand: false
 visibility:
   term:
     id: term
