@@ -56,13 +56,13 @@
 
   @include breakpoint($bp-med) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     width: 70%;
     margin: 0 auto;
 
     > li {
       display: inline-block;
-      margin-left: 5em;
+      // margin-left: 5em;
     }
   }
 }
