@@ -121,6 +121,19 @@ task failed: Exec command 'cp /var/www/html/config/settings/settings.ddev.php /v
 ```
 Try `chmod -R a+w web/sites/`
 
+---
+
+If you see this on running `ddev start`:
+```
+ERROR: for 91c3f3ea381e_ddev-global-web  Cannot start service web: error while mounting volume '/var/lib/docker/volumes/ddev-global_nfsmount/_data': failed to mount local volume: mount :/System/Volumes/Data/Users/{{ USER }}/Sites/global:/var/lib/docker/volumes/ddev-global_nfsmount/_data, data: addr=192.168.65.2,hard,nolock: permission denied
+
+ERROR: for web  Cannot start service web: error while mounting volume '/var/lib/docker/volumes/ddev-global_nfsmount/_data': failed to mount local volume: mount :/System/Volumes/Data/Users/{{ USER }}/Sites/global:/var/lib/docker/volumes/ddev-global_nfsmount/_data, data: addr=192.168.65.2,hard,nolock: permission denied
+Encountered errors while bringing up the project.' 
+```
+Follow the instructions for [macOS NFS Setup](https://ddev.readthedocs.io/en/stable/users/performance/#macos-nfs-setup):
+`curl -O https://raw.githubusercontent.com/drud/ddev/master/scripts/macos_ddev_nfs_setup.sh && chmod +x macos_ddev_nfs_setup.sh && ./macos_ddev_nfs_setup.sh`.
+
+
 ### `phing` errors
 
 If you try a `phing` command and get the error `Buildfile: build.xml does not exist!`, make sure you are in the `/var/www/html/` directory.
