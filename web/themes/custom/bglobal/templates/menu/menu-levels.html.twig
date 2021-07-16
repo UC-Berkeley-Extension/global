@@ -10,17 +10,26 @@
         %}
 
         <li{{ item.attributes.addClass(item_classes) }}>
-          {% if item.url.toString() is empty %}
-            {{ item.title }}
-          {% else %}
-            <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
-          {% endif %}
+          
 
           {% if item.has_children %}
-            <button class="menu__toggle" type="button"><span class="element-invisible">Open Drawer</span></button>
+            <button class="menu__toggle" type="button">
+            {% if item.url.toString() is empty %}
+              {{ item.title }}
+            {% endif %}
+              <span class="element-invisible">Open Drawer</span>
+            </button>
             <div class="dropdown-menu dropdown-fullwidth">
               {{ item.content }}
             </div>
+          {% else %}
+
+            {% if item.url.toString() is empty %}
+              {{ item.title }}
+            {% else %}
+              <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
+            {% endif %}
+
           {% endif %}
 
         </li>
@@ -30,3 +39,16 @@
 {% endmacro %}
 
 {{ _self.menu_links(items, attributes, 0, classes ?: ['menu', 'menu--' ~ menu_name|clean_class, 'nav', 'navbar-nav'], dropdown_classes ?: ['dropdown_menu']) }}
+
+{# {% if item.url.toString() is empty %}
+            hi{{ item.title }}
+          {% else %}
+            <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
+          {% endif %}
+
+          {% if item.has_children %}
+            <button class="menu__toggle" type="button"><span class="element-invisible">Open Drawer</span></button>
+            <div class="dropdown-menu dropdown-fullwidth">
+              {{ item.content }}
+            </div>
+          {% endif %} #}

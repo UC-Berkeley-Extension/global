@@ -1,7 +1,7 @@
 .header__search {
   @include breakpoint($bp-med) {
     position: absolute;
-    top: -2.25em;
+    top: -2.75em;
     right: 0;
   }
 }
@@ -11,7 +11,7 @@
   justify-content: flex-start;
 
   .button {
-    padding: 0 .5em;
+    padding: 0.4em .5em;
   }
 
   input {
