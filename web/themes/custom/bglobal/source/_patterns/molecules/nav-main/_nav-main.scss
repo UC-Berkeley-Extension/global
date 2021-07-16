@@ -110,6 +110,9 @@ ul.navbar-nav {
   }
 }
 
+nav > h2 {
+  font-size: 1em;
+}
 button.menu__toggle::after {
   color: #c4820e;
   display: inline-block;
