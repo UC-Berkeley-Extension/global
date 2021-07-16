@@ -19,9 +19,15 @@
       const expanded = button.getAttribute('aria-expanded') === 'true';
       button.setAttribute('aria-expanded', !expanded);
       drawer.classList.toggle('expanded');
+
       if (!expanded) {
+        parent.forEach( list => {
+          list.querySelectorAll('div.dropdown-menu')[0].style.display = "none";
+          list.querySelectorAll('button')[0].setAttribute('aria-expanded', false);
+        }) 
+        button.setAttribute('aria-expanded', true);
         drawer.style.display = "block";
-      } else {
+      } else { 
         drawer.style.display = "none";
       }
     };

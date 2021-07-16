@@ -1,7 +1,7 @@
 .header__search {
   @include breakpoint($bp-med) {
     position: absolute;
-    top: -2.25em;
+    top: -2.75em;
     right: 0;
   }
 }
