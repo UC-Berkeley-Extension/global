@@ -1,4 +1,3 @@
-/* eslint-disable */
 (function () {
   const parent = document.querySelectorAll('.menu-depth-0');
 
@@ -21,10 +20,14 @@
       drawer.classList.toggle('expanded');
 
       if (!expanded) {
-        parent.forEach( list => {
-          list.querySelectorAll('div.dropdown-menu')[0].style.display = "none";
-          list.querySelectorAll('button')[0].setAttribute('aria-expanded', false);
-        }) 
+        parent.forEach(list => {
+          const listMenu = list.querySelectorAll('div.dropdown-menu')[0];
+          const listButton = list.querySelectorAll('button')[0];
+          if (listMenu && listButton) {
+            listMenu.style.display = "none";
+            listButton.setAttribute('aria-expanded', false);
+          }
+        });
         button.setAttribute('aria-expanded', true);
         drawer.style.display = "block";
       } else { 
@@ -34,9 +37,8 @@
 
     document.body.addEventListener("click", function(e) {
       button.setAttribute('aria-expanded', false);
-      drawer.style.display = "none";
+      // drawer.style.display = "none";
     });
 
   });
 })();
-/* eslint-enable */

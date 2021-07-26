@@ -29,13 +29,12 @@ settings:
   suggestion: haas_main_menu
   label_type: block
   label_link: false
-  expand: false
 visibility:
   term:
     id: term
     tid:
       -
-        target_id: '1'
+        target_id: '5'
     negate: false
     show_if_no_terms: 0
     context_mapping: {  }
